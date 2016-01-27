@@ -67,7 +67,7 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li class="dropdown"><a href="#">Pages <i class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="sub-menu">
                             <li><a href="aboutus.html">About</a></li>
@@ -90,10 +90,10 @@
                             <li><a href="blogdetails.html">Blog Details</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a href="portfolio.html">Portfolio <i class="fa fa-angle-down"></i></a>
+                    <li class="dropdown active"><a href="portfolio.html">Portfolio <i class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="sub-menu">
                             <li><a href="portfolio.html">Portfolio Default</a></li>
-                            <li><a href="portfoliofour.html">Isotope 3 Columns + Right Sidebar</a></li>
+                            <li><a class="active" href="portfoliofour.html">Isotope 3 Columns + Right Sidebar</a></li>
                             <li><a href="portfolioone.html">3 Columns + Right Sidebar</a></li>
                             <li><a href="portfoliotwo.html">3 Columns + Left Sidebar</a></li>
                             <li><a href="portfoliothree.html">2 Columns</a></li>
@@ -116,152 +116,282 @@
 </header>
 <!--/#header-->
 
-<section id="home-slider">
-    <div class="container">
-        <div class="row">
-            <div class="main-slider">
-                <div class="slide-text">
-                    <h1>We Are Creative Nerds</h1>
-                    <p>Boudin doner frankfurter pig. Cow shank bresaola pork loin tri-tip tongue venison pork belly meatloaf short loin landjaeger biltong beef ribs shankle chicken andouille.</p>
-                    <a href="#" class="btn btn-common">SIGN UP</a>
-                </div>
-                <img src="assets/images/home/slider/hill.png" class="slider-hill" alt="slider image">
-                <img src="assets/images/home/slider/house.png" class="slider-house" alt="slider image">
-                <img src="assets/images/home/slider/sun.png" class="slider-sun" alt="slider image">
-                <img src="assets/images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
-                <img src="assets/images/home/slider/birds2.png" class="slider-birds2" alt="slider image">
-            </div>
-        </div>
-    </div>
-    <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
-</section>
-<!--/#home-slider-->
 
-<section id="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
-                <div class="single-service">
-                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <img src="assets/images/home/icon1.png" alt="">
-                    </div>
-                    <h2>Incredibly Responsive</h2>
-                    <p>Ground round tenderloin flank shank ribeye. Hamkevin meatball swine. Cow shankle beef sirloin chicken ground round.</p>
-                </div>
-            </div>
-            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
-                <div class="single-service">
-                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
-                        <img src="assets/images/home/icon2.png" alt="">
-                    </div>
-                    <h2>Superior Typography</h2>
-                    <p>Hamburger ribeye drumstick turkey, strip steak sausage ground round shank pastrami beef brisket pancetta venison.</p>
-                </div>
-            </div>
-            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
-                <div class="single-service">
-                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
-                        <img src="assets/images/home/icon3.png" alt="">
-                    </div>
-                    <h2>Swift Page Builder</h2>
-                    <p>Venison tongue, salami corned beef ball tip meatloaf bacon. Fatback pork belly bresaola tenderloin bone pork kevin shankle.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--/#services-->
-
-<section id="action" class="responsive">
-    <div class="vertical-center">
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
         <div class="container">
             <div class="row">
-                <div class="action take-tour">
-                    <div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h1 class="title">Triangle Corporate Template</h1>
-                        <p>A responsive, retina-ready &amp; wide multipurpose template.</p>
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">Portfolio</h1>
+                        <p>Be Creative</p>
                     </div>
-                    <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <div class="tour-button">
-                            <a href="#" class="btn btn-common">TAKE THE TOUR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#page-breadcrumb-->
+
+<section id="projects">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-8">
+                <div class="row">
+                    <ul class="portfolio-filter text-center">
+                        <li><a class="btn btn-default active" href="#" data-filter="*">All</a></li>
+                        <li><a class="btn btn-default" href="#" data-filter=".branded">Branded</a></li>
+                        <li><a class="btn btn-default" href="#" data-filter=".design">Design</a></li>
+                        <li><a class="btn btn-default" href="#" data-filter=".folio">Folio</a></li>
+                        <li><a class="btn btn-default" href="#" data-filter=".logos">Logos</a></li>
+                        <li><a class="btn btn-default" href="#" data-filter=".mobile">Mobile</a></li>
+                        <li><a class="btn btn-default" href="#" data-filter=".mockup">Mockup</a></li>
+                    </ul><!--/#portfolio-filter-->
+
+                    <div class="portfolio-items">
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded logos">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="assets/images/portfolio/1.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/1.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item mockup folio">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="assets/images/portfolio/2.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/2.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item design logos">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="assets/images/portfolio/3.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/3.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item design logos">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="assets/images/portfolio/4.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/4.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded mobile">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="assets/images/portfolio/5.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/5.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded mockup">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="assets/images/portfolio/6.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/6.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded folio">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="assets/images/portfolio/7.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/7.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item design logos">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="assets/images/portfolio/8.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/8.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item mobile logos">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="assets/images/portfolio/9.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/9.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="portfolio-pagination">
+                        <ul class="pagination">
+                            <li><a href="#">left</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li class="active"><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">right</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 padding-top">
+                <div class="sidebar portfolio-sidebar">
+                    <div class="sidebar-item categories">
+                        <h3>Project Categories</h3>
+                        <ul class="nav navbar-stacked">
+                            <li><a href="#">Branded<span class="pull-right">(1)</span></a></li>
+                            <li class="active"><a href="#">Design<span class="pull-right">(8)</span></a></li>
+                            <li><a href="#">Folio<span class="pull-right">(4)</span></a></li>
+                            <li><a href="#">Logos<span class="pull-right">(9)</span></a></li>
+                            <li><a href="#">Mobile<span class="pull-right">(3)</span></a></li>
+                            <li><a href="#">Mockup<span class="pull-right">(4)</span></a></li>
+                            <li><a href="#">Php<span class="pull-right">(2)</span></a></li>
+                            <li><a href="#">Wordpress<span class="pull-right">(8)</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-item  recent">
+                        <h3>Recent Projects</h3>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#"><img src="assets/images/portfolio/project1.jpg" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
+                                <p>posted on 07 March 2014</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#"><img src="assets/images/portfolio/project2.jpg" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
+                                <p>posted on 07 March 2014</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#"><img src="assets/images/portfolio/project3.jpg" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <h4><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
+                                <p>posted on 07 March 2014</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-item popular">
+                        <h3>Popular Projects</h3>
+                        <ul class="gallery">
+                            <li><a href="#"><img src="assets/images/portfolio/popular1.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="assets/images/portfolio/popular2.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="assets/images/portfolio/popular3.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="assets/images/portfolio/popular4.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="assets/images/portfolio/popular5.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="assets/images/portfolio/popular1.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!--/#action-->
+<!--/#projects-->
 
-<section id="features">
-    <div class="container">
-        <div class="row">
-            <div class="single-features">
-                <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                    <img src="assets/images/home/image1.png" class="img-responsive" alt="">
-                </div>
-                <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                    <h2>Experienced and Enthusiastic</h2>
-                    <P>Pork belly leberkas cow short ribs capicola pork loin. Doner fatback frankfurter jerky meatball pastrami bacon tail sausage. Turkey fatback ball tip, tri-tip tenderloin drumstick salami strip steak.</P>
-                </div>
-            </div>
-            <div class="single-features">
-                <div class="col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                    <h2>Built for the Responsive Web</h2>
-                    <P>Mollit eiusmod id chuck turducken laboris meatloaf pork loin tenderloin swine. Pancetta excepteur fugiat strip steak tri-tip. Swine salami eiusmod sint, ex id venison non. Fugiat ea jowl cillum meatloaf.</P>
-                </div>
-                <div class="col-sm-5 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                    <img src="assets/images/home/image2.png" class="img-responsive" alt="">
-                </div>
-            </div>
-            <div class="single-features">
-                <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                    <img src="assets/images/home/image3.png" class="img-responsive" alt="">
-                </div>
-                <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                    <h2>Experienced and Enthusiastic</h2>
-                    <P>Ut officia cupidatat anim excepteur fugiat cillum ea occaecat rump pork chop tempor. Ut tenderloin veniam commodo. Shankle aliquip short ribs, chicken eiusmod exercitation shank landjaeger spare ribs corned beef.</P>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--/#features-->
-
-<section id="clients">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="clients text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-                    <p><img src="assets/images/home/clients.png" class="img-responsive" alt=""></p>
-                    <h1 class="title">Happy Clients</h1>
-                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> Ut enim ad minim veniam, quis nostrud </p>
-                </div>
-                <div class="clients-logo wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
-                    <div class="col-xs-3 col-sm-2">
-                        <a href="#"><img src="assets/images/home/client1.png" class="img-responsive" alt=""></a>
-                    </div>
-                    <div class="col-xs-3 col-sm-2">
-                        <a href="#"><img src="assets/images/home/client2.png" class="img-responsive" alt=""></a>
-                    </div>
-                    <div class="col-xs-3 col-sm-2">
-                        <a href="#"><img src="assets/images/home/client3.png" class="img-responsive" alt=""></a>
-                    </div>
-                    <div class="col-xs-3 col-sm-2">
-                        <a href="#"><img src="assets/images/home/client4.png" class="img-responsive" alt=""></a>
-                    </div>
-                    <div class="col-xs-3 col-sm-2">
-                        <a href="#"><img src="assets/images/home/client5.png" class="img-responsive" alt=""></a>
-                    </div>
-                    <div class="col-xs-3 col-sm-2">
-                        <a href="#"><img src="assets/images/home/client6.png" class="img-responsive" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--/#clients-->
 
 <footer id="footer">
     <div class="container">
@@ -269,66 +399,66 @@
             <div class="col-sm-12 text-center bottom-separator">
                 <img src="assets/images/home/under.png" class="img-responsive inline" alt="">
             </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="testimonial bottom">
-                    <h2>Testimonial</h2>
-                    <div class="media">
-                        <div class="pull-left">
-                            <a href="#"><img src="assets/images/home/profile1.png" alt=""></a>
-                        </div>
-                        <div class="media-body">
-                            <blockquote>Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat labore tail.</blockquote>
-                            <h3><a href="#">- Jhon Kalis</a></h3>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <div class="pull-left">
-                            <a href="#"><img src="assets/images/home/profile2.png" alt=""></a>
-                        </div>
-                        <div class="media-body">
-                            <blockquote>Capicola nisi flank sed minim sunt aliqua rump pancetta leberkas venison eiusmod.</blockquote>
-                            <h3><a href="">- Abraham Josef</a></h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="contact-info bottom">
-                    <h2>Contacts</h2>
-                    <address>
-                        E-mail: <a href="mailto:someone@example.com">email@email.com</a> <br>
-                        Phone: +1 (123) 456 7890 <br>
-                        Fax: +1 (123) 456 7891 <br>
-                    </address>
-
-                    <h2>Address</h2>
-                    <address>
-                        Unit C2, St.Vincent's Trading Est., <br>
-                        Feeder Road, <br>
-                        Bristol, BS2 0UY <br>
-                        United Kingdom <br>
-                    </address>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <div class="contact-form bottom">
-                    <h2>Send a message</h2>
-                    <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control" required="required" placeholder="Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" class="form-control" required="required" placeholder="Email Id">
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your text here"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" name="submit" class="btn btn-submit" value="Submit">
-                        </div>
-                    </form>
-                </div>
-            </div>
+<!--            <div class="col-md-4 col-sm-6">-->
+<!--                <div class="testimonial bottom">-->
+<!--                    <h2>Testimonial</h2>-->
+<!--                    <div class="media">-->
+<!--                        <div class="pull-left">-->
+<!--                            <a href="#"><img src="assets/images/home/profile1.png" alt=""></a>-->
+<!--                        </div>-->
+<!--                        <div class="media-body">-->
+<!--                            <blockquote>Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat labore tail.</blockquote>-->
+<!--                            <h3><a href="#">- Jhon Kalis</a></h3>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="media">-->
+<!--                        <div class="pull-left">-->
+<!--                            <a href="#"><img src="assets/images/home/profile2.png" alt=""></a>-->
+<!--                        </div>-->
+<!--                        <div class="media-body">-->
+<!--                            <blockquote>Capicola nisi flank sed minim sunt aliqua rump pancetta leberkas venison eiusmod.</blockquote>-->
+<!--                            <h3><a href="">- Abraham Josef</a></h3>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-3 col-sm-6">-->
+<!--                <div class="contact-info bottom">-->
+<!--                    <h2>Contacts</h2>-->
+<!--                    <address>-->
+<!--                        E-mail: <a href="mailto:someone@example.com">email@email.com</a> <br>-->
+<!--                        Phone: +1 (123) 456 7890 <br>-->
+<!--                        Fax: +1 (123) 456 7891 <br>-->
+<!--                    </address>-->
+<!---->
+<!--                    <h2>Address</h2>-->
+<!--                    <address>-->
+<!--                        Unit C2, St.Vincent's Trading Est., <br>-->
+<!--                        Feeder Road, <br>-->
+<!--                        Bristol, BS2 0UY <br>-->
+<!--                        United Kingdom <br>-->
+<!--                    </address>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-4 col-sm-12">-->
+<!--                <div class="contact-form bottom">-->
+<!--                    <h2>Send a message</h2>-->
+<!--                    <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">-->
+<!--                        <div class="form-group">-->
+<!--                            <input type="text" name="name" class="form-control" required="required" placeholder="Name">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <input type="email" name="email" class="form-control" required="required" placeholder="Email Id">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your text here"></textarea>-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <input type="submit" name="submit" class="btn btn-submit" value="Submit">-->
+<!--                        </div>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
             <div class="col-sm-12">
                 <div class="copyright-text text-center">
                     <p>&copy; Your Company 2014. All Rights Reserved.</p>

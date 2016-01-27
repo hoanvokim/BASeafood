@@ -12,7 +12,7 @@
   @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
 
   body {
-    background: #fff;
+    background: #0D75BC;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     font-size: 14px;
@@ -251,7 +251,7 @@
 }
 
 #header .navbar {
-  background: #fff;
+  background: #0D75BC;
   border: 0;
   margin-bottom: 0;
 }
@@ -1100,12 +1100,13 @@ ul.elements li > i{
 
 .portfolio-filter li a {
   border-radius: 0;
-  color: #686868;
+  color: #fff;
   font-size: 18px;
   font-weight: 300;
   padding: 0 25px;
   text-transform: capitalize;
   border: none;
+  background-color: #0D75BC;
 }
 
 .portfolio-filter li .active{
