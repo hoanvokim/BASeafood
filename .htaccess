@@ -9,7 +9,7 @@ RewriteEngine On
 RewriteBase /baseafood/
 
 # Protect application and system files from being viewed when the index.php is missing
-RewriteCond $1 ^(backend|system|private|logs)
+RewriteCond $1 ^(webapps|system|private|logs)
 
 # Rewrite to index.php/access_denied/URL
 RewriteRule ^(.*)$ index.php/access_denied/$1 [PT,L]
