@@ -18,8 +18,8 @@ class Home extends CI_Controller
     {
         $data['title'] = 'Baseafood';
 
-        $this->load->view('layout/header', $data);
+        $this->load->view('layouts/base/header', $data);
         $this->load->view('pages/home', $data);
-        $this->load->view('layout/footer');
+        $this->load->view('layouts/base/footer');
     }
 }
