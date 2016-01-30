@@ -7,7 +7,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">B<span>aseafood</span></a>
+            <!--            <a class="navbar-brand" href="index.html">B<span>aseafood</span></a>-->
+            <a class="navbar-brand" href="#"><img src="webresources/img/fish-logo.png"/> </a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -41,7 +42,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="privacy.html">News && Events</a>
+                    <a href="privacy.html">News - Events</a>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-close-others="false" data-delay="0" data-hover=
@@ -78,7 +79,8 @@
                 <li>
                     <a href="contact.html">Contact</a>
                 </li>
-                <li><input class="form-control search" placeholder=" Search" type="text"></li>
+                <li><input class="form-control search" type="text"></li>
+
             </ul>
         </div>
     </div>
