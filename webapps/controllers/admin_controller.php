@@ -19,14 +19,15 @@ class Admin_Controller extends CI_Controller
     public function index()
     {
         $data['title'] = 'Administration Page';
-        $this->load->view('layouts/base/header', $data);
+
         if ($this->isLogin()) {
             $this->load->view('pages/admin/index', $data);
-            $this->load->view('layouts/base/footer');
         } else {
+            $this->load->view('layouts/base/header', $data);
             $this->load->helper(array('form'));
             $this->load->view('pages/security/login', $data);
+            $this->load->view('layouts/base/footer_js');
         }
-        $this->load->view('layouts/base/footer_js');
+
     }
 }
