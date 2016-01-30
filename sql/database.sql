@@ -13,6 +13,7 @@ Create table `menu`(
 	`name` nvarchar(100) not null,
 	`fk_parent` tinyint ,
 	`url` varchar(1000),
+	`order` int,
 	PRIMARY KEY (`id`)
 )ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
