@@ -6,7 +6,7 @@
  * Time: 11:37 PM
  * To change this template use File | Settings | File Templates.
  */
-class Admin extends CI_Controller
+class Admin_Controller extends CI_Controller
 {
 
     public function __construct()
@@ -17,9 +17,13 @@ class Admin extends CI_Controller
     public function index()
     {
         $data['title'] = 'Administration Page';
-
         $this->load->view('layouts/base/header', $data);
-        $this->load->view('pages/admin/index', $data);
-        $this->load->view('layouts/base/footer');
+        if ($this->isLogin()) {
+            $this->load->view('pages/admin/index', $data);
+            $this->load->view('layouts/base/footer');
+        } else {
+            $this->load->view('pages/security/login', $data);
+        }
+        $this->load->view('layouts/base/footer_js');
     }
 }

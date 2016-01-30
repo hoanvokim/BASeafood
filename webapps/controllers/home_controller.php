@@ -6,7 +6,7 @@
  * Time: 10:33 PM
  * To change this template use File | Settings | File Templates.
  */
-class Home extends CI_Controller
+class Home_Controller extends CI_Controller
 {
 
     public function __construct()
@@ -17,8 +17,6 @@ class Home extends CI_Controller
     public function index()
     {
         $data['title'] = 'Baseafood';
-        $this->load->view('layouts/base/header', $data);
         $this->load->view('pages/home', $data);
-        $this->load->view('layouts/base/footer',$data);
     }
 }

@@ -17,10 +17,11 @@ class User_model extends CI_Model
 
     public function login($username, $password)
     {
+        return true;
     }
 
     public function insert($data)
     {
-        return $this->db->insert('news', $data);
+        return $this->db->insert('user', $data);
     }
 }

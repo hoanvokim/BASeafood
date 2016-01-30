@@ -93,4 +93,9 @@ class CI_Controller {
 		return self::$instance;
 	}
 
+    public function isLogin()
+    {
+        $user = $this->session->userdata('user_data');
+        return isset($user);
+    }
 }

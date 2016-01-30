@@ -1,3 +1,9 @@
-<br>
-<p>this is admin page</p>
-<br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <?php $this->load->view('layouts/base/header'); ?>
+</head>
+<body>
+<?php $this->load->view('layouts/base/footer_js'); ?>
+</body>
+</html>
