@@ -2,7 +2,7 @@
     <div class="container">
         <div class="form-wrapper">
             <?php  $attributes = array('class' => 'form-signin wow fadeInUp', 'id' => 'loginform');
-                echo form_open('verifylogin',$attributes); ?>
+                echo form_open('verifylogin_controller',$attributes); ?>
                 <h2 class="form-signin-heading">sign in now</h2>
                 <?php echo validation_errors(); ?>
                 <div class="login-wrap">

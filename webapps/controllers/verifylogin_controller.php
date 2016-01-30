@@ -6,7 +6,7 @@
  * Time: 12:09 AM
  * To change this template use File | Settings | File Templates.
  */
-class VerifyLogin extends CI_Controller {
+class VerifyLogin_Controller extends CI_Controller {
 
     function __construct()
     {
