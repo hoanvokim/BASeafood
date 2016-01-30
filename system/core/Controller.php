@@ -95,7 +95,7 @@ class CI_Controller {
 
     public function isLogin()
     {
-        $user = $this->session->userdata('user_data');
+        $user = $this->session->userdata('logged_in');
         return isset($user);
     }
 }
