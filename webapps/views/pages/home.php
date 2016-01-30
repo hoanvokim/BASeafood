@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php $this->load->view('layouts/base/menu'); ?>
-<!-- Sequence Modern Slider -->
+<!-- Sequence Modern Slider-->
 <div id="da-slider" class="da-slider">
 
     <div class="da-slide">
