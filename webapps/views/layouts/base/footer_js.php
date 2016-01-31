@@ -1,28 +1,28 @@
-<script src="webresources/js/jquery-1.8.3.min.js" type="text/javascript">
+<script src="<?php base_url()?>webresources/js/jquery-1.8.3.min.js" type="text/javascript">
 </script>
-<script src="webresources/js/bootstrap.min.js" type="text/javascript">
+<script src="<?php base_url()?>webresources/js/bootstrap.min.js" type="text/javascript">
 </script>
-<script src="webresources/js/hover-dropdown.js" type="text/javascript">
+<script src="<?php base_url()?>webresources/js/hover-dropdown.js" type="text/javascript">
 </script>
-<script defer src="webresources/js/jquery.flexslider.js" type="text/javascript">
+<script defer src="<?php base_url()?>webresources/js/jquery.flexslider.js" type="text/javascript">
 </script>
-<script src="webresources/assets/bxslider/jquery.bxslider.js" type="text/javascript">
-</script>
-
-<script  src="webresources/js/jquery.parallax-1.1.3.js" type="text/javascript">
-</script>
-<script src="webresources/js/wow.min.js" type="text/javascript">
-</script>
-<script src="webresources/assets/owlcarousel/owl.carousel.js" type="text/javascript">
+<script src="<?php base_url()?>webresources/assets/bxslider/jquery.bxslider.js" type="text/javascript">
 </script>
 
-<script src="webresources/js/jquery.easing.min.js" type="text/javascript">
+<script  src="<?php base_url()?>webresources/js/jquery.parallax-1.1.3.js" type="text/javascript">
 </script>
-<script src="webresources/js/link-hover.js" type="text/javascript">
+<script src="<?php base_url()?>webresources/js/wow.min.js" type="text/javascript">
 </script>
-<script src="webresources/js/superfish.js" type="text/javascript">
+<script src="<?php base_url()?>webresources/assets/owlcarousel/owl.carousel.js" type="text/javascript">
 </script>
-<script  src="webresources/js/parallax-slider/jquery.cslider.js" type="text/javascript">
+
+<script src="<?php base_url()?>webresources/js/jquery.easing.min.js" type="text/javascript">
+</script>
+<script src="<?php base_url()?>webresources/js/link-hover.js" type="text/javascript">
+</script>
+<script src="<?php base_url()?>webresources/js/superfish.js" type="text/javascript">
+</script>
+<script  src="<?php base_url()?>webresources/js/parallax-slider/jquery.cslider.js" type="text/javascript">
 </script>
 <script type="text/javascript">
     $(function () {
@@ -37,7 +37,7 @@
 
 
 <!--common script for all pages-->
-<script src="webresources/js/common-scripts.js" type="text/javascript">
+<script src="<?php base_url()?>webresources/js/common-scripts.js" type="text/javascript">
 </script>
 
 <script type="text/javascript">

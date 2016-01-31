@@ -6,3 +6,26 @@
  * Time: 1:35 AM
  * To change this template use File | Settings | File Templates.
  */
+class Manager_Gallery_Controller extends CI_Controller
+{
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('user_model','',TRUE);
+    }
+
+    public function index()
+    {
+        $data['title'] = 'Gallery administration';
+
+        if ($this->isLogin()) {
+            $this->load->view('pages/admin/gallery/index', $data);
+        } else {
+            $this->load->view('layouts/base/header', $data);
+            $this->load->helper(array('form'));
+            $this->load->view('pages/security/login', $data);
+            $this->load->view('layouts/base/footer_js');
+        }
+    }
+}

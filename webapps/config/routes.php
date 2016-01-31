@@ -52,3 +52,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['default_controller'] = 'home_controller';
 $route['admin'] = 'admin_controller/index';
+$route['category-manager'] = 'manager_category_controller/index';
+$route['gallery-manager'] = 'manager_gallery_controller/index';
+$route['images-manager'] = 'manager_images_controller/index';
+$route['menu-manager'] = 'manager_menu_controller/index';
+$route['news-manager'] = 'manager_news_controller/index';
+$route['product-manager'] = 'manager_product_controller/index';

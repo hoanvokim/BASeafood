@@ -1,8 +1,14 @@
-<?php
-/**
- * Created by IntelliJ IDEA.
- * User: NhuTran
- * Date: 1/31/16
- * Time: 12:36 AM
- * To change this template use File | Settings | File Templates.
- */
+<meta charset="UTF-8">
+<title><?php echo $title ?></title>
+<meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+<link href="<?php base_url()?>webresources/dashboard/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="<?php base_url()?>webresources/dashboard/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="<?php base_url()?>webresources/dashboard/css/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css"/>
+<link href="<?php base_url()?>webresources/dashboard/css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css"/>
+<link href="<?php base_url()?>webresources/dashboard/css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet"
+      type="text/css"/>
+<link href="<?php base_url()?>webresources/dashboard/css/AdminLTE.css" rel="stylesheet" type="text/css"/>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
