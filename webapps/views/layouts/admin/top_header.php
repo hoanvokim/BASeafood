@@ -1,5 +1,5 @@
 <header class="header">
-    <a href="index.html" class="logo">
+    <a href="<?php echo base_url()?>" class="logo">
         AdminLTE
     </a>
     <nav class="navbar navbar-static-top" role="navigation">
@@ -20,7 +20,7 @@
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header bg-light-blue">
-                            <img src="img/avatar3.png" class="img-circle" alt="User Image"/>
+                            <img src="webresources/dashboard/img/avatar3.png" class="img-circle" alt="User Image"/>
 
                             <p>
                                 Jane Doe - Web Developer
