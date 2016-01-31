@@ -28,6 +28,12 @@ class Admin_Controller extends CI_Controller
             $this->load->view('pages/security/login', $data);
             $this->load->view('layouts/base/footer_js');
         }
+    }
 
+    function logout()
+    {
+        $this->session->unset_userdata('logged_in');
+        session_destroy();
+        redirect('admin', 'refresh');
     }
 }

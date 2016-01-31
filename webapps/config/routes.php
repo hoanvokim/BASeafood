@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['default_controller'] = 'home_controller';
 $route['admin'] = 'admin_controller/index';
+$route['logout'] = 'admin_controller/logout';
 $route['category-manager'] = 'manager_category_controller/index';
 $route['gallery-manager'] = 'manager_gallery_controller/index';
 $route['upload-manager'] = 'manager_images_controller/index';
