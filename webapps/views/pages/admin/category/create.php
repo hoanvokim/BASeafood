@@ -34,6 +34,7 @@
                             </div>
                             <div class="box-footer">
                                 <button type="submit" class="btn btn-primary">create</button>
+                                <a href="<?php echo site_url('category-manager'); ?>" type="submit" class="btn">Cancel</a>
                             </div>
                         </form>
                     </div>

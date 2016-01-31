@@ -54,7 +54,7 @@ class Manager_Category_Controller extends CI_Controller
         else
         {
             $this->category_model->insert($this->input->post('name'));
-            redirect('admin', 'refresh');
+            redirect('category-manager', 'refresh');
         }
     }
 
