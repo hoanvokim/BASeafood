@@ -5,9 +5,8 @@
 	position: relative;
 	margin: 0 auto;
 	overflow: hidden;
-	background: transparent url(../../img/parallax-slider/images/main-bg.jpg) repeat 0% 0%;
-	border-top: 1px solid #eee;
-	border-bottom: 1px solid #eee;
+	/*background: transparent url(../../img/parallax-slider/images/slider_bg.png) repeat 0% 0%;*/
+	background-color: transparent;
 	/*box-shadow: 0px 1px 1px rgba(0,0,0,0.2), 0px -2px 1px #fff;*/
 	-webkit-transition: background-position 1s ease-out 0.3s;
 	-moz-transition: background-position 1s ease-out 0.3s;
@@ -22,7 +21,7 @@
 	height: 100%;
 	top: 0px;
 	left: 0px;
-	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+	/*font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;*/
 	text-align: left;
 }
 .da-slide-current{
@@ -60,7 +59,7 @@
 	white-space: nowrap;
 	z-index: 10;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-	font-family: 'Economica', Arial, sans-serif;
+	/*font-family: 'Economica', Arial, sans-serif;*/
 	font-weight: 700;
 	margin-left: -8%;
 }
@@ -72,10 +71,10 @@
 	line-height: 26px;
 	height: 80px;
 	overflow: hidden;
-	font-style: italic;
-	font-family: 'Economica', Arial, sans-serif;
+	/*font-style: italic;*/
+	/*font-family: 'Economica', Arial, sans-serif;*/
 	font-weight: 400;
-	font-style: italic;
+	/*font-style: italic;*/
 	margin-left: -8%;
 }
 .da-slide .da-img{

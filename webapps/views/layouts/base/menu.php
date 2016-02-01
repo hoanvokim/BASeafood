@@ -80,7 +80,6 @@
                     <a href="contact.html">Contact</a>
                 </li>
                 <li><input class="form-control search" type="text"></li>
-
             </ul>
         </div>
     </div>
