@@ -49,6 +49,7 @@
                                 <?php endforeach ?>
                                 </tbody>
                             </table>
+                            <?php echo $this->pagination->create_links();?>
                         </div>
 
                         <div class="box-footer clearfix no-border">
