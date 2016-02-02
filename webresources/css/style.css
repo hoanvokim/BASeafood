@@ -6,7 +6,7 @@ Website:
 */
 body {
     color: #fff;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
     /*font-family: 'Open Sans', sans-serif;*/
     padding: 0px !important;
     margin: 0px !important;
@@ -105,9 +105,9 @@ p {
 
 .head-section .nav li a,
 .head-section .nav li.active ul.dropdown-menu li a {
-    color: #336799;
+    color: #2559a5;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 500;
     text-transform: uppercase;
 }
 
@@ -124,7 +124,7 @@ ul.dropdown-menu {
 .head-section .nav li.active ul.dropdown-menu li a:hover,
 .head-section .nav li.active ul.dropdown-menu li.active a {
     color: #fff;
-    background-color: #336799;
+    background-color: #2559a5;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;

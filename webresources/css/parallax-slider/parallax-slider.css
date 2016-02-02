@@ -21,7 +21,7 @@
 	height: 100%;
 	top: 0px;
 	left: 0px;
-	/*font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;*/
+	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
 	text-align: left;
 }
 .da-slide-current{
@@ -59,7 +59,7 @@
 	white-space: nowrap;
 	z-index: 10;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-	/*font-family: 'Economica', Arial, sans-serif;*/
+	font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 	font-weight: 700;
 	margin-left: -8%;
 }
@@ -72,7 +72,7 @@
 	height: 80px;
 	overflow: hidden;
 	/*font-style: italic;*/
-	/*font-family: 'Economica', Arial, sans-serif;*/
+	font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 	font-weight: 400;
 	/*font-style: italic;*/
 	margin-left: -8%;
@@ -119,12 +119,11 @@
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
-	background: #000000;
-	margin: 3px;
+	margin: 6px;
 	cursor: pointer;
 	box-shadow:
 		1px 1px 1px rgba(0,0,0,0.1) inset,
-		1px 1px 1px rgba(255,255,255,0.1);
+		1px 1px 1px rgba(155, 155, 155, 0.65);
 	opacity: .7;
 }
 .da-dots span.da-dots-current:after{
@@ -151,16 +150,16 @@
 .da-arrows span{
 	position: absolute;
 	top: 50%;
-	height: 30px;
-	width: 30px;
+	height: 40px;
+	width: 40px;
 	border-radius: 50%;
-	background: #000;
+	/*background: #000;*/
 	cursor: pointer;
 	z-index: 2000;
 	opacity: 0.5;
-	box-shadow:
-		1px 1px 1px rgba(0,0,0,0.1) inset,
-		1px 1px 1px rgba(255,255,255,0.1);
+	/*box-shadow:*/
+		/*1px 1px 1px rgba(0,0,0,0.1) inset,*/
+		/*1px 1px 1px rgba(255,255,255,0.1);*/
 	-webkit-transition: opacity 0.4s ease-in-out-out 0.2s;
 	-moz-transition: opacity 0.4s ease-in-out-out 0.2s;
 	-o-transition: opacity 0.4s ease-in-out-out 0.2s;
@@ -177,15 +176,15 @@
 	height: 20px;
 	top: 5px;
 	left: 5px;
-	background: transparent url(../../img/parallax-slider/images/arrows.png) no-repeat top left;
+	background: transparent url(../../img/parallax-slider/images/arrows-1.png) no-repeat top left;
 	border-radius: 50%;
-	box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+	/*box-shadow: 1px 1px 2px rgba(0,0,0,0.1);*/
 }
 .da-arrows span:hover:after{
-	box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+	/*box-shadow: 1px 1px 4px rgba(0,0,0,0.3);*/
 }
 .da-arrows span:active:after{
-	box-shadow: 1px 1px 1px rgba(255,255,255,0.1);
+	/*box-shadow: 1px 1px 1px rgba(255,255,255,0.1);*/
 }
 .da-arrows span.da-arrows-next:after{
 	background-position: top right;
