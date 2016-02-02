@@ -1768,7 +1768,9 @@ ul.page-footer-list li i {
 }
 
 .dark-text {
-    color: #797d87
+    color: #15171d;
+    font-size: 10px;
+    font-style: italic;
 }
 
 .yellow-txt {
