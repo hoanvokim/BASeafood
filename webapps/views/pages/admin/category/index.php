@@ -4,13 +4,13 @@
     <?php $this->load->view('layouts/admin/header'); ?>
 </head>
 <body class="skin-blue">
-<?php $this->load->view('layouts/admin/top_header'); ?>
+<?php $this->load->view('layouts/admin/nav'); ?>
 <div class="wrapper row-offcanvas row-offcanvas-left">
-    <?php $this->load->view('layouts/admin/menu_sidebar'); ?>
+    <?php $this->load->view('layouts/admin/menu'); ?>
     <aside class="right-side">
         <section class="content">
             <div class="row">
-                <section class="col-lg-6">
+                <section class="col-lg-12">
                     <div class="box box-primary">
                         <div class="box-header">
                             <i class="ion ion-clipboard"></i>
@@ -18,7 +18,7 @@
                             <h3 class="box-title">Category List</h3>
                         </div>
                         <div class="box-body table-responsive">
-                            <table id="example2" class="table table-bordered table-hover">
+                            <table id="example1" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
                                     <th>Id</th>
@@ -33,8 +33,10 @@
                                         <td><?php echo $category_item['id'] ?></td>
                                         <td><?php echo $category_item['name'] ?></td>
                                         <td><?php echo $category_item['fk_parent'] ?></td>
-                                        <td><a href="category-manager/edit/<?php echo $category_item['id'] ?>"><i class="fa fa-edit"></i></a> |
-                                            <a href="category-manager/delete/<?php echo $category_item['id'] ?>"><i class="fa fa-trash-o"></i></a></td>
+                                        <td>
+                                            <?php echo anchor('category-manager/edit/'.$category_item['id'], '<i class="fa fa-edit"></i> Edit', 'class="btn btn-info"') ?>
+                                            | <?php echo anchor('category-manager/delete/'.$category_item['id'], '<i class="fa fa-trash-o"></i> Delete', 'class="btn btn-danger"') ?>
+                                        </td>
                                     </tr>
                                 <?php endforeach ?>
                                 </tbody>
@@ -51,6 +53,6 @@
     </aside>
 
 </div>
-<?php $this->load->view('layouts/admin/footer_js'); ?>
+<?php $this->load->view('layouts/admin/footer'); ?>
 </body>
 </html>
