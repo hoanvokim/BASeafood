@@ -6,7 +6,20 @@
 <script src="<?php echo base_url();?>webresources/dashboard/js/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
 <script src="<?php echo base_url();?>webresources/dashboard/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url();?>webresources/dashboard/js/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
-<!-- AdminLTE App -->
+<script src="<?php echo base_url();?>webresources/dashboard/js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
+<script src="<?php echo base_url();?>webresources/dashboard/js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
 <script src="<?php echo base_url();?>webresources/dashboard/js/AdminLTE/app.js" type="text/javascript"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?php echo base_url();?>webresources/dashboard/js/AdminLTE/dashboard.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function() {
+        $("#example1").dataTable();
+        $('#example2').dataTable({
+            "bPaginate": true,
+            "bLengthChange": false,
+            "bFilter": false,
+            "bSort": true,
+            "bInfo": true,
+            "bAutoWidth": false
+        });
+    });
+</script>
