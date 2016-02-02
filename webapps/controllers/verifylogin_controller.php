@@ -6,7 +6,7 @@
  * Time: 12:09 AM
  * To change this template use File | Settings | File Templates.
  */
-class VerifyLogin_Controller extends CI_Controller {
+class VerifyLogin_controller extends CI_Controller {
 
     function __construct()
     {
@@ -24,28 +24,18 @@ class VerifyLogin_Controller extends CI_Controller {
 
         if($this->form_validation->run() == FALSE)
         {
-            //Field validation failed.  User redirected to login page
-            $data['title'] = 'Administration Page';
-            $this->load->view('layouts/base/header', $data);
-            $this->load->view('pages/security/login', $data);
-            $this->load->view('layouts/base/footer_js');
+            $this->loadLoginView();
         }
         else
         {
-            //Go to private area
             redirect('admin', 'refresh');
         }
-
     }
 
     function check_database($password)
     {
-        //Field validation succeeded.  Validate against database
         $username = $this->input->post('username');
-
-        //query the database
         $result = $this->user_model->login($username, $password);
-
         if($result)
         {
             $sess_array = array();

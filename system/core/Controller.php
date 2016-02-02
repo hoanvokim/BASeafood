@@ -98,4 +98,9 @@ class CI_Controller {
         $user = $this->session->userdata('logged_in');
         return isset($user);
     }
+
+    public function loadLoginView(){
+        $data['title'] = 'Login';
+        $this->load->view('pages/security/login', $data);
+    }
 }

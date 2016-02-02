@@ -4,9 +4,8 @@
  * User: NhuTran
  * Date: 1/31/16
  * Time: 1:22 AM
- * To change this template use File | Settings | File Templates.
  */
-class Manager_Category_Controller extends CI_Controller
+class Manager_category_controller extends CI_Controller
 {
 
     public function __construct()
@@ -18,34 +17,31 @@ class Manager_Category_Controller extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Category administration';
-
-        if ($this->isLogin()) {
-            $data['categories'] = $this->category_model->findAll();
-            $this->load->view('pages/admin/category/index', $data);
-        } else {
-            $this->load->view('layouts/base/header', $data);
-            $this->load->helper(array('form'));
-            $this->load->view('pages/security/login', $data);
-            $this->load->view('layouts/base/footer_js');
+        if (!$this->isLogin()) {
+            $this->loadLoginView();
+            return;
         }
+        $data['title'] = 'Category administration';
+        $data['categories'] = $this->category_model->findAll();
+        $this->load->view('pages/admin/category/index', $data);
     }
 
     public function create_new()
     {
-        $data['title'] = 'Category creation';
-        $this->load->helper(array('form'));
-        if ($this->isLogin()) {
-            $this->load->view('pages/admin/category/create', $data);
-        } else {
-            $this->load->view('layouts/base/header', $data);
-            $this->load->view('pages/security/login', $data);
-            $this->load->view('layouts/base/footer_js');
+        if (!$this->isLogin()) {
+            $this->loadLoginView();
+            return;
         }
+        $data['title'] = 'Category creation';
+        $this->load->view('pages/admin/category/create', $data);
     }
 
     public function post_create_new()
     {
+        if (!$this->isLogin()) {
+            $this->loadLoginView();
+            return;
+        }
         $data['title'] = 'Category creation';
         $this->load->library('form_validation');
         $this->form_validation->set_rules('name', 'name', 'trim|required|is_unique[category.name]', array(
@@ -62,28 +58,22 @@ class Manager_Category_Controller extends CI_Controller
 
     public function delete($id)
     {
-        $data['title'] = 'Category creation';
-        $this->load->helper(array('form'));
-        if ($this->isLogin()) {
-            $this->load->view('pages/admin/category/create', $data);
-        } else {
-            $this->load->view('layouts/base/header', $data);
-            $this->load->view('pages/security/login', $data);
-            $this->load->view('layouts/base/footer_js');
+        if (!$this->isLogin()) {
+            $this->loadLoginView();
+            return;
         }
+        $data['title'] = 'Delete category?';
+        $this->load->view('pages/admin/category/delete', $data);
     }
 
     public function edit($id)
     {
-        $data['title'] = 'Category creation';
-        $this->load->helper(array('form'));
-        if ($this->isLogin()) {
-            $this->load->view('pages/admin/category/create', $data);
-        } else {
-            $this->load->view('layouts/base/header', $data);
-            $this->load->view('pages/security/login', $data);
-            $this->load->view('layouts/base/footer_js');
+        if (!$this->isLogin()) {
+            $this->loadLoginView();
+            return;
         }
+        $data['title'] = 'Edit category';
+        $this->load->view('pages/admin/category/create', $data);
     }
 
     function check_existed($name)

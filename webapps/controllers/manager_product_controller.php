@@ -6,7 +6,7 @@
  * Time: 1:23 AM
  * To change this template use File | Settings | File Templates.
  */
-class Manager_Product_Controller extends CI_Controller
+class Manager_product_controller extends CI_Controller
 {
 
     public function __construct()
@@ -17,15 +17,11 @@ class Manager_Product_Controller extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Product administration';
-
-        if ($this->isLogin()) {
-            $this->load->view('pages/admin/product/index', $data);
-        } else {
-            $this->load->view('layouts/base/header', $data);
-            $this->load->helper(array('form'));
-            $this->load->view('pages/security/login', $data);
-            $this->load->view('layouts/base/footer_js');
+        if (!$this->isLogin()) {
+            $this->loadLoginView();
+            return;
         }
+        $data['title'] = 'Product administration';
+        $this->load->view('pages/admin/product/index', $data);
     }
 }
