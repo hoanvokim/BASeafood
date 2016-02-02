@@ -49,7 +49,7 @@ class Manager_category_controller extends CI_Controller
             'is_unique' => 'This %s already exists.'
         ));
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('pages/admin/category/create');
+            $this->load->view('pages/admin/category/create',$data);
         } else {
             $this->category_model->insert($this->input->post('name'));
             redirect('category-manager', 'refresh');

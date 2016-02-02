@@ -1,7 +1,6 @@
-<div aria-hidden="true" aria-labelledby="myModal" role="dialog" tabindex="-1" id="create_category_dialog" class="modal fade">
+<div aria-hidden="true" aria-labelledby="create_category_dialog" role="dialog" tabindex="-1" id="create_category_dialog" class="modal fade">
     <div class="modal-dialog">
-        <?php $attr = array('id' => 'myForm');
-        echo form_open('create-category-submit', $attr); ?>
+        <?php  echo form_open('create-category-submit'); ?>
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -9,11 +8,10 @@
             </div>
             <div class="modal-body">
                 <div class="box box-primary">
-                    <div class="box-header">
-                        <?php echo validation_errors(); ?>
-                    </div>
-
                     <div class="box-body">
+                        <div class="text-red text-center">
+                            <?php echo validation_errors(); ?>
+                        </div>
                         <div class="form-group">
                             <label for="name">Category name</label>
                             <input type="text" id="name" name="name" class="form-control" placeholder="Category name" autofocus>

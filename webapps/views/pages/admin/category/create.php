@@ -12,11 +12,11 @@
             <div class="row">
                 <section class="col-lg-6">
                     <div class="box box-primary">
-                        <div class="box-header">
-                            <?php echo validation_errors(); ?>
-                        </div>
                         <?php echo form_open('create-category-submit'); ?>
                         <div class="box-body">
+                            <div class="text-red text-center">
+                                <?php echo validation_errors(); ?>
+                            </div>
                             <div class="form-group">
                                 <label for="name">Category name</label>
                                 <input type="text" id="name" name="name" class="form-control" placeholder="Category name" autofocus>
@@ -24,7 +24,7 @@
                         </div>
                         <div class="box-footer">
                             <button type="submit" class="btn btn-primary">create</button>
-                            <a href="<?php echo site_url('category-manager'); ?>" type="submit" class="btn pull-right">Cancel</a>
+                            <a href="<?php echo site_url('category-manager'); ?>" type="submit" class="btn">Cancel</a>
                         </div>
                         </form>
                     </div>

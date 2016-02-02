@@ -45,8 +45,7 @@
                         </div>
 
                         <div class="box-footer clearfix no-border">
-                            <a data-toggle="modal" href="#create_category_dialog"> <i class="fa fa-plus"></i> Add item</a>
-                            <a href="create-category" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</a>
+                            <a data-toggle="modal" href="#create_category_dialog" class="btn btn-default pull-right"> <i class="fa fa-plus"></i> Add item</a>
                         </div>
                     </div>
                 </section>
