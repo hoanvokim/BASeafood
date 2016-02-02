@@ -22,15 +22,6 @@ class Manager_Category_Controller extends CI_Controller
 
         if ($this->isLogin()) {
             $data['categories'] = $this->category_model->findAll();
-
-            $this->load->library('pagination');
-            $config['base_url'] = 'http://localhost/baseafood/category-manager/';
-            $config['uri_segment'] = 2;
-            $config['total_rows'] = 2;
-            $config['per_page'] = 1;
-            $config['use_page_numbers'] = TRUE;
-            $this->pagination->initialize($config);
-
             $this->load->view('pages/admin/category/index', $data);
         } else {
             $this->load->view('layouts/base/header', $data);
