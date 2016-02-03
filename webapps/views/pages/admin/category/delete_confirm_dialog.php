@@ -1,4 +1,4 @@
-<div aria-hidden="true" aria-labelledby="delete_category_confirm_dialog" role="dialog" tabindex="-1" id="delete_category_confirm_dialog" class="modal fade">
+<div aria-hidden="true" aria-labelledby="deleteCategoryDialog" role="dialog" tabindex="-1" id="deleteCategoryDialog" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">

@@ -36,7 +36,7 @@
                                         <td>
                                             <?php echo anchor('category-manager/edit/' . $category_item['id'], '<i class="fa fa-edit"></i> Edit', 'class="btn btn-info"') ?>
                                             | <?php echo anchor('category-manager/delete/' . $category_item['id'], '<i class="fa fa-trash-o"></i> Delete', 'class="btn btn-danger"') ?>
-                                            <a data-toggle="modal" href="#delete_category_confirm_dialog"> <i class="fa fa-trash-o"></i> Delete</a>
+                                            <a id="showDeleteCategoryDialog" data-toggle="modal" href="#deleteCategoryDialog"> <i class="fa fa-trash-o"></i> Delete</a>
                                         </td>
                                     </tr>
                                 <?php endforeach ?>
@@ -45,7 +45,7 @@
                         </div>
 
                         <div class="box-footer clearfix no-border">
-                            <a data-toggle="modal" href="#create_category_dialog" class="btn btn-default pull-right"> <i class="fa fa-plus"></i> Add item</a>
+                            <a id="showCreateCategoryDialog" data-toggle="modal" href="#createCategoryDialog" class="btn btn-default pull-right"> <i class="fa fa-plus"></i> Add item</a>
                         </div>
                     </div>
                 </section>
@@ -56,5 +56,8 @@
 <?php $this->load->view('pages/admin/category/delete_confirm_dialog'); ?>
 <?php $this->load->view('pages/admin/category/create_dialog'); ?>
 <?php $this->load->view('layouts/admin/footer'); ?>
+<script>
+
+</script>
 </body>
 </html>

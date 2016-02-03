@@ -1,4 +1,4 @@
-<div aria-hidden="true" aria-labelledby="create_category_dialog" role="dialog" tabindex="-1" id="create_category_dialog" class="modal fade">
+<div aria-hidden="true" aria-labelledby="createCategoryDialog" role="dialog" tabindex="-1" id="createCategoryDialog" class="modal fade">
     <div class="modal-dialog">
         <?php  echo form_open('create-category-submit'); ?>
         <div class="modal-content">
