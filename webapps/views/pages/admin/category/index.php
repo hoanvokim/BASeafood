@@ -21,7 +21,6 @@
                             <table id="example1" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
-                                    <th>Id</th>
                                     <th>Name</th>
                                     <th>Parent</th>
                                     <th>Actions</th>
@@ -30,7 +29,6 @@
                                 <tbody>
                                 <?php foreach ($categories as $category_item): ?>
                                     <tr>
-                                        <td><?php echo $category_item['id'] ?></td>
                                         <td><?php echo $category_item['name'] ?></td>
                                         <td><?php echo $category_item['fk_parent'] ?></td>
                                         <td>

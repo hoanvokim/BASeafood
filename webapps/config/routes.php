@@ -51,19 +51,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 $route['default_controller'] = 'home_controller';
-$route['admin'] = 'admin_controller/index';
-$route['logout'] = 'admin_controller/logout';
+$route['admin'] = 'dm/admin_controller/index';
+$route['logout'] = 'dm/admin_controller/logout';
+$route['verifylogin'] = 'dm/verifylogin_controller/index';
 
-$route['category-manager'] = 'manager_category_controller/index';
-$route['create-category'] = 'manager_category_controller/create_new';
-$route['category-manager/update/:num'] = 'manager_category_controller/update';
-$route['category-manager/delete/:num'] = 'manager_category_controller/delete';
-$route['create-category-submit'] = 'manager_category_controller/post_create_new';
-$route['update-category-submit'] = 'manager_category_controller/post_update';
-$route['delete-category-submit/:num'] = 'manager_category_controller/post_delete';
+//routing for administration pages
+//category administration
+$route['category-manager'] = 'dm/manager_category_controller/index';
+$route['create-category'] = 'dm/manager_category_controller/create_new';
+$route['category-manager/update/:num'] = 'dm/manager_category_controller/update';
+$route['category-manager/delete/:num'] = 'dm/manager_category_controller/delete';
+$route['create-category-submit'] = 'dm/manager_category_controller/post_create_new';
+$route['update-category-submit'] = 'dm/manager_category_controller/post_update';
+$route['delete-category-submit/:num'] = 'dm/manager_category_controller/post_delete';
 
-$route['gallery-manager'] = 'manager_gallery_controller/index';
-$route['upload-manager'] = 'manager_images_controller/index';
-$route['menu-manager'] = 'manager_menu_controller/index';
-$route['news-manager'] = 'manager_news_controller/index';
-$route['product-manager'] = 'manager_product_controller/index';
+//gallery administration
+$route['gallery-manager'] = 'dm/manager_gallery_controller/index';
+
+//upload images administration
+$route['upload-manager'] = 'dm/manager_images_controller/index';
+
+//menu administration
+$route['menu-manager'] = 'dm/manager_menu_controller/index';
+
+//news administration
+$route['news-manager'] = 'dm/manager_news_controller/index';
+
+//product administration
+$route['product-manager'] = 'dm/manager_product_controller/index';
