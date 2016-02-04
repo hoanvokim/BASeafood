@@ -34,9 +34,8 @@
                                         <td><?php echo $category_item['name'] ?></td>
                                         <td><?php echo $category_item['fk_parent'] ?></td>
                                         <td>
-                                            <?php echo anchor('category-manager/edit/' . $category_item['id'], '<i class="fa fa-edit"></i> Edit', 'class="btn btn-info"') ?>
-                                            | <?php echo anchor('category-manager/delete/' . $category_item['id'], '<i class="fa fa-trash-o"></i> Delete', 'class="btn btn-danger"') ?>
-                                            <a id="showDeleteCategoryDialog" data-toggle="modal" href="#deleteCategoryDialog"> <i class="fa fa-trash-o"></i> Delete</a>
+                                            <a href="<?php echo base_url() . "category-manager/edit/" . $category_item['id']; ?>" class="btn btn-info"><i class="fa fa-edit"></i> Edit</a>
+                                            <a href="<?php echo base_url() . "category-manager/delete/" . $category_item['id']; ?>" class="btn btn-danger"><i class="fa fa-trash-o"></i> Delete</a>
                                         </td>
                                     </tr>
                                 <?php endforeach ?>
@@ -45,7 +44,7 @@
                         </div>
 
                         <div class="box-footer clearfix no-border">
-                            <a id="showCreateCategoryDialog" data-toggle="modal" href="#createCategoryDialog" class="btn btn-default pull-right"> <i class="fa fa-plus"></i> Add item</a>
+                            <?php echo anchor('create-category', '<i class="fa fa-plus"></i>Add new', 'class="btn btn-default pull-right"') ?>
                         </div>
                     </div>
                 </section>
@@ -53,8 +52,6 @@
         </section>
     </aside>
 </div>
-<?php $this->load->view('pages/admin/category/delete_confirm_dialog'); ?>
-<?php $this->load->view('pages/admin/category/create_dialog'); ?>
 <?php $this->load->view('layouts/admin/footer'); ?>
 <script>
 

@@ -1,4 +1,5 @@
-<?php    defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
+
 /**
  * Created by IntelliJ IDEA.
  * User: NhuTran
@@ -49,21 +50,30 @@ class Manager_category_controller extends CI_Controller
             'is_unique' => 'This %s already exists.'
         ));
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('pages/admin/category/create',$data);
-        } else {
+            $this->load->view('pages/admin/category/create', $data);
+        }
+        else {
             $this->category_model->insert($this->input->post('name'));
             redirect('category-manager', 'refresh');
         }
     }
 
-    public function delete($id)
+    public function delete()
     {
         if (!$this->isLogin()) {
             $this->loadLoginView();
             return;
         }
         $data['title'] = 'Delete category?';
+        $category = $this->category_model->findById($this->uri->segment(3));
+        $data['category'] = $category;
         $this->load->view('pages/admin/category/delete', $data);
+    }
+
+    public function post_delete()
+    {
+        $this->category_model->delete($this->uri->segment(2));
+        redirect('category-manager', 'refresh');
     }
 
     public function edit($id)
