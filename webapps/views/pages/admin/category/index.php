@@ -34,7 +34,7 @@
                                         <td><?php echo $category_item['name'] ?></td>
                                         <td><?php echo $category_item['fk_parent'] ?></td>
                                         <td>
-                                            <a href="<?php echo base_url() . "category-manager/edit/" . $category_item['id']; ?>" class="btn btn-info"><i class="fa fa-edit"></i> Edit</a>
+                                            <a href="<?php echo base_url() . "category-manager/update/" . $category_item['id']; ?>" class="btn btn-info"><i class="fa fa-edit"></i> Edit</a>
                                             <a href="<?php echo base_url() . "category-manager/delete/" . $category_item['id']; ?>" class="btn btn-danger"><i class="fa fa-trash-o"></i> Delete</a>
                                         </td>
                                     </tr>

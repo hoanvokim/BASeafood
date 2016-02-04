@@ -23,15 +23,28 @@ class Category_Model extends CI_Model
 
     public function findById($id)
     {
-        $this->db->select('id,name');
+        $this->db->select('id , name');
         $this->db->from('category');
         $this->db->where('id =', $id);
         $query = $this->db->get();
-        return $query->result_array();
+        if ($query) {
+            foreach ($query->result_array() as $item) {
+                return array(
+                    'id' => $item['id'],
+                    'name' => $item['name'],
+                );
+            }
+        }
+        return false;
     }
 
     public function findByName($name)
     {
+        $this->db->select('id,name');
+        $this->db->from('category');
+        $this->db->where('name =', $name);
+        $query = $this->db->get();
+        return $query->result_array();
     }
 
     public function insert($name)
@@ -42,61 +55,18 @@ class Category_Model extends CI_Model
         $this->db->insert('category', $data);
     }
 
-    public function update($category)
+    public function update($id, $name)
     {
+        $data = array(
+            'name' => $name
+        );
+        $this->db->where('id', $id);
+        $this->db->update('category', $data);
     }
 
     public function delete($id)
     {
         $this->db->where('id', $id);
         $this->db->delete('category');
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param mixed $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getParent()
-    {
-        return $this->parent;
-    }
-
-    /**
-     * @param mixed $parent
-     */
-    public function setParent($parent)
-    {
-        $this->parent = $parent;
     }
 }

@@ -53,12 +53,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home_controller';
 $route['admin'] = 'admin_controller/index';
 $route['logout'] = 'admin_controller/logout';
+
 $route['category-manager'] = 'manager_category_controller/index';
-$route['category-manager/edit/:num'] = 'manager_category_controller/edit/$1';
-$route['category-manager/delete/:num'] = 'manager_category_controller/delete';
 $route['create-category'] = 'manager_category_controller/create_new';
+$route['category-manager/update/:num'] = 'manager_category_controller/update';
+$route['category-manager/delete/:num'] = 'manager_category_controller/delete';
 $route['create-category-submit'] = 'manager_category_controller/post_create_new';
+$route['update-category-submit'] = 'manager_category_controller/post_update';
 $route['delete-category-submit/:num'] = 'manager_category_controller/post_delete';
+
 $route['gallery-manager'] = 'manager_gallery_controller/index';
 $route['upload-manager'] = 'manager_images_controller/index';
 $route['menu-manager'] = 'manager_menu_controller/index';
