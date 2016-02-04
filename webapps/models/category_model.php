@@ -17,13 +17,22 @@ class Category_Model extends CI_Model
 
     public function findAll()
     {
+        $this->db->order_by('fk_parent,id');
         $query = $this->db->get('category');
         return $query->result_array();
     }
 
+    public function findByParent($parent){
+        $this->db->select('*');
+        $this->db->from('category');
+        $this->db->where('fk_parent =', 5);
+        $query = $this->db->get();
+        return isset($query);
+    }
+
     public function findById($id)
     {
-        $this->db->select('id , name');
+        $this->db->select('id , name,fk_parent');
         $this->db->from('category');
         $this->db->where('id =', $id);
         $query = $this->db->get();
@@ -32,6 +41,7 @@ class Category_Model extends CI_Model
                 return array(
                     'id' => $item['id'],
                     'name' => $item['name'],
+                    'parent' => $item['fk_parent'],
                 );
             }
         }
@@ -47,11 +57,19 @@ class Category_Model extends CI_Model
         return $query->result_array();
     }
 
-    public function insert($name)
+    public function insert($name, $parentId)
     {
-        $data = array(
-            'name' => $name,
-        );
+        if (!isset($parentId)) {
+            $data = array(
+                'name' => $name,
+            );
+        } else {
+            $data = array(
+                'name' => $name,
+                'fk_parent' => $parentId,
+            );
+        }
+
         $this->db->insert('category', $data);
     }
 

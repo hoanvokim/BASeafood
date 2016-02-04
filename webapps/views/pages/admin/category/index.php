@@ -18,22 +18,30 @@
                             <h3 class="box-title">Category List</h3>
                         </div>
                         <div class="box-body table-responsive">
-                            <table id="example1" class="table table-bordered table-hover">
+                            <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
+                                    <th>Id</th>
                                     <th>Name</th>
                                     <th>Parent</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach ($categories as $category_item): ?>
+                                <?php foreach ($categories as $category): ?>
                                     <tr>
-                                        <td><?php echo $category_item['name'] ?></td>
-                                        <td><?php echo $category_item['fk_parent'] ?></td>
+                                        <td><?php echo $category['id'] ?></td>
+                                        <td><?php echo $category['name'] ?></td>
+                                        <td><?php echo $category['fk_parent'] ?></td>
                                         <td>
-                                            <a href="<?php echo base_url() . "category-manager/update/" . $category_item['id']; ?>" class="btn btn-info"><i class="fa fa-edit"></i> Edit</a>
-                                            <a href="<?php echo base_url() . "category-manager/delete/" . $category_item['id']; ?>" class="btn btn-danger"><i class="fa fa-trash-o"></i> Delete</a>
+                                            <a href="<?php echo base_url() . "create-category/" . $category['id']; ?>"
+                                               class="btn btn-default"><i class="fa fa-edit"></i> Add child</a>
+                                            <a href="<?php echo base_url() . "category-manager/update/" . $category['id']; ?>"
+                                               class="btn btn-info"><i class="fa fa-edit"></i> Edit</a>
+                                            <?php if ($category['can_be_deleted']): ?>
+                                                <a href="<?php echo base_url() . "category-manager/delete/" . $category['id']; ?>"
+                                                   class="btn btn-danger"><i class="fa fa-trash-o"></i> Delete</a>
+                                            <?php endif ?>
                                         </td>
                                     </tr>
                                 <?php endforeach ?>

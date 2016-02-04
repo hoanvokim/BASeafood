@@ -58,7 +58,8 @@ $route['verifylogin'] = 'dm/verifylogin_controller/index';
 //routing for administration pages
 //category administration
 $route['category-manager'] = 'dm/manager_category_controller/index';
-$route['create-category'] = 'dm/manager_category_controller/create_new';
+$route['create-category'] = 'dm/manager_category_controller/create_new/$1';
+$route['create-category/:num'] = 'dm/manager_category_controller/create_new/$1';
 $route['category-manager/update/:num'] = 'dm/manager_category_controller/update';
 $route['category-manager/delete/:num'] = 'dm/manager_category_controller/delete';
 $route['create-category-submit'] = 'dm/manager_category_controller/post_create_new';

@@ -17,9 +17,19 @@
                             <div class="text-red text-center">
                                 <?php echo validation_errors(); ?>
                             </div>
+                            <?php if ($parent!=-1): ?>
+                                <input type="hidden" id="hide" name="pid" value="<?php echo $parent['id']; ?>">
+                                <div class="form-group">
+                                    <label>Parent category:</label>
+                                    <label class="text-muted disabled"><?php echo $parent['name']; ?></label>
+                                </div>
+                            <?php else: ?>
+                                <input type="hidden" id="hide" name="pid" value="">
+                            <?php endif ?>
                             <div class="form-group">
                                 <label for="name">Category name</label>
-                                <input type="text" id="name" name="name" class="form-control" placeholder="Category name" autofocus>
+                                <input type="text" id="name" name="name" class="form-control"
+                                       placeholder="Category name" autofocus>
                             </div>
                         </div>
                         <div class="box-footer">
