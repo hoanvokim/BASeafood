@@ -38,7 +38,7 @@
                                                class="btn btn-default"><i class="fa fa-edit"></i> Add child</a>
                                             <a href="<?php echo base_url() . "category-manager/update/" . $category['id']; ?>"
                                                class="btn btn-info"><i class="fa fa-edit"></i> Edit</a>
-                                            <?php if ($category['can_be_deleted']): ?>
+                                            <?php if ($category['can_be_deleted']==TRUE): ?>
                                                 <a href="<?php echo base_url() . "category-manager/delete/" . $category['id']; ?>"
                                                    class="btn btn-danger"><i class="fa fa-trash-o"></i> Delete</a>
                                             <?php endif ?>

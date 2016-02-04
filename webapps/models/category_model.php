@@ -22,12 +22,13 @@ class Category_Model extends CI_Model
         return $query->result_array();
     }
 
-    public function findByParent($parent){
+    public function findByParent($parent)
+    {
         $this->db->select('*');
         $this->db->from('category');
-        $this->db->where('fk_parent =', 5);
+        $this->db->where('fk_parent =', $parent);
         $query = $this->db->get();
-        return isset($query);
+        return $query->result_array();
     }
 
     public function findById($id)

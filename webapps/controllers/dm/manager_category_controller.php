@@ -26,7 +26,10 @@ class Manager_category_controller extends CI_Controller
         $data['categories'] = $this->category_model->findAll();
         $categories = array();
         foreach ($data['categories'] as $category) {
-            $can_be_deleted = !$this->category_model->findByParent($category['id']);
+            $can_be_deleted = TRUE;
+            if ($this->category_model->findByParent($category['id'])) {
+                $can_be_deleted = FALSE;
+            };
             array_push($categories, array(
                 'id' => $category['id'],
                 'name' => $category['name'],
