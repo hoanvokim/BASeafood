@@ -17,8 +17,8 @@ class Manager_menu_controller extends CI_Controller
 
     public function index()
     {
-        if (!$this->isLogin()) {
-            $this->loadLoginView();
+        if (!$this->is_login()) {
+            $this->load_login_view();
             return;
         }
         $data['title'] = 'Menu administration';

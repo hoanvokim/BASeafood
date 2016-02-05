@@ -71,6 +71,12 @@ $route['gallery-manager'] = 'dm/manager_gallery_controller/index';
 
 //upload images administration
 $route['upload-manager'] = 'dm/manager_images_controller/index';
+$route['upload-image'] = 'dm/manager_images_controller/upload';
+$route['upload-manager/update/:num'] = 'dm/manager_images_controller/update';
+$route['upload-manager/delete/:num'] = 'dm/manager_images_controller/delete';
+$route['upload-image-submit'] = 'dm/manager_images_controller/post_upload';
+$route['update-image-submit'] = 'dm/manager_images_controller/post_update';
+$route['delete-uploaded-image'] = 'dm/manager_images_controller/post_delete';
 
 //menu administration
 $route['menu-manager'] = 'dm/manager_menu_controller/index';

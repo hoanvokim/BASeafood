@@ -24,7 +24,7 @@ class VerifyLogin_controller extends CI_Controller {
 
         if($this->form_validation->run() == FALSE)
         {
-            $this->loadLoginView();
+            $this->load_login_view();
         }
         else
         {

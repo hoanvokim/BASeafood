@@ -18,8 +18,8 @@ class Manager_category_controller extends CI_Controller
 
     public function index()
     {
-        if (!$this->isLogin()) {
-            $this->loadLoginView();
+        if (!$this->is_login()) {
+            $this->load_login_view();
             return;
         }
         $data['title'] = 'Category administration';
@@ -43,8 +43,8 @@ class Manager_category_controller extends CI_Controller
 
     public function create_new()
     {
-        if (!$this->isLogin()) {
-            $this->loadLoginView();
+        if (!$this->is_login()) {
+            $this->load_login_view();
             return;
         }
         $data['title'] = 'Category creation';
@@ -59,8 +59,8 @@ class Manager_category_controller extends CI_Controller
 
     public function post_create_new()
     {
-        if (!$this->isLogin()) {
-            $this->loadLoginView();
+        if (!$this->is_login()) {
+            $this->load_login_view();
             return;
         }
         $data['title'] = 'Category creation';
@@ -84,8 +84,8 @@ class Manager_category_controller extends CI_Controller
 
     public function update()
     {
-        if (!$this->isLogin()) {
-            $this->loadLoginView();
+        if (!$this->is_login()) {
+            $this->load_login_view();
             return;
         }
         $data['title'] = 'Edit category';
@@ -104,8 +104,8 @@ class Manager_category_controller extends CI_Controller
 
     public function post_update()
     {
-        if (!$this->isLogin()) {
-            $this->loadLoginView();
+        if (!$this->is_login()) {
+            $this->load_login_view();
             return;
         }
         $data['title'] = 'Edit category';
@@ -129,8 +129,8 @@ class Manager_category_controller extends CI_Controller
 
     public function delete()
     {
-        if (!$this->isLogin()) {
-            $this->loadLoginView();
+        if (!$this->is_login()) {
+            $this->load_login_view();
             return;
         }
         $data['title'] = 'Delete category?';
