@@ -19,7 +19,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="upload_file">File upload</label>
-                                <input type='file' name='upload_file' size='20'/>
+                                <input type='file' name='userfile' size='20'/>
                             </div>
                         </div>
                         <div class="box-footer">

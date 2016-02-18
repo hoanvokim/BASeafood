@@ -43,7 +43,7 @@ class Manager_images_controller extends CI_Controller
     {
         $this->load->library('form_validation');
         $this->load->library('upload', $this->get_config());
-        if ($this->upload->do_upload()) {
+        if ($this->upload->do_upload('userfile')) {
             redirect('upload-manager', 'refresh');
         }
         $this->load->library('upload');
@@ -77,7 +77,7 @@ class Manager_images_controller extends CI_Controller
     private function get_config()
     {
         return array(
-            'upload_path' => base_url() . "assets/upload/images/",
+            'upload_path' =>  "./assets/upload/images/",
             'allowed_types' => "gif|jpg|png|jpeg",
             'overwrite' => TRUE,
             'max_size' => "20480000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
