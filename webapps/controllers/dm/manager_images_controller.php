@@ -23,7 +23,7 @@ class Manager_images_controller extends CI_Controller
             return;
         }
         $data['title'] = 'Images administration';
-        $data['images'] = array();
+        $data['images'] = $this->images_model->findAll();
         $this->load->view('pages/admin/images/index', $data);
     }
 
@@ -44,12 +44,25 @@ class Manager_images_controller extends CI_Controller
         $this->load->library('form_validation');
         $this->load->library('upload', $this->get_config());
         if ($this->upload->do_upload('userfile')) {
+            $upload_files = $this->upload->data();
+            $this->images_model->insert($upload_files['file_name'],$upload_files['file_path'],$upload_files['file_path']);
             redirect('upload-manager', 'refresh');
         }
         $this->load->library('upload');
         $data['title'] = 'Upload image';
         $data['error'] = $this->upload->display_errors();
         $this->load->view('pages/admin/images/upload', $data);
+    }
+
+    private function get_config()
+    {
+        return array(
+            'upload_path' => "./assets/upload/images/",
+            'allowed_types' => "gif|jpg|png|jpeg",
+            'overwrite' => TRUE,
+            'max_size' => "20480000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
+        );
+
     }
 
     public function delete()
@@ -72,16 +85,5 @@ class Manager_images_controller extends CI_Controller
     {
         $this->images_model->delete($this->uri->segment(2));
         redirect('upload-manager', 'refresh');
-    }
-
-    private function get_config()
-    {
-        return array(
-            'upload_path' =>  "./assets/upload/images/",
-            'allowed_types' => "gif|jpg|png|jpeg",
-            'overwrite' => TRUE,
-            'max_size' => "20480000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
-        );
-
     }
 }

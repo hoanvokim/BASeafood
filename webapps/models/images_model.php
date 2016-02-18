@@ -20,7 +20,7 @@ class Images_model extends CI_Model
 
     public function findAll()
     {
-        return $this->db->get('images');
+        return $this->db->get('images')->result_array();
     }
 
     public function findById($id)
