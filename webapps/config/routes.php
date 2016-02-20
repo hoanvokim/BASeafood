@@ -78,6 +78,10 @@ $route['upload-image-submit'] = 'dm/manager_images_controller/post_upload';
 $route['update-image-submit'] = 'dm/manager_images_controller/post_update';
 $route['delete-uploaded-image'] = 'dm/manager_images_controller/post_delete';
 
+//get image
+$route['get-image'] = 'dm/manager_images_controller/get_image';
+
+
 //menu administration
 $route['menu-manager'] = 'dm/manager_menu_controller/index';
 
@@ -93,3 +97,4 @@ $route['product-manager/delete/:num'] = 'dm/manager_product_controller/delete';
 $route['create-product-submit'] = 'dm/manager_product_controller/post_create_new';
 $route['update-product-submit'] = 'dm/manager_product_controller/post_update';
 $route['delete-product-submit/:num'] = 'dm/manager_product_controller/post_delete';
+

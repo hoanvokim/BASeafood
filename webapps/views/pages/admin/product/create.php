@@ -27,6 +27,12 @@
                                        placeholder="Product name" autofocus>
                             </div>
                             <div class="form-group">
+                                <label for="name">Image</label>
+                                <?php echo form_dropdown('image', $images, $selected, $id); ?>
+                                <img src="<?php echo $default_image;?>" class="img-responsive img-thumbnail" style="width: 200px;height: 200px;"
+                                     id="product_image"/>
+                            </div>
+                            <div class="form-group">
                                 <label for="en_name">Latin name</label>
                                 <input type="text" id="en_name" name="en_name" class="form-control"
                                        placeholder="Latin name">

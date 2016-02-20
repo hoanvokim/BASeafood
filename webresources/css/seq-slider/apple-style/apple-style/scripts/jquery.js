@@ -7713,7 +7713,8 @@ jQuery.extend({
 	ajaxTransport: addToPrefiltersOrTransports( transports ),
 
 	// Main method
-	ajax: function( url, options ) {
+
+    ajax: function( url, options ) {
 
 		// If url is an object, simulate pre-1.5 signature
 		if ( typeof url === "object" ) {

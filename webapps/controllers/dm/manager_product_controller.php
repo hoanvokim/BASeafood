@@ -14,6 +14,7 @@ class Manager_product_controller extends CI_Controller
         parent::__construct();
         $this->load->model('user_model', '', TRUE);
         $this->load->model('category_model', '', TRUE);
+        $this->load->model('images_model', '', TRUE);
         $this->load->model('product_model', '', TRUE);
     }
 
@@ -49,7 +50,24 @@ class Manager_product_controller extends CI_Controller
         if ($categoryId) {
             $data['category'] = $this->category_model->findById($categoryId);
         }
+        $images = $this->images_model->findAll();
+        $options = array();
+        $selected = -1;
+        $default_image = '';
+        foreach ($images as $image) {
+            array_push($options, array(
+                'fk_images' => $image['name']
+            ));
+            if ($selected == -1) {
+                $selected = $image['name'];
+                $default_image = base_url() . $image['url'];
+            }
+        }
+        $data['selected'] = $selected;
+        $data['images'] = $options;
         $data['title'] = 'Product creation';
+        $data['id'] = 'id="image_dropdown"';
+        $data['default_image'] = $default_image;
         $this->load->view('pages/admin/product/create', $data);
     }
 

@@ -43,7 +43,9 @@
                                                 <tbody>
                                                 <?php foreach ($category['products'] as $product): ?>
                                                     <tr>
-                                                        <td><?php echo $product['id'] ?></td>
+                                                        <td><img src="<?php echo $product['image_url']; ?>"
+                                                                 class="img-responsive img-thumbnail"
+                                                                 style="width: 200px;height: 200px;"/></td>
                                                         <td><?php echo $product['name'] ?></td>
                                                         <td><?php echo $product['en_name'] ?></td>
                                                         <td>

@@ -26,7 +26,24 @@ class Images_model extends CI_Model
     public function findById($id)
     {
         $this->db->where('id', $id);
-        $query=$this->db->get("images");
+        $query = $this->db->get("images");
+        if ($query) {
+            foreach ($query->result_array() as $item) {
+                return array(
+                    'id' => $item['id'],
+                    'name' => $item['name'],
+                    'url' => $item['url'],
+                    'thumb_url' => $item['thumb_url'],
+                );
+            }
+        }
+        return false;
+    }
+
+    public function findByName($name)
+    {
+        $this->db->where('name', $name);
+        $query = $this->db->get("images");
         if ($query) {
             foreach ($query->result_array() as $item) {
                 return array(
