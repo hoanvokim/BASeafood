@@ -45,7 +45,8 @@ class Manager_images_controller extends CI_Controller
         $this->load->library('upload', $this->get_config());
         if ($this->upload->do_upload('userfile')) {
             $upload_files = $this->upload->data();
-            $this->images_model->insert($upload_files['file_name'],$upload_files['file_path'],$upload_files['file_path']);
+            $file_path='assets/upload/images/'.$upload_files['file_name'];
+            $this->images_model->insert($upload_files['file_name'],$file_path,$file_path);
             redirect('upload-manager', 'refresh');
         }
         $this->load->library('upload');
@@ -74,7 +75,7 @@ class Manager_images_controller extends CI_Controller
         $data['title'] = 'Delete image?';
         $image = $this->images_model->findById($this->uri->segment(3));
         if ($image) {
-            $data['image'] = $image;
+            $data['images'] = $image;
             $this->load->view('pages/admin/images/delete', $data);
             return;
         }
@@ -83,7 +84,10 @@ class Manager_images_controller extends CI_Controller
 
     public function post_delete()
     {
-        $this->images_model->delete($this->uri->segment(2));
+        $id=$this->uri->segment(2);
+        $images=$this->images_model->findById($id);
+        @unlink($images['url']);
+        $this->images_model->delete($id);
         redirect('upload-manager', 'refresh');
     }
 }

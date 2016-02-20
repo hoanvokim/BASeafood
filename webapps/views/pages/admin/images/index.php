@@ -21,21 +21,17 @@
                             <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
+                                    <th></th>
                                     <th>Name</th>
-                                    <th>Url</th>
-                                    <th>Thumbnail url</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <?php foreach ($images as $image): ?>
                                     <tr>
+                                        <td><img src="<?php echo $image['url']; ?>" class="img-responsive img-thumbnail" style="width: 200px;height: 200px;"/></td>
                                         <td><?php echo $image['name'] ?></td>
-                                        <td><?php echo $image['url'] ?></td>
-                                        <td><?php echo $image['thumb_url'] ?></td>
                                         <td>
-                                            <a href="<?php echo base_url() . "upload-manager/update/" . $image['id']; ?>"
-                                               class="btn btn-info"><i class="fa fa-edit"></i> Edit</a>
                                             <a href="<?php echo base_url() . "upload-manager/delete/" . $image['id']; ?>"
                                                class="btn btn-danger"><i class="fa fa-trash-o"></i> Delete</a>
                                         </td>
