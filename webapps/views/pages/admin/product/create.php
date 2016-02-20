@@ -28,7 +28,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="name">Image</label>
-                                <?php echo form_dropdown('image', $images, $selected, $id); ?>
+                                <?php echo form_dropdown('product_image', $images, $selected, 'id="image_dropdown"'); ?>
                                 <img src="<?php echo $default_image;?>" class="img-responsive img-thumbnail" style="width: 200px;height: 200px;"
                                      id="product_image"/>
                             </div>

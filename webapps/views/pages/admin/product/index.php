@@ -18,7 +18,7 @@
                             <h3 class="box-title">Products group by category</h3>
                         </div>
                         <div class="box-body table-responsive">
-                            <table id="example2" class="table table-bordered table-hover">
+                            <table id="example1"  class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
                                     <th>Name</th>
@@ -31,7 +31,7 @@
                                     <tr>
                                         <td><?php echo $category['name'] ?></td>
                                         <td>
-                                            <table class="table table-bordered table-hover">
+                                            <table id="example2" class="table table-bordered table-hover">
                                                 <thead>
                                                 <tr>
                                                     <th></th>
@@ -45,7 +45,7 @@
                                                     <tr>
                                                         <td><img src="<?php echo $product['image_url']; ?>"
                                                                  class="img-responsive img-thumbnail"
-                                                                 style="width: 200px;height: 200px;"/></td>
+                                                                 style="width: 150px;height: 150px;"/></td>
                                                         <td><?php echo $product['name'] ?></td>
                                                         <td><?php echo $product['en_name'] ?></td>
                                                         <td>

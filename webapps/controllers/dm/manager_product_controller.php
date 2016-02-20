@@ -66,7 +66,6 @@ class Manager_product_controller extends CI_Controller
         $data['selected'] = $selected;
         $data['images'] = $options;
         $data['title'] = 'Product creation';
-        $data['id'] = 'id="image_dropdown"';
         $data['default_image'] = $default_image;
         $this->load->view('pages/admin/product/create', $data);
     }
@@ -77,22 +76,39 @@ class Manager_product_controller extends CI_Controller
             $this->load_login_view();
             return;
         }
-        $data['title'] = 'Category creation';
+        $data['title'] = 'Product creation';
         $this->load->library('form_validation');
-        $data['parent'] = '-1';
-        $parentId = $this->input->post('pid');
-        if ($parentId) {
-            $data['parent'] = $this->category_model->findById($parentId);
+        $categoryId = $this->input->post('cid');
+        if ($categoryId) {
+            $data['category'] = $this->category_model->findById($categoryId);
         }
-        $this->form_validation->set_rules('name', 'name', 'trim|required|is_unique[category.name]', array(
+        $this->form_validation->set_rules('name', 'name', 'trim|required|is_unique[product.name]', array(
             'required' => 'You have not provided %s.',
             'is_unique' => 'This %s already exists.'
         ));
         if ($this->form_validation->run() == FALSE) {
-            $this->load->view('pages/admin/category/create', $data);
+            $images = $this->images_model->findAll();
+            $options = array();
+            $selected = -1;
+            $default_image = '';
+            foreach ($images as $image) {
+                array_push($options, array(
+                    'fk_images' => $image['name']
+                ));
+                if ($selected == -1) {
+                    $selected = $image['name'];
+                    $default_image = base_url() . $image['url'];
+                }
+            }
+            $data['selected'] = $selected;
+            $data['images'] = $options;
+            $data['title'] = 'Product creation';
+            $data['default_image'] = $default_image;
+            $this->load->view('pages/admin/product/create', $data);
         } else {
-            $this->category_model->insert($this->input->post('name'), $this->input->post('pid'));
-            redirect('category-manager', 'refresh');
+            $image = $this->images_model->findByName($this->input->post('product_image'));
+            $this->product_model->insert($this->input->post('name'), $this->input->post('en_name'), $this->input->post('cid'), $image['id'], $this->input->post('size'), $this->input->post('packing'));
+            redirect('product-manager', 'refresh');
         }
     }
 }
