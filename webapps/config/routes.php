@@ -86,3 +86,10 @@ $route['news-manager'] = 'dm/manager_news_controller/index';
 
 //product administration
 $route['product-manager'] = 'dm/manager_product_controller/index';
+$route['create-product'] = 'dm/manager_product_controller/create_new/$1';
+$route['create-product/:num'] = 'dm/manager_product_controller/create_new/$1';
+$route['product-manager/update/:num'] = 'dm/manager_product_controller/update';
+$route['product-manager/delete/:num'] = 'dm/manager_product_controller/delete';
+$route['create-product-submit'] = 'dm/manager_product_controller/post_create_new';
+$route['update-product-submit'] = 'dm/manager_product_controller/post_update';
+$route['delete-product-submit/:num'] = 'dm/manager_product_controller/post_delete';
