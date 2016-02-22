@@ -23,7 +23,9 @@ class Gallery_Model extends CI_Model
 
     public function findById($id)
     {
-
+        $this->db->where('id', $id);
+        $query = $this->db->get('gallery');
+        return $query->result_array();
     }
 
     public function findByGroup($group)
@@ -43,14 +45,14 @@ class Gallery_Model extends CI_Model
         $this->db->insert('gallery', $data);
     }
 
-    public function update($name, $url_image, $group)
+    public function update($id, $name, $url_image, $group)
     {
         $data = array(
             'name' => $name,
             'url_image' => $url_image,
             'group' => $group
         );
-
+        $this->db->where('id', $id);
         $this->db->update('gallery', $data);
     }
 
