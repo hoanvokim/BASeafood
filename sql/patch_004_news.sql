@@ -1,4 +1,4 @@
-CREATE TABLE `product` (
+CREATE TABLE `news` (
     `id`                TINYINT       NOT NULL AUTO_INCREMENT,
     `title`             NVARCHAR(100) NOT NULL,
     `content`           TEXT,
