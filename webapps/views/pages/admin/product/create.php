@@ -12,10 +12,13 @@
             <div class="row">
                 <section class="col-lg-6">
                     <div class="box box-primary">
-                        <?php echo form_open('create-product-submit'); ?>
+                        <?php echo form_open_multipart('create-product-submit'); ?>
                         <div class="box-body">
                             <div class="text-red text-center">
                                 <?php echo validation_errors(); ?>
+                            </div>
+                            <div class="text-red text-center">
+                                <?php echo $error; ?>
                             </div>
                             <div class="form-group">
                                 <label class="text-blue"><?php echo 'Category: ' . $category['name']; ?></label>
@@ -27,10 +30,8 @@
                                        placeholder="Product name" autofocus>
                             </div>
                             <div class="form-group">
-                                <label for="name">Image</label>
-                                <?php echo form_dropdown('product_image', $images, $selected, 'id="image_dropdown"'); ?>
-                                <img src="<?php echo $default_image;?>" class="img-responsive img-thumbnail" style="width: 200px;height: 200px;"
-                                     id="product_image"/>
+                                <label for="userfile">Image</label>
+                                <input type='file' name='userfile' size='20' id="upload_file"/>
                             </div>
                             <div class="form-group">
                                 <label for="en_name">Latin name</label>

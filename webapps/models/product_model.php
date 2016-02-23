@@ -27,21 +27,19 @@ class Product_Model extends CI_Model
 
     public function findByCategory($category)
     {
-        $this->db->select('product.id, product.fk_category, product.fk_image,
-            images.url as image_url, product.name, product.en_name, product.size, product.packing');
+        $this->db->select('*');
         $this->db->from('product');
-        $this->db->join('images', 'images.id=product.fk_image', 'left');
         $this->db->where('fk_category', $category);
         $query = $this->db->get();
         return $query->result_array();
     }
 
-    public function insert($name, $en_name, $fk_category, $fk_image, $size, $packing)
+    public function insert($name, $en_name, $fk_category, $url, $size, $packing)
     {
         $data = array(
             'name' => $name,
             'en_name' => $en_name,
-            'fk_image' => $fk_image,
+            'url' => $url,
             'fk_category' => $fk_category,
             'size' => $size,
             'packing' => $packing

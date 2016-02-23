@@ -29,7 +29,7 @@
             "bInfo": true,
             "bAutoWidth": false
         });
-        $('#image_dropdown').change(function () {
+        $('#upload_file').change(function () {
             var e = document.getElementById("image_dropdown");
             var image_name = e.options[e.selectedIndex].text;
             console.log('image_name:' + image_name);

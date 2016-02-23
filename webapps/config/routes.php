@@ -76,7 +76,7 @@ $route['upload-manager/update/:num'] = 'dm/manager_images_controller/update';
 $route['upload-manager/delete/:num'] = 'dm/manager_images_controller/delete';
 $route['upload-image-submit'] = 'dm/manager_images_controller/post_upload';
 $route['update-image-submit'] = 'dm/manager_images_controller/post_update';
-$route['delete-uploaded-image'] = 'dm/manager_images_controller/post_delete';
+$route['delete-images-submit/:num'] = 'dm/manager_images_controller/post_delete';
 
 //get image
 $route['get-image'] = 'dm/manager_images_controller/get_image';
