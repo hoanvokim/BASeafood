@@ -87,6 +87,13 @@ $route['menu-manager'] = 'dm/manager_menu_controller/index';
 
 //news administration
 $route['news-manager'] = 'dm/manager_news_controller/index';
+$route['create-news'] = 'dm/manager_news_controller/create_new/$1';
+$route['create-news/:num'] = 'dm/manager_news_controller/create_new/$1';
+$route['news-manager/update/:num'] = 'dm/manager_news_controller/update';
+$route['news-manager/delete/:num'] = 'dm/manager_news_controller/delete';
+$route['create-news-submit'] = 'dm/manager_news_controller/post_create_new';
+$route['update-news-submit'] = 'dm/manager_news_controller/post_update';
+$route['delete-news-submit/:num'] = 'dm/manager_news_controller/post_delete';
 
 //product administration
 $route['product-manager'] = 'dm/manager_product_controller/index';

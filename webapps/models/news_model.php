@@ -23,8 +23,22 @@ class News_Model extends CI_Model
 
     public function findById($id)
     {
-        $this->db->where('id', $id);
-        return $this->db->get('news')->result_array();
+        $this->db->from('news');
+        $this->db->where('id =', $id);
+        $query = $this->db->get();
+        if ($query) {
+            foreach ($query->result_array() as $item) {
+                return array(
+                    'id' => $item['id'],
+                    'title' => $item['title'],
+                    'content' => $item['content'],
+                    'url_image' => $item['url_image'],
+                    'url_attached_file' => $item['url_attached_file'],
+                    'type' => $item['type']
+                );
+            }
+        }
+        return false;
     }
 
     public function findByType($type)
