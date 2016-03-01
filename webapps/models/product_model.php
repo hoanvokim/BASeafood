@@ -16,8 +16,23 @@ class Product_Model extends CI_Model
 
     public function findById($id)
     {
-        $this->db->where('id', $id);
-        return $this->db->get('product')->result_array();
+        $this->db->from('product');
+        $this->db->where('id =', $id);
+        $query = $this->db->get();
+        if ($query) {
+            foreach ($query->result_array() as $item) {
+                return array(
+                    'id' => $item['id'],
+                    'name' => $item['name'],
+                    'en_name' => $item['en_name'],
+                    'size' => $item['size'],
+                    'packing' => $item['packing'],
+                    'url' => $item['url'],
+                    'fk_category' => $item['fk_category']
+                );
+            }
+        }
+        return false;
     }
 
     public function findAll()
@@ -47,9 +62,18 @@ class Product_Model extends CI_Model
         $this->db->insert('product', $data);
     }
 
-    public function update()
+    public function update($id, $name, $en_name, $fk_category, $url, $size, $packing)
     {
-
+        $data = array(
+            'name' => $name,
+            'en_name' => $en_name,
+            'url' => $url,
+            'fk_category' => $fk_category,
+            'size' => $size,
+            'packing' => $packing
+        );
+        $this->db->where('id', $id);
+        $this->db->update('product', $data);
     }
 
     public function delete($id)
