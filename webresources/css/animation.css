@@ -1,0 +1,39 @@
+/*-- Animation */
+.animated1 {
+
+}
+
+.animated2 {
+    -webkit-animation: lightSpeedIn 1s ease-in 200ms both;
+    animation: lightSpeedIn 1s ease-in 200ms both;
+}
+
+.animated3 {
+    -webkit-animation: bounceInLeft 2s ease-in-out 800ms both;
+    animation: bounceInLeft 1.5s ease-in-out 800ms both;
+}
+
+.animated4 {
+    -webkit-animation: flipInX 2s ease-in 800ms both;
+    animation: flipInX 2s ease-in 800ms both;
+}
+
+.animated5 {
+    -webkit-animation: bounceInLeft 1s ease-in-out 100ms both;
+    animation: bounceInLeft 1s ease-in-out 100ms both;
+}
+
+.animated6 {
+    -webkit-animation: bounceIn 1s ease-in 500ms both;
+    animation: bounceIn 1s ease-in 500ms both;
+}
+
+.animated7 {
+    -webkit-animation: bounceIn 1s ease-in 500ms both;
+    animation: bounceIn 1s ease-in 500ms both;
+}
+
+.animated8 {
+    -webkit-animation: bounceInDown 1s ease-in 800ms both;
+    animation: bounceInDown 1s ease-in 800ms both;
+}
