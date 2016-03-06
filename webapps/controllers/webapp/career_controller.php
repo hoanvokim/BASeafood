@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Date: 3/5/16
  * Time: 10:23 AM
  */
-class Carrer_controller extends CI_Controller
+class Career_controller extends CI_Controller
 {
 
     public function __construct()

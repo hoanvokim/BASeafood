@@ -50,7 +50,7 @@
                             <li><a href="<?php echo site_url('product_international'); ?>">International</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?php echo site_url('newsevents'); ?>">News | Events</a></li>
+                    <li><a href="<?php echo site_url('newsandevents'); ?>">News | Events</a></li>
                     <li class="dropdown"><a href="<?php echo site_url('partners'); ?>">Partners <i class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="sub-menu">
                             <li><a href="<?php echo site_url('financial_report'); ?>">Financial Report</a></li>

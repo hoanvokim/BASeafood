@@ -9,7 +9,7 @@
 <?php $this->load->view('layouts/base/menu'); ?>
 
 <!--Start content-->
-Career
+financial report
 <!--End content-->
 
 <!--Begin include JS files-->
