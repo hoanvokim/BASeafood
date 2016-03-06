@@ -30,42 +30,42 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="<?php echo base_url(); ?>">
                     <h1><img src="<?php echo base_url(); ?>/webresources/images/logo-plus.png" alt="logo"></h1>
                 </a>
 
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li class="dropdown"><a href="introduce.html">Introduce <i class="fa fa-angle-down"></i></a>
+                    <li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
+                    <li class="dropdown"><a href="<?php echo site_url('introduce'); ?>">Introduce <i class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="sub-menu">
-                            <li><a href="introduce.html">About</a></li>
-                            <li><a href="factory.html">Factory</a></li>
+                            <li><a href="<?php echo site_url('introduce'); ?>">About</a></li>
+                            <li><a href="<?php echo site_url('factory'); ?>">Factory</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a href="product.html">Product <i class="fa fa-angle-down"></i></a>
+                    <li class="dropdown"><a href="<?php echo site_url('product'); ?>">Product <i class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="sub-menu">
-                            <li><a href="domestic.html">Domestic</a></li>
-                            <li><a href="international.html">International</a></li>
+                            <li><a href="<?php echo site_url('product_domestic'); ?>">Domestic</a></li>
+                            <li><a href="<?php echo site_url('product_international'); ?>">International</a></li>
                         </ul>
                     </li>
-                    <li><a href="news.html">News | Events</a></li>
-                    <li class="dropdown"><a href="partners.html">Partners <i class="fa fa-angle-down"></i></a>
+                    <li><a href="<?php echo site_url('newsevents'); ?>">News | Events</a></li>
+                    <li class="dropdown"><a href="<?php echo site_url('partners'); ?>">Partners <i class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="sub-menu">
-                            <li><a href="financial.html">Financial Report</a></li>
-                            <li><a href="partners.html">Partners Meeting</a></li>
-                            <li><a href="policy.html">Company Policy</a></li>
+                            <li><a href="<?php echo site_url('financial_report'); ?>">Financial Report</a></li>
+                            <li><a href="<?php echo site_url('partners_meeting'); ?>">Partners Meeting</a></li>
+                            <li><a href="<?php echo site_url('policy'); ?>">Company Policy</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a href="photo.html">Photos <i class="fa fa-angle-down"></i></a>
+                    <li class="dropdown"><a href="<?php echo site_url('photos'); ?>">Photos <i class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="sub-menu">
-                            <li><a href="general.html">General</a></li>
-                            <li><a href="factory-photos.html">Factory</a></li>
+                            <li><a href="<?php echo site_url('photos_general'); ?>">General</a></li>
+                            <li><a href="<?php echo site_url('photos_factories'); ?>">Factory</a></li>
                         </ul>
                     </li>
-                    <li><a href=career.html#">Career</a>
-                    <li><a href="contact-us.html">Contact</a>
+                    <li><a href="<?php echo site_url('career'); ?>">Career</a> </li>
+                    <li><a href="<?php echo site_url('contact'); ?>">Contact</a></li>
                 </ul>
             </div>
             <div class="search">

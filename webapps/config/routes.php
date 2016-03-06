@@ -49,13 +49,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-
+//default controllers
 $route['default_controller'] = 'home_controller';
+
+//webapp pages
+$route['product'] = 'webapp/product_controller/index';
+$route['product_domestic'] = 'webapp/product_controller/domestic';
+$route['product_international'] = 'webapp/product_controller/international';
+$route['introduce'] = 'webapp/introduce_controller/index';
+$route['factory'] = 'webapp/factory_controller/index';
+$route['newsandevents'] = 'webapp/news_controller/index';
+$route['partners'] = 'webapp/partners_controller/index';
+$route['financial_report'] = 'webapp/financial_report_controller/index';
+$route['partners_meeting'] = 'webapp/partners_meeting_controller/index';
+$route['policy'] = 'webapp/policy_controller/index';
+$route['photos'] = 'webapp/photos_controller/index';
+$route['photos_general'] = 'webapp/photos_controller/general';
+$route['photos_factories'] = 'webapp/photos_controller/factories';
+$route['career'] = 'webapp/career_controller/index';
+$route['contact'] = 'webapp/contact_controller/index';
+
+//routing for administration pages
 $route['admin'] = 'dm/admin_controller/index';
 $route['logout'] = 'dm/admin_controller/logout';
 $route['verifylogin'] = 'dm/verifylogin_controller/index';
-
-//routing for administration pages
 //category administration
 $route['category-manager'] = 'dm/manager_category_controller/index';
 $route['create-category'] = 'dm/manager_category_controller/create_new/$1';
@@ -104,4 +121,3 @@ $route['product-manager/delete/:num'] = 'dm/manager_product_controller/delete';
 $route['create-product-submit'] = 'dm/manager_product_controller/post_create_new';
 $route['update-product-submit'] = 'dm/manager_product_controller/post_update';
 $route['delete-product-submit/:num'] = 'dm/manager_product_controller/post_delete';
-
