@@ -1,3 +1,4 @@
+
 <header id="header">
     <div class="container">
         <div class="row">
@@ -8,12 +9,27 @@
                         <li><a href=""><i class="fa fa-twitter"></i></a></li>
                         <li><a href=""><i class="fa fa-google-plus"></i></a></li>
                         <li>
+                            <?php
+                            $attributes = array('id' => 'languageForm');
+                            echo form_open('switchlanguage', $attributes);
+                            ?>
+                            <input type="hidden" name="redirurl" value="<? echo $_SERVER['REQUEST_URI']; ?>"/>
                             <input type="checkbox"
-                                   checked data-toggle="toggle"
+                                   id="languageToggle"
+                                   name="languageToggle"
+                                <?php
+                                if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                                    ?>
+                                    checked
+                                    <?php
+                                }
+                                ?>
+                                   data-toggle="toggle"
                                    data-style="slow"
                                    data-on="<i class='fa fa-language'></i> Eng &nbsp;&nbsp;"
                                    data-off="<i class='fa fa-language'></i> Vie &nbsp;&nbsp;"
                                    data-size="mini"/>
+                            </form
                         </li>
                     </ul>
                 </div>
@@ -37,7 +53,7 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
+                    <li class="active"><a href="<?php echo base_url(); ?>">HOME</a></li>
                     <li class="dropdown"><a href="<?php echo site_url('introduce'); ?>">Introduce <i class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="sub-menu">
                             <li><a href="<?php echo site_url('introduce'); ?>">About</a></li>
@@ -60,11 +76,11 @@
                     </li>
                     <li class="dropdown"><a href="<?php echo site_url('photos'); ?>">Photos <i class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="sub-menu">
-                            <li><a href="<?php echo site_url('photos_general'); ?>">General</a></li>
-                            <li><a href="<?php echo site_url('photos_factories'); ?>">Factory</a></li>
+                            <li><a href="<?php echo site_url('photos_offices'); ?>">Offices</a></li>
+                            <li><a href="<?php echo site_url('photos_factories'); ?>">Factories</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?php echo site_url('career'); ?>">Career</a> </li>
+                    <li><a href="<?php echo site_url('career'); ?>">Career</a></li>
                     <li><a href="<?php echo site_url('contact'); ?>">Contact</a></li>
                 </ul>
             </div>

@@ -64,10 +64,13 @@ $route['financial_report'] = 'webapp/financial_report_controller/index';
 $route['partners_meeting'] = 'webapp/partners_meeting_controller/index';
 $route['policy'] = 'webapp/policy_controller/index';
 $route['photos'] = 'webapp/photos_controller/index';
-$route['photos_general'] = 'webapp/photos_controller/general';
+$route['photos_offices'] = 'webapp/photos_controller/offices';
 $route['photos_factories'] = 'webapp/photos_controller/factories';
 $route['career'] = 'webapp/career_controller/index';
 $route['contact'] = 'webapp/contact_controller/index';
+
+//webapp process
+$route['switchlanguage'] = 'webapp_process/switch_language_controller/index';
 
 //routing for administration pages
 $route['admin'] = 'dm/admin_controller/index';

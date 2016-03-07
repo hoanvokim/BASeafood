@@ -5,6 +5,7 @@
     <?php $this->load->view('layouts/base/header'); ?>
 </head>
 <body>
+
 <!--Begin load menu-->
 <?php $this->load->view('layouts/base/menu'); ?>
 

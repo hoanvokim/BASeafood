@@ -21,9 +21,9 @@ class Photos_controller extends CI_Controller
         $this->load->view('pages/webapp/photos', $data);
     }
 
-    public function general()
+    public function offices()
     {
-        $data['title'] = 'Photos general';
+        $data['title'] = 'Photos offices';
         $this->load->view('pages/webapp/photos', $data);
     }
 

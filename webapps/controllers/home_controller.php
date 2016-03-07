@@ -17,6 +17,7 @@ class Home_controller extends CI_Controller
 
     public function index()
     {
+        $_SESSION["activeLanguage"] = "en";
         $data['title'] = 'Baseafood';
         $this->load->view('pages/home', $data);
     }
