@@ -3,13 +3,8 @@
  * Created by IntelliJ IDEA.
  * User: hoanvo
  * Date: 3/7/16
- * Time: 3:05 PM
+ * Time: 10:19 PM
  */
-
-$lang = array();
-
-// Menu _ VI
-
 $lang['MENU_HOME'] = 'Trang chủ';
 $lang['MENU_INTRODUCE'] = 'Giới thiệu';
 $lang['MENU_ABOUT'] = 'Chúng tôi';

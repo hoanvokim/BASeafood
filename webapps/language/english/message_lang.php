@@ -3,12 +3,8 @@
  * Created by IntelliJ IDEA.
  * User: hoanvo
  * Date: 3/7/16
- * Time: 3:05 PM
+ * Time: 10:18 PM
  */
-
-$lang = array();
-
-// Menu _ EN
 
 $lang['MENU_HOME'] = 'HOME';
 $lang['MENU_INTRODUCE'] = 'Introduce';
@@ -23,8 +19,8 @@ $lang['MENU_FINANCIAL_REPORT'] = 'Financial Report';
 $lang['MENU_PARTNERS_MEETING'] = 'Partners Meeting';
 $lang['MENU_COMPANY_POLICY'] = 'Company Policy';
 $lang['MENU_PHOTOS'] = 'Photos';
-$lang['MENU_PHOTOS_OFFICES'] = 'Offices';
-$lang['MENU_PHOTOS_FACTORIES'] = 'Factories';
+$lang['MENU_OFFICES'] = 'Offices';
+$lang['MENU_FACTORIES'] = 'Factories';
 $lang['MENU_CAREER'] = 'Career';
 $lang['MENU_CONTACT'] = 'Contact';
 ?>

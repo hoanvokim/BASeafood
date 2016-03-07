@@ -50,9 +50,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 //default controllers
-$route['default_controller'] = 'home_controller';
+$route['default_controller'] = 'home_controller/index';
 
 //webapp pages
+$route['home'] = 'webapp/user_home_controller/index';
 $route['product'] = 'webapp/product_controller/index';
 $route['product_domestic'] = 'webapp/product_controller/domestic';
 $route['product_international'] = 'webapp/product_controller/international';
