@@ -6,6 +6,9 @@
  * Time: 10:18 PM
  */
 
+// Global
+$lang['BASEAFOOD'] = 'baseafood';
+// Menu
 $lang['MENU_HOME'] = 'HOME';
 $lang['MENU_INTRODUCE'] = 'Introduce';
 $lang['MENU_ABOUT'] = 'About us';
@@ -23,4 +26,5 @@ $lang['MENU_OFFICES'] = 'Offices';
 $lang['MENU_FACTORIES'] = 'Factories';
 $lang['MENU_CAREER'] = 'Career';
 $lang['MENU_CONTACT'] = 'Contact';
+
 ?>

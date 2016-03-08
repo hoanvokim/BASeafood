@@ -45,14 +45,14 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="<?php echo base_url(); ?>">
+                <a class="navbar-brand" href="<?php echo site_url('home'); ?>">
                     <h1><img src="<?php echo base_url(); ?>/webresources/images/logo.png" alt="logo"></h1>
                 </a>
 
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="<?php echo base_url(); ?>"><?php echo $this->lang->line('MENU_HOME'); ?></a></li>
+                    <li class="active"><a href="<?php echo site_url('home'); ?>"><?php echo $this->lang->line('MENU_HOME'); ?></a></li>
                     <li class="dropdown"><a href="<?php echo site_url('introduce'); ?>"><?php echo $this->lang->line('MENU_INTRODUCE'); ?> <i
                                 class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="sub-menu">

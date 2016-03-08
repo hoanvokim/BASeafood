@@ -5,6 +5,9 @@
  * Date: 3/7/16
  * Time: 10:19 PM
  */
+// Global
+$lang['BASEAFOOD'] = 'baseafood';
+// MENU
 $lang['MENU_HOME'] = 'Trang chủ';
 $lang['MENU_INTRODUCE'] = 'Giới thiệu';
 $lang['MENU_ABOUT'] = 'Chúng tôi';
