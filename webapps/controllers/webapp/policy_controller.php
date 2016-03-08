@@ -13,11 +13,7 @@ class Policy_controller extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        if (strcasecmp($_SESSION["activeLanguage"], "vi") == 0) {
-            $this->lang->load('message', 'vietnamese');
-        } else {
-            $this->lang->load('message', 'english');
-        }
+        $this->utilities->loadPropertiesFiles($this->lang);
     }
 
     public function index()

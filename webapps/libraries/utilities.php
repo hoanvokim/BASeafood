@@ -9,14 +9,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 class Utilities
 {
-    public function loadPropertiesFiles()
+    public function loadPropertiesFiles($lang)
     {
-        if (isset($_SESSION["activeLanguage"])) {
-            if (strcasecmp($_SESSION["activeLanguage"], "vi") == 0) {
-                $this->lang->load('message', 'vietnamese');
-            } else {
-                $this->lang->load('message', 'english');
-            }
+        if (strcasecmp($_SESSION["activeLanguage"], "vi") == 0) {
+            $lang->load('message', 'vietnamese');
+        } else {
+            $lang->load('message', 'english');
         }
     }
 }
