@@ -21,8 +21,13 @@
                                 <?php echo $error; ?>
                             </div>
                             <div class="form-group">
-                                <label for="name">Title</label>
-                                <input type="text" id="title" name="title" class="form-control"
+                                <label for="en_title">English Title</label>
+                                <input type="text" id="en_title" name="en_title" class="form-control"
+                                       placeholder="Title" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <label for="vi_title">Vietnamese Title</label>
+                                <input type="text" id="vi_title" name="vi_title" class="form-control"
                                        placeholder="Title" autofocus>
                             </div>
                             <div class="form-group">
@@ -30,19 +35,16 @@
                                 <input type='file' name='userfile' size='20' id="upload_file"/>
                             </div>
                             <div class="form-group">
-                                <label for="en_name">Latin name</label>
-                                <input type="text" id="en_name" name="en_name" class="form-control"
-                                       placeholder="Latin name">
+                                <label for="en_content">English content</label>
+                                <textarea id="en_content" name="en_content" class="form-control"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="size">Size </label>
-                                <input type="text" id="size" name="size" class="form-control"
-                                       placeholder="Size, for example: 4-6     pc/kg   200-250 gr/pc">
+                                <label for="vi_content">Vietnamese content</label>
+                                <textarea id="vi_content" name="vi_content" class="form-control"></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="packing">Packing</label>
-                                <input type="text" id="packing" name="packing" class="form-control"
-                                       placeholder="Packing, for example: IQF, 1kg/PE x 10/CTN">
+                                <label for="type">Type</label>
+                                <input type="text" id="type" name="type" class="form-control"/>
                             </div>
                         </div>
                         <div class="box-footer">

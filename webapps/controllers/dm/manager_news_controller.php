@@ -1,4 +1,5 @@
-<?php   defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
+
 /**
  * Created by IntelliJ IDEA.
  * User: NhuTran
@@ -48,21 +49,30 @@ class Manager_news_controller extends CI_Controller
         $data['title'] = 'News creation';
         $this->load->library('form_validation');
         $this->load->library('upload', $this->get_config());
-        $this->form_validation->set_rules('title', 'title', 'trim|required|is_unique[news.title]', array(
-            'required' => 'You have not provided %s.',
-            'is_unique' => 'This %s already exists.'
-        ));
         if ($this->upload->do_upload('userfile')) {
             $upload_files = $this->upload->data();
             $file_path = 'assets/upload/images/news/' . $upload_files['file_name'];
-            if ($this->form_validation->run() == FALSE) {
-                $this->load->view('pages/admin/news/create', $data);
-            } else {
-                $this->product_model->insert($this->input->post('title'), $this->input->post('content'), $file_path, $file_path, $this->input->post('type'));
-                redirect('news-manager', 'refresh');
-            }
+            $en_title = $this->input->post('en_title');
+            $vi_title = $this->input->post('vi_title');
+            $en_content = $this->input->post('en_content');
+            $vi_content = $this->input->post('vi_content');
+            $type = $this->input->post('type');
+            $this->news_model->insert($en_title, $vi_title, $en_content,
+                $vi_content, $file_path, $file_path, $type);
+            redirect('news-manager', 'refresh');
         }
         $data['error'] = $this->upload->display_errors();
         $this->load->view('pages/admin/news/create', $data);
+    }
+
+    private function get_config()
+    {
+        return array(
+            'upload_path' => "./assets/upload/images/news/",
+            'allowed_types' => "gif|jpg|png|jpeg|pdf|doc|docx",
+            'overwrite' => TRUE,
+            'max_size' => "20480000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
+        );
+
     }
 }

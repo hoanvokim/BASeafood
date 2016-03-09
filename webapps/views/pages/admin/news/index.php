@@ -22,8 +22,8 @@
                                 <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Title</th>
-                                    <th>Content</th>
+                                    <th>En Title</th>
+                                    <th>En Content</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
@@ -31,8 +31,8 @@
                                 <?php foreach ($news_list as $news): ?>
                                     <tr>
                                         <td><?php echo $news['id'] ?></td>
-                                        <td><?php echo $news['title'] ?></td>
-                                        <td><?php echo $news['content'] ?></td>
+                                        <td><?php echo $news['en_title'] ?></td>
+                                        <td><?php echo $news['en_content'] ?></td>
                                         <td>
                                             <a href="<?php echo base_url() . "news-manager/update/" . $news['id']; ?>"
                                                class="btn btn-info"><i class="fa fa-edit"></i> Edit</a>

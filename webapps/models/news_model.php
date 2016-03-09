@@ -30,8 +30,10 @@ class News_Model extends CI_Model
             foreach ($query->result_array() as $item) {
                 return array(
                     'id' => $item['id'],
-                    'title' => $item['title'],
-                    'content' => $item['content'],
+                    'en_title' => $item['en_title'],
+                    'vi_title' => $item['vi_title'],
+                    'en_content' => $item['en_content'],
+                    'vi_content' => $item['vi_content'],
                     'url_image' => $item['url_image'],
                     'url_attached_file' => $item['url_attached_file'],
                     'type' => $item['type']
@@ -47,11 +49,13 @@ class News_Model extends CI_Model
         return $this->db->get('news')->result_array();
     }
 
-    public function insert($title, $content, $url_image, $url_attached_file, $type)
+    public function insert($en_title, $vi_title, $en_content, $vi_content, $url_image, $url_attached_file, $type)
     {
         $data = array(
-            'title' => $title,
-            'content' => $content,
+            'en_title' => $en_title,
+            'vi_title' => $vi_title,
+            'en_content' => $en_content,
+            'vi_content' => $vi_content,
             'url_image' => $url_image,
             'url_attached_file' => $url_attached_file,
             'type' => $type
@@ -60,11 +64,13 @@ class News_Model extends CI_Model
         $this->db->insert('news', $data);
     }
 
-    public function update($id, $title, $content, $url_image, $url_attached_file, $type)
+    public function update($id, $en_title, $vi_title, $en_content, $vi_content, $url_image, $url_attached_file, $type)
     {
         $data = array(
-            'title' => $title,
-            'content' => $content,
+            'en_title' => $en_title,
+            'vi_title' => $vi_title,
+            'en_content' => $en_content,
+            'vi_content' => $vi_content,
             'url_image' => $url_image,
             'url_attached_file' => $url_attached_file,
             'type' => $type
