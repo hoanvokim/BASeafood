@@ -10,7 +10,7 @@
     <aside class="right-side">
         <section class="content">
             <div class="row">
-                <?php $this->load->view('pages/home'); ?>
+                <p>Administration Pages</p>
             </div>
         </section>
     </aside>

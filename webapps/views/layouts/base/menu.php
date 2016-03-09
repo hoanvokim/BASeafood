@@ -12,7 +12,7 @@
                             $attributes = array('id' => 'languageForm');
                             echo form_open('switchlanguage', $attributes);
                             ?>
-                            <input type="hidden" name="redirurl" value="<? echo $_SERVER['REQUEST_URI']; ?>"/>
+                            <input type="hidden" name="redirurl" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
                             <input type="checkbox"
                                    id="languageToggle"
                                    name="languageToggle"
