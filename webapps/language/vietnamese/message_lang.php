@@ -7,6 +7,7 @@
  */
 // Global
 $lang['BASEAFOOD'] = 'baseafood';
+$lang['FEATURES'] = 'Chúng tôi mang đến cho bạn những thực phẩm tốt nhất vì sức khoẻ chính bạn';
 // MENU
 $lang['MENU_HOME'] = 'Trang chủ';
 $lang['MENU_INTRODUCE'] = 'Giới thiệu';

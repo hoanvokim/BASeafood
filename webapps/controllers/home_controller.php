@@ -15,7 +15,6 @@ class Home_controller extends CI_Controller
     {
         parent::__construct();
         $this->lang->load('message', 'english');
-        $this->load->model('features_model', '', TRUE);
     }
 
     public function index()
@@ -23,8 +22,8 @@ class Home_controller extends CI_Controller
         $_SESSION["activeLanguage"] = "en";
         $data['title'] = 'Baseafood';
 
-        $features = $this->features_model->findAll();
-
+        $this->load->model('features_model');
+        $data['features'] = $this->features_model->findAll();
         $this->load->view('pages/home', $data);
     }
 }

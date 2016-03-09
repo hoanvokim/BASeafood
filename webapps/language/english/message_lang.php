@@ -8,6 +8,7 @@
 
 // Global
 $lang['BASEAFOOD'] = 'baseafood';
+$lang['FEATURES'] = 'we bring you the best food for your health';
 // Menu
 $lang['MENU_HOME'] = 'HOME';
 $lang['MENU_INTRODUCE'] = 'Introduce';

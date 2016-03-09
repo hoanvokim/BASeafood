@@ -15,6 +15,10 @@ class Features_Model extends CI_Model
 
     public function findAll()
     {
-        return $this->db->get('features')->result_array();
+        $this->db->select("*");
+        $this->db->from('features');
+        $this->db->order_by("id","asc");
+        $query = $this->db->get();
+        return $query->result();
     }
 }

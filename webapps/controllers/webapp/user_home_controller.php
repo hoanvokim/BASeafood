@@ -19,6 +19,8 @@ class User_home_controller extends CI_Controller
     public function index()
     {
         $data['title'] = 'Baseafood';
+        $this->load->model('features_model');
+        $data['features'] = $this->features_model->findAll();
         $this->load->view('pages/home', $data);
     }
 
