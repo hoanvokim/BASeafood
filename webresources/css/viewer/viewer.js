@@ -901,11 +901,11 @@
                 );
             });
 
-            $('#header').css('-webkit-filter', ('blur(5px)'));
-            $('#page-breadcrumb').css('-webkit-filter', ('blur(5px)'));
-            $('.docs-pictures').css('-webkit-filter', ('blur(5px)'));
-            $('.product-pagination').css('-webkit-filter', ('blur(5px)'));
-            $('#footer').css('-webkit-filter', ('blur(5px)'));
+            $('#header').css('-webkit-filter', ('blur(15px)'));
+            $('#page-breadcrumb').css('-webkit-filter', ('blur(15px)'));
+            $('.docs-pictures').css('-webkit-filter', ('blur(15px)'));
+            $('.product-pagination').css('-webkit-filter', ('blur(15px)'));
+            $('#footer').css('-webkit-filter', ('blur(15px)'));
 
             list.innerHTML = items.join('');
 

@@ -47,9 +47,12 @@
 
 .docs-pictures > li {
     float: left;
-    width: 33.3%;
-    height: 33.3%;
+    width: 25%;
+    max-width: 250px;
+    height: 25%;
+    max-height: 250px;
     margin: 0 -1px -1px 0;
+    padding: 5px;
     border: 1px solid transparent;
     overflow: hidden;
 }
