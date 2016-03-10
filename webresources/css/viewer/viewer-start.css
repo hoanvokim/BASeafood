@@ -43,24 +43,33 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    text-align: center;
 }
 
 .docs-pictures > li {
     float: left;
     width: 25%;
     max-width: 250px;
-    height: 25%;
-    max-height: 250px;
+    height: 27%;
+    max-height: 270px;
     margin: 0 -1px -1px 0;
     padding: 5px;
     border: 1px solid transparent;
     overflow: hidden;
 }
-
+.docs-pictures > li:hover {
+    border: 1px solid #2559a5;
+}
 .docs-pictures > li > img {
     width: 100%;
     cursor: -webkit-zoom-in;
     cursor: zoom-in;
+}
+
+.docs-pictures > li > span {
+    margin: 0px auto;
+    font-weight: 500;
+    color: #2559a5;
 }
 
 .docs-toggles > .btn,

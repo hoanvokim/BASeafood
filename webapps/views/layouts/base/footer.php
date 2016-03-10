@@ -4,7 +4,7 @@
             <div class="col-sm-12 text-center bottom-separator">
                 <img src="<?php echo base_url(); ?>/webresources/images/home/under.png" class="img-responsive inline" alt="">
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-4 col-sm-12">
                 <div class="testimonial bottom">
                     <h2>User Access</h2>
                     <div class="pull-left">
@@ -17,7 +17,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-12">
                 <div class="contact-info bottom">
                     <h2>Contacts info.</h2>
                     <address>
