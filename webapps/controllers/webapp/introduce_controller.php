@@ -19,6 +19,8 @@ class Introduce_controller extends CI_Controller
     public function index()
     {
         $data['title'] = 'Our Company';
+        $this->load->model('generic_information_model');
+        $data['aboutInformation'] = $this->generic_information_model->findByComponent('aboutInfo');
         $this->load->view('pages/webapp/introduce', $data);
     }
 }
