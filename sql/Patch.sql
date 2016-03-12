@@ -72,12 +72,30 @@ CREATE TABLE `baseafood`.`news` (
   `vi_content`        TEXT,
   `url_image`         NVARCHAR(250),
   `url_attached_file` NVARCHAR(250),
-  `type`              NVARCHAR(100),
+  `datecreated`       DATETIME DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 )
   ENGINE = MyISAM
   DEFAULT CHARSET = latin1
   AUTO_INCREMENT = 1;
+
+INSERT INTO `baseafood`.`news` (`en_title`,`vi_title`,`en_content`,`vi_content`,`url_image`,`url_attached_file`)
+VALUES('Website encourages scrolling' ,'Website tin tức','Quisque sed metus at justo vestibulum congue at et arcu. Maecen pellentesque lobortis ante. Vestibulum quam cursus eget augue purus','VN __ Quisque sed metus at justo vestibulum congue at et arcu. Maecen pellentesque lobortis ante. Vestibulum quam cursus eget augue purus','files/pdf.png','news/download/1.pdf');
+
+INSERT INTO `baseafood`.`news` (`en_title`,`vi_title`,`en_content`,`vi_content`,`url_image`,`url_attached_file`)
+VALUES('Website encourages scrolling' ,'Website tin tức','Quisque sed metus at justo vestibulum congue at et arcu. Maecen pellentesque lobortis ante. Vestibulum quam cursus eget augue purus','VN __ Quisque sed metus at justo vestibulum congue at et arcu. Maecen pellentesque lobortis ante. Vestibulum quam cursus eget augue purus','files/pdf.png','news/download/2.pdf');
+
+INSERT INTO `baseafood`.`news` (`en_title`,`vi_title`,`en_content`,`vi_content`,`url_image`,`url_attached_file`)
+VALUES('Website encourages scrolling' ,'Website tin tức','Quisque sed metus at justo vestibulum congue at et arcu. Maecen pellentesque lobortis ante. Vestibulum quam cursus eget augue purus','VN __ Quisque sed metus at justo vestibulum congue at et arcu. Maecen pellentesque lobortis ante. Vestibulum quam cursus eget augue purus','files/pdf.png','news/download/3.pdf');
+
+INSERT INTO `baseafood`.`news` (`en_title`,`vi_title`,`en_content`,`vi_content`,`url_image`,`url_attached_file`)
+VALUES('Website encourages scrolling' ,'Website tin tức','Quisque sed metus at justo vestibulum congue at et arcu. Maecen pellentesque lobortis ante. Vestibulum quam cursus eget augue purus','VN __ Quisque sed metus at justo vestibulum congue at et arcu. Maecen pellentesque lobortis ante. Vestibulum quam cursus eget augue purus','files/pdf.png','news/download/4.pdf');
+
+INSERT INTO `baseafood`.`news` (`en_title`,`vi_title`,`en_content`,`vi_content`,`url_image`)
+VALUES('Website encourages scrolling' ,'Website tin tức','Quisque sed metus at justo vestibulum congue at et arcu. Maecen pellentesque lobortis ante. Vestibulum quam cursus eget augue purus','VN __ Quisque sed metus at justo vestibulum congue at et arcu. Maecen pellentesque lobortis ante. Vestibulum quam cursus eget augue purus','files/news.png');
+
+INSERT INTO `baseafood`.`news` (`en_title`,`vi_title`,`en_content`,`vi_content`,`url_image`)
+VALUES('Website encourages scrolling' ,'Website tin tức','Quisque sed metus at justo vestibulum congue at et arcu. Maecen pellentesque lobortis ante. Vestibulum quam cursus eget augue purus','VN __ Quisque sed metus at justo vestibulum congue at et arcu. Maecen pellentesque lobortis ante. Vestibulum quam cursus eget augue purus','files/news.png');
 
 -- Path 005 : gallery --
 
@@ -155,6 +173,25 @@ CREATE TABLE `baseafood`.`sliders` (
   DEFAULT CHARSET = latin1
   AUTO_INCREMENT = 1;
 
+INSERT INTO `baseafood`.`sliders` (`img_src`,`en_content`,`vi_content`,`url`)
+VALUES('1.png', 'Fish Tuna #1','Cá Ngừ Số 1','product/1');
+INSERT INTO `baseafood`.`sliders` (`img_src`,`en_content`,`vi_content`,`url`)
+VALUES('2.jpg', 'Fish Tuna #2','Cá Ngừ Số 2','product/2');
+INSERT INTO `baseafood`.`sliders` (`img_src`,`en_content`,`vi_content`,`url`)
+VALUES('3.jpg', 'Fish Tuna #3','Cá Ngừ Số 3','product/3');
+INSERT INTO `baseafood`.`sliders` (`img_src`,`en_content`,`vi_content`,`url`)
+VALUES('4.jpg', 'Fish Tuna #4','Cá Ngừ Số 4','product/4');
+INSERT INTO `baseafood`.`sliders` (`img_src`,`en_content`,`vi_content`,`url`)
+VALUES('5.jpg', 'Fish Tuna #5','Cá Ngừ Số 5','product/5');
+INSERT INTO `baseafood`.`sliders` (`img_src`,`en_content`,`vi_content`,`url`)
+VALUES('6.jpg', 'Fish Tuna #6','Cá Ngừ Số 6','product/6');
+INSERT INTO `baseafood`.`sliders` (`img_src`,`en_content`,`vi_content`,`url`)
+VALUES('7.jpg', 'Fish Tuna #7','Cá Ngừ Số 7','product/7');
+INSERT INTO `baseafood`.`sliders` (`img_src`,`en_content`,`vi_content`,`url`)
+VALUES('8.jpg', 'Fish Tuna #8','Cá Ngừ Số 8','product/8');
+INSERT INTO `baseafood`.`sliders` (`img_src`,`en_content`,`vi_content`,`url`)
+VALUES('9.jpg', 'Fish Tuna #9','Cá Ngừ Số 9','product/9');
+
 CREATE TABLE `baseafood`.`generic_information` (
   `id`         TINYINT NOT NULL AUTO_INCREMENT,
   `type`       VARCHAR(100),
@@ -220,3 +257,4 @@ INSERT INTO `baseafood`.`generic_information` (`type`, `order`, `en_title`, `vi_
 VALUES ('aboutInfo', 2, 'Financial Structure', 'Cơ cấu vốn', 'EN _ - Vốn Nhà nước : 25,74 %<br/>
 - Vốn của các cổ đông khác : 74,26% ', '- Vốn Nhà nước : 25,74 %<br/>
 - Vốn của các cổ đông khác : 74,26% ');
+

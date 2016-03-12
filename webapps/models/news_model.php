@@ -21,6 +21,15 @@ class News_Model extends CI_Model
         return $query->result_array();
     }
 
+    public function getAll() {
+
+        $this->db->select("*");
+        $this->db->from('news');
+        $this->db->order_by("id","desc");
+        $query = $this->db->get();
+        return $query->result();
+    }
+
     public function findById($id)
     {
         $this->db->from('news');

@@ -10,69 +10,23 @@
     <div class="container">
         <div class="caption text-center text-dark" data-stellar-ratio="0.7">
             <div id="owl-intro-text" class="owl-carousel">
-                <div class="item">
-                    <img src="<?php echo base_url(); ?>/webresources/images/seafood/1.png" class="slider-item"/>
-                    <p>We bring you fresh food</p>
-                    <div class="extra-space-l"></div>
-                    <a class="btn btn-blank" href="https://creativemarket.com/Themetorium" target="_blank"
-                       role="button">View More!</a>
-                </div>
-                <div class="item">
-                    <img src="<?php echo base_url(); ?>/webresources/images/seafood/2.jpg" class="slider-item"/>
-                    <p>We bring you fresh food</p>
-                    <div class="extra-space-l"></div>
-                    <a class="btn btn-blank" href="https://creativemarket.com/Themetorium" target="_blank"
-                       role="button">View More!</a>
-                </div>
-                <div class="item">
-                    <img src="<?php echo base_url(); ?>/webresources/images/seafood/3.jpg" class="slider-item"/>
-                    <p>We bring you fresh food</p>
-                    <div class="extra-space-l"></div>
-                    <a class="btn btn-blank" href="https://creativemarket.com/Themetorium" target="_blank"
-                       role="button">View More!</a>
-                </div>
-                <div class="item">
-                    <img src="<?php echo base_url(); ?>/webresources/images/seafood/4.jpg" class="slider-item"/>
-                    <p>We bring you fresh food</p>
-                    <div class="extra-space-l"></div>
-                    <a class="btn btn-blank" href="https://creativemarket.com/Themetorium" target="_blank"
-                       role="button">View More!</a>
-                </div>
-                <div class="item">
-                    <img src="<?php echo base_url(); ?>/webresources/images/seafood/5.jpg" class="slider-item"/>
-                    <p>We bring you fresh food</p>
-                    <div class="extra-space-l"></div>
-                    <a class="btn btn-blank" href="https://creativemarket.com/Themetorium" target="_blank"
-                       role="button">View More!</a>
-                </div>
-                <div class="item">
-                    <img src="<?php echo base_url(); ?>/webresources/images/seafood/6.jpg" class="slider-item"/>
-                    <p>We bring you fresh food</p>
-                    <div class="extra-space-l"></div>
-                    <a class="btn btn-blank" href="https://creativemarket.com/Themetorium" target="_blank"
-                       role="button">View More!</a>
-                </div>
-                <div class="item">
-                    <img src="<?php echo base_url(); ?>/webresources/images/seafood/7.jpg" class="slider-item"/>
-                    <p>We bring you fresh food</p>
-                    <div class="extra-space-l"></div>
-                    <a class="btn btn-blank" href="https://creativemarket.com/Themetorium" target="_blank"
-                       role="button">View More!</a>
-                </div>
-                <div class="item">
-                    <img src="<?php echo base_url(); ?>/webresources/images/seafood/8.jpg" class="slider-item"/>
-                    <p>We bring you fresh food</p>
-                    <div class="extra-space-l"></div>
-                    <a class="btn btn-blank" href="https://creativemarket.com/Themetorium" target="_blank"
-                       role="button">View More!</a>
-                </div>
-                <div class="item">
-                    <img src="<?php echo base_url(); ?>/webresources/images/seafood/9.jpg" class="slider-item"/>
-                    <p>We bring you fresh food</p>
-                    <div class="extra-space-l"></div>
-                    <a class="btn btn-blank" href="https://creativemarket.com/Themetorium" target="_blank"
-                       role="button">View More!</a>
-                </div>
+
+                <?php foreach ($sliders as $slider) { ?>
+                    <div class="item">
+                        <img src="<?php echo base_url(); ?>/webresources/images/sliders/<?php echo $slider->img_src; ?>" class="slider-item"/>
+                        <p><?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                                echo $slider->en_content;
+                            }
+                            else {
+                                echo $slider->vi_content;
+                            } ?></p>
+                        <div class="extra-space-l"></div>
+                        <a class="btn btn-blank" href="<?php echo $slider->url; ?>" target="_blank"
+                           role="button"><?php echo $this->lang->line('VIEW_MORE'); ?></a>
+                    </div>
+                <?php }
+                ?>
+
             </div>
         </div> <!-- /.caption -->
     </div> <!-- /.container -->

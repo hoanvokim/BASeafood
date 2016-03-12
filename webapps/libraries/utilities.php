@@ -17,4 +17,7 @@ class Utilities
             $lang->load('message', 'english');
         }
     }
+    function IsNullOrEmptyString($question){
+        return (!isset($question) || trim($question)==='');
+    }
 }

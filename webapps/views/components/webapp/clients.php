@@ -13,9 +13,8 @@
                 <div class="clients text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
                     <p><img src="<?php echo base_url(); ?>/webresources/images/home/clients.png" class="img-responsive"
                             alt=""></p>
-                    <h1 class="title">Happy Clients</h1>
-                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> Ut enim ad minim veniam,
-                        quis nostrud </p>
+                    <h1 class="title"><?php echo $this->lang->line('CLIENTS'); ?></h1>
+                    <p><?php echo $this->lang->line('CLIENTS_INTRO'); ?></p>
                 </div>
                 <div class="clients-logo wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
                     <div class="col-xs-6 col-sm-6 col-md-4 col-lg-2">

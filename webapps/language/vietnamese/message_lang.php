@@ -8,6 +8,11 @@
 // Global
 $lang['BASEAFOOD'] = 'baseafood';
 $lang['FEATURES'] = 'Chúng tôi mang đến cho bạn những thực phẩm tốt nhất vì sức khoẻ chính bạn';
+$lang['VIEW_MORE'] = 'Xem chi ';
+$lang['OUR_CERTIFICATES'] = 'Chứng chỉ';
+$lang['OUR_CERTIFICATES_INTRO'] = 'Tất cả các chứng chỉ chúng tôi đạt được để mang những sản phẩm tốt nhất đến bạn.';
+$lang['CLIENTS'] = 'Các khách hàng sử dụng sản phẩm';
+$lang['CLIENTS_INTRO'] = 'Những cửa hàng và khách hàng đã và đang tin dùng và sử dụng các sản phẩm của chúng tôi.';
 // MENU
 $lang['MENU_HOME'] = 'Trang chủ';
 $lang['MENU_INTRODUCE'] = 'Giới thiệu';

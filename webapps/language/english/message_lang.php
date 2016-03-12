@@ -9,6 +9,11 @@
 // Global
 $lang['BASEAFOOD'] = 'baseafood';
 $lang['FEATURES'] = 'we bring you the best food for your health';
+$lang['VIEW_MORE'] = 'View More!';
+$lang['OUR_CERTIFICATES'] = 'Our Certifications';
+$lang['OUR_CERTIFICATES_INTRO'] = 'Complete all standard to brings the good products to you.';
+$lang['CLIENTS'] = 'Happy Clients';
+$lang['CLIENTS_INTRO'] = 'All of customers and companies trust and using our products.';
 // Menu
 $lang['MENU_HOME'] = 'HOME';
 $lang['MENU_INTRODUCE'] = 'Introduce';

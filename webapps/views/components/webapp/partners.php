@@ -11,24 +11,28 @@
     <div class="page-header-wrapper">
         <div class="container">
             <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                <h1 class="title">Our Certifications</h1>
+                <h1 class="title"><?php echo $this->lang->line('OUR_CERTIFICATES'); ?></h1>
                 <div class="devider"></div>
-                <p class="subtitle">Complete all standard to brings the good products to you.</p>
+                <p class="subtitle"><?php echo $this->lang->line('OUR_CERTIFICATES_INTRO'); ?></p>
             </div>
         </div>
     </div>
     <!-- End page header-->
     <div class="container wow fadeInDown" data-wow-delay="0.4s">
         <div id="owl-partners" class="owl-carousel">
-            <img src="<?php echo base_url(); ?>/webresources/images/partners/1.png" alt="img" style="height: 70px;">
-            <img src="<?php echo base_url(); ?>/webresources/images/partners/2.png" alt="img" style="height: 70px;">
-            <img src="<?php echo base_url(); ?>/webresources/images/partners/3.png" alt="img" style="height: 70px;">
-            <img src="<?php echo base_url(); ?>/webresources/images/partners/4.png" alt="img" style="height: 70px;">
-            <img src="<?php echo base_url(); ?>/webresources/images/partners/5.png" alt="img" style="height: 70px;">
-            <img src="<?php echo base_url(); ?>/webresources/images/partners/6.png" alt="img" style="height: 70px;">
-            <img src="<?php echo base_url(); ?>/webresources/images/partners/7.png" alt="img" style="height: 70px;">
-            <img src="<?php echo base_url(); ?>/webresources/images/partners/8.png" alt="img" style="height: 70px;">
-            <img src="<?php echo base_url(); ?>/webresources/images/partners/9.png" alt="img" style="height: 70px;">
+            <img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/1.png" alt="img">
+            <img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/2.png" alt="img">
+            <img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/3.png" alt="img">
+            <img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/4.png" alt="img">
+            <img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/5.jpg" alt="img">
+            <img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/6.jpg" alt="img">
+            <img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/7.jpg" alt="img">
+            <img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/8.jpg" alt="img">
+            <img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/9.jpg" alt="img">
+            <img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/10.jpg" alt="img">
+            <img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/11.jpg" alt="img">
+            <img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/12.jpg" alt="img">
+            <img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/13.jpg" alt="img">
         </div>
     </div>
 </section>
