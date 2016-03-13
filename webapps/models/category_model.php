@@ -33,7 +33,7 @@ class Category_Model extends CI_Model
 
     public function findById($id)
     {
-        $this->db->select('id , name,fk_parent');
+        $this->db->select('id , en_name,vi_name,fk_parent');
         $this->db->from('category');
         $this->db->where('id =', $id);
         $query = $this->db->get();
@@ -41,7 +41,8 @@ class Category_Model extends CI_Model
             foreach ($query->result_array() as $item) {
                 return array(
                     'id' => $item['id'],
-                    'name' => $item['name'],
+                    'en_name' => $item['en_name'],
+                    'vi_name' => $item['vi_name'],
                     'parent' => $item['fk_parent'],
                 );
             }
@@ -51,22 +52,24 @@ class Category_Model extends CI_Model
 
     public function findByName($name)
     {
-        $this->db->select('id,name');
+        $this->db->select('id,en_name,vi_name');
         $this->db->from('category');
-        $this->db->where('name =', $name);
+        $this->db->where('en_name =', $name);
         $query = $this->db->get();
         return $query->result_array();
     }
 
-    public function insert($name, $parentId)
+    public function insert($en_name, $vi_name, $parentId)
     {
         if (!isset($parentId)) {
             $data = array(
-                'name' => $name,
+                'en_name' => $en_name,
+                'vi_name' => $vi_name,
             );
         } else {
             $data = array(
-                'name' => $name,
+                'en_name' => $en_name,
+                'vi_name' => $vi_name,
                 'fk_parent' => $parentId,
             );
         }
@@ -74,10 +77,11 @@ class Category_Model extends CI_Model
         $this->db->insert('category', $data);
     }
 
-    public function update($id, $name)
+    public function update($id, $en_name, $vi_name)
     {
         $data = array(
-            'name' => $name
+            'en_name' => $en_name,
+            'vi_name' => $vi_name
         );
         $this->db->where('id', $id);
         $this->db->update('category', $data);

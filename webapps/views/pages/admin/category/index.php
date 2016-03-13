@@ -22,7 +22,8 @@
                                 <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Name</th>
+                                    <th>Eng Name</th>
+                                    <th>Vietnamese Name</th>
                                     <th>Parent</th>
                                     <th>Actions</th>
                                 </tr>
@@ -31,7 +32,8 @@
                                 <?php foreach ($categories as $category): ?>
                                     <tr>
                                         <td><?php echo $category['id'] ?></td>
-                                        <td><?php echo $category['name'] ?></td>
+                                        <td><?php echo $category['en_name'] ?></td>
+                                        <td><?php echo $category['vi_name'] ?></td>
                                         <td><?php echo $category['fk_parent'] ?></td>
                                         <td>
                                             <a href="<?php echo base_url() . "create-category/" . $category['id']; ?>"

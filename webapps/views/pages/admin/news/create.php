@@ -23,12 +23,12 @@
                             <div class="form-group">
                                 <label for="en_title">English Title</label>
                                 <input type="text" id="en_title" name="en_title" class="form-control"
-                                       placeholder="Title" autofocus>
+                                       placeholder="English title" autofocus>
                             </div>
                             <div class="form-group">
                                 <label for="vi_title">Vietnamese Title</label>
                                 <input type="text" id="vi_title" name="vi_title" class="form-control"
-                                       placeholder="Title" autofocus>
+                                       placeholder="Vietnamese title" autofocus>
                             </div>
                             <div class="form-group">
                                 <label for="userfile">Image</label>

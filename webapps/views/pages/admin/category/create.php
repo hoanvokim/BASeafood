@@ -21,14 +21,19 @@
                                 <input type="hidden" id="hide" name="pid" value="<?php echo $parent['id']; ?>">
                                 <div class="form-group">
                                     <label>Parent category:</label>
-                                    <label class="text-muted disabled"><?php echo $parent['name']; ?></label>
+                                    <label class="text-muted disabled"><?php echo $parent['en_name']; ?></label>
                                 </div>
                             <?php else: ?>
                                 <input type="hidden" id="hide" name="pid" value="">
                             <?php endif ?>
                             <div class="form-group">
-                                <label for="name">Category name</label>
-                                <input type="text" id="name" name="name" class="form-control"
+                                <label for="en_name">English name</label>
+                                <input type="text" id="en_name" name="en_name" class="form-control"
+                                       placeholder="Category name" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <label for="vi_name">Vietnamese name</label>
+                                <input type="text" id="vi_name" name="vi_name" class="form-control"
                                        placeholder="Category name" autofocus>
                             </div>
                         </div>

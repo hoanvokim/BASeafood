@@ -64,16 +64,16 @@ create table `baseafood`.`product` (
 
 -- Path 004 : news --
 
-create table `baseafood`.`news` (
-    `id`                tinyint       not null auto_increment,
-    `en_title`          nvarchar(100) not null,
-    `vi_title`          nvarchar(100) not null,
-    `en_content`        text,
-    `vi_content`        text,
-    `url_image`         nvarchar(250),
-    `url_attached_file` nvarchar(250),
-    `datecreated`       datetime               default CURRENT_TIMESTAMP,
-    primary key (`id`)
+CREATE TABLE `baseafood`.`news` (
+  `id`                TINYINT       NOT NULL AUTO_INCREMENT,
+  `en_title`          NVARCHAR(100) NOT NULL,
+  `vi_title`          NVARCHAR(100) NOT NULL,
+  `en_content`        TEXT,
+  `vi_content`        TEXT,
+  `url_attached_file` NVARCHAR(250),
+  `created_date`       DATETIME DEFAULT CURRENT_TIMESTAMP,
+  `updated_date`       DATETIME DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
 )
     engine = MyISAM
     default charset = latin1

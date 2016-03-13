@@ -32,7 +32,8 @@ class Manager_category_controller extends CI_Controller
             };
             array_push($categories, array(
                 'id' => $category['id'],
-                'name' => $category['name'],
+                'en_name' => $category['en_name'],
+                'vi_name' => $category['vi_name'],
                 'fk_parent' => $category['fk_parent'],
                 'can_be_deleted' => $can_be_deleted,
             ));
@@ -70,14 +71,14 @@ class Manager_category_controller extends CI_Controller
         if ($parentId) {
             $data['parent'] = $this->category_model->findById($parentId);
         }
-        $this->form_validation->set_rules('name', 'name', 'trim|required|is_unique[category.name]', array(
+        $this->form_validation->set_rules('en_name', 'en_name', 'trim|required|is_unique[category.en_name]', array(
             'required' => 'You have not provided %s.',
             'is_unique' => 'This %s already exists.'
         ));
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('pages/admin/category/create', $data);
         } else {
-            $this->category_model->insert($this->input->post('name'), $this->input->post('pid'));
+            $this->category_model->insert($this->input->post('en_name'),$this->input->post('vi_name'), $this->input->post('pid'));
             redirect('category-manager', 'refresh');
         }
     }
@@ -89,13 +90,9 @@ class Manager_category_controller extends CI_Controller
             return;
         }
         $data['title'] = 'Edit category';
-        $data['parent'] = -1;
         $category = $this->category_model->findById($this->uri->segment(3));
         if ($category) {
             $data['category'] = $category;
-            if ($category['parent']) {
-                $data['parent'] = $this->category_model->findById($category['parent']);
-            }
             $this->load->view('pages/admin/category/update', $data);
             return;
         }
@@ -110,19 +107,20 @@ class Manager_category_controller extends CI_Controller
         }
         $data['title'] = 'Edit category';
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('dname', 'name', 'trim|required|is_unique[category.name]', array(
+        $this->form_validation->set_rules('en_name', 'en_name', 'trim|required|is_unique[category.en_name]', array(
             'required' => 'You have not provided %s.',
             'is_unique' => 'This %s already exists.'
         ));
         if ($this->form_validation->run() == FALSE) {
             $category = array(
                 'id' => $this->input->post('did'),
-                'name' => $this->input->post('dname'),
+                'en_name' => $this->input->post('en_name'),
+                'vi_name' => $this->input->post('vi_name'),
             );
             $data['category'] = $category;
             $this->load->view('pages/admin/category/update', $data);
         } else {
-            $this->category_model->update($this->input->post('did'), $this->input->post('dname'));
+            $this->category_model->update($this->input->post('did'), $this->input->post('en_name'), $this->input->post('vi_name'));
             redirect('category-manager', 'refresh');
         }
     }
