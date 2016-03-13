@@ -4,30 +4,28 @@
             <div class="col-sm-12 text-center bottom-separator">
                 <img src="<?php echo base_url(); ?>/webresources/images/home/under.png" class="img-responsive inline" alt="">
             </div>
-            <div class="col-md-4 col-sm-12">
+            <div class="col-md-3 col-sm-12">
                 <div class="testimonial bottom">
                     <h2>User Access</h2>
-                    <div class="pull-left">
-                        <a href="#"><i class="fa fa-user"></i> : 8</a>
-                    </div>
-                    <br/>
-                    <br/>
-                    <div class="pull-left">
-                        <a href="#"><i class="fa fa-certificate"></i> : 19223</a>
+                    <div class="list-group">
+                        <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; User accessing: 12</a>
+                        <a class="list-group-item"><i class="fa fa-certificate fa-fw"></i>&nbsp; Accessed: 12930</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-12">
+            <div class="col-md-5 col-sm-12">
                 <div class="contact-info bottom">
                     <h2>Contacts info.</h2>
-                    <address>
-                        Address: 460 Truong Cong Dinh, Ward 8<br/>
-                        Vung Tau city, Ba Ria Vung Tau Province, Viet Nam<br/>
-                        Phone : (084) 0643 837313 - 0643 582646<br/>
-                        Fax : (084) 0643 837312<br/>
-                        Email : <a href="javascript:;">baseafoodvn@vnn.vn</a>
-                    </address>
-
+                    <div class="list-group">
+                        <a class="list-group-item"><i class="fa fa-barcode fa-fw"></i>&nbsp; Company code: 3502297423</a>
+                        <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; Company name: BASEAFOOD 1 COMPANY LIMITED</a>
+                        <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; Company shortname: BASEAFOOD 1 CO.,LTD</a>
+                        <a class="list-group-item"><i class="fa fa-road fa-fw"></i>&nbsp; Address: 321, Trần Xuân Độ street, Phuoc trung ward, Ba Ria
+                                                                                            city, BR-VT province</a>
+                        <a class="list-group-item"><i class="fa fa-phone fa-fw"></i>&nbsp; Phone: 064.3825246</a>
+                        <a class="list-group-item"><i class="fa fa-fax fa-fw"></i>&nbsp; Fax: 064.3825545</a>
+                        <a class="list-group-item"><i class="fa fa-google fa-fw"></i>&nbsp; Email: tuongf34@gmail.com</a>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4 col-sm-12">

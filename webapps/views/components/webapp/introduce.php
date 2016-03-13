@@ -39,35 +39,36 @@
                                 </div>
                             </div>
                             <div class="post-content overflow">
-                                <h2 class="post-title bold">Details information</h2>
-                                <p>
-                                    <i class="fa fa-barcode"></i> Company code: 3502297423 <br/>
-                                    <i class="fa fa-user"></i> Company name: BASEAFOOD 1 COMPANY LIMITED <br/>
-                                    <i class="fa fa-user"></i> Company shortname: BASEAFOOD 1 CO.,LTD <br/>
-                                    <i class="fa fa-road"></i> Address: 321, Trần Xuân Độ street, Phuoc trung ward, Ba Ria
-                                    city, BR-VT province <br/>
-                                    <i class="fa fa-phone"></i> Phone: 064.3825246 <br/>
-                                    <i class="fa fa-fax"></i> Fax: 064.3825545 <br/>
-                                    <i class="fa fa-google"></i> Email: tuongf34@gmail.com <br/>
-                                </p>
-                                <?php foreach ($aboutInformation as $aboutInfo) { ?>
-                                    <h2 class="post-title bold">
-                                        <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
-                                            echo $aboutInfo->en_title;
-                                        }
-                                        else {
-                                            echo $aboutInfo->vi_title;
-                                        } ?>
-                                    </h2>
-                                    <p>
-                                        <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
-                                            echo $aboutInfo->en_content;
-                                        }
-                                        else {
-                                            echo $aboutInfo->vi_content;
-                                        } ?>
-                                    </p>
-                                <?php } ?>
+                                <div class="list-group">
+                                    <h2 class="list-group-item post-title bold text-uppercase list-group-item__header">Details information</h2>
+                                    <a class="list-group-item"><i class="fa fa-barcode fa-fw"></i>&nbsp; Company code: 3502297423</a>
+                                    <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; Company name: BASEAFOOD 1 COMPANY LIMITED</a>
+                                    <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; Company shortname: BASEAFOOD 1 CO.,LTD</a>
+                                    <a class="list-group-item"><i class="fa fa-road fa-fw"></i>&nbsp; Address: 321, Trần Xuân Độ street, Phuoc trung ward, Ba Ria
+                                                                                               city, BR-VT province</a>
+                                    <a class="list-group-item"><i class="fa fa-phone fa-fw"></i>&nbsp; Phone: 064.3825246</a>
+                                    <a class="list-group-item"><i class="fa fa-fax fa-fw"></i>&nbsp; Fax: 064.3825545</a>
+                                    <a class="list-group-item"><i class="fa fa-google fa-fw"></i>&nbsp; Email: tuongf34@gmail.com</a>
+
+                                    <?php foreach ($aboutInformation as $aboutInfo) { ?>
+                                        <h2 class="list-group-item post-title bold text-uppercase list-group-item__header">
+                                            <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                                                echo $aboutInfo->en_title;
+                                            }
+                                            else {
+                                                echo $aboutInfo->vi_title;
+                                            } ?>
+                                        </h2>
+                                        <p class="list-group-item">
+                                            <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                                                echo $aboutInfo->en_content;
+                                            }
+                                            else {
+                                                echo $aboutInfo->vi_content;
+                                            } ?>
+                                        </p>
+                                    <?php } ?>
+                                </div>
                                 <div class="post-bottom overflow">
                                     <ul class="nav navbar-nav post-nav">
                                         <li><a href="#"><i class="fa fa-tag"></i>General</a></li>

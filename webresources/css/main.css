@@ -9,9 +9,9 @@
 
 body {
     background: #fff;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 22px;
-    font-weight: 400;
+    font-weight: 200;
     color: #000;
 }
 
@@ -20,13 +20,14 @@ html {
 }
 
 a {
-    color: #C03035;
+    color: #2559a5;
 }
 
 a:hover {
     outline: none;
     text-decoration: none;
     color: #2559a5;
+    font-weight: bold;
 }
 
 a:focus {
@@ -988,7 +989,7 @@ ul.elements li {
 }
 
 ul.elements li > i {
-    color: #C03035;
+    color: #2559a5;
     display: inline-block;
     margin-right: 10px;
 }
@@ -1345,7 +1346,7 @@ Portfolio with right sidebar
 }
 
 .tag-cloud .nav-pills li a:hover {
-    background: #0099AE;
+    background: #2559a5;
 }
 
 .popular ul.gallery {
@@ -1462,6 +1463,7 @@ Portfolio Details
 
 .navbar-default li a:hover {
     color: #0884d5;
+    font-weight: bold;
     background: none;
 }
 
@@ -1702,13 +1704,13 @@ Blog with right sidebar
 }
 
 .post-nav li a {
-    color: #0099AE;
+    color: #2559a5;
     padding: 0;
     text-align: left;
 }
 
 .post-nav li a i {
-    color: #0099AE;
+    color: #2559a5;
     margin-right: 8px;
 }
 
@@ -2841,4 +2843,18 @@ span.stButton_gradient,
 
 .certificates__img {
     height: 70px;
+}
+
+.pre__title {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.list-group-item__header {
+    background-color: #2559a5;
+    color: #fff;
+}
+
+.list-group-item__content {
+    padding-left: 15px;
 }
