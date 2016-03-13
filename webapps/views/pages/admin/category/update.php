@@ -17,17 +17,16 @@
                             <div class="text-red text-center">
                                 <?php echo validation_errors(); ?>
                             </div>
-                            <?php if ($parent != -1): ?>
-                                <div class="form-group">
-                                    <label>Parent category:</label>
-                                    <label class="text-muted disabled"><?php echo $parent['name']; ?></label>
-                                </div>
-                            <?php endif ?>
                             <div class="form-group">
                                 <input type="hidden" id="hide" name="did" value="<?php echo $category['id']; ?>">
-                                <label for="name">Category name</label>
-                                <input type="text" id="dname" name="dname" class="form-control"
-                                       value="<?php echo $category['name']; ?>" placeholder="Category name" autofocus>
+                                <label for="en_name">English name</label>
+                                <input type="text" id="en_name" name="en_name" class="form-control"
+                                       value="<?php echo $category['en_name']; ?>" placeholder="Category name" autofocus>
+                            </div>
+                            <div class="form-group">
+                                <label for="vi_name">Vietnamese name</label>
+                                <input type="text" id="vi_name" name="vi_name" class="form-control"
+                                       value="<?php echo $category['vi_name']; ?>" placeholder="Category name" autofocus>
                             </div>
                         </div>
                         <div class="box-footer">

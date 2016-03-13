@@ -16,7 +16,7 @@
                             <h3 class="box-title">Delete category</h3>
                         </div>
                         <div class="box-body">
-                            <p class="text-danger"> Would you like to delete the category: <?php echo $category['name']; ?></p>
+                            <p class="text-danger"> Would you like to delete the category: <?php echo $category['en_name']; ?></p>
                         </div>
 
                         <div class="box-footer clearfix no-border">
