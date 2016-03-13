@@ -1,8 +1,6 @@
 DROP DATABASE `baseafood`;
 CREATE DATABASE `baseafood`;
 
--- Path 001 : users, menu, category --
-
 CREATE TABLE `baseafood`.`users` (
   `id`       TINYINT(4)   NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(30)  NOT NULL,
@@ -70,9 +68,9 @@ CREATE TABLE `baseafood`.`news` (
   `vi_title`          NVARCHAR(100) NOT NULL,
   `en_content`        TEXT,
   `vi_content`        TEXT,
-  `url_image`         NVARCHAR(250),
   `url_attached_file` NVARCHAR(250),
-  `datecreated`       DATETIME DEFAULT CURRENT_TIMESTAMP,
+  `created_date`       DATETIME DEFAULT CURRENT_TIMESTAMP,
+  `updated_date`       DATETIME DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 )
   ENGINE = MyISAM
