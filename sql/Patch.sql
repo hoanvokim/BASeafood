@@ -64,16 +64,17 @@ create table `baseafood`.`product` (
 
 -- Path 004 : news --
 
-CREATE TABLE `baseafood`.`news` (
-  `id`                TINYINT       NOT NULL AUTO_INCREMENT,
-  `en_title`          NVARCHAR(100) NOT NULL,
-  `vi_title`          NVARCHAR(100) NOT NULL,
-  `en_content`        TEXT,
-  `vi_content`        TEXT,
-  `url_attached_file` NVARCHAR(250),
-  `created_date`       DATETIME DEFAULT CURRENT_TIMESTAMP,
-  `updated_date`       DATETIME DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
+create table `baseafood`.`news` (
+    `id`                tinyint       not null auto_increment,
+    `en_title`          nvarchar(100) not null,
+    `vi_title`          nvarchar(100) not null,
+    `en_content`        text,
+    `vi_content`        text,
+    `url_image`         varchar(100),
+    `url_attached_file` nvarchar(250),
+    `created_date`      datetime               default CURRENT_TIMESTAMP,
+    `updated_date`      datetime               default CURRENT_TIMESTAMP,
+    primary key (`id`)
 )
     engine = MyISAM
     default charset = latin1
@@ -213,16 +214,16 @@ create table `baseafood`.`generic_information` (
 
 insert into `baseafood`.`generic_information` (`type`, `order`, `en_title`, `vi_title`, `en_content`, `vi_content`)
 values ('aboutInfo', 0, 'History of the company', 'Lịch sử hình thành và phát triển'
-    , 'EN _ Là một doanh nghiệp cổ phần có quy mô lớn được thành lập từ năm 1981. Sau hơn 30 năm xây dựng và phát triển, hiện Công ty có đội ngũ cán bộ quản lý có kinh nghiệm và trình độ chuyên sâu về Chế biến thủy sản, có đội ngũ công nhân lành nghề với trên 1.000 người. Ngoài ra Công ty đã trang bị hệ thống máy móc thiết bị hiện đại có thể chế biến các mặt hàng xuất khẩu có chất lượng cao để có thể đáp ứng được nhu cầu của các thị trường khó tính nhất. Công ty có nhiều xí nghiệp sản xuất đạt tiêu chuẩn Châu Âu DL 34, DL 20, giấy chứng nhận đạt tiêu chuẩn xuất vào các nước hồi giáo HALAL, tiêu chuẩn an toàn vệ sinh thực phẩm Việt Nam HACCP, chứng chỉ ISO 9001: 2008. Sản lượng thành phẩm xuất khẩu hàng năm đạt 9.000 tấn, trong đó 90% xuất khẩu, 10% tiêu thụ nội địa. Các mặt hàng xuất khẩu của Công ty gồm hàng đông các loại như: Tôm, Cá các loại, surimi các loại, Ghẹ, Bạch tuộc, mực nang, mực ống… nguyên con, phi lê, thành phẩm đóng gói nhỏ phục vụ cho các siêu thị. Hàng khô gồm: các loại Cá, Mực… tẩm gia vị và nướng ăn liền…Kim ngạch xuất khẩu hàng năm đạt từ 25 đến 30 triệu USD.
+    , '<p class=""> EN _ Là một doanh nghiệp cổ phần có quy mô lớn được thành lập từ năm 1981. Sau hơn 30 năm xây dựng và phát triển, hiện Công ty có đội ngũ cán bộ quản lý có kinh nghiệm và trình độ chuyên sâu về Chế biến thủy sản, có đội ngũ công nhân lành nghề với trên 1.000 người. Ngoài ra Công ty đã trang bị hệ thống máy móc thiết bị hiện đại có thể chế biến các mặt hàng xuất khẩu có chất lượng cao để có thể đáp ứng được nhu cầu của các thị trường khó tính nhất. Công ty có nhiều xí nghiệp sản xuất đạt tiêu chuẩn Châu Âu DL 34, DL 20, giấy chứng nhận đạt tiêu chuẩn xuất vào các nước hồi giáo HALAL, tiêu chuẩn an toàn vệ sinh thực phẩm Việt Nam HACCP, chứng chỉ ISO 9001: 2008. Sản lượng thành phẩm xuất khẩu hàng năm đạt 9.000 tấn, trong đó 90% xuất khẩu, 10% tiêu thụ nội địa. Các mặt hàng xuất khẩu của Công ty gồm hàng đông các loại như: Tôm, Cá các loại, surimi các loại, Ghẹ, Bạch tuộc, mực nang, mực ống… nguyên con, phi lê, thành phẩm đóng gói nhỏ phục vụ cho các siêu thị. Hàng khô gồm: các loại Cá, Mực… tẩm gia vị và nướng ăn liền…Kim ngạch xuất khẩu hàng năm đạt từ 25 đến 30 triệu USD.
     <br/>
-Hiện nay, có trên 40 khách hàng các nước thường xuyên quan hệ mua bán với Công ty. Thị trường lớn nhất là các nước Nhật Bản, Hàn Quốc, Nga, Ukraina, Belarus, Tây Ban Nha, Mỹ, và một số nước thuộc Trung Đông. Mục tiêu kinh doanh của Công ty là luôn chú trọng nâng cao chất lượng sản phẩm. Đầu tư nâng cấp các nhà xưởng, đào tạo đội ngũ công nhân lành nghề, có kinh nghiệm trong sản xuất và coi trọng những yêu cầu về mẫu mã và chất lượng sản phẩm của khách hàng. Công ty luôn giữ uy tín thương hiệu BASEAFOOD trên thị trường Quốc tế.'
-    , 'Là một doanh nghiệp cổ phần có quy mô lớn được thành lập từ năm 1981. Sau hơn 30 năm xây dựng và phát triển, hiện Công ty có đội ngũ cán bộ quản lý có kinh nghiệm và trình độ chuyên sâu về Chế biến thủy sản, có đội ngũ công nhân lành nghề với trên 1.000 người. Ngoài ra Công ty đã trang bị hệ thống máy móc thiết bị hiện đại có thể chế biến các mặt hàng xuất khẩu có chất lượng cao để có thể đáp ứng được nhu cầu của các thị trường khó tính nhất. Công ty có nhiều xí nghiệp sản xuất đạt tiêu chuẩn Châu Âu DL 34, DL 20, giấy chứng nhận đạt tiêu chuẩn xuất vào các nước hồi giáo HALAL, tiêu chuẩn an toàn vệ sinh thực phẩm Việt Nam HACCP, chứng chỉ ISO 9001: 2008. Sản lượng thành phẩm xuất khẩu hàng năm đạt 9.000 tấn, trong đó 90% xuất khẩu, 10% tiêu thụ nội địa. Các mặt hàng xuất khẩu của Công ty gồm hàng đông các loại như: Tôm, Cá các loại, surimi các loại, Ghẹ, Bạch tuộc, mực nang, mực ống… nguyên con, phi lê, thành phẩm đóng gói nhỏ phục vụ cho các siêu thị. Hàng khô gồm: các loại Cá, Mực… tẩm gia vị và nướng ăn liền…Kim ngạch xuất khẩu hàng năm đạt từ 25 đến 30 triệu USD.
+Hiện nay, có trên 40 khách hàng các nước thường xuyên quan hệ mua bán với Công ty. Thị trường lớn nhất là các nước Nhật Bản, Hàn Quốc, Nga, Ukraina, Belarus, Tây Ban Nha, Mỹ, và một số nước thuộc Trung Đông. Mục tiêu kinh doanh của Công ty là luôn chú trọng nâng cao chất lượng sản phẩm. Đầu tư nâng cấp các nhà xưởng, đào tạo đội ngũ công nhân lành nghề, có kinh nghiệm trong sản xuất và coi trọng những yêu cầu về mẫu mã và chất lượng sản phẩm của khách hàng. Công ty luôn giữ uy tín thương hiệu BASEAFOOD trên thị trường Quốc tế.</p>'
+    , '<p class=""> Là một doanh nghiệp cổ phần có quy mô lớn được thành lập từ năm 1981. Sau hơn 30 năm xây dựng và phát triển, hiện Công ty có đội ngũ cán bộ quản lý có kinh nghiệm và trình độ chuyên sâu về Chế biến thủy sản, có đội ngũ công nhân lành nghề với trên 1.000 người. Ngoài ra Công ty đã trang bị hệ thống máy móc thiết bị hiện đại có thể chế biến các mặt hàng xuất khẩu có chất lượng cao để có thể đáp ứng được nhu cầu của các thị trường khó tính nhất. Công ty có nhiều xí nghiệp sản xuất đạt tiêu chuẩn Châu Âu DL 34, DL 20, giấy chứng nhận đạt tiêu chuẩn xuất vào các nước hồi giáo HALAL, tiêu chuẩn an toàn vệ sinh thực phẩm Việt Nam HACCP, chứng chỉ ISO 9001: 2008. Sản lượng thành phẩm xuất khẩu hàng năm đạt 9.000 tấn, trong đó 90% xuất khẩu, 10% tiêu thụ nội địa. Các mặt hàng xuất khẩu của Công ty gồm hàng đông các loại như: Tôm, Cá các loại, surimi các loại, Ghẹ, Bạch tuộc, mực nang, mực ống… nguyên con, phi lê, thành phẩm đóng gói nhỏ phục vụ cho các siêu thị. Hàng khô gồm: các loại Cá, Mực… tẩm gia vị và nướng ăn liền…Kim ngạch xuất khẩu hàng năm đạt từ 25 đến 30 triệu USD.
     <br/>
-Hiện nay, có trên 40 khách hàng các nước thường xuyên quan hệ mua bán với Công ty. Thị trường lớn nhất là các nước Nhật Bản, Hàn Quốc, Nga, Ukraina, Belarus, Tây Ban Nha, Mỹ, và một số nước thuộc Trung Đông. Mục tiêu kinh doanh của Công ty là luôn chú trọng nâng cao chất lượng sản phẩm. Đầu tư nâng cấp các nhà xưởng, đào tạo đội ngũ công nhân lành nghề, có kinh nghiệm trong sản xuất và coi trọng những yêu cầu về mẫu mã và chất lượng sản phẩm của khách hàng. Công ty luôn giữ uy tín thương hiệu BASEAFOOD trên thị trường Quốc tế.');
+Hiện nay, có trên 40 khách hàng các nước thường xuyên quan hệ mua bán với Công ty. Thị trường lớn nhất là các nước Nhật Bản, Hàn Quốc, Nga, Ukraina, Belarus, Tây Ban Nha, Mỹ, và một số nước thuộc Trung Đông. Mục tiêu kinh doanh của Công ty là luôn chú trọng nâng cao chất lượng sản phẩm. Đầu tư nâng cấp các nhà xưởng, đào tạo đội ngũ công nhân lành nghề, có kinh nghiệm trong sản xuất và coi trọng những yêu cầu về mẫu mã và chất lượng sản phẩm của khách hàng. Công ty luôn giữ uy tín thương hiệu BASEAFOOD trên thị trường Quốc tế.</p>');
 
 insert into `baseafood`.`generic_information` (`type`, `order`, `en_title`, `vi_title`, `en_content`, `vi_content`)
-values ('aboutInfo', 1, 'Business Fields', 'Ngành nghề kinh doanh', 'EN _MESSAGE<br/>
-<ul class="elements list-group-item list-group-item__content">
+values ('aboutInfo', 1, 'Business Fields', 'Ngành nghề kinh doanh', 'EN _MESSAGE
+<ul class="elements ">
 <li><i class="fa fa-angle-right"></i>Nuôi trồng, thu mua, chế biến, kinh doanh hàng nông, lâm, thủy sản </li>
 <li><i class="fa fa-angle-right"></i>Kinh doanh cây, con giống các lọai;</li>
 <li><i class="fa fa-angle-right"></i>Kinh doanh xe chuyên dùng các loại; kinh doanh xe ôtô tải, xe ôtô khách các lọai; xe môtô các lọai;</li>
@@ -239,7 +240,7 @@ values ('aboutInfo', 1, 'Business Fields', 'Ngành nghề kinh doanh', 'EN _MESS
 <li><i class="fa fa-angle-right"></i>Vận tải hàng hóa bằng xe thùng, xe bảo ôn chở thịt thực phẩm;</li>
 <li><i class="fa fa-angle-right"></i>Cho thuê kho, bãi;</li>
 <li><i class="fa fa-angle-right"></i>Sản xuất và mua bán nước đá ướp lạnh.<li/>
-<ul/>', ' <ul class="elements list-group-item list-group-item__content">
+</ul>', ' <ul class="elements ">
 <li><i class="fa fa-angle-right"></i>Nuôi trồng, thu mua, chế biến, kinh doanh hàng nông, lâm, thủy sản;</li>
 <li><i class="fa fa-angle-right"></i>Kinh doanh cây, con giống các lọai;</li>
 <li><i class="fa fa-angle-right"></i>Kinh doanh xe chuyên dùng các loại; kinh doanh xe ôtô tải, xe ôtô khách các lọai; xe môtô các lọai;</li>
@@ -259,12 +260,12 @@ values ('aboutInfo', 1, 'Business Fields', 'Ngành nghề kinh doanh', 'EN _MESS
 </ul>');
 
 insert into `baseafood`.`generic_information` (`type`, `order`, `en_title`, `vi_title`, `en_content`, `vi_content`)
-values ('aboutInfo', 2, 'Financial Structure', 'Cơ cấu vốn', 'EN _MESSAGE
-<ul class="elements list-group-item list-group-item__content">
+values ('aboutInfo', 2, 'Financial Structure', 'Cơ cấu vốn',  'EN _MESSAGE
+<ul class="elements ">
 <li><i class="fa fa-angle-right"></i>Vốn Nhà nước : 25,74 %</li>
 <li><i class="fa fa-angle-right"></i>Vốn của các cổ đông khác : 74,26% </li>
 </ul>'
-, '<ul class="elements list-group-item list-group-item__content">
+    , '<ul class="elements ">
 <li><i class="fa fa-angle-right"></i>Vốn Nhà nước : 25,74 %</li>
 <li><i class="fa fa-angle-right"></i>Vốn của các cổ đông khác : 74,26% </li>
 </ul>');

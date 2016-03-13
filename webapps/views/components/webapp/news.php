@@ -24,13 +24,13 @@
                                 <img src="<?php echo base_url(); ?>webresources/images/<?php echo $new->url_image ?>" alt="blog"/>
                                 <?php if (!$this->utilities->IsNullOrEmptyString($new->url_attached_file)) { ?>
                                     <a href="<?php echo $new->url_attached_file ?>">
-                                        <i class="fa fa-download"></i>
+                                        <i class="fa fa-download news__download"></i>
                                     </a>
                                 <?php } ?>
                             </div>
                         </div><!-- end image wrapper -->
                         <div class="media-body post-body">
-                            <h3><a href="<?php echo base_url(); ?>/news-details/view/<?php echo $new->id ?>">
+                            <h3><a class="news__link" href="<?php echo base_url(); ?>/news-details/view/<?php echo $new->id ?>">
                                     <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                                         echo $new->en_title;
                                     }
@@ -40,7 +40,7 @@
                                 </a></h3>
                             <p class="post-meta">
                                 <span class="post-meta-author">By <a href="#">Admin</a></span>
-                                <span class="date">On <?php echo $new->datecreated ?></span>
+                                <span class="date">On <?php echo $new->created_date ?></span>
                             </p>
                             <div class="post-excerpt">
                                 <p> <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {

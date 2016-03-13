@@ -59,28 +59,21 @@
                                                 echo $aboutInfo->vi_title;
                                             } ?>
                                         </h2>
-                                        <p class="list-group-item">
+                                        <div class="list-group-item">
                                             <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                                                 echo $aboutInfo->en_content;
                                             }
                                             else {
                                                 echo $aboutInfo->vi_content;
                                             } ?>
-                                        </p>
+                                        </div>
                                     <?php } ?>
                                 </div>
                                 <div class="post-bottom overflow">
                                     <ul class="nav navbar-nav post-nav">
                                         <li><a href="#"><i class="fa fa-tag"></i>General</a></li>
-                                        <li><a href="#"><i class="fa fa-user"></i>32 Watched</a></li>
+                                        <li><a href="#"><i class="fa fa-tag"></i>Introduce</a></li>
                                     </ul>
-                                </div>
-                                <div class="blog-share">
-                                    <span class='st_facebook_hcount'></span>
-                                    <span class='st_twitter_hcount'></span>
-                                    <span class='st_linkedin_hcount'></span>
-                                    <span class='st_pinterest_hcount'></span>
-                                    <span class='st_email_hcount'></span>
                                 </div>
                             </div>
                         </div>
