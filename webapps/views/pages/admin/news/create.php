@@ -36,11 +36,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="en_content">English content</label>
-                                <textarea id="en_content" name="en_content" class="form-control"></textarea>
+                                <textarea id="news_en_content_editor" name="en_content" class="form-control"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="vi_content">Vietnamese content</label>
-                                <textarea id="vi_content" name="vi_content" class="form-control"></textarea>
+                                <textarea id="news_vi_content_editor" name="vi_content" class="form-control"></textarea>
                             </div>
                         </div>
                         <div class="box-footer">
