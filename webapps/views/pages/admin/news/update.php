@@ -37,11 +37,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="en_content">English content</label>
-                                <textarea id="en_content" name="en_content" class="form-control"><?php echo htmlspecialchars($news['en_content']); ?></textarea>
+                                <textarea id="en_content" name="en_content" class="form-control"><?php echo htmlspecialchars_decode(strip_tags($news['en_content'])); ?></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="vi_content">Vietnamese content</label>
-                                <textarea id="vi_content" name="vi_content" class="form-control"><?php echo htmlspecialchars($news['vi_content']); ?></textarea>
+                                <textarea id="vi_content" name="vi_content" class="form-control"><?php echo htmlspecialchars_decode(strip_tags($news['vi_content'])); ?></textarea>
                             </div>
                         </div>
                         <div class="box-footer">
