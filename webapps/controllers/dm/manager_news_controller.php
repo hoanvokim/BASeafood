@@ -123,6 +123,14 @@ class Manager_news_controller extends CI_Controller
                 redirect('news-manager', 'refresh');
             }
         }
+        $news = array(
+            'id'=>  $this->input->post('nid'),
+            'en_title' => $this->input->post('en_title'),
+            'vi_title' => $this->input->post('vi_title'),
+            'en_content' => $this->input->post('en_content'),
+            'vi_content' => $this->input->post('vi_content'),
+        );
+        $data['news'] = $news;
         $data['error'] = $this->upload->display_errors();
         $this->load->view('pages/admin/news/update', $data);
     }
