@@ -19,6 +19,8 @@ class News_controller extends CI_Controller
     public function index()
     {
         $data['title'] = 'News and Events';
+        $this->load->model('news_model');
+        $data['news'] = $this->news_model->getAll();
         $this->load->view('pages/webapp/newsandevents', $data);
     }
 }

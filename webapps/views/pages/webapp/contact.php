@@ -9,7 +9,7 @@
 <?php $this->load->view('layouts/base/menu'); ?>
 
 <!--Start content-->
-contact pages
+<?php $this->load->view('components/webapp/contact'); ?>
 <!--End content-->
 
 <!--Begin include JS files-->
