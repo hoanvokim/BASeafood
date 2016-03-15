@@ -42,10 +42,6 @@
                                 <label for="vi_content">Vietnamese content</label>
                                 <textarea id="vi_content" name="vi_content" class="form-control"></textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="type">Type</label>
-                                <input type="text" id="type" name="type" class="form-control"/>
-                            </div>
                         </div>
                         <div class="box-footer">
                             <button type="submit" class="btn btn-primary">create</button>

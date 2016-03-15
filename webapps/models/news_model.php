@@ -21,11 +21,12 @@ class News_Model extends CI_Model
         return $query->result_array();
     }
 
-    public function getAll() {
+    public function getAll()
+    {
 
         $this->db->select("*");
         $this->db->from('news');
-        $this->db->order_by("id","desc");
+        $this->db->order_by("id", "desc");
         $query = $this->db->get();
         return $query->result();
     }
@@ -52,37 +53,27 @@ class News_Model extends CI_Model
         return false;
     }
 
-    public function findByType($type)
-    {
-        $this->db->where('type', $type);
-        return $this->db->get('news')->result_array();
-    }
-
-    public function insert($en_title, $vi_title, $en_content, $vi_content, $url_image, $url_attached_file, $type)
+    public function insert($en_title, $vi_title, $en_content, $vi_content, $url_attached_file)
     {
         $data = array(
             'en_title' => $en_title,
             'vi_title' => $vi_title,
             'en_content' => $en_content,
             'vi_content' => $vi_content,
-            'url_image' => $url_image,
             'url_attached_file' => $url_attached_file,
-            'type' => $type
         );
 
         $this->db->insert('news', $data);
     }
 
-    public function update($id, $en_title, $vi_title, $en_content, $vi_content, $url_image, $url_attached_file, $type)
+    public function update($id, $en_title, $vi_title, $en_content, $vi_content, $url_attached_file)
     {
         $data = array(
             'en_title' => $en_title,
             'vi_title' => $vi_title,
             'en_content' => $en_content,
             'vi_content' => $vi_content,
-            'url_image' => $url_image,
             'url_attached_file' => $url_attached_file,
-            'type' => $type
         );
         $this->db->where('id', $id);
         $this->db->update('news', $data);

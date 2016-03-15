@@ -49,17 +49,24 @@ class Manager_news_controller extends CI_Controller
         $data['title'] = 'News creation';
         $this->load->library('form_validation');
         $this->load->library('upload', $this->get_config());
+        $this->form_validation->set_rules('en_title', 'en_title', 'trim|required', array(
+            'required' => 'You have not provided %s.',
+        ));
+        $this->form_validation->set_rules('vi_title', 'vi_title', 'trim|required', array(
+            'required' => 'You have not provided %s.',
+        ));
         if ($this->upload->do_upload('userfile')) {
             $upload_files = $this->upload->data();
             $file_path = 'assets/upload/images/news/' . $upload_files['file_name'];
-            $en_title = $this->input->post('en_title');
-            $vi_title = $this->input->post('vi_title');
-            $en_content = $this->input->post('en_content');
-            $vi_content = $this->input->post('vi_content');
-            $type = $this->input->post('type');
-            $this->news_model->insert($en_title, $vi_title, $en_content,
-                $vi_content, $file_path, $file_path, $type);
-            redirect('news-manager', 'refresh');
+            if ($this->form_validation->run() == TRUE) {
+                $en_title = $this->input->post('en_title');
+                $vi_title = $this->input->post('vi_title');
+                $en_content = $this->input->post('en_content');
+                $vi_content = $this->input->post('vi_content');
+                $this->news_model->insert($en_title, $vi_title, $en_content,
+                    $vi_content, $file_path);
+                redirect('news-manager', 'refresh');
+            }
         }
         $data['error'] = $this->upload->display_errors();
         $this->load->view('pages/admin/news/create', $data);
@@ -91,18 +98,25 @@ class Manager_news_controller extends CI_Controller
         $data['title'] = 'Edit news';
         $this->load->library('form_validation');
         $this->load->library('upload', $this->get_config());
+        $this->form_validation->set_rules('en_title', 'en_title', 'trim|required', array(
+            'required' => 'You have not provided %s.',
+        ));
+        $this->form_validation->set_rules('vi_title', 'vi_title', 'trim|required', array(
+            'required' => 'You have not provided %s.',
+        ));
         if ($this->upload->do_upload('userfile')) {
             $upload_files = $this->upload->data();
             $file_path = 'assets/upload/images/news/' . $upload_files['file_name'];
-            $id = $this->input->post('nid');
-            $en_title = $this->input->post('en_title');
-            $vi_title = $this->input->post('vi_title');
-            $en_content = $this->input->post('en_content');
-            $vi_content = $this->input->post('vi_content');
-            $type = $this->input->post('type');
-            $this->news_model->update($id, $en_title, $vi_title, $en_content,
-                $vi_content, $file_path, $file_path, $type);
-            redirect('news-manager', 'refresh');
+            if ($this->form_validation->run() == TRUE) {
+                $id = $this->input->post('nid');
+                $en_title = $this->input->post('en_title');
+                $vi_title = $this->input->post('vi_title');
+                $en_content = $this->input->post('en_content');
+                $vi_content = $this->input->post('vi_content');
+                $this->news_model->update($id, $en_title, $vi_title, $en_content,
+                    $vi_content, $file_path);
+                redirect('news-manager', 'refresh');
+            }
         }
         $data['error'] = $this->upload->display_errors();
         $this->load->view('pages/admin/news/update', $data);
