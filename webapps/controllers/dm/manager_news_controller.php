@@ -122,6 +122,33 @@ class Manager_news_controller extends CI_Controller
         $this->load->view('pages/admin/news/update', $data);
     }
 
+    public function delete()
+    {
+        if (!$this->is_login()) {
+            $this->load_login_view();
+            return;
+        }
+        $data['title'] = 'Delete news?';
+        $news = $this->news_model->findById($this->uri->segment(3));
+        if ($news) {
+            $data['news'] = $news;
+            $this->load->view('pages/admin/news/delete', $data);
+            return;
+        }
+        redirect('news-manager', 'refresh');
+    }
+
+    public function post_delete()
+    {
+        $id = $this->uri->segment(2);
+        $news = $this->news_model->findById($id);
+        if ($news) {
+            @unlink($news['url']);
+            $this->news_model->delete($id);
+        }
+        redirect('news-manager', 'refresh');
+    }
+
     private function get_config()
     {
         return array(
