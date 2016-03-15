@@ -24,7 +24,7 @@ class User_home_controller extends CI_Controller
         $this->load->model('sliders_model');
         $data['sliders'] = $this->sliders_model->findAll();
         $this->load->model('news_model');
-        $data['news'] = $this->news_model->findAll();
+        $data['news'] = $this->news_model->getAll();
         $this->load->view('pages/home', $data);
     }
 
