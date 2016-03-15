@@ -29,7 +29,7 @@
                                 <tbody>
                                 <?php foreach ($categories as $category): ?>
                                     <tr>
-                                        <td><?php echo $category['name'] ?></td>
+                                        <td><?php echo $category['en_name'] ?></td>
                                         <td>
                                             <table id="example2" class="table table-bordered table-hover">
                                                 <thead>
@@ -46,7 +46,7 @@
                                                         <td><img src="<?php echo $product['url']; ?>"
                                                                  class="img-responsive img-thumbnail"
                                                                  style="width: 150px;height: 150px;"/></td>
-                                                        <td><?php echo $product['name'] ?></td>
+                                                        <td><?php echo $product['vi_name'] ?></td>
                                                         <td><?php echo $product['en_name'] ?></td>
                                                         <td>
                                                             <a href="<?php echo base_url() . "product-manager/update/" . $product['id']; ?>"

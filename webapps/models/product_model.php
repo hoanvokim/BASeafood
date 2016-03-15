@@ -23,7 +23,7 @@ class Product_Model extends CI_Model
             foreach ($query->result_array() as $item) {
                 return array(
                     'id' => $item['id'],
-                    'name' => $item['name'],
+                    'vi_name' => $item['vi_name'],
                     'en_name' => $item['en_name'],
                     'size' => $item['size'],
                     'packing' => $item['packing'],
@@ -52,7 +52,7 @@ class Product_Model extends CI_Model
     public function insert($name, $en_name, $fk_category, $url, $size, $packing)
     {
         $data = array(
-            'name' => $name,
+            'vi_name' => $name,
             'en_name' => $en_name,
             'url' => $url,
             'fk_category' => $fk_category,
@@ -65,7 +65,7 @@ class Product_Model extends CI_Model
     public function update($id, $name, $en_name, $fk_category, $url, $size, $packing)
     {
         $data = array(
-            'name' => $name,
+            'vi_name' => $name,
             'en_name' => $en_name,
             'url' => $url,
             'fk_category' => $fk_category,

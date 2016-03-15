@@ -21,14 +21,14 @@
                                 <?php echo $error; ?>
                             </div>
                             <div class="form-group">
-                                <label class="text-blue"><?php echo 'Category: ' . $category['name']; ?></label>
+                                <label class="text-blue"><?php echo 'Category: ' . $category['en_name']; ?></label>
                                 <input type="hidden" id="hide" name="cid" value="<?php echo $category['id']; ?>">
                                 <input type="hidden" id="hide" name="pid" value="<?php echo $product['id']; ?>">
                             </div>
                             <div class="form-group">
-                                <label for="name">Product name</label>
-                                <input type="text" id="name" name="name" class="form-control"
-                                       value="<?php echo $product['name']; ?>" placeholder="Product name" autofocus>
+                                <label for="vi_name">Product name</label>
+                                <input type="text" id="vi_name" name="vi_name" class="form-control"
+                                       value="<?php echo $product['vi_name']; ?>" placeholder="Product name" autofocus>
                             </div>
                             <div class="form-group">
                                 <label for="userfile">Image</label>

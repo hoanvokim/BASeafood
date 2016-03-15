@@ -30,7 +30,7 @@ class Manager_product_controller extends CI_Controller
             $products = $this->product_model->findByCategory($category['id']);
             array_push($products_category, array(
                 'id' => $category['id'],
-                'name' => $category['name'],
+                'en_name' => $category['en_name'],
                 'products' => $products,
             ));
         }
@@ -68,7 +68,11 @@ class Manager_product_controller extends CI_Controller
         if ($categoryId) {
             $data['category'] = $this->category_model->findById($categoryId);
         }
-        $this->form_validation->set_rules('name', 'name', 'trim|required|is_unique[product.name]', array(
+        $this->form_validation->set_rules('en_name', 'en_name', 'trim|required|is_unique[product.en_name]', array(
+            'required' => 'You have not provided %s.',
+            'is_unique' => 'This %s already exists.'
+        ));
+        $this->form_validation->set_rules('vi_name', 'vi_name', 'trim|required|is_unique[product.vi_name]', array(
             'required' => 'You have not provided %s.',
             'is_unique' => 'This %s already exists.'
         ));
@@ -78,7 +82,7 @@ class Manager_product_controller extends CI_Controller
             if ($this->form_validation->run() == FALSE) {
                 $this->load->view('pages/admin/product/create', $data);
             } else {
-                $this->product_model->insert($this->input->post('name'), $this->input->post('en_name'), $this->input->post('cid'), $file_path, $this->input->post('size'), $this->input->post('packing'));
+                $this->product_model->insert($this->input->post('vi_name'), $this->input->post('en_name'), $this->input->post('cid'), $file_path, $this->input->post('size'), $this->input->post('packing'));
                 redirect('product-manager', 'refresh');
             }
         }
@@ -129,7 +133,11 @@ class Manager_product_controller extends CI_Controller
         if ($categoryId) {
             $data['category'] = $this->category_model->findById($categoryId);
         }
-        $this->form_validation->set_rules('name', 'name', 'trim|required|is_unique[product.name]', array(
+        $this->form_validation->set_rules('vi_name', 'vi_name', 'trim|required|is_unique[product.vi_name]', array(
+            'required' => 'You have not provided %s.',
+            'is_unique' => 'This %s already exists.'
+        ));
+        $this->form_validation->set_rules('en_name', 'en_name', 'trim|required|is_unique[product.en_name]', array(
             'required' => 'You have not provided %s.',
             'is_unique' => 'This %s already exists.'
         ));
@@ -139,7 +147,7 @@ class Manager_product_controller extends CI_Controller
             if ($this->form_validation->run() == FALSE) {
                 $this->load->view('pages/admin/product/update', $data);
             } else {
-                $this->product_model->update($this->input->post('pid'), $this->input->post('name'), $this->input->post('en_name'), $this->input->post('cid'), $file_path, $this->input->post('size'), $this->input->post('packing'));
+                $this->product_model->update($this->input->post('pid'), $this->input->post('vi_name'), $this->input->post('en_name'), $this->input->post('cid'), $file_path, $this->input->post('size'), $this->input->post('packing'));
                 redirect('product-manager', 'refresh');
             }
         }
