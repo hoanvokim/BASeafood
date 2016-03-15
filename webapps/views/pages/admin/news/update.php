@@ -12,7 +12,7 @@
             <div class="row">
                 <section class="col-lg-6">
                     <div class="box box-primary">
-                        <?php echo form_open_multipart('create-news-submit'); ?>
+                        <?php echo form_open_multipart('update-news-submit'); ?>
                         <div class="box-body">
                             <input type="hidden" id="hide" name="nid" value="<?php echo $news['id']; ?>">
                             <div class="text-red text-center">
@@ -37,15 +37,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="en_content">English content</label>
-                                <textarea id="en_content" name="en_content" class="form-control" value="<?php echo $news['en_content']; ?>"></textarea>
+                                <textarea id="en_content" name="en_content" class="form-control"><?php echo htmlspecialchars($news['en_content']); ?></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="vi_content">Vietnamese content</label>
-                                <textarea id="vi_content" name="vi_content" class="form-control" value="<?php echo $news['vi_content']; ?>"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="type">Type</label>
-                                <input type="text" id="type" name="type" class="form-control" value="<?php echo $news['type']; ?>"/>
+                                <textarea id="vi_content" name="vi_content" class="form-control"><?php echo htmlspecialchars($news['vi_content']); ?></textarea>
                             </div>
                         </div>
                         <div class="box-footer">

@@ -23,12 +23,12 @@
                             <div class="form-group">
                                 <label for="en_title">English Title</label>
                                 <input type="text" id="en_title" name="en_title" class="form-control"
-                                       placeholder="English title" autofocus>
+                                       placeholder="English title" value="<?= set_value('en_title') ?>" autofocus>
                             </div>
                             <div class="form-group">
                                 <label for="vi_title">Vietnamese Title</label>
                                 <input type="text" id="vi_title" name="vi_title" class="form-control"
-                                       placeholder="Vietnamese title" autofocus>
+                                       placeholder="Vietnamese title" value="<?= set_value('vi_title') ?>" autofocus>
                             </div>
                             <div class="form-group">
                                 <label for="userfile">Image</label>
@@ -36,11 +36,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="en_content">English content</label>
-                                <textarea id="news_en_content_editor" name="en_content" class="form-control"></textarea>
+                                <textarea id="news_en_content_editor" name="en_content" class="form-control" value="<?= set_value('en_content') ?>"></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="vi_content">Vietnamese content</label>
-                                <textarea id="news_vi_content_editor" name="vi_content" class="form-control"></textarea>
+                                <textarea id="news_vi_content_editor" name="vi_content" class="form-control" value="<?= set_value('vi_content') ?>"></textarea>
                             </div>
                         </div>
                         <div class="box-footer">

@@ -68,6 +68,11 @@ class Manager_news_controller extends CI_Controller
                 redirect('news-manager', 'refresh');
             }
         }
+
+        $data['en_title'] = $this->input->post('en_title');
+        $data['vi_title'] = $this->input->post('vi_title');
+        $data['en_content'] = $this->input->post('en_content');
+        $data['vi_content'] = $this->input->post('vi_content');
         $data['error'] = $this->upload->display_errors();
         $this->load->view('pages/admin/news/create', $data);
     }
