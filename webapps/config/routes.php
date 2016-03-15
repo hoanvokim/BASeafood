@@ -89,6 +89,13 @@ $route['delete-category-submit/:num'] = 'dm/manager_category_controller/post_del
 
 //gallery administration
 $route['gallery-manager'] = 'dm/manager_gallery_controller/index';
+$route['create-gallery/offices'] = 'dm/manager_gallery_controller/create_new/OFFICES';
+$route['create-gallery/factories'] = 'dm/manager_gallery_controller/create_new/FACTORIES';
+$route['gallery-manager/update/:num'] = 'dm/manager_gallery_controller/update';
+$route['gallery-manager/delete/:num'] = 'dm/manager_gallery_controller/delete';
+$route['create-gallery-submit'] = 'dm/manager_gallery_controller/post_create_new';
+$route['update-gallery-submit'] = 'dm/manager_gallery_controller/post_update';
+$route['delete-gallery-submit/:num'] = 'dm/manager_gallery_controller/post_delete';
 
 //upload images administration
 $route['upload-manager'] = 'dm/manager_images_controller/index';
@@ -101,10 +108,6 @@ $route['delete-images-submit/:num'] = 'dm/manager_images_controller/post_delete'
 
 //get image
 $route['get-image'] = 'dm/manager_images_controller/get_image';
-
-
-//menu administration
-$route['menu-manager'] = 'dm/manager_menu_controller/index';
 
 //news administration
 $route['news-manager'] = 'dm/manager_news_controller/index';

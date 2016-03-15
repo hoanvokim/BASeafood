@@ -9,6 +9,10 @@
  */
 class Gallery_Model extends CI_Model
 {
+    public static $GALLERY_GROUP = array(
+        'FACTORIES' => 'Factories',
+        'OFFICES' => 'Offices'
+    );
 
     public function __construct()
     {
@@ -25,7 +29,17 @@ class Gallery_Model extends CI_Model
     {
         $this->db->where('id', $id);
         $query = $this->db->get('gallery');
-        return $query->result_array();
+        if ($query) {
+            foreach ($query->result_array() as $item) {
+                return array(
+                    'id' => $item['id'],
+                    'en_name' => $item['en_name'],
+                    'vi_name' => $item['vi_name'],
+                    'url_image' => $item['url_image'],
+                    'group' => $item['group'],
+                );
+            }
+        }
     }
 
     public function findByGroup($group)
@@ -34,10 +48,11 @@ class Gallery_Model extends CI_Model
         return $this->db->get('gallery')->result_array();
     }
 
-    public function insert($name, $url_image, $group)
+    public function insert($en_name, $vi_name, $url_image, $group)
     {
         $data = array(
-            'name' => $name,
+            'en_name' => $en_name,
+            'vi_name' => $vi_name,
             'url_image' => $url_image,
             'group' => $group
         );
@@ -45,12 +60,12 @@ class Gallery_Model extends CI_Model
         $this->db->insert('gallery', $data);
     }
 
-    public function update($id, $name, $url_image, $group)
+    public function update($id, $en_name, $vi_name, $url_image)
     {
         $data = array(
-            'name' => $name,
+            'en_name' => $en_name,
+            'vi_name' => $vi_name,
             'url_image' => $url_image,
-            'group' => $group
         );
         $this->db->where('id', $id);
         $this->db->update('gallery', $data);
