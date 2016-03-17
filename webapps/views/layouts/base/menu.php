@@ -46,7 +46,7 @@
                 </button>
 
                 <a class="navbar-brand" href="<?php echo site_url('home'); ?>">
-                    <h1><img src="<?php echo base_url(); ?>/webresources/images/logo.png" alt="logo"></h1>
+                    <h1><img src="<?php echo base_url(); ?>/webresources/images/flag.png" alt="logo"></h1>
                 </a>
 
             </div>
@@ -67,6 +67,7 @@
                             <li><a href="<?php echo site_url('product_international'); ?>"><?php echo $this->lang->line('MENU_INTERNATIONAL'); ?></a></li>
                         </ul>
                     </li>
+
                     <li><a href="<?php echo site_url('newsandevents'); ?>"><?php echo $this->lang->line('MENU_NEWS_EVENTS'); ?></a></li>
                     <li class="dropdown"><a href="<?php echo site_url('partners'); ?>"><?php echo $this->lang->line('MENU_PARTNERS'); ?> <i
                                 class="fa fa-angle-down"></i></a>
@@ -87,6 +88,7 @@
                     <li><a href="<?php echo site_url('contact'); ?>"><?php echo $this->lang->line('MENU_CONTACT'); ?></a></li>
                 </ul>
             </div>
+
             <div class="search">
                 <form role="form">
                     <i class="fa fa-search"></i>

@@ -121,7 +121,7 @@ h3 {
 }
 
 .padding-top {
-    padding-top: 90px;
+    padding-top: 30px;
 }
 
 .padding-right {
@@ -1219,11 +1219,6 @@ Portfolio with right sidebar
 }
 
 .categories .navbar-stacked li {
-    border-bottom: 1px solid #ececec;
-}
-
-.categories .navbar-stacked li:last-child {
-    border-bottom: 0px solid #ececec;
 }
 
 .categories .navbar-stacked li a {
@@ -1236,19 +1231,19 @@ Portfolio with right sidebar
 .categories .navbar-stacked li a:hover {
     background: none;
     margin-left: 20px;
-    color: #0099AE;
+    color: #2559a5;
     opacity: 1;
 }
 
 .categories .navbar-stacked li.active a {
-    color: #0099AE;
+    color: #2559a5;
     padding-left: 20px;
 }
 
 .categories .navbar-stacked li.active a:before {
     position: absolute;
     content: "";
-    border-color: transparent transparent transparent #0099AE;
+    border-color: transparent transparent transparent #2559a5;
     border-width: 8px;
     border-style: solid;
     left: 0;
@@ -1294,7 +1289,7 @@ Portfolio with right sidebar
 }
 
 .sidebar-item .media:hover {
-    border-left: 2px solid #0099AE;
+    border-left: 2px solid #2559a5;
     padding-left: 5px;
     transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -1303,7 +1298,7 @@ Portfolio with right sidebar
 }
 
 .sidebar-item .media:hover.media .media-body h4 a {
-    color: #0099AE;
+    color: #2559a5;
     transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -webkit-transition: all 0.3s ease 0s;
@@ -1919,7 +1914,7 @@ span.stButton_gradient,
 }
 
 #gmap {
-    height: 350px;
+    height: 500px;
 }
 
 .get-in-touch img {
@@ -1940,7 +1935,7 @@ span.stButton_gradient,
     width: 36%;
     height: 100%;
     padding: 25px 50px;
-    opacity: 0.9;
+    opacity: 1;
     color: #fff;
 }
 
@@ -2860,4 +2855,111 @@ span.stButton_gradient,
 
 .news__download {
     color: #C03035;
+}
+
+/*Slider bar*/
+
+/*****************************
+Portfolio with right sidebar
+*****************************/
+
+.sidebar h3 {
+    color: #404040;
+    margin-top: 0;
+    border-bottom: 3px solid #ececec;
+    margin-bottom: 6px;
+    padding-bottom: 8px;
+}
+
+.sidebar-item {
+    margin-bottom: 48px;
+}
+
+.categories .navbar-stacked li a {
+    font-size: 16px;
+    color: #6a6a6a;
+    padding: 8px 0;
+    padding-left: 0;
+}
+
+.categories .navbar-stacked li a:hover {
+    background: none;
+    margin-left: 20px;
+    color: #2559a5;
+    opacity: 1;
+}
+
+.categories .navbar-stacked li.active a {
+    color: #2559a5;
+    padding-left: 20px;
+}
+
+.categories .navbar-stacked li.active a:before {
+    position: absolute;
+    content: "";
+    border-color: transparent transparent transparent #2559a5;
+    border-width: 8px;
+    border-style: solid;
+    left: 0;
+    top: 13px;
+    margin-top: 0;
+    z-index: 0;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+
+.categories .navbar-stacked li.active a:after {
+    position: absolute;
+    content: "";
+    border-color: transparent transparent transparent #851c23;
+    border-width: 6px;
+    border-style: solid;
+    left: 0px;
+    top: 15px;
+    margin-top: 0;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+
+.sidebar-item .media {
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 10px;
+    padding-top: 21px;
+    margin-top: 0;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+
+.sidebar-item .media:last-child {
+    border-bottom: 0px solid #ececec;
+    padding-bottom: 0;
+}
+
+.sidebar-item .media:hover {
+    border-left: 2px solid #dab074;
+    padding-left: 5px;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+
+.sidebar-item .media:hover.media .media-body h4 a {
+    color: #dab074;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+
+.sidebar-item .media .media-body h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.sidebar-item .media .media-body h4 a {
+    color: #7d7d7d;
+    font-size: 16px;
+}
+
+.sidebar-item .media .media-body p {
+    color: #b4b4b4;
+    font-size: 12px;
 }

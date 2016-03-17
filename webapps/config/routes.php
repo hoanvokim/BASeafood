@@ -51,10 +51,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 //default controllers
 $route['default_controller'] = 'home_controller/index';
+$route['demo'] = 'webapp/demo_controller/index';
 
 //webapp pages
 $route['home'] = 'webapp/user_home_controller/index';
-$route['product'] = 'webapp/product_controller/index';
 $route['product_domestic'] = 'webapp/product_controller/domestic';
 $route['product_international'] = 'webapp/product_controller/international';
 $route['introduce'] = 'webapp/introduce_controller/index';
@@ -69,7 +69,9 @@ $route['photos_offices'] = 'webapp/photos_controller/offices';
 $route['photos_factories'] = 'webapp/photos_controller/factories';
 $route['career'] = 'webapp/career_controller/index';
 $route['contact'] = 'webapp/contact_controller/index';
-
+$route['product'] = 'webapp/product_controller/index';
+$route['product/(:num)'] = 'webapp/product_controller/index/$1';
+$route['product/findByCategories/(:num)'] = 'webapp/product_controller/findByCategories/$1';
 //webapp process
 $route['switchlanguage'] = 'webapp_process/switch_language_controller/index';
 

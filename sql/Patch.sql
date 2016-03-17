@@ -20,10 +20,12 @@ CREATE TABLE `baseafood`.`category` (
     `id`        TINYINT       NOT NULL AUTO_INCREMENT,
     `en_name`   NVARCHAR(100) NOT NULL,
     `vi_name`   NVARCHAR(100) NOT NULL,
-    `fk_parent` TINYINT,
+    `parent` TINYINT,
+    `slug`   VARCHAR(100) NOT NULL,
+    `number`   INT NOT NULL,
     PRIMARY KEY (`id`),
-    INDEX `category_parent_index` (`fk_parent`),
-    FOREIGN KEY (`fk_parent`)
+    INDEX `category_parent_index` (`parent`),
+    FOREIGN KEY (`parent`)
     REFERENCES `baseafood`.`category` (`id`)
 )
     ENGINE = MyISAM

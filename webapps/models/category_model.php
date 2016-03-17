@@ -17,16 +17,14 @@ class Category_Model extends CI_Model
 
     public function findAll()
     {
-        $this->db->order_by('fk_parent,id');
-        $query = $this->db->get('category');
-        return $query->result_array();
+        return $this->db->get("category")->result_array();
     }
 
     public function findByParent($parent)
     {
         $this->db->select('*');
         $this->db->from('category');
-        $this->db->where('fk_parent =', $parent);
+        $this->db->where('parent =', $parent);
         $query = $this->db->get();
         return $query->result_array();
     }
@@ -43,7 +41,7 @@ class Category_Model extends CI_Model
                     'id' => $item['id'],
                     'en_name' => $item['en_name'],
                     'vi_name' => $item['vi_name'],
-                    'parent' => $item['fk_parent'],
+                    'parent' => $item['parent'],
                 );
             }
         }
@@ -66,7 +64,8 @@ class Category_Model extends CI_Model
                 'en_name' => $en_name,
                 'vi_name' => $vi_name,
             );
-        } else {
+        }
+        else {
             $data = array(
                 'en_name' => $en_name,
                 'vi_name' => $vi_name,
@@ -91,5 +90,23 @@ class Category_Model extends CI_Model
     {
         $this->db->where('id', $id);
         $this->db->delete('category');
+    }
+
+    public function getCategoryTreeForParentId($parent_id = 0)
+    {
+        $categories = array();
+        $this->db->select('*');
+        $this->db->from('category');
+        $this->db->where('parent', $parent_id);
+        $result = $this->db->get()->result();
+        foreach ($result as $mainCategory) {
+            $category = array();
+            $category['id'] = $mainCategory->id;
+            $category['name'] = $mainCategory->en_name;
+            $category['parent_id'] = $mainCategory->parent;
+            $category['sub_categories'] = $this->getCategoryTreeForParentId($category['id']);
+            $categories[$mainCategory->id] = $category;
+        }
+        return $categories;
     }
 }

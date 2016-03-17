@@ -37,7 +37,26 @@ class Product_Model extends CI_Model
 
     public function findAll()
     {
-        return $this->db->get('product')->result_array();
+        $this->db->select("*");
+        $this->db->from('product');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function record_count() {
+        return $this->db->count_all("product");
+    }
+    public function fetch_data($limit, $start) {
+        $this->db->limit($limit, $start);
+        $query = $this->db->get("product");
+
+        if ($query->num_rows() > 0) {
+            foreach ($query->result() as $row) {
+                $data[] = $row;
+            }
+            return $data;
+        }
+        return false;
     }
 
     public function findByCategory($category)
@@ -46,7 +65,16 @@ class Product_Model extends CI_Model
         $this->db->from('product');
         $this->db->where('fk_category', $category);
         $query = $this->db->get();
-        return $query->result_array();
+        return $query->result();
+    }
+
+    public function findByCategories($category)
+    {
+        $this->db->select('*');
+        $this->db->from('product');
+        $this->db->or_where_in('fk_category', $category);
+        $query = $this->db->get();
+        return $query->result();
     }
 
     public function insert($name, $en_name, $fk_category, $url, $size, $packing)

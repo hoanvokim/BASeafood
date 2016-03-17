@@ -12,7 +12,7 @@
         <div class="text-center">
             <div class="row">
                 <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                    <h1 class="title">We need you!</h1>
+                    <h1 class="title"><?php echo $this->lang->line('WE_NEED_YOU'); ?></h1>
                     <div class="devider"></div>
                     <p><img src="<?php echo base_url(); ?>/webresources/images/home/career.jpg" style="width: 40%"></p>
                 </div>

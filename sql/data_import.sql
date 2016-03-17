@@ -128,3 +128,49 @@ VALUES ('aboutInfo', 2, 'Financial Structure', 'Cơ cấu vốn', 'EN _MESSAGE
 <li><i class="fa fa-angle-right"></i>Vốn Nhà nước : 25,74 %</li>
 <li><i class="fa fa-angle-right"></i>Vốn của các cổ đông khác : 74,26% </li>
 </ul>');
+
+INSERT INTO `baseafood`.`category` (`id`, `en_name`, `vi_name`, `parent`,`slug`,`number`) VALUES
+(1, 'Domestic', 'Nội địa', NULL,'Item-0',1),
+(2, 'International', 'Xuất Khẩu', NULL,'Item-1',2),
+(3, 'Frozen', 'Đông lạnh', 1,'Item-0-1',1),
+(4, 'Dry', 'Khô', 1, 'Item-0-2',2),
+(5, 'Fish', 'Cá', 3,'Item-0-1-1',1),
+(6, 'Shellfish', 'Giáp sát', 3,'Item-0-1-2',2),
+(7, 'Molluscs', 'Nhuyễn thể', 3,'Item-0-1-3',3),
+(8, 'Others', 'Khác', 3,'Item-0-1-4',4),
+(9, 'Frozen', 'Đông lạnh', 2,'Item-1-1',1),
+(10, 'Dry', 'Khô', 2,'Item-1-2',2),
+(11, 'Fish', 'Cá', 9,'Item-1-1-1',1),
+(12, 'Shellfish', 'Giáp sát', 9,'Item-1-1-2',2),
+(13, 'Molluscs', 'Nhuyễn thể', 9,'Item-1-1-3',3),
+(14, 'Others', 'Khác', 9,'Item-1-1-4',4);
+
+INSERT INTO `baseafood`.`product` (`id`, `en_name`, `vi_name`, `size`, `packing`, `url`, `fk_category`) VALUES
+('1', 'Auxis Thazard', 'Cá ngừ chù nguyên con đông lạnh', '300-500 gr/pc <br/> 500-800 gr/pc <br/> 800-up gr/pc', 'IQF, 1pc/PE x 10/CTN', 'bonito.jpg', '5'),
+('2', 'Nemipterus virgatus', 'Cá đổng nguyên con đông lạnh', 'U4 pc/kg 250-up gr/pc <br/> 4-6 pc/kg 200-250 gr/pc <br/>6-8 pc/kg 150-200 gr/pc <br/> 10-12 pc/kg 50-100 gr/pc', 'IQF, 1kg/PE x 10/CTN', 'GoldenThreadfinBream.jpg', '5'),
+('3', 'Selaroides leptolepis', 'Cá chỉ vàng nguyên con đông lạnh', '25-30 pc/kg <br/> 30-35 pc/kg <br/> 35-40 pc/kg', 'IQF, 1kg/PE x 10/CTN', 'Yellowstriptrevally.jpg', '5'),
+('4', 'Rastrelliger kanagurta', 'Cá bạc má nguyên con đông lạnh', 'U4      pc/kg   250-up   gr/pc <br/> 4-6     pc/kg   200-250 gr/pc <br/> 6-8     pc/kg   150-200 gr/pc <br/>10-12 pc/kg   50-100   gr/pc', 'IQF, 1kg/PE x 10/CTN', 'IndianMackerel.jpg', '5'),
+('5', 'Selar crumenophthalmus', 'Cá tráo nguyên con đông lạnh', 'U4      pc/kg   250-up   gr/pc <br/> 4-6     pc/kg   200-250 gr/pc <br/> 6-8     pc/kg   150-200 gr/pc <br/> 10-12 pc/kg     50-100 gr/pc', 'IQF, 1kg/PE x 10/CTN', 'Bigeyescad.jpg', '5'),
+('6', 'Saurida tumbil', 'Khô Cá Mối Cắt Đầu', '6-12 cm/miếng <br/> 12-17 cm/miếng', '', 'Lizardfish.jpg', '4'),
+('7', 'Saurida tumbil', 'Khô Cá Mối Fillet Bướm Cắt Khúc', '6-8 cm/miếng', '', 'LizarfishPieces.jpg', '4'),
+('8', 'Plectorynchus macracanthus', 'Khô Cá Mắt Kiếng cắt đầu lột da', ' 5-7 cm/miếng <br/> 7-9 cm/miếng', '', 'khocamatkien.jpg', '4'),
+('9', 'Plectorynchus macracanthus', 'Khô Cá Mắt Kiếng Fillet Bướm còn da', '5-7 cm/miếng <br/> 7-9 cm/miếng', '', 'khocamatkien2.jpg', '4'),
+('10', 'Hermiramphidae', 'Khô Cá Lìm Kìm Fillet Bướm', '8-12 cm/miếng <br/> 12-17 cm/miếng', '', 'khocaliemphile.jpg', '4'),
+('11', 'Khô Cá Đuối ghép nướng ăn liền.', 'Khô Cá Đuối ghép nướng ăn liền.', '', '', 'khocaduoinuonganlien.jpg', '4'),
+('12', 'Khô Cá Bống ghép nướng ăn liền.', 'Khô Cá Bống ghép nướng ăn liền.', '', '', 'khocaboghepnuong.jpg', '4'),
+('13', 'Sardinella gibbosa', 'Khô Cá Trích Fillet', ' 4-6 cm/miếng <br/> 6-8 cm/miếng', '', 'filletcatrich.jpg', '4'),
+('14', 'Nemipterus virgatus', 'Khô Cá Đổng Fillet Bướm', '5-7 cm/miếng <br/> 7-9 cm/miếng', '', 'khocadong.jpg', '4'),
+('15', 'Selaroides leptolepis', 'Khô Cá Chỉ Vàng Fillet Bướm', '5-7 cm/miếng <br/> 7-9 cm/miếng', '', 'cachivangfillet.jpg', '4'),
+('16', 'Tuna fillet', 'Cá ngừ vây vàng fillet đông lạnh', '+ Loại: A  (L: 12-17 cm / W:  4 – 6 cm /H: 2.5- 4 cm) <br/> Khối lượng: 200-350 grs/pc <br/> + Loại: AA (L: 14-20 cm /W: 6-  8 cm/H: 2.5- 4 cm)<br/>Khối lượng: 350-550 grs/pc<br/>+ Loại: AAA (L: 14-20 cm/W: 8- up cm/H: 2.5- 4 cm)<br/>Khối lượng: 550-800 gr/pc', 'IQF, IVP, 10kgs N.W./carton.', 'tunafillet.jpg', '11'),
+('17', 'Mix seafood', 'Hải sản hỗn hợp', 'Thành phần phối trộn:<br/>1. Tôm PUD<br/>2. Chả cá<br/>3. Vẹm<br/>4. Nghêu trắng / lụa<br/>5. Đầu mực ống/nang<br/>6. Mực ống cắt khoanh<br/>7. Mực nang/ bạch tuộc cắt', 'thùng 10 kg<br/>họăc: túi nhỏ (70gr, 150gr, 300gr, 500gr, 1000gr / túi)', 'mixseafood.jpg', '14'),
+('18', 'Mix seafood ball', 'Chả cá hỗn hợp', 'Các sản phẩm Chả cá:<br/>1. Chả cá Đổng 100%, 70%, 50%, 30%<br/>2. Chả cá Mối 100%<br/>3. Chả cá các loại (cá thịt trắng)<br/>Độ dai: 100-200, 200-300, 300-500, 500-700', '10kg/khối x 2/thùng carton', 'seafoodball.jpg', '14'),
+('19', 'Hermiramphidae', 'Khô Cá Lìm Kìm Fillet Bướm', '8-12 cm/miếng <br/> 12-17 cm/miếng', '', 'khocaliemphile.jpg', '10'),
+('20', 'Selaroides leptolepis', 'Khô Cá Chỉ Vàng Fillet Bướm', '', '', 'khocachivangfillet.jpg', '10'),
+('21', 'Sardinella gibbosa', 'Khô Cá Trích Fillet', '', '', 'filletcatrich.jpg', '10'),
+('22', 'Khô Cá Ngân fillet', 'Khô Cá Ngân fillet', '', '', 'khocangan.jpg', '10'),
+('23', 'Saurida tumbil', 'Khô Cá Mối Cắt Đầu', '', '', 'Lizardfish.jpg', '10'),
+('24', 'Saurida tumbil', 'Khô Cá Mối Fillet Miếng', '', '', 'khocamoimieng.jpg', '10'),
+('25', 'Plectorynchus macracanthus', 'Khô Cá Mắt Kiếng cắt đầu lột da', '', '', 'khocamatkien.jpg', '10'),
+('26', 'Plectorynchus macracanthus', 'Khô Cá Mắt Kiếng Fillet Bướm còn da', '', '', 'khocamatkien2.jpg', '10'),
+('27', 'Nemipterus virgatus', 'Khô Cá Đổng Fillet Bướm', '', '', 'khocadong.jpg', '10'),
+('28', 'Khô cá bò ghép', 'Khô cá bò ghép', '', '', 'khocabo.jpg', '10');

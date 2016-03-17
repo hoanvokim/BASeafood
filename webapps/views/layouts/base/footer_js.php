@@ -10,7 +10,9 @@
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>webresources/css/viewer/viewer.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>webresources/css/viewer/viewer-start.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>webresources/css/multilevel-menu/bootstrap-submenu.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>webresources/js/gmaps.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>webresources/js/wow.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>webresources/js/jstree.min.js"></script>
 <!--Customized-->
 <script type="text/javascript" src="<?php echo base_url(); ?>webresources/js/main.js"></script>

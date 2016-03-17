@@ -20,6 +20,7 @@
 
 <link href="<?php echo base_url(); ?>webresources/css/viewer/viewer.css" rel="stylesheet"/>
 <link href="<?php echo base_url(); ?>webresources/css/viewer/viewer-start.css" rel="stylesheet"/>
+<link href="<?php echo base_url(); ?>webresources/css/multilevel-menu/bootstrap-submenu.min.css" rel="stylesheet"/>
 
 <!--[if lt IE 9]>
 <script src="<?php echo base_url(); ?>webresources/js/html5shiv.js"></script>

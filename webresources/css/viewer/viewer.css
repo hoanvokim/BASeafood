@@ -340,6 +340,7 @@
 
     max-width: 90%;
     margin: 0 5% 5px;
+    padding-bottom: 10px;
 
     white-space: nowrap;
     text-overflow: ellipsis;

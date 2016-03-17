@@ -21,7 +21,14 @@
                     <div class="media recent-post">
                         <div class="post-img-wrapper">
                             <div class="post-img-overlay">
-                                <img src="<?php echo base_url(); ?>webresources/images/<?php echo $new->url_image ?>" alt="blog"/>
+                                <img src="<?php echo base_url(); ?>webresources/images/files/<?php
+                                if (strpos($new->url_attached_file, 'pdf') !== false) {
+                                    echo 'pdf.png';
+                                }
+                                else {
+                                    echo 'news.png';
+                                }
+                                ?>" alt="blog"/>
                                 <?php if (!$this->utilities->IsNullOrEmptyString($new->url_attached_file)) { ?>
                                     <a href="<?php echo $new->url_attached_file ?>">
                                         <i class="fa fa-download news__download"></i>

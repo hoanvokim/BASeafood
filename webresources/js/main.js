@@ -88,10 +88,10 @@ jQuery(function ($) {
 
         map = new GMaps({
             el: '#gmap',
-            lat: 43.04446,
-            lng: -76.130791,
+            lat: 10.485857,
+            lng: 107.174071,
             scrollwheel: false,
-            zoom: 16,
+            zoom: 17,
             zoomControl: false,
             panControl: false,
             streetViewControl: false,
@@ -138,24 +138,48 @@ jQuery(function ($) {
         autoHeight: true
     })
 
-
-
 });
 
-function autoResize(id){
+function autoResize(id) {
     var newheight;
     var newwidth;
 
-    if(document.getElementById){
-        newheight = document.getElementById(id).contentWindow.document .body.scrollHeight;
-        newwidth = document.getElementById(id).contentWindow.document .body.scrollWidth;
+    if (document.getElementById) {
+        newheight = document.getElementById(id).contentWindow.document.body.scrollHeight;
+        newwidth = document.getElementById(id).contentWindow.document.body.scrollWidth;
     }
     document.getElementById(id).height = (newheight) + "px";
     document.getElementById(id).width = (newwidth) + "px";
 }
 
-$(document).ready(function() {
-    $("#languageToggle").change(function() {
+$(document).ready(function () {
+    $("#languageToggle").change(function () {
         $("#languageForm").submit();
     });
 });
+
+function categorytreeview() {
+
+    if ($('.box-category').hasClass('treeview') == true) {
+
+        $(".box-category").treeview({
+
+            animated: "slow",
+
+            collapsed: false,
+
+            unique: false
+
+        });
+
+        $('.box-category li').parent().removeClass('expandable');
+
+        $('.box-category li').parent().addClass('collapsable');
+
+        $('.box-category .box-category .collapsable li').css('display', 'block');
+
+    }
+
+}
+
+$(document).ready(function () {categorytreeview();});

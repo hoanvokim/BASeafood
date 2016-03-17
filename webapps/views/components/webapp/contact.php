@@ -13,8 +13,8 @@
             <div class="row">
                 <div class="action">
                     <div class="col-sm-12">
-                        <h1 class="title">Contact US</h1>
-                        <p>Stay close</p>
+                        <h1 class="title"><?php echo $this->lang->line('MENU_CONTACT'); ?></h1>
+                        <p><?php echo $this->lang->line('CONTACT_US_PLACEHOLDER'); ?></p>
                     </div>
                 </div>
             </div>
@@ -27,18 +27,16 @@
     <div class="container">
         <div id="gmap"></div>
         <div class="contact-info">
-            <h2>CÔNG TY CP CHẾ BIẾN XNK THỦY SẢN TỈNH BÀ RỊA - VŨNG TÀU </h2>
+            <h2><?php echo $this->lang->line('COMPANY_NAME'); ?></h2>
             <address>
-                E-mail: <a href="mailto:someone@example.com">baseafoodvn@vnn.vn</a> <br>
-                Phone: (084) 0643 837313 - 0643 582646<br>
-                Fax: (084) 0643 837312 <br>
+                <?php echo $this->lang->line('EMAIL'); ?>: <a href="mailto:<?php echo $this->lang->line('EMAIL_VALUE'); ?>"><?php echo $this->lang->line('EMAIL_VALUE'); ?></a> <br>
+                <?php echo $this->lang->line('PHONE'); ?>: <?php echo $this->lang->line('PHONE_VALUE'); ?><br>
+                <?php echo $this->lang->line('FAX'); ?>: <?php echo $this->lang->line('FAX_VALUE'); ?><br>
             </address>
 
-            <h2>Address</h2>
+            <h2><?php echo $this->lang->line('ADDRESS'); ?></h2>
             <address>
-                460 Trương Công Định<br/>
-                Phường 8, TP. Vũng Tàu<br/>
-                Tỉnh Bà Rịa - Vũng Tàu<br/>
+                <?php echo $this->lang->line('ADDRESS_VALUE'); ?>
             </address>
         </div>
     </div>
