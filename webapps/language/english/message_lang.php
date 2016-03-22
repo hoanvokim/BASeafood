@@ -17,12 +17,17 @@ $lang['CLIENTS_INTRO'] = 'All of customers and companies trust and using our pro
 $lang['USER_ACCESS'] = 'User access';
 $lang['ONLINE'] = 'Online';
 $lang['ACCESSED'] = 'Accessed';
+$lang['INFORMATION'] = 'Details information';
 $lang['CONTACT_INFO'] = 'Contact info.';
 $lang['SEND_MESSAGE'] = 'Send a message';
 $lang['NAME'] = 'Name';
 $lang['TEXT'] = 'Your text here';
 $lang['SEND'] = 'Send';
 $lang['WE_NEED_YOU'] = 'You need you!';
+$lang['CATEGORIES'] = 'Categories';
+$lang['GENERAL_INFORMATION'] = 'Introduce';
+$lang['TAG_CLOUD'] = 'Tag cloud';
+$lang['LATEST_PHOTOS'] = 'Latest photos';
 // Contact us
 $lang['CONTACT_US_PLACEHOLDER'] = 'Stay close';
 // About us
@@ -46,17 +51,10 @@ $lang['MENU_INTRODUCE'] = 'Introduce';
 $lang['MENU_ABOUT'] = 'About us';
 $lang['MENU_FACTORY'] = 'Factory';
 $lang['MENU_PRODUCT'] = 'Product';
-$lang['MENU_DOMESTIC'] = 'Domestic';
-$lang['MENU_INTERNATIONAL'] = 'International';
 $lang['MENU_NEWS_EVENTS'] = 'News | Events';
-$lang['MENU_PARTNERS'] = 'Partners';
-$lang['MENU_FINANCIAL_REPORT'] = 'Financial Report';
-$lang['MENU_PARTNERS_MEETING'] = 'Partners Meeting';
-$lang['MENU_COMPANY_POLICY'] = 'Company Policy';
+$lang['MENU_BUSINESS'] = 'Our Business';
 $lang['MENU_PHOTOS'] = 'Photos';
-$lang['MENU_OFFICES'] = 'Offices';
-$lang['MENU_FACTORIES'] = 'Factories';
 $lang['MENU_CAREER'] = 'Career';
 $lang['MENU_CONTACT'] = 'Contact';
-
+$lang['NO_PRODUCTS'] = 'Sorry! We don\'t have any product!';
 ?>

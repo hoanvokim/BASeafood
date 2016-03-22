@@ -10,7 +10,7 @@
     <div class="sidebar-item categories">
         <div class="column-block">
             <div class="columnblock-title">
-                Categories
+                <?php echo $this->lang->line('CATEGORIES'); ?>
                 <span class="label label-default label-pill label-success">
                     <h4 class="pull-xs-right pull-right" style="margin-top: -5px;">
                         <? echo $total; ?>

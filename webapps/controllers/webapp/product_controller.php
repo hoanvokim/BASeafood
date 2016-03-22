@@ -14,14 +14,16 @@ class Product_controller extends CI_Controller
     {
         parent::__construct();
         $this->utilities->loadPropertiesFiles($this->lang);
+        //init pagination
+        $this->load->library("pagination");
+        $this->load->model('product_model');
+
         //load categories
         $this->load->model("category_model");
         $items = $this->category_model->findAll();
         $this->load->library("multi_menu");
         $this->multi_menu->set_items($items);
-        //init pagination
-        $this->load->library("pagination");
-        $this->load->model('product_model');
+
     }
 
     public function index()
@@ -34,7 +36,6 @@ class Product_controller extends CI_Controller
         $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
         $data["products"] = $this->product_model->fetch_data($config["per_page"], $page);
         $data["links"] = $this->pagination->create_links();
-        $data['title'] = 'State1';
         $data['total'] = $total_row;
         $this->load->view('pages/webapp/product', $data);
     }
@@ -45,12 +46,14 @@ class Product_controller extends CI_Controller
         $config["base_url"] = base_url() . "product";
         $config["total_rows"] = $count;
         $config["per_page"] = 12;
-        $config['uri_segment'] = 2;
-        $config['num_links'] = 5;
+        $config['uri_segment'] = 3;
+        $config['num_links'] = 2;
+        $config['use_page_numbers'] = TRUE;
+        $config['page_query_string'] = TRUE;
         $config['full_tag_open'] = '<ul class="pagination">';
         $config['full_tag_close'] = '</ul>';
-        $config['first_link'] = false;
-        $config['last_link'] = false;
+        $config['first_link'] = true;
+        $config['last_link'] = true;
         $config['first_tag_open'] = '<li>';
         $config['first_tag_close'] = '</li>';
         $config['prev_link'] = '&laquo';
@@ -68,17 +71,6 @@ class Product_controller extends CI_Controller
         return $config;
     }
 
-    public function domestic()
-    {
-        $data['title'] = 'Product Domestic';
-        $this->load->view('pages/webapp/product', $data);
-    }
-
-    public function international()
-    {
-        $data['title'] = 'Product international';
-        $this->load->view('pages/webapp/product', $data);
-    }
 
     public function findByCategories($category)
     {
@@ -86,7 +78,7 @@ class Product_controller extends CI_Controller
         $this->load->model("category_model");
         $ids = $this->category_model->getCategoryTreeForParentId($category);
         $idList = array();
-        $idList = $this->echoText($ids, $idList);
+        $idList = $this->exportIds($ids, $idList);
         $this->load->model("product_model");
 
         if (count($idList) == 0) {
@@ -97,8 +89,7 @@ class Product_controller extends CI_Controller
             $this->pagination->initialize($config);
             $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
             $data['products'] = $this->product_model->findByCategory($category, $config["per_page"], $page);
-        }
-        else {
+        } else {
             $total_row = $this->product_model->recordCountByCategories($idList);
             //bootstrap pagination
             $config = $this->initPaginationBootstrap($total_row);
@@ -114,14 +105,14 @@ class Product_controller extends CI_Controller
         $this->load->view('pages/webapp/product', $data);
     }
 
-    public function echoText($ids, $idList)
+    public function exportIds($ids, $idList)
     {
         while (key($ids) !== NULL) {
             if (is_int(key($ids))) {
                 array_push($idList, key($ids));
             }
             if (is_array(current($ids))) {
-                $idList = $this->echoText(current($ids), $idList);
+                $idList = $this->exportIds(current($ids), $idList);
             }
             // PHP_EOL
             next($ids);

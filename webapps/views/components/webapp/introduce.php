@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="action">
                     <div class="col-sm-12">
-                        <h1 class="title">General Information</h1>
+                        <h1 class="title"><?php echo $this->lang->line('GENERAL_INFORMATION'); ?></h1>
                         </p>
                     </div>
                 </div>
@@ -40,15 +40,15 @@
                             </div>
                             <div class="post-content overflow">
                                 <div class="list-group">
-                                    <h2 class="list-group-item post-title bold text-uppercase list-group-item__header">Details information</h2>
-                                    <a class="list-group-item"><i class="fa fa-barcode fa-fw"></i>&nbsp; Company code: 3502297423</a>
-                                    <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; Company name: BASEAFOOD 1 COMPANY LIMITED</a>
-                                    <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; Company shortname: BASEAFOOD 1 CO.,LTD</a>
-                                    <a class="list-group-item"><i class="fa fa-road fa-fw"></i>&nbsp; Address: 321, Trần Xuân Độ street, Phuoc trung ward, Ba Ria
+                                    <h2 class="list-group-item post-title bold text-uppercase list-group-item__header"><?php echo $this->lang->line('INFORMATION'); ?></h2>
+                                    <a class="list-group-item"><i class="fa fa-barcode fa-fw"></i>&nbsp; <?php echo $this->lang->line('COMPANY_CODE'); ?>: 3502297423</a>
+                                    <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('COMPANY_NAME'); ?>: BASEAFOOD 1 COMPANY LIMITED</a>
+                                    <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('COMPANY_SHORTNAME'); ?>: BASEAFOOD 1 CO.,LTD</a>
+                                    <a class="list-group-item"><i class="fa fa-road fa-fw"></i>&nbsp; <?php echo $this->lang->line('ADDRESS'); ?>: 321, Trần Xuân Độ street, Phuoc trung ward, Ba Ria
                                                                                                city, BR-VT province</a>
-                                    <a class="list-group-item"><i class="fa fa-phone fa-fw"></i>&nbsp; Phone: 064.3825246</a>
-                                    <a class="list-group-item"><i class="fa fa-fax fa-fw"></i>&nbsp; Fax: 064.3825545</a>
-                                    <a class="list-group-item"><i class="fa fa-google fa-fw"></i>&nbsp; Email: tuongf34@gmail.com</a>
+                                    <a class="list-group-item"><i class="fa fa-phone fa-fw"></i>&nbsp; <?php echo $this->lang->line('PHONE'); ?>: 064.3825246</a>
+                                    <a class="list-group-item"><i class="fa fa-fax fa-fw"></i>&nbsp; <?php echo $this->lang->line('FAX'); ?>: 064.3825545</a>
+                                    <a class="list-group-item"><i class="fa fa-google fa-fw"></i>&nbsp; <?php echo $this->lang->line('EMAIL'); ?>: tuongf34@gmail.com</a>
 
                                     <?php foreach ($aboutInformation as $aboutInfo) { ?>
                                         <h2 class="list-group-item post-title bold text-uppercase list-group-item__header">
@@ -83,7 +83,7 @@
             <div class="col-md-3 col-sm-5">
                 <div class="sidebar blog-sidebar">
                     <div class="sidebar-item tag-cloud">
-                        <h3>Tag Cloud</h3>
+                        <h3><?php echo $this->lang->line('TAG_CLOUD'); ?></h3>
                         <ul class="nav nav-pills">
                             <li><a href="#">news</a></li>
                             <li><a href="#">finance</a></li>
@@ -93,7 +93,7 @@
                         </ul>
                     </div>
                     <div class="sidebar-item popular">
-                        <h3>Latest Photos</h3>
+                        <h3><?php echo $this->lang->line('LATEST_PHOTOS'); ?></h3>
                         <ul class="gallery">
                             <li><a href="#"><img
                                         src="<?php echo base_url(); ?>webresources/images/portfolio/popular1.jpg"
@@ -120,138 +120,3 @@
         </div>
     </div>
 </section>
-
-<section id="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1200ms" data-wow-delay="200ms">
-                <div class="single-service">
-                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="200ms">
-                        <img src="<?php echo base_url(); ?>webresources/images/home/icon1.png" alt="">
-                    </div>
-                    <h2>SIÊU THỊ ĐẶC SẢN VŨNG TÀU</h2>
-                    <p>
-                        460 Trương Công Định, F.8, TP.Vũng Tàu
-                        <br/>
-                        SĐT: 064 2 240 231
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1200ms" data-wow-delay="400ms">
-                <div class="single-service">
-                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="400ms">
-                        <img src="<?php echo base_url(); ?>webresources/images/home/icon2.png" alt="">
-                    </div>
-                    <h2>SIÊU THỊ HẢI SẢN BÀ RỊA (gần Bến xe Bà Rịa)</h2>
-                    <p>
-                        Trung Tâm Thương Mại Bà Rịa, TX Bà Rịa
-                        <br/>
-                        SĐT: 064 3 717 469
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1200ms" data-wow-delay="600ms">
-                <div class="single-service">
-                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
-                        <img src="<?php echo base_url(); ?>webresources/images/home/icon3.png" alt="">
-                    </div>
-                    <h2>SIÊU THỊ THỰC PHẨM </h2>
-                    <p>
-                        169 Thuỳ Vân , F.8, Thành Phố Vũng Tàu
-                        <br/>
-                        SĐT: 064 3 585 095
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1200ms" data-wow-delay="200ms">
-                <div class="single-service">
-                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="200ms">
-                        <img src="<?php echo base_url(); ?>webresources/images/services/1.png" alt="">
-                    </div>
-                    <h2>SIÊU THỊ GOOD MART</h2>
-                    <p>
-                        10 Xô Viết Nghệ Tĩnh, Phường Thắng Tam, TP.Vũng Tàu
-                        <br/>
-                        SĐT: 064 3 853 329
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1200ms" data-wow-delay="400ms">
-                <div class="single-service">
-                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="400ms">
-                        <img src="<?php echo base_url(); ?>webresources/images/services/2.png" alt="">
-                    </div>
-                    <h2>CỬA HÀNG ĐẶC SẢN BIỂN</h2>
-                    <p>
-                        08 Thuỳ Vân, Phường Thắng Tam, TP.Vũng Tàu
-                        <br/>
-                        SĐT: 064 3 523 833
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1200ms" data-wow-delay="600ms">
-                <div class="single-service">
-                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
-                        <img src="<?php echo base_url(); ?>webresources/images/services/3.png" alt="">
-                    </div>
-                    <h2>CỬA HÀNG ĐẶC SẢN BIỂN MEDICOAST</h2>
-                    <p>
-                        165 Thuỳ Vân, Phường Thắng Tam, Tp.Vũng Tàu
-                        <br/>
-                        SĐT: 064 3 521 616
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1200ms" data-wow-delay="200ms">
-                <div class="single-service">
-                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="200ms">
-                        <img src="<?php echo base_url(); ?>webresources/images/services/1.png" alt="">
-                    </div>
-                    <h2>CỬA HÀNG ĐẶC SẢN BIỂN - HTX HẢI ÂU</h2>
-                    <p>
-                        107 Thùy Vân, Phường 2, Vũng Tàu
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1200ms" data-wow-delay="400ms">
-                <div class="single-service">
-                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="400ms">
-                        <img src="<?php echo base_url(); ?>webresources/images/services/2.png" alt="">
-                    </div>
-                    <h2>CỬA HÀNG ĐẶC SẢN BIỂN - BẾN TÀU CÁNH NGẦM</h2>
-                </div>
-            </div>
-            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1200ms" data-wow-delay="600ms">
-                <div class="single-service">
-                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
-                        <img src="<?php echo base_url(); ?>webresources/images/services/3.png" alt="">
-                    </div>
-                    <h2>ĐỘI XE BÁN HÀNG LƯU ĐỘNG</h2>
-                    <p>
-                        SĐT: 064 3 585 088
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1200ms" data-wow-delay="200ms">
-                <div class="single-service">
-                    <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="200ms">
-                        <img src="<?php echo base_url(); ?>webresources/images/services/1.png" alt="">
-                    </div>
-                    <h2>CỬA HÀNG ĐẶC SẢN BIỂN (đối diện chợ Long Hải)</h2>
-                    <p>
-                        Thị Trấn Long Hải, Huyện Long Điền, Tỉnh Bà Rịa Vũng Tàu
-                        <br/>
-                        SĐT: 0643.661647
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--/#services-->

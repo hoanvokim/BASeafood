@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * Date: 3/5/16
  * Time: 10:23 AM
  */
-class Financial_report_controller extends CI_Controller
+class Business_controller extends CI_Controller
 {
 
     public function __construct()
@@ -18,7 +18,7 @@ class Financial_report_controller extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Financial report';
-        $this->load->view('pages/webapp/financial_report', $data);
+        $data['title'] = 'Our business';
+        $this->load->view('pages/webapp/business', $data);
     }
 }

@@ -25,8 +25,7 @@ class Category_Model extends CI_Model
         $this->db->select('*');
         $this->db->from('category');
         $this->db->where('parent =', $parent);
-        $query = $this->db->get();
-        return $query->result_array();
+        return $this->db->get()->result_array();
     }
 
     public function findById($id)
@@ -64,8 +63,7 @@ class Category_Model extends CI_Model
                 'en_name' => $en_name,
                 'vi_name' => $vi_name,
             );
-        }
-        else {
+        } else {
             $data = array(
                 'en_name' => $en_name,
                 'vi_name' => $vi_name,
@@ -92,7 +90,7 @@ class Category_Model extends CI_Model
         $this->db->delete('category');
     }
 
-    public function getCategoryTreeForParentId($parent_id = 0)
+    public function getCategoryTreeForParentId($parent_id)
     {
         $categories = array();
         $this->db->select('*');

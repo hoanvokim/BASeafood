@@ -52,40 +52,36 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="<?php echo site_url('home'); ?>"><?php echo $this->lang->line('MENU_HOME'); ?></a></li>
-                    <li class="dropdown"><a href="<?php echo site_url('introduce'); ?>"><?php echo $this->lang->line('MENU_INTRODUCE'); ?> <i
+                    <li class="active"><a
+                            href="<?php echo site_url('home'); ?>"><?php echo $this->lang->line('MENU_HOME'); ?></a>
+                    </li>
+                    <li>
+                        <a href="<?php echo site_url('product'); ?>"><?php echo $this->lang->line('MENU_PRODUCT'); ?></a>
+                    </li>
+                    <li class="dropdown"><a
+                            href="<?php echo site_url('introduce'); ?>"><?php echo $this->lang->line('MENU_ABOUT'); ?>
+                            <i
                                 class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="sub-menu">
-                            <li><a href="<?php echo site_url('introduce'); ?>"><?php echo $this->lang->line('MENU_ABOUT'); ?></a></li>
-                            <li><a href="<?php echo site_url('factory'); ?>"><?php echo $this->lang->line('MENU_FACTORY'); ?></a></li>
+                            <li>
+                                <a href="<?php echo site_url('newsandevents'); ?>"><?php echo $this->lang->line('MENU_NEWS_EVENTS'); ?></a></a>
+                            </li>
+                            <li>
+                                <a href="<?php echo site_url('ourbusiness'); ?>"><?php echo $this->lang->line('MENU_BUSINESS'); ?> </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo site_url('photos'); ?>"><?php echo $this->lang->line('MENU_PHOTOS'); ?></a>
+                            </li>
+                            <li>
+                                <a href="<?php echo site_url('introduce'); ?>"><?php echo $this->lang->line('MENU_ABOUT'); ?></a>
+                            </li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a href="<?php echo site_url('product'); ?>"><?php echo $this->lang->line('MENU_PRODUCT'); ?> <i
-                                class="fa fa-angle-down"></i></a>
-                        <ul role="menu" class="sub-menu">
-                            <li><a href="<?php echo site_url('product_domestic'); ?>"><?php echo $this->lang->line('MENU_DOMESTIC'); ?></a></li>
-                            <li><a href="<?php echo site_url('product_international'); ?>"><?php echo $this->lang->line('MENU_INTERNATIONAL'); ?></a></li>
-                        </ul>
+                    <li><a href="<?php echo site_url('career'); ?>"><?php echo $this->lang->line('MENU_CAREER'); ?></a>
                     </li>
-
-                    <li><a href="<?php echo site_url('newsandevents'); ?>"><?php echo $this->lang->line('MENU_NEWS_EVENTS'); ?></a></li>
-                    <li class="dropdown"><a href="<?php echo site_url('partners'); ?>"><?php echo $this->lang->line('MENU_PARTNERS'); ?> <i
-                                class="fa fa-angle-down"></i></a>
-                        <ul role="menu" class="sub-menu">
-                            <li><a href="<?php echo site_url('financial_report'); ?>"><?php echo $this->lang->line('MENU_FINANCIAL_REPORT'); ?></a></li>
-                            <li><a href="<?php echo site_url('partners_meeting'); ?>"><?php echo $this->lang->line('MENU_PARTNERS_MEETING'); ?></a></li>
-                            <li><a href="<?php echo site_url('policy'); ?>"><?php echo $this->lang->line('MENU_COMPANY_POLICY'); ?></a></li>
-                        </ul>
+                    <li>
+                        <a href="<?php echo site_url('contact'); ?>"><?php echo $this->lang->line('MENU_CONTACT'); ?></a>
                     </li>
-                    <li class="dropdown"><a href="<?php echo site_url('photos'); ?>"><?php echo $this->lang->line('MENU_PHOTOS'); ?> <i
-                                class="fa fa-angle-down"></i></a>
-                        <ul role="menu" class="sub-menu">
-                            <li><a href="<?php echo site_url('photos_offices'); ?>"><?php echo $this->lang->line('MENU_OFFICES'); ?></a></li>
-                            <li><a href="<?php echo site_url('photos_factories'); ?>"><?php echo $this->lang->line('MENU_FACTORIES'); ?></a></li>
-                        </ul>
-                    </li>
-                    <li><a href="<?php echo site_url('career'); ?>"><?php echo $this->lang->line('MENU_CAREER'); ?></a></li>
-                    <li><a href="<?php echo site_url('contact'); ?>"><?php echo $this->lang->line('MENU_CONTACT'); ?></a></li>
                 </ul>
             </div>
 

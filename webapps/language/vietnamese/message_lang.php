@@ -16,15 +16,19 @@ $lang['CLIENTS_INTRO'] = 'Những cửa hàng và khách hàng đã và đang ti
 $lang['USER_ACCESS'] = 'Người dùng truy cập';
 $lang['ONLINE'] = 'Trực tuyến';
 $lang['ACCESSED'] = 'Đã truy cập';
+$lang['INFORMATION'] = 'Thông tin công ty';
 $lang['CONTACT_INFO'] = 'Thông tin liên hệ';
 $lang['SEND_MESSAGE'] = 'Gửi tin nhắn';
 $lang['NAME'] = 'Tên';
 $lang['TEXT'] = 'Nội dung';
 $lang['SEND'] = 'Gửi';
 $lang['WE_NEED_YOU'] = 'Chúng tôi cần bạn!';
+$lang['CATEGORIES'] = 'Danh mục';
+$lang['GENERAL_INFORMATION'] = 'Giới thiệu';
+$lang['TAG_CLOUD'] = 'Gợi ý tìm kiếm';
+$lang['LATEST_PHOTOS'] = 'Hình ảnh mới nhất';
 // Contact us
 $lang['CONTACT_US_PLACEHOLDER'] = 'Chúng tôi ở đây';
-
 // About us
 $lang['COMPANY_CODE'] = 'Mã công ty';
 $lang['COMPANY_CODE_VALUE'] = '3502297423';
@@ -46,16 +50,10 @@ $lang['MENU_INTRODUCE'] = 'Giới thiệu';
 $lang['MENU_ABOUT'] = 'Chúng tôi';
 $lang['MENU_FACTORY'] = 'Nhà máy';
 $lang['MENU_PRODUCT'] = 'Sản phẩm';
-$lang['MENU_DOMESTIC'] = 'Nội địa';
-$lang['MENU_INTERNATIONAL'] = 'Quốc tế';
 $lang['MENU_NEWS_EVENTS'] = 'Tin tức | Sự kiện';
-$lang['MENU_PARTNERS'] = 'Cổ đông';
-$lang['MENU_FINANCIAL_REPORT'] = 'Báo cáo tài chính';
-$lang['MENU_PARTNERS_MEETING'] = 'Đại hội cổ đông';
-$lang['MENU_COMPANY_POLICY'] = 'Chính sách';
+$lang['MENU_BUSINESS'] = 'Tình hình kinh doanh';
 $lang['MENU_PHOTOS'] = 'Hình ảnh';
-$lang['MENU_PHOTOS_OFFICES'] = 'Văn phòng';
-$lang['MENU_PHOTOS_FACTORIES'] = 'Xí nghiệp';
 $lang['MENU_CAREER'] = 'Tuyển dụng';
 $lang['MENU_CONTACT'] = 'Liên hệ';
+$lang['NO_PRODUCTS'] = 'Xin lỗi! Chúng tôi không có sản phẩm!';
 ?>
