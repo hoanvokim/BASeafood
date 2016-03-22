@@ -14,26 +14,39 @@ class Product_controller extends CI_Controller
     {
         parent::__construct();
         $this->utilities->loadPropertiesFiles($this->lang);
+        //load categories
         $this->load->model("category_model");
         $items = $this->category_model->findAll();
         $this->load->library("multi_menu");
         $this->multi_menu->set_items($items);
-
+        //init pagination
         $this->load->library("pagination");
         $this->load->model('product_model');
     }
 
     public function index()
     {
+        $total_row = $this->product_model->record_count();
+        //bootstrap pagination
+        $config = $this->initPaginationBootstrap($total_row);
+        //paging
+        $this->pagination->initialize($config);
+        $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
+        $data["products"] = $this->product_model->fetch_data($config["per_page"], $page);
+        $data["links"] = $this->pagination->create_links();
+        $data['title'] = 'State1';
+        $data['total'] = $total_row;
+        $this->load->view('pages/webapp/product', $data);
+    }
+
+    function initPaginationBootstrap($count)
+    {
         $config = array();
         $config["base_url"] = base_url() . "product";
-        $total_row = $this->product_model->record_count();
-        $config["total_rows"] = $total_row;
-        $config["per_page"] = 8;
+        $config["total_rows"] = $count;
+        $config["per_page"] = 12;
         $config['uri_segment'] = 2;
         $config['num_links'] = 5;
-
-        //bootstrap pagination
         $config['full_tag_open'] = '<ul class="pagination">';
         $config['full_tag_close'] = '</ul>';
         $config['first_link'] = false;
@@ -52,17 +65,7 @@ class Product_controller extends CI_Controller
         $config['cur_tag_close'] = '</a></li>';
         $config['num_tag_open'] = '<li>';
         $config['num_tag_close'] = '</li>';
-
-
-        $data['title'] = 'Product General';
-
-        //paging
-        $this->pagination->initialize($config);
-        $page =($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
-        $data["products"] = $this->product_model->fetch_data($config["per_page"], $page);
-        $data["links"] = $this->pagination->create_links();
-
-        $this->load->view('pages/webapp/product', $data);
+        return $config;
     }
 
     public function domestic()
@@ -79,18 +82,35 @@ class Product_controller extends CI_Controller
 
     public function findByCategories($category)
     {
+        //recursive categories from parent
         $this->load->model("category_model");
         $ids = $this->category_model->getCategoryTreeForParentId($category);
         $idList = array();
         $idList = $this->echoText($ids, $idList);
         $this->load->model("product_model");
-        $data['title'] = 'abc';
+
         if (count($idList) == 0) {
-            $data['products'] = $this->product_model->findByCategory($category);
+            $total_row = $this->product_model->recordCountByCategory($category);
+            //bootstrap pagination
+            $config = $this->initPaginationBootstrap($total_row);
+            //paging
+            $this->pagination->initialize($config);
+            $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
+            $data['products'] = $this->product_model->findByCategory($category, $config["per_page"], $page);
         }
         else {
-            $data['products'] = $this->product_model->findByCategories($idList);
+            $total_row = $this->product_model->recordCountByCategories($idList);
+            //bootstrap pagination
+            $config = $this->initPaginationBootstrap($total_row);
+            //paging
+            $this->pagination->initialize($config);
+            $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
+            $data['products'] = $this->product_model->findByCategories($idList, $config["per_page"], $page);
         }
+        $data["links"] = $this->pagination->create_links();
+        $data['title'] = 'State1';
+        $total_row = $this->product_model->record_count();
+        $data['total'] = $total_row;
         $this->load->view('pages/webapp/product', $data);
     }
 

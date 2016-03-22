@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by IntelliJ IDEA.
  * User: NhuTran
@@ -43,10 +44,13 @@ class Product_Model extends CI_Model
         return $query->result();
     }
 
-    public function record_count() {
+    public function record_count()
+    {
         return $this->db->count_all("product");
     }
-    public function fetch_data($limit, $start) {
+
+    public function fetch_data($limit, $start)
+    {
         $this->db->limit($limit, $start);
         $query = $this->db->get("product");
 
@@ -59,22 +63,54 @@ class Product_Model extends CI_Model
         return false;
     }
 
-    public function findByCategory($category)
+    public function recordCountByCategory($category)
     {
         $this->db->select('*');
         $this->db->from('product');
         $this->db->where('fk_category', $category);
         $query = $this->db->get();
-        return $query->result();
+        return $query->num_rows();
     }
 
-    public function findByCategories($category)
+    public function findByCategory($category, $limit, $start)
+    {
+        $this->db->select('*');
+        $this->db->from('product');
+        $this->db->where('fk_category', $category);
+        $this->db->limit($limit, $start);
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+            foreach ($query->result() as $row) {
+                $data[] = $row;
+            }
+            return $data;
+        }
+        return false;
+    }
+
+    public function recordCountByCategories($category)
     {
         $this->db->select('*');
         $this->db->from('product');
         $this->db->or_where_in('fk_category', $category);
         $query = $this->db->get();
-        return $query->result();
+        return $query->num_rows();
+    }
+
+    public function findByCategories($category, $limit, $start)
+    {
+        $this->db->select('*');
+        $this->db->from('product');
+        $this->db->or_where_in('fk_category', $category);
+        $this->db->limit($limit, $start);
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+            foreach ($query->result() as $row) {
+                $data[] = $row;
+            }
+            return $data;
+        }
+        return false;
     }
 
     public function insert($name, $en_name, $fk_category, $url, $size, $packing)
