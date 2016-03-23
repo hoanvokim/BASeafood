@@ -41,20 +41,37 @@ class Tags_Model extends CI_Model
         $this->db->insert('tags', $data);
     }
 
-    public function saveReferenceProduct($tag, $product)
+    public function update($id, $name)
     {
         $data = array(
+            'name' => $name,
+        );
+        $this->db->where('id', $id);
+        $this->db->update('tags', $data);
+    }
+
+    public function delete($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('tags');
+    }
+
+    public function saveReferenceProduct($tag_name, $product)
+    {
+        $tags = $this->findByName($tag_name);
+        $data = array(
             'fk_product' => $product,
-            'fk_tags' => $tag,
+            'fk_tags' => $tags['id'],
         );
         $this->db->insert('product_tags', $data);
     }
 
-    public function saveReferenceNews($tag, $news)
+    public function saveReferenceNews($tag_name, $news)
     {
+        $tags = $this->findByName($tag_name);
         $data = array(
             'fk_news' => $news,
-            'fk_tags' => $tag,
+            'fk_tags' => $tags['id'],
         );
         $this->db->insert('news_tags', $data);
     }
@@ -77,18 +94,5 @@ class Tags_Model extends CI_Model
         return $this->db->query($sql)->result_array();
     }
 
-    public function update($id, $name)
-    {
-        $data = array(
-            'name' => $name,
-        );
-        $this->db->where('id', $id);
-        $this->db->update('tags', $data);
-    }
 
-    public function delete($id)
-    {
-        $this->db->where('id', $id);
-        $this->db->delete('tags');
-    }
 }
