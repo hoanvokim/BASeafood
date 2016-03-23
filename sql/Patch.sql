@@ -34,8 +34,7 @@ CREATE TABLE `baseafood`.`category` (
 
 CREATE TABLE `baseafood`.`tags` (
     `id`      TINYINT NOT NULL AUTO_INCREMENT,
-    `en_name` NVARCHAR(200),
-    `vi_name` NVARCHAR(200),
+    `name` NVARCHAR(200),
     PRIMARY KEY (`id`)
 )
     ENGINE = MyISAM
