@@ -20,7 +20,7 @@ CREATE TABLE `baseafood`.`category` (
     `id`      TINYINT       NOT NULL AUTO_INCREMENT,
     `en_name` NVARCHAR(100) NOT NULL,
     `vi_name` NVARCHAR(100) NOT NULL,
-    `parent`  TINYINT,
+    `parent`  TINYINT                DEFAULT NULL,
     `slug`    VARCHAR(100)  NOT NULL,
     `number`  INT           NOT NULL,
     PRIMARY KEY (`id`),
@@ -33,7 +33,7 @@ CREATE TABLE `baseafood`.`category` (
     AUTO_INCREMENT = 1;
 
 CREATE TABLE `baseafood`.`tags` (
-    `id`      TINYINT NOT NULL AUTO_INCREMENT,
+    `id`   TINYINT NOT NULL AUTO_INCREMENT,
     `name` NVARCHAR(200),
     PRIMARY KEY (`id`)
 )

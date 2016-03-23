@@ -34,7 +34,7 @@ class Manager_category_controller extends CI_Controller
                 'id' => $category['id'],
                 'en_name' => $category['en_name'],
                 'vi_name' => $category['vi_name'],
-                'fk_parent' => $category['fk_parent'],
+                'fk_parent' => $category['parent'],
                 'can_be_deleted' => $can_be_deleted,
             ));
         }

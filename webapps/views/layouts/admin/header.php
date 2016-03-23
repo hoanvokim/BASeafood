@@ -8,6 +8,7 @@
 <link href="<?php echo base_url(); ?>webresources/dashboard/css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css"/>
 <link href="<?php echo base_url(); ?>webresources/dashboard/css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet"
       type="text/css"/>
+<link href="<?php echo base_url(); ?>webresources/css/select2-bootstrap.css" rel="stylesheet" type="text/css"/>
 <link href="<?php echo base_url(); ?>webresources/dashboard/css/AdminLTE.css" rel="stylesheet" type="text/css"/>
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>

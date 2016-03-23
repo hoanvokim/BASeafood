@@ -48,6 +48,16 @@
                                 <input type="text" id="packing" name="packing" class="form-control"
                                        placeholder="Packing, for example: IQF, 1kg/PE x 10/CTN">
                             </div>
+                            <div class="form-group">
+                                <label for="packing">Tags</label>
+                                <select class="form-control select2" multiple="multiple">
+                                    <option></option>
+                                    <option value="CA">California</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="WA">Washington</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="box-footer">
                             <button type="submit" class="btn btn-primary">create</button>

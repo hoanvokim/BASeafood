@@ -30,7 +30,7 @@ class Category_Model extends CI_Model
 
     public function findById($id)
     {
-        $this->db->select('id , en_name,vi_name,fk_parent');
+        $this->db->select('id , en_name,vi_name,parent');
         $this->db->from('category');
         $this->db->where('id =', $id);
         $query = $this->db->get();
@@ -59,15 +59,25 @@ class Category_Model extends CI_Model
     public function insert($en_name, $vi_name, $parentId)
     {
         if (!isset($parentId)) {
+            $children = $this->findByParent($parentId);
+            $sortIndex = sizeof($children);
+            $parent = $this->findById($parentId);
             $data = array(
                 'en_name' => $en_name,
                 'vi_name' => $vi_name,
+                'slug' => $parent[slug] . '-' . $sortIndex + 1,
+                'number' => $sortIndex + 1,
             );
-        } else {
+        }
+        else {
+            $children = $this->findByParent(null);
+            $sortIndex = sizeof($children);
             $data = array(
                 'en_name' => $en_name,
                 'vi_name' => $vi_name,
-                'fk_parent' => $parentId,
+                'parent' => $parentId,
+                'slug' => 'Item-' . $sortIndex,
+                'number' => $sortIndex,
             );
         }
 
