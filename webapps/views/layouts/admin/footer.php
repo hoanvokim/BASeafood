@@ -7,6 +7,10 @@
 <script src="<?php echo base_url(); ?>webresources/dashboard/js/AdminLTE/app.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>webresources/dashboard/js/AdminLTE/dashboard.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>webresources/dashboard/js/plugins/ckeditor/ckeditor.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>webresources/vendor/select2/js/select2.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function() { $("#tags_dropdown").select2(); });
+</script>
 <script type="text/javascript">
     $(function () {
         $("#example1").dataTable();
