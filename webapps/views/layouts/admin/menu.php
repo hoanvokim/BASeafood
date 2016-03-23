@@ -26,6 +26,11 @@
                     <i class="fa fa-dashboard"></i> <span>Images manager</span>
                 </a>
             </li>
+            <li>
+                <a href="<?php echo site_url('tags-manager'); ?>">
+                    <i class="fa fa-dashboard"></i> <span>Tags manager</span>
+                </a>
+            </li>
         </ul>
     </section>
 </aside>

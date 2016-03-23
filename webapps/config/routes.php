@@ -127,3 +127,13 @@ $route['product-manager/delete/:num'] = 'dm/manager_product_controller/delete';
 $route['create-product-submit'] = 'dm/manager_product_controller/post_create_new';
 $route['update-product-submit'] = 'dm/manager_product_controller/post_update';
 $route['delete-product-submit/:num'] = 'dm/manager_product_controller/post_delete';
+
+//product administration
+$route['tags-manager'] = 'dm/manager_tags_controller/index';
+$route['create-tags'] = 'dm/manager_tags_controller/create_new/$1';
+$route['create-tags/:num'] = 'dm/manager_tags_controller/create_new/$1';
+$route['tags-manager/update/:num'] = 'dm/manager_tags_controller/update';
+$route['tags-manager/delete/:num'] = 'dm/manager_tags_controller/delete';
+$route['create-tags-submit'] = 'dm/manager_tags_controller/post_create_new';
+$route['update-tags-submit'] = 'dm/manager_tags_controller/post_update';
+$route['delete-tags-submit/:num'] = 'dm/manager_tags_controller/post_delete';

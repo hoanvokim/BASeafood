@@ -19,6 +19,23 @@ class Tags_Model extends CI_Model
         return $this->db->get("tags")->result_array();
     }
 
+    public function findById($id)
+    {
+        $this->db->select('id , name');
+        $this->db->from('tags');
+        $this->db->where('id =', $id);
+        $query = $this->db->get();
+        if ($query) {
+            foreach ($query->result_array() as $item) {
+                return array(
+                    'id' => $item['id'],
+                    'name' => $item['name'],
+                );
+            }
+        }
+        return false;
+    }
+
     public function findByName($name)
     {
         $this->db->where('name =', $name);
