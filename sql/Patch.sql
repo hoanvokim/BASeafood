@@ -169,9 +169,9 @@ CREATE TABLE `baseafood`.`product_tags` (
     `fk_product` TINYINT,
     `fk_tags`    TINYINT,
     PRIMARY KEY (`id`),
-    CONSTRAINT news_tags_fk_product FOREIGN KEY (fk_product) REFERENCES product (id)
+    CONSTRAINT news_tags_fk_product FOREIGN KEY (fk_product) REFERENCES `baseafood`.`product` (id)
         ON DELETE CASCADE,
-    CONSTRAINT news_tags_fk_tags FOREIGN KEY (fk_tags) REFERENCES tags (id)
+    CONSTRAINT news_tags_fk_tags FOREIGN KEY (fk_tags) REFERENCES `baseafood`.`tags` (id)
         ON DELETE CASCADE
 )
     ENGINE = MyISAM
@@ -183,9 +183,9 @@ CREATE TABLE `baseafood`.`news_tags` (
     `fk_news` TINYINT,
     `fk_tags` TINYINT,
     PRIMARY KEY (`id`),
-    CONSTRAINT news_tags_fk_news FOREIGN KEY (fk_news) REFERENCES news (id)
+    CONSTRAINT news_tags_fk_news FOREIGN KEY (fk_news) REFERENCES `baseafood`.`news` (id)
         ON DELETE CASCADE,
-    CONSTRAINT news_tags_fk_tags FOREIGN KEY (fk_tags) REFERENCES tags (id)
+    CONSTRAINT news_tags_fk_tags FOREIGN KEY (fk_tags) REFERENCES `baseafood`.`tags` (id)
         ON DELETE CASCADE
 )
     ENGINE = MyISAM
