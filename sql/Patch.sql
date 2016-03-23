@@ -17,12 +17,12 @@ INSERT INTO `baseafood`.`users` (username, password) VALUES ('superadmin', MD5('
 
 
 CREATE TABLE `baseafood`.`category` (
-    `id`        TINYINT       NOT NULL AUTO_INCREMENT,
-    `en_name`   NVARCHAR(100) NOT NULL,
-    `vi_name`   NVARCHAR(100) NOT NULL,
-    `parent` TINYINT,
-    `slug`   VARCHAR(100) NOT NULL,
-    `number`   INT NOT NULL,
+    `id`      TINYINT       NOT NULL AUTO_INCREMENT,
+    `en_name` NVARCHAR(100) NOT NULL,
+    `vi_name` NVARCHAR(100) NOT NULL,
+    `parent`  TINYINT,
+    `slug`    VARCHAR(100)  NOT NULL,
+    `number`  INT           NOT NULL,
     PRIMARY KEY (`id`),
     INDEX `category_parent_index` (`parent`),
     FOREIGN KEY (`parent`)
@@ -32,7 +32,15 @@ CREATE TABLE `baseafood`.`category` (
     DEFAULT CHARSET = latin1
     AUTO_INCREMENT = 1;
 
--- Path 002 : images --
+CREATE TABLE `baseafood`.`tags` (
+    `id`      TINYINT NOT NULL AUTO_INCREMENT,
+    `en_name` NVARCHAR(200),
+    `vi_name` NVARCHAR(200),
+    PRIMARY KEY (`id`)
+)
+    ENGINE = MyISAM
+    DEFAULT CHARSET = latin1
+    AUTO_INCREMENT = 1;
 
 CREATE TABLE `baseafood`.`images` (
     `id`        TINYINT       NOT NULL AUTO_INCREMENT,
@@ -100,8 +108,8 @@ END;
 
 CREATE TABLE `baseafood`.`gallery` (
     `id`        TINYINT       NOT NULL AUTO_INCREMENT,
-    `en_name`      NVARCHAR(100) NOT NULL,
-    `vi_name`      NVARCHAR(100) NOT NULL,
+    `en_name`   NVARCHAR(100) NOT NULL,
+    `vi_name`   NVARCHAR(100) NOT NULL,
     `url_image` NVARCHAR(250),
     `group`     NVARCHAR(100),
     PRIMARY KEY (`id`)
@@ -152,6 +160,34 @@ CREATE TABLE `baseafood`.`generic_information` (
                  CHARACTER SET utf8
                  COLLATE utf8_general_ci,
     PRIMARY KEY (`id`)
+)
+    ENGINE = MyISAM
+    DEFAULT CHARSET = latin1
+    AUTO_INCREMENT = 1;
+
+CREATE TABLE `baseafood`.`product_tags` (
+    `id`         TINYINT NOT NULL AUTO_INCREMENT,
+    `fk_product` TINYINT,
+    `fk_tags`    TINYINT,
+    PRIMARY KEY (`id`),
+    CONSTRAINT news_tags_fk_product FOREIGN KEY (fk_product) REFERENCES product (id)
+        ON DELETE CASCADE,
+    CONSTRAINT news_tags_fk_tags FOREIGN KEY (fk_tags) REFERENCES tags (id)
+        ON DELETE CASCADE
+)
+    ENGINE = MyISAM
+    DEFAULT CHARSET = latin1
+    AUTO_INCREMENT = 1;
+
+CREATE TABLE `baseafood`.`news_tags` (
+    `id`      TINYINT NOT NULL AUTO_INCREMENT,
+    `fk_news` TINYINT,
+    `fk_tags` TINYINT,
+    PRIMARY KEY (`id`),
+    CONSTRAINT news_tags_fk_news FOREIGN KEY (fk_news) REFERENCES news (id)
+        ON DELETE CASCADE,
+    CONSTRAINT news_tags_fk_tags FOREIGN KEY (fk_tags) REFERENCES tags (id)
+        ON DELETE CASCADE
 )
     ENGINE = MyISAM
     DEFAULT CHARSET = latin1
