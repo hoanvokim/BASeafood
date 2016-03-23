@@ -27,7 +27,7 @@ class Manager_product_controller extends CI_Controller
         $categories = $this->category_model->findAll();
         $products_category = array();
         foreach ($categories as $category) {
-            $products = $this->product_model->findByCategory($category['id']);
+            $products = $this->product_model->findAllProductByCategory($category['id']);
             array_push($products_category, array(
                 'id' => $category['id'],
                 'en_name' => $category['en_name'],

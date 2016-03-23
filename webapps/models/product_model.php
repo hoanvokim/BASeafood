@@ -6,6 +6,7 @@
  * Date: 1/31/16
  * Time: 1:40 AM
  * To change this template use File | Settings | File Templates.
+ * @property  db
  */
 class Product_Model extends CI_Model
 {
@@ -70,6 +71,15 @@ class Product_Model extends CI_Model
         $this->db->where('fk_category', $category);
         $query = $this->db->get();
         return $query->num_rows();
+    }
+
+    public function findAllProductByCategory($category)
+    {
+        $this->db->select('*');
+        $this->db->from('product');
+        $this->db->where('fk_category', $category);
+        $query = $this->db->get();
+        return $query->result_array();
     }
 
     public function findByCategory($category, $limit, $start)
