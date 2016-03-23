@@ -63,9 +63,7 @@
                             <i
                                 class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="sub-menu">
-                            <li>
-                                <a href="<?php echo site_url('newsandevents'); ?>"><?php echo $this->lang->line('MENU_NEWS_EVENTS'); ?></a></a>
-                            </li>
+
                             <li>
                                 <a href="<?php echo site_url('ourbusiness'); ?>"><?php echo $this->lang->line('MENU_BUSINESS'); ?> </a>
                             </li>
@@ -76,6 +74,9 @@
                                 <a href="<?php echo site_url('introduce'); ?>"><?php echo $this->lang->line('MENU_ABOUT'); ?></a>
                             </li>
                         </ul>
+                    </li>
+                    <li>
+                        <a href="<?php echo site_url('newsandevents'); ?>"><?php echo $this->lang->line('MENU_NEWS_EVENTS'); ?></a></a>
                     </li>
                     <li><a href="<?php echo site_url('career'); ?>"><?php echo $this->lang->line('MENU_CAREER'); ?></a>
                     </li>

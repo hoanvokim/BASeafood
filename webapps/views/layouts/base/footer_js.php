@@ -14,5 +14,6 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>webresources/js/gmaps.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>webresources/js/wow.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>webresources/js/jstree.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>webresources/js/Chart.js"></script>
 <!--Customized-->
 <script type="text/javascript" src="<?php echo base_url(); ?>webresources/js/main.js"></script>

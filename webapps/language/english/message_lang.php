@@ -28,6 +28,7 @@ $lang['CATEGORIES'] = 'Categories';
 $lang['GENERAL_INFORMATION'] = 'Introduce';
 $lang['TAG_CLOUD'] = 'Tag cloud';
 $lang['LATEST_PHOTOS'] = 'Latest photos';
+$lang['FINANCIAL_REPORT'] = 'Our Business Report';
 // Contact us
 $lang['CONTACT_US_PLACEHOLDER'] = 'Stay close';
 // About us
@@ -57,4 +58,6 @@ $lang['MENU_PHOTOS'] = 'Photos';
 $lang['MENU_CAREER'] = 'Career';
 $lang['MENU_CONTACT'] = 'Contact';
 $lang['NO_PRODUCTS'] = 'Sorry! We don\'t have any product!';
+//News
+$lang['NEWS'] = 'Headlines';
 ?>

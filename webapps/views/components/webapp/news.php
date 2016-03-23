@@ -10,9 +10,8 @@
     <div class="container">
         <div class="row">
             <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                <h1 class="title">Our News <img src="<?php echo base_url(); ?>/webresources/images/home/news.png"></h1>
+                <h1 class="title"><?php echo $this->lang->line('NEWS'); ?>  <img src="<?php echo base_url(); ?>/webresources/images/home/news.png"></h1>
                 <div class="devider"></div>
-                <p class="subtitle">Update latest news from the company</p>
             </div>
         </div><!--/ Title row end -->
         <div class="row">

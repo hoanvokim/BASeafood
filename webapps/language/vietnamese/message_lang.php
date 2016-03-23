@@ -8,7 +8,7 @@
 // Global
 $lang['BASEAFOOD'] = 'baseafood';
 $lang['FEATURES'] = 'Chúng tôi mang đến cho bạn những thực phẩm tốt nhất vì sức khoẻ chính bạn';
-$lang['VIEW_MORE'] = 'Xem chi ';
+$lang['VIEW_MORE'] = 'Xem chi tiết';
 $lang['OUR_CERTIFICATES'] = 'Chứng chỉ';
 $lang['OUR_CERTIFICATES_INTRO'] = 'Tất cả các chứng chỉ chúng tôi đạt được để mang những sản phẩm tốt nhất đến bạn.';
 $lang['CLIENTS'] = 'Các khách hàng sử dụng sản phẩm';
@@ -27,6 +27,7 @@ $lang['CATEGORIES'] = 'Danh mục';
 $lang['GENERAL_INFORMATION'] = 'Giới thiệu';
 $lang['TAG_CLOUD'] = 'Gợi ý tìm kiếm';
 $lang['LATEST_PHOTOS'] = 'Hình ảnh mới nhất';
+$lang['FINANCIAL_REPORT'] = 'Thống kê tình hình kinh doanh';
 // Contact us
 $lang['CONTACT_US_PLACEHOLDER'] = 'Chúng tôi ở đây';
 // About us
@@ -56,4 +57,6 @@ $lang['MENU_PHOTOS'] = 'Hình ảnh';
 $lang['MENU_CAREER'] = 'Tuyển dụng';
 $lang['MENU_CONTACT'] = 'Liên hệ';
 $lang['NO_PRODUCTS'] = 'Xin lỗi! Chúng tôi không có sản phẩm!';
+//News
+$lang['NEWS'] = 'Tin chính';
 ?>
