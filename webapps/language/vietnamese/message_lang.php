@@ -28,6 +28,8 @@ $lang['GENERAL_INFORMATION'] = 'Giới thiệu';
 $lang['TAG_CLOUD'] = 'Gợi ý tìm kiếm';
 $lang['LATEST_PHOTOS'] = 'Hình ảnh mới nhất';
 $lang['FINANCIAL_REPORT'] = 'Thống kê tình hình kinh doanh';
+$lang['CHART'] = 'Biểu đồ thể hiện báo cáo kinh doanh trong năm 2016 và 2015';
+$lang['BUSINESS'] = 'Kinh doanh';
 // Contact us
 $lang['CONTACT_US_PLACEHOLDER'] = 'Chúng tôi ở đây';
 // About us

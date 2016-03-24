@@ -12,7 +12,7 @@ $headers[] = "From: {$name} <{$from}>";
 $headers[] = "Reply-To: <{$from}>";
 $headers[] = "Subject: {$subject}";
 $headers[] = "X-Mailer: PHP/".phpversion();
-
+echo 'test';
 mail($to, $subject, $message, $headers);
 
-die;
+?>

@@ -29,6 +29,8 @@ $lang['GENERAL_INFORMATION'] = 'Introduce';
 $lang['TAG_CLOUD'] = 'Tag cloud';
 $lang['LATEST_PHOTOS'] = 'Latest photos';
 $lang['FINANCIAL_REPORT'] = 'Our Business Report';
+$lang['CHART'] = 'The chart is the financial report of 2016 and 2015';
+$lang['BUSINESS'] = 'Business';
 // Contact us
 $lang['CONTACT_US_PLACEHOLDER'] = 'Stay close';
 // About us

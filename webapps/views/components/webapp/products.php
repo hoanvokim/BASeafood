@@ -47,7 +47,8 @@
                                             echo "<br/>";
                                             echo "Packing: " . $product->packing;
                                             echo "<br/>";
-                                        } else {
+                                        }
+                                        else {
                                             echo "Tên: " . $product->vi_name;
                                             echo "<br/>";
                                             echo "Cỡ: " . $product->size;
@@ -58,13 +59,17 @@
                                      ">
                                 <span>
                                     <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
-                                        echo $product->en_name;
-                                    } else {
-                                        echo $product->vi_name;
+                                        $limited_word = word_limiter($product->en_name, 4);
+                                        echo $limited_word;
+                                    }
+                                    else {
+                                        $limited_word = word_limiter($product->vi_name, 4);
+                                        echo $limited_word;
                                     } ?></span>
                                 </li>
                             <?php }
-                        } else { ?>
+                        }
+                        else { ?>
                             <?php echo $this->lang->line('NO_PRODUCTS'); ?>
                         <?php } ?>
                     </ul>

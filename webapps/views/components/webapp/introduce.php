@@ -30,11 +30,10 @@
                     <div class="col-md-12 col-sm-12">
                         <div class="single-blog blog-details two-column">
                             <div class="post-thumb">
-                                <a href="#"><img src="<?php echo base_url(); ?>webresources/images/blog/7.jpg"
+                                <a href="#"><img src="<?php echo base_url(); ?>webresources/images/photos/introduce.jpg"
                                                  class="img-responsive" alt=""></a>
                                 <div class="post-overlay">
-                                    <span class="uppercase"><a href="#">14 <br>
-                                            <small>Feb</small>
+                                    <span class="uppercase"><a href="#"><?php echo $today = date("j"); ?> <br><small><?php echo $today = date("M"); ?></small>
                                         </a></span>
                                 </div>
                             </div>

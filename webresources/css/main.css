@@ -678,8 +678,8 @@ ul.sub-menu {
 }
 
 .action h1 {
-    padding-top: 10px;
-    margin-top: 0;
+    padding: 30px;
+    margin-top: 11px;
 }
 
 .action p {
@@ -1684,7 +1684,6 @@ Blog with right sidebar
 .single-blog .post-overlay span a small {
     font-size: 16px;
     font-weight: 300;
-    margin-left: 5px;
 }
 
 .single-blog .post-overlay span:before {

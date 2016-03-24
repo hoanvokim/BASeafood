@@ -19,7 +19,7 @@
             </div>
             <div class="row">
                 <hr/>
-                <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
+                <div class="page-header text-center wow fadeInDown" data-wow-delay="1s">
                     <h1 class="title">Marketing JOB!</h1>
                     <div class="devider"></div>
 

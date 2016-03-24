@@ -16,6 +16,7 @@ class Product_controller extends CI_Controller
         $this->utilities->loadPropertiesFiles($this->lang);
         //init pagination
         $this->load->library("pagination");
+        $this->load->helper('text');
         $this->load->model('product_model');
 
         //load categories
