@@ -38,6 +38,7 @@ class Product_controller extends CI_Controller
         $data["products"] = $this->product_model->fetch_data($config["per_page"], $page);
         $data["links"] = $this->pagination->create_links();
         $data['total'] = $total_row;
+        $data['title'] = 'Products';
         $this->load->view('pages/webapp/product', $data);
     }
 

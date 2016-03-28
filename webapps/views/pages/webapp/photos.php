@@ -24,12 +24,7 @@
 </section>
 
 <?php
-if (strcasecmp($title, "Photos") == 0 || strcasecmp($title, "Photos offices") == 0) {
-    $this->load->view('components/webapp/photos_offices');
-}
-if (strcasecmp($title, "Photos") == 0 || strcasecmp($title, "Photos factories") == 0) {
-    $this->load->view('components/webapp/photos_factory');
-}
+    $this->load->view('components/webapp/photos');
 ?>
 <!--End content-->
 

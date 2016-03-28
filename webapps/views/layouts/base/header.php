@@ -17,6 +17,7 @@
 <link href="<?php echo base_url(); ?>webresources/css/owl-carousel/css/owl.carousel.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>webresources/css/owl-carousel/css/owl.theme.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>webresources/css/modify.css" rel="stylesheet"/>
+<link href="<?php echo base_url(); ?>webresources/vendor/select2/css/select2.css" rel="stylesheet" type="text/css"/>
 
 <link href="<?php echo base_url(); ?>webresources/css/viewer/viewer.css" rel="stylesheet"/>
 <link href="<?php echo base_url(); ?>webresources/css/viewer/viewer-start.css" rel="stylesheet"/>

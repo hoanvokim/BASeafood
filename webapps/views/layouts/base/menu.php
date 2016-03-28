@@ -87,10 +87,19 @@
             </div>
 
             <div class="search">
-                <form role="form">
+                <form role="form" name ="userinput" action="webapp/form_reader/save_userinput" method="post">
                     <i class="fa fa-search"></i>
                     <div class="field-toggle">
-                        <input type="text" class="search-form" autocomplete="off" placeholder="Search">
+                        <div class="form-group">
+                            <label for="packing">Tags</label>
+                            <select class="form-control select2" multiple="multiple" id="tags_dropdown" name="tag">
+                                <option></option>
+                                <option value="CA">California</option>
+                                <option value="NV">Nevada</option>
+                                <option value="OR">Oregon</option>
+                                <option value="WA">Washington</option>
+                            </select>
+                        </div>
                     </div>
                 </form>
             </div>

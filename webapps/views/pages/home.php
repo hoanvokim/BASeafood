@@ -12,7 +12,6 @@
 <?php $this->load->view('components/webapp/sliders'); ?>
 <?php $this->load->view('components/webapp/features'); ?>
 <?php $this->load->view('components/webapp/news'); ?>
-<?php $this->load->view('components/webapp/clients'); ?>
 <?php $this->load->view('components/webapp/partners'); ?>
 <!--End content-->
 

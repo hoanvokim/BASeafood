@@ -11,12 +11,7 @@
         <div class="column-block">
             <div class="columnblock-title">
                 <?php echo $this->lang->line('CATEGORIES'); ?>
-                <span class="label label-default label-pill label-success">
-                    <h4 class="pull-xs-right pull-right" style="margin-top: -5px;">
-                        <? echo $total; ?>
-                    </h4>
-                    <?php echo $this->lang->line('MENU_PRODUCT'); ?>
-                </span></div>
+            </div>
             <div class="category_block">
                 <?php echo $this->multi_menu->render(array(
                     'nav_tag_open' => '<ul class="box-category treeview-list treeview">',
