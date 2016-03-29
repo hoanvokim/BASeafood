@@ -37,6 +37,50 @@ class Product_Model extends CI_Model
         return false;
     }
 
+    public function findByViName($vi_name)
+    {
+        $this->db->select('*');
+        $this->db->from('product');
+        $this->db->where('vi_name =', $vi_name);
+        $query = $this->db->get();
+        if ($query) {
+            foreach ($query->result_array() as $item) {
+                return array(
+                    'id' => $item['id'],
+                    'vi_name' => $item['vi_name'],
+                    'en_name' => $item['en_name'],
+                    'size' => $item['size'],
+                    'packing' => $item['packing'],
+                    'url' => $item['url'],
+                    'fk_category' => $item['fk_category']
+                );
+            }
+        }
+        return false;
+    }
+
+    public function findByEnName($en_name)
+    {
+        $this->db->select('*');
+        $this->db->from('product');
+        $this->db->where('en_name =', $en_name);
+        $query = $this->db->get();
+        if ($query) {
+            foreach ($query->result_array() as $item) {
+                return array(
+                    'id' => $item['id'],
+                    'vi_name' => $item['vi_name'],
+                    'en_name' => $item['en_name'],
+                    'size' => $item['size'],
+                    'packing' => $item['packing'],
+                    'url' => $item['url'],
+                    'fk_category' => $item['fk_category']
+                );
+            }
+        }
+        return false;
+    }
+
     public function findAll()
     {
         $this->db->select("*");

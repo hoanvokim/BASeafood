@@ -1,4 +1,5 @@
-<?php    defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
+
 /**
  * Created by IntelliJ IDEA.
  * User: NhuTran
@@ -15,6 +16,7 @@ class Manager_product_controller extends CI_Controller
         $this->load->model('user_model', '', TRUE);
         $this->load->model('category_model', '', TRUE);
         $this->load->model('product_model', '', TRUE);
+        $this->load->model('tags_model', '', TRUE);
     }
 
     public function index()
@@ -52,6 +54,7 @@ class Manager_product_controller extends CI_Controller
         }
         $data['title'] = 'Product creation';
         $data['error'] = '';
+        $data['tags'] = $this->tags_model->findAll();
         $this->load->view('pages/admin/product/create', $data);
     }
 
@@ -81,11 +84,18 @@ class Manager_product_controller extends CI_Controller
             $file_path = 'assets/upload/images/products/' . $upload_files['file_name'];
             if ($this->form_validation->run() == FALSE) {
                 $this->load->view('pages/admin/product/create', $data);
-            } else {
+            }
+            else {
                 $this->product_model->insert($this->input->post('vi_name'), $this->input->post('en_name'), $this->input->post('cid'), $file_path, $this->input->post('size'), $this->input->post('packing'));
+                $tags = $this->input->post('tags');
+                $product = $this->product_model->findByEnName($this->input->post('en_name'));
+                foreach ($tags as $tag) {
+                    $this->tags_model->saveReferenceProduct($tag, $product['id']);
+                }
                 redirect('product-manager', 'refresh');
             }
         }
+        $data['tags'] = $this->tags_model->findAll();
         $data['error'] = $this->upload->display_errors();
         $this->load->view('pages/admin/product/create', $data);
     }
@@ -146,7 +156,8 @@ class Manager_product_controller extends CI_Controller
             $file_path = 'assets/upload/images/products/' . $upload_files['file_name'];
             if ($this->form_validation->run() == FALSE) {
                 $this->load->view('pages/admin/product/update', $data);
-            } else {
+            }
+            else {
                 $this->product_model->update($this->input->post('pid'), $this->input->post('vi_name'), $this->input->post('en_name'), $this->input->post('cid'), $file_path, $this->input->post('size'), $this->input->post('packing'));
                 redirect('product-manager', 'refresh');
             }

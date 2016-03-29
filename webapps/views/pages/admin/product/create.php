@@ -50,7 +50,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="packing">Tags</label>
-                                <select class="form-control select2" multiple="multiple" id="tags_dropdown">
+                                <select class="form-control select2" multiple="multiple" id="tags_dropdown" name="tags">
                                     <option></option>
                                     <option value="CA">California</option>
                                     <option value="NV">Nevada</option>

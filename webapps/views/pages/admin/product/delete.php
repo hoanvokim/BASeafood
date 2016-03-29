@@ -16,7 +16,7 @@
                             <h3 class="box-title">Delete product</h3>
                         </div>
                         <div class="box-body">
-                            <p class="text-danger"> Would you like to delete the product: <?php echo $product['name']; ?></p>
+                            <p class="text-danger"> Would you like to delete the product: <?php echo $product['vi_name']; ?></p>
                         </div>
 
                         <div class="box-footer clearfix no-border">
