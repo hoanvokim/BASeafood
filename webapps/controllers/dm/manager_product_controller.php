@@ -82,10 +82,7 @@ class Manager_product_controller extends CI_Controller
         if ($this->upload->do_upload('userfile')) {
             $upload_files = $this->upload->data();
             $file_path = 'assets/upload/images/products/' . $upload_files['file_name'];
-            if ($this->form_validation->run() == FALSE) {
-                $this->load->view('pages/admin/product/create', $data);
-            }
-            else {
+            if ($this->form_validation->run() == TRUE) {
                 $this->product_model->insert($this->input->post('vi_name'), $this->input->post('en_name'), $this->input->post('cid'), $file_path, $this->input->post('size'), $this->input->post('packing'));
                 $tags = $this->input->post('tags');
                 $product = $this->product_model->findByEnName($this->input->post('en_name'));
