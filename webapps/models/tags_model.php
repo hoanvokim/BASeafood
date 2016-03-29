@@ -73,12 +73,11 @@ class Tags_Model extends CI_Model
         $this->db->delete('tags');
     }
 
-    public function saveReferenceProduct($tag_name, $product)
+    public function saveReferenceProduct($tag, $product)
     {
-        $tags = $this->findByName($tag_name);
         $data = array(
             'fk_product' => $product,
-            'fk_tags' => $tags['id'],
+            'fk_tags' => $tag,
         );
         $this->db->insert('product_tags', $data);
     }

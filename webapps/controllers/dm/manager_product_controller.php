@@ -97,17 +97,6 @@ class Manager_product_controller extends CI_Controller
         $this->load->view('pages/admin/product/create', $data);
     }
 
-    private function get_config()
-    {
-        return array(
-            'upload_path' => "./assets/upload/images/products/",
-            'allowed_types' => "gif|jpg|png|jpeg",
-            'overwrite' => TRUE,
-            'max_size' => "20480000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
-        );
-
-    }
-
     public function update()
     {
         $this->load->library('upload');
@@ -188,5 +177,16 @@ class Manager_product_controller extends CI_Controller
             $this->product_model->delete($id);
         }
         redirect('product-manager', 'refresh');
+    }
+
+    private function get_config()
+    {
+        return array(
+            'upload_path' => "./assets/upload/images/products/",
+            'allowed_types' => "gif|jpg|png|jpeg",
+            'overwrite' => TRUE,
+            'max_size' => "20480000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
+        );
+
     }
 }
