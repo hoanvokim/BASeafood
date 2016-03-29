@@ -78,7 +78,7 @@ class Manager_category_controller extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('pages/admin/category/create', $data);
         } else {
-            $this->category_model->insert($this->input->post('en_name'),$this->input->post('vi_name'), $this->input->post('pid'));
+            $this->category_model->insert($this->input->post('en_name'), $this->input->post('vi_name'), $this->input->post('pid'));
             redirect('category-manager', 'refresh');
         }
     }
@@ -107,10 +107,15 @@ class Manager_category_controller extends CI_Controller
         }
         $data['title'] = 'Edit category';
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('en_name', 'en_name', 'trim|required|is_unique[category.en_name]', array(
+        $this->form_validation->set_rules('en_name', 'en_name', 'trim|required|callback_check_en_name_existed', array(
             'required' => 'You have not provided %s.',
-            'is_unique' => 'This %s already exists.'
+            'check_en_name_existed' => 'This %s already exists.'
         ));
+        $this->form_validation->set_rules('vi_name', 'vi_name', 'trim|required|callback_check_vi_name_existed', array(
+            'required' => 'You have not provided %s.',
+            'check_vi_name_existed' => 'This %s already exists.'
+        ));
+
         if ($this->form_validation->run() == FALSE) {
             $category = array(
                 'id' => $this->input->post('did'),
@@ -147,13 +152,33 @@ class Manager_category_controller extends CI_Controller
         redirect('category-manager', 'refresh');
     }
 
-    function check_existed($name)
+    function check_vi_name_existed($name)
     {
-        $result = $this->category_model->findByName($name);
-        if ($result) {
-            $this->form_validation->set_message('check_existed', 'Category existed, please enter another name');
-            return true;
+        $id = $this->input->post('did');
+        $category = $this->category_model->findById($id);
+        if ($category['vi_name'] != $name) {
+            $result = $this->category_model->findByViName($name);
+            if ($result) {
+                $this->form_validation->set_message('check_existed', 'Category existed, please enter another name');
+                return false;
+            }
+
         }
-        return false;
+        return true;
+    }
+
+    function check_en_name_existed($name)
+    {
+        $id = $this->input->post('did');
+        $category = $this->category_model->findById($id);
+        if ($category['en_name'] != $name) {
+            $result = $this->category_model->findByEnName($name);
+            if ($result) {
+                $this->form_validation->set_message('check_existed', 'Category existed, please enter another name');
+                return false;
+            }
+
+        }
+        return true;
     }
 }

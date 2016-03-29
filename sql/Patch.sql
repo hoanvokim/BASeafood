@@ -1,8 +1,6 @@
 DROP DATABASE `baseafood`;
 CREATE DATABASE `baseafood`;
 
--- Path 001 : users, menu, category --
-
 CREATE TABLE `baseafood`.`users` (
     `id`       TINYINT(4)   NOT NULL AUTO_INCREMENT,
     `username` VARCHAR(30)  NOT NULL,
@@ -52,8 +50,6 @@ CREATE TABLE `baseafood`.`images` (
     DEFAULT CHARSET = latin1
     AUTO_INCREMENT = 1;
 
--- Path 003 : products --
-
 CREATE TABLE `baseafood`.`product` (
     `id`          TINYINT       NOT NULL AUTO_INCREMENT,
     `en_name`     NVARCHAR(100) NOT NULL,
@@ -71,8 +67,6 @@ CREATE TABLE `baseafood`.`product` (
     DEFAULT CHARSET = latin1
     AUTO_INCREMENT = 1;
 
--- Path 004 : news --
-
 CREATE TABLE `baseafood`.`news` (
     `id`                TINYINT       NOT NULL          AUTO_INCREMENT,
     `en_title`          NVARCHAR(100) NOT NULL,
@@ -87,21 +81,6 @@ CREATE TABLE `baseafood`.`news` (
     ENGINE = MyISAM
     DEFAULT CHARSET = latin1
     AUTO_INCREMENT = 1;
-
-CREATE TRIGGER `baseafood`.`news_INSERT` BEFORE INSERT ON `baseafood`.`news`
-FOR EACH ROW BEGIN
-    -- Set the creation date
-    SET new.created_date = now();
-
-    -- Set the udpate date
-    SET new.updated_date = now();
-END;
-
-CREATE TRIGGER `baseafood`.`news_UPDATE` BEFORE UPDATE ON `baseafood`.`news`
-FOR EACH ROW BEGIN
-    -- Set the udpate date
-    SET new.updated_date = now();
-END;
 
 -- Path 005 : gallery --
 
