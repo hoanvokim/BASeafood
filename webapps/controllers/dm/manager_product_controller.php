@@ -131,26 +131,63 @@ class Manager_product_controller extends CI_Controller
         if ($categoryId) {
             $data['category'] = $this->category_model->findById($categoryId);
         }
-        $this->form_validation->set_rules('vi_name', 'vi_name', 'trim|required|is_unique[product.vi_name]', array(
+        $this->form_validation->set_rules('vi_name', 'vi_name', 'trim|required|callback_check_unique_vi_name', array(
             'required' => 'You have not provided %s.',
-            'is_unique' => 'This %s already exists.'
+            'check_unique_vi_name' => 'This %s already exists.'
         ));
-        $this->form_validation->set_rules('en_name', 'en_name', 'trim|required|is_unique[product.en_name]', array(
+        $this->form_validation->set_rules('en_name', 'en_name', 'trim|required|callback_check_unique_en_name', array(
             'required' => 'You have not provided %s.',
-            'is_unique' => 'This %s already exists.'
+            'check_unique_en_name' => 'This %s already exists.'
         ));
-        if ($this->upload->do_upload('userfile')) {
+
+
+        if ($this->upload->do_upload()) {
             $upload_files = $this->upload->data();
             $file_path = 'assets/upload/images/products/' . $upload_files['file_name'];
-            if ($this->form_validation->run() == FALSE) {
-                $this->load->view('pages/admin/product/update', $data);
-            }
-            else {
-                $this->product_model->update($this->input->post('pid'), $this->input->post('vi_name'), $this->input->post('en_name'), $this->input->post('cid'), $file_path, $this->input->post('size'), $this->input->post('packing'));
+            if ($this->form_validation->run() == TRUE) {
+                $this->product_model->update($this->input->post('pid'),
+                    $this->input->post('vi_name'),
+                    $this->input->post('en_name'),
+                    $this->input->post('cid'),
+                    $file_path,
+                    $this->input->post('size'),
+                    $this->input->post('packing'));
                 redirect('product-manager', 'refresh');
             }
         }
-        $data['error'] = $this->upload->display_errors();
+
+        $error = isset($_FILES['userfile']['error']) ? $_FILES['userfile']['error'] : 4;
+        $upload_error = false;
+        if (sizeof($this->upload->error_msg) == 1 && $error == 4) {
+            if ($this->form_validation->run() == TRUE) {
+                $this->product_model->update($this->input->post('pid'),
+                    $this->input->post('vi_name'),
+                    $this->input->post('en_name'),
+                    $this->input->post('cid'),
+                    null,
+                    $this->input->post('size'),
+                    $this->input->post('packing'));
+                redirect('product-manager', 'refresh');
+            }
+        }
+        else {
+            $upload_error = true;
+        }
+        if ($upload_error) {
+            $data['error'] = $this->upload->display_errors();
+        }
+        else {
+            $data['error'] = '';
+        }
+
+        $product = $this->product_model->findById($this->input->post('pid'));
+        $product['vi_name'] = $this->input->post('vi_name');
+        $product['en_name'] = $this->input->post('en_name');
+        $product['size'] = $this->input->post('size');
+        $product['packing'] = $this->input->post('packing');
+        $data['product'] = $product;
+        $data['tags'] = $this->tags_model->findAll();
+        $data['active_tags'] = $this->tags_model->findByProduct($product['id']);
         $this->load->view('pages/admin/product/update', $data);
     }
 
@@ -190,5 +227,33 @@ class Manager_product_controller extends CI_Controller
             'max_size' => "20480000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
         );
 
+    }
+
+    function check_unique_vi_name($vi_name)
+    {
+        $result = null;
+        $id = $this->input->post('pid');
+        $product = $this->product_model->findById($id);
+        if ($product['vi_name'] == $vi_name) {
+            return true;
+        }
+        if (isset($vi_name)) {
+            $result = $this->product_model->findByViName($vi_name);
+        }
+        return !isset($result);
+    }
+
+    function check_unique_en_name($en_name)
+    {
+        $result = null;
+        $id = $this->input->post('pid');
+        $product = $this->product_model->findById($id);
+        if ($product['en_name'] == $en_name) {
+            return true;
+        }
+        if (isset($en_name)) {
+            $result = $this->product_model->findByEnName($en_name);
+        }
+        return !isset($result);
     }
 }

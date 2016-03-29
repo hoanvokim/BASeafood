@@ -190,6 +190,16 @@ class Product_Model extends CI_Model
             'size' => $size,
             'packing' => $packing
         );
+        if ($url == null) {
+            $data = array(
+                'vi_name' => $name,
+                'en_name' => $en_name,
+                'fk_category' => $fk_category,
+                'size' => $size,
+                'packing' => $packing
+            );
+        }
+
         $this->db->where('id', $id);
         $this->db->update('product', $data);
     }
