@@ -107,6 +107,8 @@ class Manager_product_controller extends CI_Controller
         $data['title'] = 'Edit product';
         $data['error'] = '';
         $product = $this->product_model->findById($this->uri->segment(3));
+        $data['tags'] = $this->tags_model->findAll();
+        $data['active_tags'] = $this->tags_model->findByProduct($product['id']);
         if ($product) {
             $data['product'] = $product;
             $data['category'] = $this->category_model->findById($product['fk_category']);

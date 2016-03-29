@@ -36,6 +36,15 @@ class Tags_Model extends CI_Model
         return false;
     }
 
+    public function findByProduct($product)
+    {
+        $this->db->select('fk_tags');
+        $this->db->from('product_tags');
+        $this->db->where('fk_product =', $product);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
     public function findByName($name)
     {
         $this->db->where('name =', $name);
@@ -109,6 +118,4 @@ class Tags_Model extends CI_Model
                 WHERE t.name = ' . $name;
         return $this->db->query($sql)->result_array();
     }
-
-
 }
