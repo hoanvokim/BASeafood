@@ -106,8 +106,8 @@ class Tags_Model extends CI_Model
         $sql = 'select p.* from product as p
                 join product_tags as pt on pt.fk_product=p.id
                 JOIN tags as t on t.id=pt.fk_tags
-                WHERE t.name = ' . $name;
-        return $this->db->query($sql)->result_array();
+                WHERE t.name = ?';
+        return $this->db->query($sql, array($name))->result_array();
     }
 
     public function findNewsByTags($name)
@@ -115,7 +115,7 @@ class Tags_Model extends CI_Model
         $sql = 'select p.* from news as p
                 join news_tags as pt on pt.fk_news=p.id
                 JOIN tags as t on t.id=pt.fk_tags
-                WHERE t.name = ' . $name;
-        return $this->db->query($sql)->result_array();
+                WHERE t.name = ?';
+        return $this->db->query($sql, array($name))->result_array();
     }
 }
