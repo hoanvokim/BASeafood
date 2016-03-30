@@ -2962,3 +2962,14 @@ Portfolio with right sidebar
     color: #b4b4b4;
     font-size: 12px;
 }
+
+/*Result*/
+
+#result {
+    position: relative;
+    overflow: hidden;
+}
+
+#result img {
+    width: 600px;
+}

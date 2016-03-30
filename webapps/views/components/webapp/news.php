@@ -9,9 +9,10 @@
 <section id="blog" class="blog">
     <div class="container">
         <div class="row">
-            <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                <h1 class="title"><?php echo $this->lang->line('NEWS'); ?>  <img src="<?php echo base_url(); ?>/webresources/images/home/news.png"></h1>
-                <div class="devider"></div>
+            <div class="page-header text-center">
+                <h1 class="title wow fadeInDown" data-wow-delay="0.4s"><?php echo $this->lang->line('NEWS'); ?> <img
+                        src="<?php echo base_url(); ?>/webresources/images/home/news.png"></h1>
+                <div class="devider wow fadeInDown" data-wow-delay="0.6s"></div>
             </div>
         </div><!--/ Title row end -->
         <div class="row">
@@ -20,12 +21,13 @@
                     <div class="media recent-post">
                         <div class="post-img-wrapper">
                             <div class="post-img-overlay">
-                                <img src="<?php echo base_url(); ?>webresources/images/files/<?php
+                                <img src="<?php
                                 if (strpos($new->url_attached_file, 'pdf') !== false) {
-                                    echo 'pdf.png';
-                                }
-                                else {
-                                    echo 'news.png';
+                                    echo base_url().'webresources/images/files/pdf.png';
+                                } else if (strpos($new->url_attached_file, 'jpg') !== false) {
+                                    echo $new->url_attached_file;
+                                } else {
+                                    echo base_url().'webresources/images/files/news.png';
                                 }
                                 ?>" alt="blog"/>
                                 <?php if (!$this->utilities->IsNullOrEmptyString($new->url_attached_file)) { ?>
@@ -36,11 +38,11 @@
                             </div>
                         </div><!-- end image wrapper -->
                         <div class="media-body post-body">
-                            <h3><a class="news__link" href="<?php echo base_url(); ?>/news-details/view/<?php echo $new->id ?>">
+                            <h3><a class="news__link"
+                                   href="<?php echo base_url(); ?>/news-details/view/<?php echo $new->id ?>">
                                     <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                                         echo $new->en_title;
-                                    }
-                                    else {
+                                    } else {
                                         echo $new->vi_title;
                                     } ?>
                                 </a></h3>
@@ -51,8 +53,7 @@
                             <div class="post-excerpt">
                                 <p> <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                                         echo $new->en_content;
-                                    }
-                                    else {
+                                    } else {
                                         echo $new->vi_content;
                                     } ?></p>
                             </div>
