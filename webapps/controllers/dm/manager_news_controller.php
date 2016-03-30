@@ -77,6 +77,17 @@ class Manager_news_controller extends CI_Controller
         $this->load->view('pages/admin/news/create', $data);
     }
 
+    private function get_config()
+    {
+        return array(
+            'upload_path' => "./assets/upload/images/news/",
+            'allowed_types' => "gif|jpg|png|jpeg|pdf|doc|docx",
+            'overwrite' => TRUE,
+            'max_size' => "20480000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
+        );
+
+    }
+
     public function update()
     {
         if (!$this->is_login()) {
@@ -109,7 +120,7 @@ class Manager_news_controller extends CI_Controller
         $this->form_validation->set_rules('vi_title', 'vi_title', 'trim|required', array(
             'required' => 'You have not provided %s.',
         ));
-        if ($this->upload->do_upload('userfile')) {
+        if ($this->upload->do_upload()) {
             $upload_files = $this->upload->data();
             $file_path = 'assets/upload/images/news/' . $upload_files['file_name'];
             if ($this->form_validation->run() == TRUE) {
@@ -123,15 +134,35 @@ class Manager_news_controller extends CI_Controller
                 redirect('news-manager', 'refresh');
             }
         }
+        $error = isset($_FILES['userfile']['error']) ? $_FILES['userfile']['error'] : 4;
+        $upload_error = false;
+        if (sizeof($this->upload->error_msg) == 1 && $error == 4) {
+            if ($this->form_validation->run() == TRUE) {
+                $id = $this->input->post('nid');
+                $en_title = $this->input->post('en_title');
+                $vi_title = $this->input->post('vi_title');
+                $en_content = $this->input->post('en_content');
+                $vi_content = $this->input->post('vi_content');
+                $this->news_model->update($id, $en_title, $vi_title, $en_content,
+                    $vi_content, $file_path);
+                redirect('news-manager', 'refresh');
+            }
+        } else {
+            $upload_error = true;
+        }
+        if ($upload_error) {
+            $data['error'] = $this->upload->display_errors();
+        } else {
+            $data['error'] = '';
+        }
         $news = array(
-            'id'=>  $this->input->post('nid'),
+            'id' => $this->input->post('nid'),
             'en_title' => $this->input->post('en_title'),
             'vi_title' => $this->input->post('vi_title'),
             'en_content' => $this->input->post('en_content'),
             'vi_content' => $this->input->post('vi_content'),
         );
         $data['news'] = $news;
-        $data['error'] = $this->upload->display_errors();
         $this->load->view('pages/admin/news/update', $data);
     }
 
@@ -160,16 +191,5 @@ class Manager_news_controller extends CI_Controller
             $this->news_model->delete($id);
         }
         redirect('news-manager', 'refresh');
-    }
-
-    private function get_config()
-    {
-        return array(
-            'upload_path' => "./assets/upload/images/news/",
-            'allowed_types' => "gif|jpg|png|jpeg|pdf|doc|docx",
-            'overwrite' => TRUE,
-            'max_size' => "20480000", // Can be set to particular file size , here it is 2 MB(2048 Kb)
-        );
-
     }
 }
