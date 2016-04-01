@@ -129,8 +129,7 @@ class Manager_news_controller extends CI_Controller
                 $vi_title = $this->input->post('vi_title');
                 $en_content = $this->input->post('en_content');
                 $vi_content = $this->input->post('vi_content');
-                $this->news_model->update($id, $en_title, $vi_title, $en_content,
-                    $vi_content, $file_path);
+                $this->news_model->update($id, $en_title, $vi_title, $en_content, $vi_content, $file_path);
                 redirect('news-manager', 'refresh');
             }
         }
@@ -143,8 +142,7 @@ class Manager_news_controller extends CI_Controller
                 $vi_title = $this->input->post('vi_title');
                 $en_content = $this->input->post('en_content');
                 $vi_content = $this->input->post('vi_content');
-                $this->news_model->update($id, $en_title, $vi_title, $en_content,
-                    $vi_content, $file_path);
+                $this->news_model->update($id, $en_title, $vi_title, $en_content, $vi_content, null);
                 redirect('news-manager', 'refresh');
             }
         } else {

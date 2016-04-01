@@ -73,6 +73,14 @@ class News_Model extends CI_Model
             'vi_content' => $vi_content,
             'url_attached_file' => $url_attached_file,
         );
+        if($url_attached_file==null){
+            $data = array(
+                'en_title' => $en_title,
+                'vi_title' => $vi_title,
+                'en_content' => $en_content,
+                'vi_content' => $vi_content,
+            );
+        }
         $this->db->where('id', $id);
         $this->db->update('news', $data);
     }
