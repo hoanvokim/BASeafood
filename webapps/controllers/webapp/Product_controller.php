@@ -48,10 +48,6 @@ class Product_controller extends CI_Controller
         $config["base_url"] = base_url() . "product";
         $config["total_rows"] = $count;
         $config["per_page"] = 12;
-        $config['uri_segment'] = 3;
-        $config['num_links'] = 2;
-        $config['use_page_numbers'] = TRUE;
-        $config['page_query_string'] = TRUE;
         $config['full_tag_open'] = '<ul class="pagination">';
         $config['full_tag_close'] = '</ul>';
         $config['first_link'] = true;
@@ -82,7 +78,6 @@ class Product_controller extends CI_Controller
         $idList = array();
         $idList = $this->exportIds($ids, $idList);
         $this->load->model("product_model");
-
         if (count($idList) == 0) {
             $total_row = $this->product_model->recordCountByCategory($category);
             //bootstrap pagination
@@ -100,10 +95,10 @@ class Product_controller extends CI_Controller
             $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
             $data['products'] = $this->product_model->findByCategories($idList, $config["per_page"], $page);
         }
+        $data["total"] = $total_row;
         $data["links"] = $this->pagination->create_links();
-        $data['title'] = 'State1';
-        $total_row = $this->product_model->record_count();
-        $data['total'] = $total_row;
+        $data["title"] = "Category";
+        $data["category"] = $this->category_model->findById($category);
         $this->load->view('pages/webapp/product', $data);
     }
 

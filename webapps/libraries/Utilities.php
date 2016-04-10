@@ -11,6 +11,9 @@ class Utilities
 {
     public function loadPropertiesFiles($lang)
     {
+        if(empty($_SESSION["activeLanguage"])) {
+            $_SESSION["activeLanguage"] = "en";
+        }
         if (strcasecmp($_SESSION["activeLanguage"], "vi") == 0) {
             $lang->load('message', 'vietnamese');
         } else {

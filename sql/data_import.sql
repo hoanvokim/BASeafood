@@ -51,25 +51,22 @@ VALUES ('Shipping Anywhere', 'Mang sản phẩm tới bất cứ nơi đâu', 'f
         'Chúng tôi đóng gói các sản phẩm rất kỹ để đảm bảo rằng chúng giữ được chất lượng tốt nhất khi đến tay người tiêu dùng.');
 
 
-INSERT INTO `baseafood`.`sliders` (`img_src`, `en_content`, `vi_content`, `url`)
-VALUES ('1.png', 'Fish Tuna #1', 'Cá Ngừ Số 1', 'product/1');
-INSERT INTO `baseafood`.`sliders` (`img_src`, `en_content`, `vi_content`, `url`)
-VALUES ('2.jpg', 'Fish Tuna #2', 'Cá Ngừ Số 2', 'product/2');
-INSERT INTO `baseafood`.`sliders` (`img_src`, `en_content`, `vi_content`, `url`)
-VALUES ('3.jpg', 'Fish Tuna #3', 'Cá Ngừ Số 3', 'product/3');
-INSERT INTO `baseafood`.`sliders` (`img_src`, `en_content`, `vi_content`, `url`)
-VALUES ('4.jpg', 'Fish Tuna #4', 'Cá Ngừ Số 4', 'product/4');
-INSERT INTO `baseafood`.`sliders` (`img_src`, `en_content`, `vi_content`, `url`)
-VALUES ('5.jpg', 'Fish Tuna #5', 'Cá Ngừ Số 5', 'product/5');
-INSERT INTO `baseafood`.`sliders` (`img_src`, `en_content`, `vi_content`, `url`)
-VALUES ('6.jpg', 'Fish Tuna #6', 'Cá Ngừ Số 6', 'product/6');
-INSERT INTO `baseafood`.`sliders` (`img_src`, `en_content`, `vi_content`, `url`)
-VALUES ('7.jpg', 'Fish Tuna #7', 'Cá Ngừ Số 7', 'product/7');
-INSERT INTO `baseafood`.`sliders` (`img_src`, `en_content`, `vi_content`, `url`)
-VALUES ('8.jpg', 'Fish Tuna #8', 'Cá Ngừ Số 8', 'product/8');
-INSERT INTO `baseafood`.`sliders` (`img_src`, `en_content`, `vi_content`, `url`)
-VALUES ('9.jpg', 'Fish Tuna #9', 'Cá Ngừ Số 9', 'product/9');
-
+INSERT INTO `baseafood`.`sliders` (`id`, `img_src`, `en_content`, `vi_content`, `url`) VALUES
+(6, '5.jpg', 'Safety gears during processing packing', 'Sử dụng đồ bảo hộ suốt quá trình đóng gói', NULL),
+(5, '4.jpg', 'Automatic process', 'Dây chuyền hoạt động tự động', NULL),
+(4, '3.jpg', 'Open factory space', 'Không gian mở ở xưởng làm việc', NULL),
+(3, '2.jpg', 'Working space in factory', 'Môi trường làm việc tại nhà máy', NULL),
+(2, '1.jpg', 'Overview the company', 'Tổng quan công ty', NULL),
+(7, '6.jpg', 'Guaranty truly right weight', 'Đảm bảo đúng trọng lượng cho từng sản phẩm', NULL),
+(8, '7.jpg', 'Safety gears during processing', 'Dụng cụ bảo hộ lao đông được đưa vào sử dụng trong quá trình sản xuất', NULL),
+(9, '8.jpg', 'Really good raw material', 'Nguyên liệu tươi và tốt nhất', NULL),
+(10, '9.jpg', 'Really good raw material', 'Nguyên liệu tươi và tốt nhất', NULL),
+(11, '10.jpg', 'Our customers visit us', 'Các đối tác đến tham quan', NULL),
+(12, '11.jpg', 'Our customers visit us', 'Các đối tác đến tham quan', NULL),
+(13, '12.jpg', 'Boiled squid', 'Mực hấp', NULL),
+(14, '10.jpg', 'Our customers visit us', 'Các đối tác đến tham quan', NULL),
+(15, '11.jpg', 'Our customers visit us', 'Các đối tác đến tham quan', NULL),
+(1, '12.jpg', 'Grand opening Baseafood1', 'Khai trương baseafood1', NULL);
 
 INSERT INTO `baseafood`.`generic_information` (`type`, `order`, `en_title`, `vi_title`, `en_content`, `vi_content`)
 VALUES ('aboutInfo', 0, 'History of the company', 'Lịch sử hình thành và phát triển'

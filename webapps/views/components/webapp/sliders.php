@@ -21,8 +21,10 @@
                                 echo $slider->vi_content;
                             } ?></p>
                         <div class="extra-space-l"></div>
-                        <a class="btn btn-blank" href="<?php echo $slider->url; ?>" target="_blank"
-                           role="button"><?php echo $this->lang->line('VIEW_MORE'); ?></a>
+                        <?php if ($slider->url != NULL) { ?>
+                            <a class="btn btn-blank" href="<?php echo $slider->url; ?>" target="_blank"
+                               role="button"><?php echo $this->lang->line('VIEW_MORE'); ?></a>
+                        <?php } ?>
                     </div>
                 <?php }
                 ?>

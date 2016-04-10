@@ -14,6 +14,16 @@
                     <div class="col-sm-12" style="padding: 20px 30px 20px 30px;">
                         <h1 class="title">
                             <?php echo $this->lang->line('MENU_PRODUCT'); ?>
+                            <p>
+                                <?php if (strcasecmp($title, "Products") != 0) {
+                                    if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                                        echo $category["en_name"];
+                                    }
+                                    else if (strcasecmp($_SESSION["activeLanguage"], "vi") == 0) {
+                                        echo $category["vi_name"];
+                                    }
+                                } ?>
+                            </p>
                         </h1>
                     </div>
                 </div>
@@ -31,6 +41,21 @@
                 <?php $this->load->view('components/webapp/category_sidebar'); ?>
             </div>
             <div class="col-md-9 col-sm-8 padding-top">
+                <?php if ($total > 1) { ?>
+                    <h4 class="fa text-center fa-search" style="color: #2559a5; width: 100%;">
+                        <?php echo $this->lang->line('TOTAL_ROW') . $total . $this->lang->line('TOTAL_PRODUCTS'); ?>
+                    </h4>
+                <?php } ?>
+                <?php if ($total == 1) { ?>
+                    <h4 class="fa text-center fa-search" style="color: #2559a5; width: 100%;">
+                        <?php echo $this->lang->line('TOTAL_ROW') . $total . $this->lang->line('TOTAL_PRODUCT'); ?>
+                    </h4>
+                <?php } ?>
+                <?php if ($total == 0) { ?>
+                    <h4 class="fa text-center fa-close red" style="color: red; width: 100%;">
+                        <?php echo $this->lang->line('NO_PRODUCTS'); ?>
+                    </h4>
+                <?php } ?>
                 <div class="docs-galley">
                     <ul class="docs-pictures clearfix">
                         <?php if (!empty($products)) {
@@ -70,7 +95,7 @@
                             <?php }
                         }
                         else { ?>
-                            <?php echo $this->lang->line('NO_PRODUCTS'); ?>
+
                         <?php } ?>
                     </ul>
                 </div>

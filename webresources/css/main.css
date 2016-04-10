@@ -686,6 +686,7 @@ ul.sub-menu {
     margin-bottom: 0;
     padding-bottom: 10px;
     font-weight: 300;
+    font-size: 15px;
 }
 
 .action .btn-common {
@@ -1131,75 +1132,64 @@ ul.elements li > i {
     padding-bottom: 90px;
 }
 
-.pagination li {
+
+/* ===========
+pagination
+==============*/
+.pagination {
     display: inline-block;
-    margin: 0 10px;
+    padding-left: 0;
+    margin: 0 0 50px;
+    border-radius: 4px;
 }
 
-.pagination li a {
-    color: #000;
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid #fff;
+.pagination > li > a, .pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: 5px;
+    line-height: 1.42857143;
+    color: #333;
+    text-decoration: none;
+    background-color: #fff;
+    border: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    font-weight: 600;
+
 }
 
-.pagination li:first-child a {
-    background: url(../images/portfolio/left.png);
-    background-repeat: no-repeat;
-    text-indent: -999999999px;
-    background-position: center top 10px;
-    width: 32px;
-    height: 36px;
-    border: none;
-    -webkit-transition: 300ms;
-    -moz-transition: 300ms;
-    -o-transition: 300ms;
-    transition: 300ms;
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+    margin-left: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
-.pagination li:first-child a:hover {
-    background: url(../images/portfolio/left.png);
-    background-position: center top -37px;
-    background-repeat: no-repeat;
-    -webkit-transition: 300ms;
-    -moz-transition: 300ms;
-    -o-transition: 300ms;
-    transition: 300ms;
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+    z-index: 2;
+    color: #ffffff;
+    background-color: #2559a5;
 }
 
-.pagination li:last-child a {
-    background: url(../images/portfolio/right.png);
-    background-repeat: no-repeat;
-    text-indent: -999999999px;
-    background-position: center top 10px;
-    width: 32px;
-    height: 36px;
-    border: none;
-    -webkit-transition: 300ms;
-    -moz-transition: 300ms;
-    -o-transition: 300ms;
-    transition: 300ms;
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
-.pagination li:last-child a:hover {
-    background: url(../images/portfolio/right.png);
-    background-position: center top -37px;
-    background-repeat: no-repeat;
-    -webkit-transition: 300ms;
-    -moz-transition: 300ms;
-    -o-transition: 300ms;
-    transition: 300ms;
-}
-
-.pagination li a:hover,
-.pagination .active a,
-.pagination a:active,
-.pagination .active a:hover,
-.pagination .active a:focus,
-.pagination a:focus {
-    background: transparent;
-    border-color: #C03035;
-    color: #C03035;
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    z-index: 3;
+    color: #fff;
+    background-color: #2559a5;
 }
 
 /*****************************
@@ -2685,9 +2675,7 @@ span.stButton_gradient,
 
 .product-pagination {
     text-align: center;
-
     padding-top: 40px;
-    padding-bottom: 90px;
 }
 
 /*Toggle*/

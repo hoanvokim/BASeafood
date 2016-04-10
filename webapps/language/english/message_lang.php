@@ -8,7 +8,7 @@
 
 // Global
 $lang['BASEAFOOD'] = 'baseafood';
-$lang['FEATURES'] = 'we bring you the best food for your health';
+$lang['FEATURES'] = 'Professional - Dynamic - Developing';
 $lang['VIEW_MORE'] = 'View More!';
 $lang['OUR_CERTIFICATES'] = 'Our Certifications';
 $lang['OUR_CERTIFICATES_INTRO'] = 'Complete all standard to brings the good products to you.';
@@ -63,4 +63,7 @@ $lang['MENU_CONTACT'] = 'Contact';
 $lang['NO_PRODUCTS'] = 'Sorry! We don\'t have any product!';
 //News
 $lang['NEWS'] = 'Headlines';
+$lang['TOTAL_ROW'] = 'We have been found ';
+$lang['TOTAL_PRODUCTS'] = ' products';
+$lang['TOTAL_PRODUCT'] = ' product';
 ?>
