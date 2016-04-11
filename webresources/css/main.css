@@ -1132,7 +1132,6 @@ ul.elements li > i {
     padding-bottom: 90px;
 }
 
-
 /* ===========
 pagination
 ==============*/
@@ -2960,4 +2959,14 @@ Portfolio with right sidebar
 
 #result img {
     width: 600px;
+}
+
+.result-product-blue {
+    color: #2559a5;
+    width: 100%;
+}
+
+.result-product-red {
+    color: red;
+    width: 100%;
 }

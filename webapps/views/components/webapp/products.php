@@ -42,17 +42,17 @@
             </div>
             <div class="col-md-9 col-sm-8 padding-top">
                 <?php if ($total > 1) { ?>
-                    <h4 class="fa text-center fa-search" style="color: #2559a5; width: 100%;">
+                    <h4 id="result-product" class="fa text-center fa-search result-product-blue">
                         <?php echo $this->lang->line('TOTAL_ROW') . $total . $this->lang->line('TOTAL_PRODUCTS'); ?>
                     </h4>
                 <?php } ?>
                 <?php if ($total == 1) { ?>
-                    <h4 class="fa text-center fa-search" style="color: #2559a5; width: 100%;">
+                    <h4 id="result-product" class="fa text-center fa-search result-product-blue">
                         <?php echo $this->lang->line('TOTAL_ROW') . $total . $this->lang->line('TOTAL_PRODUCT'); ?>
                     </h4>
                 <?php } ?>
                 <?php if ($total == 0) { ?>
-                    <h4 class="fa text-center fa-close red" style="color: red; width: 100%;">
+                    <h4 id="result-product" class="fa text-center fa-close red result-product-red">
                         <?php echo $this->lang->line('NO_PRODUCTS'); ?>
                     </h4>
                 <?php } ?>

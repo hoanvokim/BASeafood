@@ -24,11 +24,11 @@ class Switch_language_controller extends CI_Controller
             $_SESSION["activeLanguage"] = "vi";
         }
         //redirect to current page
-        if (strcasecmp(substr($this->input->post('redirurl'), 10), "/") == 0) {
-            redirect(substr($this->input->post('redirurl'), 10) . "home");
+        if (strcasecmp($this->input->post('redirurl'), "/") == 0) {
+            redirect($this->input->post('redirurl') . "home");
         }
         else {
-            redirect(substr($this->input->post('redirurl'), 10));
+            redirect($this->input->post('redirurl'));
         }
 
 

@@ -906,6 +906,8 @@
             $('.product-pagination').css('filter', ('blur(8px)'));
             $('#footer').css('filter', ('blur(8px)'));
             $('.portfolio-sidebar').css('filter', ('blur(8px)'));
+            $('#result-product').css('filter', ('blur(8px)'));
+
 
             $('#header').css('-webkit-filter', ('blur(8px)'));
             $('#page-breadcrumb').css('-webkit-filter', ('blur(8px)'));
@@ -913,6 +915,7 @@
             $('.product-pagination').css('-webkit-filter', ('blur(8px)'));
             $('#footer').css('-webkit-filter', ('blur(8px)'));
             $('.portfolio-sidebar').css('-webkit-filter', ('blur(8px)'));
+            $('#result-product').css('-webkit-filter', ('blur(8px)'));
 
             list.innerHTML = items.join('');
 
@@ -1524,6 +1527,7 @@
             $('.product-pagination').removeAttr('style');
             $('#footer').removeAttr('style');
             $('.portfolio-sidebar').removeAttr('style');
+            $('#result-product').removeAttr('style');
 
             if (options.inline || _this.transitioning || !_this.isShown) {
                 return _this;

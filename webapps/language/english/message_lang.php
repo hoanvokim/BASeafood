@@ -8,6 +8,7 @@
 
 // Global
 $lang['BASEAFOOD'] = 'baseafood';
+$lang['BASEAFOOD1'] = 'baseafood1';
 $lang['FEATURES'] = 'Professional - Dynamic - Developing';
 $lang['VIEW_MORE'] = 'View More!';
 $lang['OUR_CERTIFICATES'] = 'Our Certifications';

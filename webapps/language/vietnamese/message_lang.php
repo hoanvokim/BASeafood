@@ -7,6 +7,7 @@
  */
 // Global
 $lang['BASEAFOOD'] = 'baseafood';
+$lang['BASEAFOOD1'] = 'baseafood1';
 $lang['FEATURES'] = 'Chuyên Nghiệp - Năng Động - Phát Triển';
 $lang['VIEW_MORE'] = 'Xem chi tiết';
 $lang['OUR_CERTIFICATES'] = 'Chứng chỉ';
