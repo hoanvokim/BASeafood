@@ -137,3 +137,13 @@ $route['tags-manager/delete/:num'] = 'dm/manager_tags_controller/delete';
 $route['create-tags-submit'] = 'dm/manager_tags_controller/post_create_new';
 $route['update-tags-submit'] = 'dm/manager_tags_controller/post_update';
 $route['delete-tags-submit/:num'] = 'dm/manager_tags_controller/post_delete';
+
+//sliders administration
+$route['sliders-manager'] = 'dm/manager_sliders_controller/index';
+$route['create-sliders'] = 'dm/manager_sliders_controller/create_new/$1';
+$route['create-sliders/:num'] = 'dm/manager_sliders_controller/create_new/$1';
+$route['sliders-manager/update/:num'] = 'dm/manager_sliders_controller/update';
+$route['sliders-manager/delete/:num'] = 'dm/manager_sliders_controller/delete';
+$route['create-sliders-submit'] = 'dm/manager_sliders_controller/post_create_new';
+$route['update-sliders-submit'] = 'dm/manager_sliders_controller/post_update';
+$route['delete-sliders-submit/:num'] = 'dm/manager_sliders_controller/post_delete';

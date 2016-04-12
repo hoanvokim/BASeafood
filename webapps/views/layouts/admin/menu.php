@@ -31,6 +31,11 @@
                     <i class="fa fa-dashboard"></i> <span>Tags manager</span>
                 </a>
             </li>
+            <li>
+                <a href="<?php echo site_url('sliders-manager'); ?>">
+                    <i class="fa fa-dashboard"></i> <span>Sliders manager</span>
+                </a>
+            </li>
         </ul>
     </section>
 </aside>
