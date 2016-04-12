@@ -57,6 +57,7 @@ $lang['MENU_ABOUT'] = 'About us';
 $lang['MENU_FACTORY'] = 'Factory';
 $lang['MENU_PRODUCT'] = 'Product';
 $lang['MENU_NEWS_EVENTS'] = 'News | Events';
+$lang['MENU_NEWS'] = 'News';
 $lang['MENU_BUSINESS'] = 'Our Business';
 $lang['MENU_PHOTOS'] = 'Photos';
 $lang['MENU_CAREER'] = 'Career';
