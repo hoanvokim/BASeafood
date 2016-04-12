@@ -12,7 +12,7 @@
             <div class="row">
                 <section class="col-lg-6">
                     <div class="box box-primary">
-                        <?php echo form_open_multipart('create-news-submit'); ?>
+                        <?php echo form_open_multipart('create-sliders-submit'); ?>
                         <div class="box-body">
                             <div class="text-red text-center">
                                 <?php echo validation_errors(); ?>
@@ -21,14 +21,9 @@
                                 <?php echo $error; ?>
                             </div>
                             <div class="form-group">
-                                <label for="en_title">English Title</label>
-                                <input type="text" id="en_title" name="en_title" class="form-control"
-                                       placeholder="English title" value="<?= set_value('en_title') ?>" autofocus>
-                            </div>
-                            <div class="form-group">
-                                <label for="vi_title">Vietnamese Title</label>
-                                <input type="text" id="vi_title" name="vi_title" class="form-control"
-                                       placeholder="Vietnamese title" value="<?= set_value('vi_title') ?>" autofocus>
+                                <label for="vi_title">Url</label>
+                                <input type="text" id="url" name="url" class="form-control"
+                                       placeholder="Url" value="<?= set_value('url') ?>" autofocus>
                             </div>
                             <div class="form-group">
                                 <label for="userfile">Image</label>
@@ -45,7 +40,7 @@
                         </div>
                         <div class="box-footer">
                             <button type="submit" class="btn btn-primary">create</button>
-                            <a href="<?php echo site_url('news-manager'); ?>" type="submit" class="btn">Cancel</a>
+                            <a href="<?php echo site_url('sliders-manager'); ?>" type="submit" class="btn">Cancel</a>
                         </div>
                         </form>
                     </div>

@@ -13,17 +13,17 @@
                 <section class="col-lg-12">
                     <div class="box box-primary">
                         <div class="box-header">
-                            <h3 class="box-title">Delete news</h3>
+                            <h3 class="box-title">Delete sliders</h3>
                         </div>
                         <div class="box-body">
-                            <p class="text-danger"> Would you like to delete the news article: <?php echo $slider['en_title']; ?></p>
+                            <p class="text-danger"> Would you like to delete the sliders article: <?php echo $slider['id']; ?></p>
                         </div>
 
                         <div class="box-footer clearfix no-border">
-                            <a href="<?php echo base_url() . "delete-news-submit/" . $slider['id']; ?>" class=" btn btn-danger">
+                            <a href="<?php echo base_url() . "delete-sliders-submit/" . $slider['id']; ?>" class=" btn btn-danger">
                                 <i class="fa fa-trash-o"></i> Delete
                             </a>
-                            <a href="<?php echo site_url('news-manager'); ?>" type="submit" class="btn">Cancel</a>
+                            <a href="<?php echo site_url('sliders-manager'); ?>" type="submit" class="btn">Cancel</a>
                         </div>
                     </div>
                 </section>

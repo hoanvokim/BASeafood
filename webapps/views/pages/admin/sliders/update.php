@@ -12,7 +12,7 @@
             <div class="row">
                 <section class="col-lg-6">
                     <div class="box box-primary">
-                        <?php echo form_open_multipart('update-news-submit'); ?>
+                        <?php echo form_open_multipart('update-sliders-submit'); ?>
                         <div class="box-body">
                             <input type="hidden" id="hide" name="nid" value="<?php echo $slider['id']; ?>">
                             <div class="text-red text-center">
@@ -22,14 +22,9 @@
                                 <?php echo $error; ?>
                             </div>
                             <div class="form-group">
-                                <label for="en_title">English Title</label>
-                                <input type="text" id="en_title" name="en_title" class="form-control"
-                                       value="<?php echo $slider['en_title']; ?>" placeholder="Title" autofocus>
-                            </div>
-                            <div class="form-group">
-                                <label for="vi_title">Vietnamese Title</label>
-                                <input type="text" id="vi_title" name="vi_title" class="form-control"
-                                       value="<?php echo $slider['vi_title']; ?>" placeholder="Title" autofocus>
+                                <label for="vi_title">Url</label>
+                                <input type="text" id="url" name="url" class="form-control"
+                                       value="<?php echo $slider['url']; ?>" placeholder="Title" autofocus>
                             </div>
                             <div class="form-group">
                                 <label for="userfile">Image</label>
@@ -46,7 +41,7 @@
                         </div>
                         <div class="box-footer">
                             <button type="submit" class="btn btn-primary">Update</button>
-                            <a href="<?php echo site_url('news-manager'); ?>" type="submit" class="btn">Cancel</a>
+                            <a href="<?php echo site_url('sliders-manager'); ?>" type="submit" class="btn">Cancel</a>
                         </div>
                         </form>
                     </div>

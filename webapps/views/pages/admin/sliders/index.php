@@ -48,7 +48,7 @@
                         </div>
 
                         <div class="box-footer clearfix no-border">
-                            <?php echo anchor('create-news', '<i class="fa fa-plus"></i>Add new', 'class="btn btn-default pull-right"') ?>
+                            <?php echo anchor('create-sliders', '<i class="fa fa-plus"></i>Add new', 'class="btn btn-default pull-right"') ?>
                         </div>
                     </div>
                 </section>
