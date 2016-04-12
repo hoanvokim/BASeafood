@@ -1450,6 +1450,10 @@ Portfolio Details
     background: none;
 }
 
+.post-img-overlay>img {
+    width:100px!important;
+}
+
 .skills .navbar-default,
 .client .navbar-default {
     margin-left: 35px;

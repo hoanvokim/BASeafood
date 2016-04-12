@@ -56,6 +56,7 @@ $lang['MENU_ABOUT'] = 'Chúng tôi';
 $lang['MENU_FACTORY'] = 'Nhà máy';
 $lang['MENU_PRODUCT'] = 'Sản phẩm';
 $lang['MENU_NEWS_EVENTS'] = 'Tin tức | Sự kiện';
+$lang['MENU_NEWS'] = 'Tin tức';
 $lang['MENU_BUSINESS'] = 'Tình hình kinh doanh';
 $lang['MENU_PHOTOS'] = 'Hình ảnh';
 $lang['MENU_CAREER'] = 'Tuyển dụng';
