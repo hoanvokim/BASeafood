@@ -62,8 +62,8 @@
                             foreach ($products as $product) { ?>
                                 <li>
                                     <img
-                                        data-original="<?php echo base_url(); ?>webresources/images/products/<?php echo $product->url; ?>"
-                                        src="<?php echo base_url(); ?>webresources/images/products/thumb/<?php echo $product->url; ?>"
+                                        data-original="<?php echo base_url(); ?>assets/upload/images/products/<?php echo $product->url; ?>"
+                                        src="<?php echo base_url(); ?>assets/upload/images/products/thumb/<?php echo $product->url; ?>"
                                         alt="
                                      <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                                             echo "Name: " . $product->en_name;

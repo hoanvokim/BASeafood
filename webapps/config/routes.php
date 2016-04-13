@@ -69,6 +69,7 @@ $route['contact'] = 'webapp/contact_controller/index';
 $route['product'] = 'webapp/product_controller/index';
 $route['product/(:num)'] = 'webapp/product_controller/index/$1';
 $route['product/findByCategories/(:num)'] = 'webapp/product_controller/findByCategories/$1';
+$route['news-details/view/(:num)'] = 'webapp/news_details_controller/view/$1';
 //webapp process
 $route['switchlanguage'] = 'webapp_process/switch_language_controller/index';
 
@@ -137,12 +138,6 @@ $route['tags-manager/delete/:num'] = 'dm/manager_tags_controller/delete';
 $route['create-tags-submit'] = 'dm/manager_tags_controller/post_create_new';
 $route['update-tags-submit'] = 'dm/manager_tags_controller/post_update';
 $route['delete-tags-submit/:num'] = 'dm/manager_tags_controller/post_delete';
-//user-manual
-$route['huong-dan'] = 'webapp/user_manual_controller/index';
-$route['addProduct'] = 'webapp/user_manual_controller/addProduct';
-$route['removeProduct'] = 'webapp/user_manual_controller/removeProduct';
-$route['updateProduct'] = 'webapp/user_manual_controller/updateProduct';
-$route['managementProduct'] = 'webapp/user_manual_controller/managementProduct';
 
 //sliders administration
 $route['sliders-manager'] = 'dm/manager_sliders_controller/index';
@@ -153,3 +148,10 @@ $route['sliders-manager/delete/:num'] = 'dm/manager_sliders_controller/delete';
 $route['create-sliders-submit'] = 'dm/manager_sliders_controller/post_create_new';
 $route['update-sliders-submit'] = 'dm/manager_sliders_controller/post_update';
 $route['delete-sliders-submit/:num'] = 'dm/manager_sliders_controller/post_delete';
+
+//user-manual
+$route['huong-dan'] = 'webapp/user_manual_controller/index';
+$route['addProduct'] = 'webapp/user_manual_controller/addProduct';
+$route['removeProduct'] = 'webapp/user_manual_controller/removeProduct';
+$route['updateProduct'] = 'webapp/user_manual_controller/updateProduct';
+$route['managementProduct'] = 'webapp/user_manual_controller/managementProduct';

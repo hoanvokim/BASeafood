@@ -26,18 +26,18 @@
                                 <input type="hidden" id="hide" name="pid" value="<?php echo $product['id']; ?>">
                             </div>
                             <div class="form-group">
-                                <label for="vi_name">Product name</label>
+                                <label for="vi_name">Product name [Vietnamese] </label>
                                 <input type="text" id="vi_name" name="vi_name" class="form-control"
                                        value="<?php echo $product['vi_name']; ?>" placeholder="Product name" autofocus>
                             </div>
                             <div class="form-group">
-                                <label for="userfile">Image</label>
-                                <input type='file' name='userfile' size='20' id="upload_file"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="en_name">Latin name</label>
+                                <label for="en_name">Product name [English]</label>
                                 <input type="text" id="en_name" name="en_name" class="form-control"
                                        value="<?php echo $product['en_name']; ?>" placeholder="Latin name">
+                            </div>
+                            <div class="form-group">
+                                <label for="userfile">Image</label>
+                                <input type='file' name='userfile' size='20' id="upload_file"/>
                             </div>
                             <div class="form-group">
                                 <label for="size">Size </label>

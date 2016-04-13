@@ -10,7 +10,7 @@
     <aside class="right-side">
         <section class="content">
             <div class="row">
-                <section class="col-lg-6">
+                <section class="col-lg-12">
                     <div class="box box-primary">
                         <?php echo form_open_multipart('update-news-submit'); ?>
                         <div class="box-body">

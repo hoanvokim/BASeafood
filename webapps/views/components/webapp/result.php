@@ -36,7 +36,7 @@
                                 <div class="col-sm-12 col-md-6">
                                     <div class="post-thumb">
                                         <a href="#"><img
-                                                src="<?php echo base_url(); ?>webresources/images/products/<?php echo $product['url']; ?>"
+                                                src="<?php echo base_url(); ?>assets/upload/images/products/<?php echo $product['url']; ?>"
                                                 class="img-responsive" alt=""></a>
                                         <div class="post-overlay">
                             <span class="uppercase"><a href="#">14 <br>
@@ -94,11 +94,11 @@
                                     <div class="post-img-overlay">
                                         <img src="<?php
                                         if (strpos($new['url_attached_file'], 'pdf') !== false) {
-                                            echo base_url().'webresources/images/files/pdf.png';
+                                            echo base_url().'assets/upload/images/files/pdf.png';
                                         } else if (strpos($new['url_attached_file'], 'jpg') !== false) {
                                             echo $new['url_attached_file'];
                                         } else {
-                                            echo base_url().'webresources/images/files/news.png';
+                                            echo base_url().'assets/upload/images/files/news.png';
                                         }
                                         ?>" alt="blog"/>
                                         <?php if (!$this->utilities->IsNullOrEmptyString($new['url_attached_file'])) { ?>
