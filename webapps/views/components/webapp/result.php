@@ -17,10 +17,14 @@
             </div>
         </div><!--/ Title row end -->
 
+        <?php if(count($products) > 0 && count($news) > 0){ ?>
         <ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#product_result"><?php echo $this->lang->line('MENU_PRODUCT'); ?></a></li>
             <li><a data-toggle="tab" href="#news_result"><?php echo $this->lang->line('MENU_NEWS'); ?></a></li>
         </ul>
+        <?php }elseif(count($products) == 0 && count($news) == 0){ ?>
+            <p><?php echo $this->lang->line('NO_RESULT_SEARCH'); ?></p>
+        <?php } ?>
 
         <div class="tab-content">
             <div id="product_result" class="tab-pane fade in active">

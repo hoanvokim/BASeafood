@@ -20,7 +20,9 @@ class Introduce_controller extends CI_Controller
     {
         $data['title'] = 'Our Company';
         $this->load->model('generic_information_model');
+        $this->load->model('tags_model');
         $data['aboutInformation'] = $this->generic_information_model->findByComponent('aboutInfo');
+        $data['tags'] = $this->tags_model->getRandom();
         $this->load->view('pages/webapp/introduce', $data);
     }
 }

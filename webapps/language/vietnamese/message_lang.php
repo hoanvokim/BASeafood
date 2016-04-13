@@ -62,6 +62,7 @@ $lang['MENU_PHOTOS'] = 'Hình ảnh';
 $lang['MENU_CAREER'] = 'Tuyển dụng';
 $lang['MENU_CONTACT'] = 'Liên hệ';
 $lang['NO_PRODUCTS'] = 'Xin lỗi! Chúng tôi không có sản phẩm!';
+$lang['NO_RESULT_SEARCH'] = 'Xin lỗi! Không tìm thấy sản phẩm (tin tức) nào với tag đang tìm ... ';
 //News
 $lang['NEWS'] = 'Tin chính';
 $lang['TOTAL_ROW'] = 'Chúng tôi đã tìm thấy ';

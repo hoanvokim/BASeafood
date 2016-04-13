@@ -16,17 +16,17 @@ class Search_controller extends CI_Controller
         $this->utilities->loadPropertiesFiles($this->lang);
     }
 
-    public function find()
+    public function find($tag_name='')
     {
         // or just the username:
-        $tag = $this->input->post("name");
+        $tag = $tag_name==''? $this->input->post("name"): urldecode($tag_name);
         $this->load->model("tags_model");
         $products = $this->tags_model->findProductsByTags($tag);
         $news = $this->tags_model->findNewsByTags($tag);
         $data["products"] = $products;
         $data["news"] = $news;
         // then do whatever you want with it :)
-        $data['title'] = "test";
+        $data['title'] = "Search ".$tag;
         $this->load->view('pages/webapp/result', $data);
 
     }

@@ -63,6 +63,7 @@ $lang['MENU_PHOTOS'] = 'Photos';
 $lang['MENU_CAREER'] = 'Career';
 $lang['MENU_CONTACT'] = 'Contact';
 $lang['NO_PRODUCTS'] = 'Sorry! We don\'t have any product!';
+$lang['NO_RESULT_SEARCH'] = 'Sorry! No products (news) found ... ';
 //News
 $lang['NEWS'] = 'Headlines';
 $lang['TOTAL_ROW'] = 'We have been found ';

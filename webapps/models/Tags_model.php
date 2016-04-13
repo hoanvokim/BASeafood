@@ -19,6 +19,11 @@ class Tags_Model extends CI_Model
         return $this->db->get("tags")->result_array();
     }
 
+    public function getRandom(){
+        $query = $this->db->query("select name from tags order by rand() limit 5");
+        return $query->result_array();
+    }
+
     public function findById($id)
     {
         $this->db->select('id , name');

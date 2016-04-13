@@ -83,13 +83,14 @@
                 <div class="sidebar blog-sidebar">
                     <div class="sidebar-item tag-cloud">
                         <h3><?php echo $this->lang->line('TAG_CLOUD'); ?></h3>
-                        <ul class="nav nav-pills">
-                            <li><a href="#">news</a></li>
-                            <li><a href="#">finance</a></li>
-                            <li><a href="#">policy</a></li>
-                            <li><a href="#">product</a></li>
-                            <li><a href="#">photo</a></li>
-                        </ul>
+                        <?php if(count($tags) > 0){ ?>
+                            <ul class="nav nav-pills">
+                        <?php foreach($tags as $tag){ ?>
+                            <li><a href="#" onclick="searchByTags(this)"><?php echo $tag['name']; ?></a></li>
+                        <?php } ?>
+
+                            </ul>
+                        <?php } ?>
                     </div>
                     <div class="sidebar-item popular">
                         <h3><?php echo $this->lang->line('LATEST_PHOTOS'); ?></h3>
@@ -119,3 +120,10 @@
         </div>
     </div>
 </section>
+<script>
+    function searchByTags(obj){
+        var tag = $(obj).text();
+        var url = "<?php echo base_url(); ?>webapp/search_controller/find/" + tag;
+        $(location).attr('href',url);
+    }
+</script>
