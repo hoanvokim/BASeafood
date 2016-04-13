@@ -2974,3 +2974,9 @@ Portfolio with right sidebar
     color: red;
     width: 100%;
 }
+.usermanual {
+    width: 100%;
+}
+.usermanual--half {
+    width: 60%;
+}

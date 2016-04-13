@@ -137,6 +137,12 @@ $route['tags-manager/delete/:num'] = 'dm/manager_tags_controller/delete';
 $route['create-tags-submit'] = 'dm/manager_tags_controller/post_create_new';
 $route['update-tags-submit'] = 'dm/manager_tags_controller/post_update';
 $route['delete-tags-submit/:num'] = 'dm/manager_tags_controller/post_delete';
+//user-manual
+$route['huong-dan'] = 'webapp/user_manual_controller/index';
+$route['addProduct'] = 'webapp/user_manual_controller/addProduct';
+$route['removeProduct'] = 'webapp/user_manual_controller/removeProduct';
+$route['updateProduct'] = 'webapp/user_manual_controller/updateProduct';
+$route['managementProduct'] = 'webapp/user_manual_controller/managementProduct';
 
 //sliders administration
 $route['sliders-manager'] = 'dm/manager_sliders_controller/index';

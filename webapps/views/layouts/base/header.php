@@ -3,7 +3,7 @@
 <meta name="description" content="Developed By M Abdur Rokib Promy">
 <meta name="author" content="cosmic">
 <meta name="keywords" content="baseafood">
-<link rel="shortcut icon" href="<?php base_url() ?>webresources/img/fish-logo-no-text-icon.png">
+<link rel="shortcut icon" href="<?php base_url() ?>webresources/images/ico/site-icon.png">
 <title><?php echo $title ?> | BaSeafood</title>
 <link href="<?php echo base_url(); ?>webresources/css/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>webresources/css/font-awesome.min.css" rel="stylesheet">

@@ -1,5 +1,6 @@
 <meta charset="UTF-8">
 <title><?php echo $title ?></title>
+<link rel="shortcut icon" href="<?php base_url() ?>webresources/images/ico/site-icon.png">
 <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 <link href="<?php echo base_url(); ?>webresources/dashboard/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 <link href="<?php echo base_url(); ?>webresources/dashboard/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
