@@ -9,19 +9,7 @@
 <?php $this->load->view('layouts/base/menu'); ?>
 
 <!--Start content-->
-<section id="page-breadcrumb">
-    <div class="vertical-center sun">
-        <div class="container">
-            <div class="row">
-                <div class="action">
-                    <div class="col-sm-12">
-                        <h1 class="title"><?php echo $title ?></h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<?php $this->load->view('components/webapp/newsdetails'); ?>
 
 <!--Begin include JS files-->
 <?php $this->load->view('layouts/base/footer'); ?>

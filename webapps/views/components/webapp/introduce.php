@@ -92,29 +92,29 @@
                             </ul>
                         <?php } ?>
                     </div>
-                    <div class="sidebar-item popular">
-                        <h3><?php echo $this->lang->line('LATEST_PHOTOS'); ?></h3>
-                        <ul class="gallery">
-                            <li><a href="#"><img
-                                        src="<?php echo base_url(); ?>webresources/images/portfolio/popular1.jpg"
-                                        alt=""></a></li>
-                            <li><a href="#"><img
-                                        src="<?php echo base_url(); ?>webresources/images/portfolio/popular2.jpg"
-                                        alt=""></a></li>
-                            <li><a href="#"><img
-                                        src="<?php echo base_url(); ?>webresources/images/portfolio/popular3.jpg"
-                                        alt=""></a></li>
-                            <li><a href="#"><img
-                                        src="<?php echo base_url(); ?>webresources/images/portfolio/popular4.jpg"
-                                        alt=""></a></li>
-                            <li><a href="#"><img
-                                        src="<?php echo base_url(); ?>webresources/images/portfolio/popular5.jpg"
-                                        alt=""></a></li>
-                            <li><a href="#"><img
-                                        src="<?php echo base_url(); ?>webresources/images/portfolio/popular1.jpg"
-                                        alt=""></a></li>
-                        </ul>
-                    </div>
+<!--                    <div class="sidebar-item popular">-->
+<!--                        <h3>--><?php //echo $this->lang->line('LATEST_PHOTOS'); ?><!--</h3>-->
+<!--                        <ul class="gallery">-->
+<!--                            <li><a href="#"><img-->
+<!--                                        src="--><?php //echo base_url(); ?><!--webresources/images/portfolio/popular1.jpg"-->
+<!--                                        alt=""></a></li>-->
+<!--                            <li><a href="#"><img-->
+<!--                                        src="--><?php //echo base_url(); ?><!--webresources/images/portfolio/popular2.jpg"-->
+<!--                                        alt=""></a></li>-->
+<!--                            <li><a href="#"><img-->
+<!--                                        src="--><?php //echo base_url(); ?><!--webresources/images/portfolio/popular3.jpg"-->
+<!--                                        alt=""></a></li>-->
+<!--                            <li><a href="#"><img-->
+<!--                                        src="--><?php //echo base_url(); ?><!--webresources/images/portfolio/popular4.jpg"-->
+<!--                                        alt=""></a></li>-->
+<!--                            <li><a href="#"><img-->
+<!--                                        src="--><?php //echo base_url(); ?><!--webresources/images/portfolio/popular5.jpg"-->
+<!--                                        alt=""></a></li>-->
+<!--                            <li><a href="#"><img-->
+<!--                                        src="--><?php //echo base_url(); ?><!--webresources/images/portfolio/popular1.jpg"-->
+<!--                                        alt=""></a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
                 </div>
             </div>
         </div>

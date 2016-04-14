@@ -9,7 +9,7 @@
 <?php $this->load->view('layouts/base/menu'); ?>
 
 <!--Start content-->
-<?php $this->load->view('components/webapp/news'); ?>
+<?php $this->load->view('components/webapp/news_page'); ?>
 <!--End content-->
 
 <!--Begin include JS files-->

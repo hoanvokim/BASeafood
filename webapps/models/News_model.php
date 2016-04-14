@@ -45,6 +45,8 @@ class News_Model extends CI_Model
                     'en_content' => $item['en_content'],
                     'vi_content' => $item['vi_content'],
                     'url_attached_file' => $item['url_attached_file'],
+                    'created_date' => $item['created_date'],
+                    'updated_date' => $item['updated_date']
                 );
             }
         }

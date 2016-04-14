@@ -20,7 +20,9 @@ class News_controller extends CI_Controller
     {
         $data['title'] = 'News and Events';
         $this->load->model('news_model');
+        $this->load->model('tags_model');
         $data['news'] = $this->news_model->getAll();
+        $data['tags'] = $this->tags_model->getRandom();
         $this->load->view('pages/webapp/newsandevents', $data);
     }
 }
