@@ -25,5 +25,26 @@
             <li><a href="<?php echo base_url(); ?>removeProduct"">Remove News</a></li>
             <li><a href="<?php echo base_url(); ?>updateProduct"">Update News</a></li>
         </ul>
+        <h3>Images</h3>
+        <ul>
+            <li><a href="<?php echo base_url(); ?>managementProduct">News Management</a></li>
+            <li><a href="<?php echo base_url(); ?>addProduct">Add News</a></li>
+            <li><a href="<?php echo base_url(); ?>removeProduct"">Remove News</a></li>
+            <li><a href="<?php echo base_url(); ?>updateProduct"">Update News</a></li>
+        </ul>
+        <h3>Tags</h3>
+        <ul>
+            <li><a href="<?php echo base_url(); ?>managementProduct">News Management</a></li>
+            <li><a href="<?php echo base_url(); ?>addProduct">Add News</a></li>
+            <li><a href="<?php echo base_url(); ?>removeProduct"">Remove News</a></li>
+            <li><a href="<?php echo base_url(); ?>updateProduct"">Update News</a></li>
+        </ul>
+        <h3>Sliders</h3>
+        <ul>
+            <li><a href="<?php echo base_url(); ?>managementProduct">News Management</a></li>
+            <li><a href="<?php echo base_url(); ?>addProduct">Add News</a></li>
+            <li><a href="<?php echo base_url(); ?>removeProduct"">Remove News</a></li>
+            <li><a href="<?php echo base_url(); ?>updateProduct"">Update News</a></li>
+        </ul>
     </div>
 </nav>

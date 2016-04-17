@@ -13,7 +13,7 @@
 
                 <?php foreach ($sliders as $slider) { ?>
                     <div class="item">
-                        <img src="<?php echo base_url(); ?>/webresources/images/sliders/<?php echo $slider->img_src; ?>" class="slider-item"/>
+                        <img src="<?php echo $slider->img_src; ?>" class="slider-item"/>
                         <p><?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                                 echo $slider->en_content;
                             }

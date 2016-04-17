@@ -23,6 +23,7 @@
                                 <tr>
                                     <th></th>
                                     <th>Name</th>
+                                    <th>url</th>
                                     <th>Actions</th>
                                 </tr>
                                 </thead>
@@ -31,6 +32,7 @@
                                     <tr>
                                         <td><img src="<?php echo $image['url']; ?>" class="img-responsive img-thumbnail" style="width: 200px;height: 200px;"/></td>
                                         <td><?php echo $image['name'] ?></td>
+                                        <td><?php echo base_url() . $image['url']; ?></td>
                                         <td>
                                             <a href="<?php echo base_url() . "upload-manager/delete/" . $image['id']; ?>"
                                                class="btn btn-danger"><i class="fa fa-trash-o"></i> Delete</a>

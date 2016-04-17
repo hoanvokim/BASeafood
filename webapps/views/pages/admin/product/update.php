@@ -38,6 +38,7 @@
                             <div class="form-group">
                                 <label for="userfile">Image</label>
                                 <input type='file' name='userfile' size='20' id="upload_file"/>
+                                <span style="font-style: italic; font-size: 12px;"> <i class="fa fa-question small"></i> Please select image 400px * 400px</span>
                             </div>
                             <div class="form-group">
                                 <label for="size">Size </label>

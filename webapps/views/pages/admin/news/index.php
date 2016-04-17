@@ -21,10 +21,10 @@
                             <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
-                                    <th>Id</th>
-                                    <th>En Title</th>
-                                    <th>En Content</th>
-                                    <th>Actions</th>
+                                    <th width="5%">Id</th>
+                                    <th width="30%">En Title</th>
+                                    <th width="55%">En Content</th>
+                                    <th width="10%">Actions</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -32,7 +32,10 @@
                                     <tr>
                                         <td><?php echo $news['id'] ?></td>
                                         <td><?php echo $news['en_title'] ?></td>
-                                        <td><?php echo $news['en_content'] ?></td>
+                                        <td><?php
+                                            $limited_word = word_limiter($news['en_content'], 10);
+                                            echo $limited_word; ?>
+                                        </td>
                                         <td>
                                             <a href="<?php echo base_url() . "news-manager/update/" . $news['id']; ?>"
                                                class="btn btn-info"><i class="fa fa-edit"></i> Edit</a>

@@ -13,11 +13,9 @@
                 <a href="<?php echo base_url(); ?>news-details/view/<?php echo $new->id ?>"> <img src="<?php
                     if (strpos($new->url_attached_file, 'pdf') !== false) {
                         echo base_url() . 'webresources/images/files/pdf.png';
-                    }
-                    else if (strpos($new->url_attached_file, 'jpg') !== false) {
+                    } else if (strpos($new->url_attached_file, 'jpg') !== false) {
                         echo $new->url_attached_file;
-                    }
-                    else {
+                    } else {
                         echo base_url() . 'webresources/images/files/news.png';
                     }
                     ?>" alt="blog"/></a>
@@ -34,17 +32,17 @@
                     href="<?php echo base_url(); ?>news-details/view/<?php echo $new->id ?>">
                     <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                         echo $new->en_title;
-                    }
-                    else {
+                    } else {
                         echo $new->vi_title;
                     } ?>
                 </a></h2>
             <h5 class="post-author">published on <?php echo $new->created_date ?></h5>
             <p> <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
-                    echo $new->en_content;
-                }
-                else {
-                    echo $new->vi_content;
+                    $limited_word = word_limiter($new->en_content, 20);
+                    echo $limited_word;
+                } else {
+                    $limited_word = word_limiter($new->vi_content, 20);
+                    echo $limited_word;
                 } ?>
             </p>
             <a href="<?php echo base_url(); ?>news-details/view/<?php echo $new->id ?>"
