@@ -4,7 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Huong Dan Su dung</title>
 <script type="text/javascript" src="<?php echo base_url(); ?>webresources/js/jquery.js"></script>
-<link href="<?php echo base_url(); ?>webresources/css/main.css" rel="stylesheet">
 <style type="text/css">
 
     body {
@@ -26,6 +25,7 @@
         height: 100%;
         overflow: hidden; /* Disables scrollbars on the navigation frame. To enable scrollbars, change "hidden" to "scroll" */
         background: #eee;
+        font-size: 12px;
     }
 
     main {
@@ -65,6 +65,18 @@
     * html main {
         height: 100%;
         width: 100%;
+    }
+    .usermanual {
+        width: 100%;
+    }
+    .usermanual--half {
+        width: 60%;
+    }
+    .usermanual--quater {
+        width: 30%;
+    }
+    .usermanual--supersmall {
+        width: 20%;
     }
 
 </style>
