@@ -98,4 +98,15 @@ class User_manual_controller extends CI_Controller
         $data['title'] = 'User Manual';
         $this->load->view('pages/usermanual/add_child_category', $data);
     }
+    public function addUpdateImages()
+    {
+        $data['title'] = 'User Manual';
+        $this->load->view('pages/usermanual/add_update_images', $data);
+    }
+
+    public function imagesManagement()
+    {
+        $data['title'] = 'User Manual';
+        $this->load->view('pages/usermanual/images_management', $data);
+    }
 }

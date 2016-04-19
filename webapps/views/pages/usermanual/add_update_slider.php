@@ -9,7 +9,6 @@
 
 <main>
     <div class="innertube">
-        <h1>-- Vị Trí ở Trang Chủ --</h1>
         <img class="usermanual" src="<?php echo base_url(); ?>/webresources/images/usermanual/slider3.png" alt="logo" >
         <h4>[1] Nhập đường dẫn bạn muốn, khi người dùng nhấp vào slider</h4>
         <h4>[2] Chọn hình ảnh Slider</h4>
