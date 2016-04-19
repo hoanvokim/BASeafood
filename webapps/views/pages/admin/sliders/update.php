@@ -14,7 +14,7 @@
                     <div class="box box-primary">
                         <?php echo form_open_multipart('update-sliders-submit'); ?>
                         <div class="box-body">
-                            <input type="hidden" id="hide" name="nid" value="<?php echo $slider['id']; ?>">
+                            <input type="hidden" id="hide" name="nid" value="<?php echo $sliders['id']; ?>">
                             <div class="text-red text-center">
                                 <?php echo validation_errors(); ?>
                             </div>
@@ -22,21 +22,21 @@
                                 <?php echo $error; ?>
                             </div>
                             <div class="form-group">
-                                <label for="vi_title">Url</label>
-                                <input type="text" id="url" name="url" class="form-control"
-                                       value="<?php echo $slider['url']; ?>" placeholder="Title" autofocus>
-                            </div>
-                            <div class="form-group">
                                 <label for="userfile">Image</label>
                                 <input type='file' name='userfile' size='20' id="upload_file"/>
                             </div>
                             <div class="form-group">
+                                <label for="vi_title">Url</label>
+                                <input type="text" id="url" name="url" class="form-control"
+                                       value="<?php echo $sliders['url']; ?>" placeholder="Title" autofocus>
+                            </div>
+                            <div class="form-group">
                                 <label for="en_content">English content</label>
-                                <textarea id="news_en_content_editor" name="en_content" class="form-control"><?php echo htmlspecialchars_decode(strip_tags($slider['en_content'])); ?></textarea>
+                                <textarea id="news_en_content_editor" name="en_content" class="form-control"><?php echo htmlspecialchars_decode(strip_tags($sliders['en_content'])); ?></textarea>
                             </div>
                             <div class="form-group">
                                 <label for="vi_content">Vietnamese content</label>
-                                <textarea id="news_vi_content_editor" name="vi_content" class="form-control"><?php echo htmlspecialchars_decode(strip_tags($slider['vi_content'])); ?></textarea>
+                                <textarea id="news_vi_content_editor" name="vi_content" class="form-control"><?php echo htmlspecialchars_decode(strip_tags($sliders['vi_content'])); ?></textarea>
                             </div>
                         </div>
                         <div class="box-footer">

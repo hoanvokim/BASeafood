@@ -43,7 +43,7 @@
                                     echo base_url() . 'webresources/images/files/pdf.png';
                                 }
                                 else if (strpos($new['url_attached_file'], 'jpg') !== false) {
-                                    echo $new->url_attached_file;
+                                    echo $new['url_attached_file'];
                                 }
                                 else {
                                     echo base_url() . 'webresources/images/files/news.png';

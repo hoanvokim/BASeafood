@@ -1,4 +1,5 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
+
 /**
  * Created by IntelliJ IDEA.
  * User: NhuTran
@@ -47,20 +48,15 @@ class Manager_sliders_controller extends CI_Controller
         $data['title'] = 'Slider creation';
         $this->load->library('form_validation');
         $this->load->library('upload', $this->get_config());
-        $this->form_validation->set_rules('url', 'url', 'trim|required', array(
-            'required' => 'You have not provided %s.',
-        ));
         if ($this->upload->do_upload('userfile')) {
             $upload_files = $this->upload->data();
             $file_path = 'assets/upload/images/sliders/' . $upload_files['file_name'];
-            if ($this->form_validation->run() == TRUE) {
-                $url = $this->input->post('url');
-                $en_content = $this->input->post('en_content');
-                $vi_content = $this->input->post('vi_content');
-                $this->sliders_model->insert($en_content,
-                    $vi_content, $file_path, $url);
-                redirect('sliders-manager', 'refresh');
-            }
+            $url = $this->input->post('url');
+            $en_content = $this->input->post('en_content');
+            $vi_content = $this->input->post('vi_content');
+            $this->sliders_model->insert($en_content,
+                $vi_content, $file_path, $url);
+            redirect('sliders-manager', 'refresh');
         }
 
         $data['url'] = $this->input->post('url');
@@ -107,32 +103,25 @@ class Manager_sliders_controller extends CI_Controller
         $data['title'] = 'Edit sliders';
         $this->load->library('form_validation');
         $this->load->library('upload', $this->get_config());
-        $this->form_validation->set_rules('url', 'url', 'trim|required', array(
-            'required' => 'You have not provided %s.',
-        ));
         if ($this->upload->do_upload()) {
             $upload_files = $this->upload->data();
             $file_path = 'assets/upload/images/sliders/' . $upload_files['file_name'];
-            if ($this->form_validation->run() == TRUE) {
                 $id = $this->input->post('nid');
                 $url = $this->input->post('url');
                 $en_content = $this->input->post('en_content');
                 $vi_content = $this->input->post('vi_content');
                 $this->news_model->update($id, $en_content, $vi_content, $file_path, $url);
                 redirect('sliders-manager', 'refresh');
-            }
         }
         $error = isset($_FILES['userfile']['error']) ? $_FILES['userfile']['error'] : 4;
         $upload_error = false;
         if (sizeof($this->upload->error_msg) == 1 && $error == 4) {
-            if ($this->form_validation->run() == TRUE) {
                 $id = $this->input->post('nid');
                 $url = $this->input->post('url');
                 $en_content = $this->input->post('en_content');
                 $vi_content = $this->input->post('vi_content');
                 $this->news_model->update($id, $en_content, $vi_content, null, $url);
                 redirect('sliders-manager', 'refresh');
-            }
         } else {
             $upload_error = true;
         }

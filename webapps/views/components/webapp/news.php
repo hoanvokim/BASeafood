@@ -10,7 +10,7 @@
     <div class="col-md-12 col-sm-12 col-xs-12 wow fadeInDown" data-wow-delay=".3s">
         <div class="single-blog single-column">
             <div class="post-thumb">
-                <a href="<?php echo base_url(); ?>news-details/view/<?php echo $new->id ?>"> <img src="<?php
+                <a href="<?php echo base_url(); ?>news-details/view/<?php echo $new->id ?>"> <img class="news--images" src="<?php
                     if (strpos($new->url_attached_file, 'pdf') !== false) {
                         echo base_url() . 'webresources/images/files/pdf.png';
                     } else if (strpos($new->url_attached_file, 'jpg') !== false) {
@@ -20,7 +20,7 @@
                     }
                     ?>" alt="blog"/></a>
 
-                <?php if (!$this->utilities->IsNullOrEmptyString($new->url_attached_file)) { ?>
+                <?php if (strpos($new->url_attached_file, 'pdf') !== false) { ?>
                     <a href="<?php echo $new->url_attached_file ?>">
                         <i class="fa fa-download news__download"></i>
                     </a>

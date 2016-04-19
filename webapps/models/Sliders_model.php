@@ -18,7 +18,7 @@ class Sliders_Model extends CI_Model
     {
         $this->db->select("*");
         $this->db->from('sliders');
-        $this->db->order_by("id", "asc");
+        $this->db->order_by("id", "desc");
         $query = $this->db->get();
         return $query->result();
     }
@@ -53,7 +53,7 @@ class Sliders_Model extends CI_Model
 
         $this->db->insert('sliders', $data);
     }
-
+    
     public function update($id, $en_content, $vi_content, $file_path, $url)
     {
         $data = array(
@@ -76,6 +76,6 @@ class Sliders_Model extends CI_Model
     public function delete($id)
     {
         $this->db->where('id', $id);
-        $this->db->delete('news');
+        $this->db->delete('sliders');
     }
 }

@@ -21,13 +21,13 @@
                                 <?php echo $error; ?>
                             </div>
                             <div class="form-group">
+                                <label for="userfile">Image</label>
+                                <input type='file' name='userfile' size='20' id="upload_file"/>
+                            </div>
+                            <div class="form-group">
                                 <label for="vi_title">Url</label>
                                 <input type="text" id="url" name="url" class="form-control"
                                        placeholder="Url" value="<?= set_value('url') ?>" autofocus>
-                            </div>
-                            <div class="form-group">
-                                <label for="userfile">Image</label>
-                                <input type='file' name='userfile' size='20' id="upload_file"/>
                             </div>
                             <div class="form-group">
                                 <label for="en_content">English content</label>
