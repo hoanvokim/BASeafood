@@ -110,7 +110,7 @@ class Manager_sliders_controller extends CI_Controller
                 $url = $this->input->post('url');
                 $en_content = $this->input->post('en_content');
                 $vi_content = $this->input->post('vi_content');
-                $this->news_model->update($id, $en_content, $vi_content, $file_path, $url);
+                $this->sliders_model->update($id, $en_content, $vi_content, $file_path, $url);
                 redirect('sliders-manager', 'refresh');
         }
         $error = isset($_FILES['userfile']['error']) ? $_FILES['userfile']['error'] : 4;
@@ -120,7 +120,7 @@ class Manager_sliders_controller extends CI_Controller
                 $url = $this->input->post('url');
                 $en_content = $this->input->post('en_content');
                 $vi_content = $this->input->post('vi_content');
-                $this->news_model->update($id, $en_content, $vi_content, null, $url);
+                $this->sliders_model->update($id, $en_content, $vi_content, null, $url);
                 redirect('sliders-manager', 'refresh');
         } else {
             $upload_error = true;
