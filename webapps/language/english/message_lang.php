@@ -30,7 +30,9 @@ $lang['GENERAL_INFORMATION'] = 'Introduce';
 $lang['TAG_CLOUD'] = 'Tag cloud';
 $lang['LATEST_PHOTOS'] = 'Latest photos';
 $lang['FINANCIAL_REPORT'] = 'Our Business Report';
-$lang['CHART'] = 'The chart is the financial report of 2016 and 2015';
+$lang['CHART'] = 'Yearly sales turnover 2005-2015';
+$lang['CHART_SALES'] = 'Sales turnover: GRADUALLY INCREASING OVER YEARS END OF 2016, ESTIMATED AT 17,500,000 USD.';
+$lang['PIECHART'] = 'BASEAFOOD IS DESIROUS OF EXPANDING TO THE FOREIGN MARKET';
 $lang['BUSINESS'] = 'Business';
 $lang['SEARCH_RESULT'] = 'Search result';
 // Contact us

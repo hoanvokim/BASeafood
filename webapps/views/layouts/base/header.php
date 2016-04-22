@@ -6,7 +6,7 @@
 <link rel="shortcut icon" href="<?php base_url() ?>webresources/images/ico/site-icon.png">
 <title><?php echo $title ?> | BaSeafood</title>
 <link href="<?php echo base_url(); ?>webresources/css/bootstrap.min.css" rel="stylesheet">
-<link href="<?php echo base_url(); ?>webresources/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 <link href="<?php echo base_url(); ?>webresources/css/animate.min.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>webresources/css/lightbox.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>webresources/css/main.css" rel="stylesheet">
@@ -23,6 +23,7 @@
 <link href="<?php echo base_url(); ?>webresources/css/viewer/viewer-start.css" rel="stylesheet"/>
 <link href="<?php echo base_url(); ?>webresources/css/multilevel-menu/bootstrap-submenu.min.css" rel="stylesheet"/>
 
+<link href="<?php echo base_url(); ?>webresources/css/pizza.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
 <!--[if lt IE 9]>
 <script src="<?php echo base_url(); ?>webresources/js/html5shiv.js"></script>
 <script src="<?php echo base_url(); ?>webresources/js/respond.min.js"></script>
