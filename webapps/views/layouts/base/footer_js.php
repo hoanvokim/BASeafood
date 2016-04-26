@@ -16,5 +16,7 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>webresources/js/jstree.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>webresources/js/Chart.js"></script>
 <script src="<?php echo base_url(); ?>webresources/vendor/select2/js/select2.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>webresources/js/snap.svg.js"></script>
+<script src="<?php echo base_url(); ?>webresources/js/pizza.js"></script>
 <!--Customized-->
 <script type="text/javascript" src="<?php echo base_url(); ?>webresources/js/main.js"></script>

@@ -17,7 +17,7 @@ class Features_Model extends CI_Model
     {
         $this->db->select("*");
         $this->db->from('features');
-        $this->db->order_by("id","asc");
+        $this->db->order_by("id","desc");
         $query = $this->db->get();
         return $query->result();
     }
