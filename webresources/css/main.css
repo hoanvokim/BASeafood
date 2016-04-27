@@ -1053,8 +1053,8 @@ ul.elements li > i {
 }
 
 .portfolio-view .nav-pills li a {
-    color: #fff;
-    border: 1px solid #fff;
+    color: #2559a5;
+    border: 1px solid #2559a5;
     width: 40px;
     height: 40px;
     line-height: 38px;
@@ -1068,8 +1068,8 @@ ul.elements li > i {
 }
 
 .portfolio-view .nav-pills li a:hover {
-    color: #702340;
-    border-color: #702340;
+    color: #40a5a5;
+    border-color: #40a5a5;
     -webkit-transition: all 0.9s ease;
     transition: all 0.9s ease;
 }
