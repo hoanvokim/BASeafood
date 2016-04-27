@@ -1034,7 +1034,7 @@ ul.elements li > i {
     position: absolute;
     top: 0;
     height: 100%;
-    background: rgba(112, 35, 64, 0.9);
+    background: rgba(255, 255, 255, 0.69);
     width: 100%;
     text-align: center;
 }
@@ -1043,7 +1043,7 @@ ul.elements li > i {
     padding: 0;
     display: inline-block;
     margin-top: -26px;
-    top: 50%;
+    top: 40%;
     position: relative;
 }
 

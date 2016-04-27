@@ -71,4 +71,5 @@ $lang['NEWS'] = 'Headlines';
 $lang['TOTAL_ROW'] = 'We have been found ';
 $lang['TOTAL_PRODUCTS'] = ' products';
 $lang['TOTAL_PRODUCT'] = ' product';
+$lang['NO_PHOTOS'] = 'Sorry! We don\'t have any photos!';
 ?>

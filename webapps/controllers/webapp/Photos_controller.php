@@ -19,18 +19,8 @@ class Photos_controller extends CI_Controller
     public function index()
     {
         $data['title'] = 'Photos';
-        $this->load->view('pages/webapp/photos', $data);
-    }
-
-    public function offices()
-    {
-        $data['title'] = 'Photos offices';
-        $this->load->view('pages/webapp/photos', $data);
-    }
-
-    public function factories()
-    {
-        $data['title'] = 'Photos factories';
+        $this->load->model('gallery_model', '', TRUE);
+        $data['offices'] = $this->gallery_model->findByGroupDisplay('OFFICES');
         $this->load->view('pages/webapp/photos', $data);
     }
 }

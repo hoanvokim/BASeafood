@@ -48,6 +48,13 @@ class Gallery_Model extends CI_Model
         return $this->db->get('gallery')->result_array();
     }
 
+    public function findByGroupDisplay($group)
+    {
+        $this->db->where('group', $group);
+        $this->db->order_by("id", "desc");
+        return $this->db->get('gallery')->result_array();
+    }
+
     public function insert($en_name, $vi_name, $url_image, $group)
     {
         $data = array(

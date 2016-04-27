@@ -14,8 +14,10 @@
                     <div class="box box-primary">
                         <div class="box-header">
                             <i class="ion ion-clipboard"></i>
-
                             <h3 class="box-title">Category List</h3>
+                            <div style="margin: 10px;">
+                                <?php echo anchor('create-category', '<i class="fa fa-plus"></i> Add new', 'class="btn btn-default pull-right"') ?>
+                            </div>
                         </div>
                         <div class="box-body table-responsive">
                             <table id="example2" class="table table-bordered table-hover">
@@ -52,7 +54,7 @@
                         </div>
 
                         <div class="box-footer clearfix no-border">
-                            <?php echo anchor('create-category', '<i class="fa fa-plus"></i>Add new', 'class="btn btn-default pull-right"') ?>
+                            <?php echo anchor('create-category', '<i class="fa fa-plus"></i> Add new', 'class="btn btn-default pull-right"') ?>
                         </div>
                     </div>
                 </section>

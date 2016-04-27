@@ -12,6 +12,7 @@ CREATE TABLE `baseafood`.`users` (
     AUTO_INCREMENT = 1;
 
 INSERT INTO `baseafood`.`users` (username, password) VALUES ('superadmin', MD5('supersecret'));
+INSERT INTO `baseafood`.`users` (username, password) VALUES ('tuyenba', MD5('baseafood1'));
 
 
 CREATE TABLE `baseafood`.`category` (

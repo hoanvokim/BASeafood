@@ -17,6 +17,7 @@ class News_details_controller extends CI_Controller
 
     public function view($newsId)
     {
+        $this->load->model('tags_model');
         $this->load->model('news_model');
         $news = $this->news_model->findById($newsId);
         if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
@@ -26,6 +27,7 @@ class News_details_controller extends CI_Controller
             $data['title'] =  $news['vi_title'];
         }
         $data['new'] = $news;
+        $data['tags'] = $this->tags_model->getRandom();
         $this->load->view('pages/webapp/newsdetails', $data);
     }
 }
