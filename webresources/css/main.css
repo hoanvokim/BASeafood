@@ -2732,7 +2732,7 @@ span.stButton_gradient,
 }
 
 .landing-tab .nav-tabs > li {
-    padding: 15px 0;
+    padding: 0px 0;
 }
 
 .landing-tab .nav-tabs > li > a {
@@ -2977,5 +2977,5 @@ Portfolio with right sidebar
 }
 
 .news--images {
-    width: 850px !important;
+    width: 600px !important;
 }

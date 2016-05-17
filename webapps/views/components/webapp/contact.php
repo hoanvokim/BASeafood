@@ -29,8 +29,9 @@
         <div class="contact-info">
             <h2 class="uppercase"><?php echo $this->lang->line('BASEAFOOD1'); ?></h2>
             <address>
+                <?php echo $this->lang->line('MANAGER'); ?>: <?php echo $this->lang->line('MANAGER_VALUE'); ?><br>
                 <?php echo $this->lang->line('EMAIL'); ?>: <a href="mailto:<?php echo $this->lang->line('EMAIL_VALUE'); ?>"><?php echo $this->lang->line('EMAIL_VALUE'); ?></a> <br>
-                <?php echo $this->lang->line('PHONE'); ?>: <?php echo $this->lang->line('PHONE_VALUE'); ?><br>
+                <?php echo $this->lang->line('PHONE'); ?>: <a href="tel:<?php echo $this->lang->line('PHONE_VALUE'); ?>"><?php echo $this->lang->line('PHONE_VALUE'); ?></a> <br>
                 <?php echo $this->lang->line('FAX'); ?>: <?php echo $this->lang->line('FAX_VALUE'); ?><br>
             </address>
 

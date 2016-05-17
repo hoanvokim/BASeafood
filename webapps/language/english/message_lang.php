@@ -51,7 +51,16 @@ $lang['PHONE_VALUE'] = '064.3825246';
 $lang['FAX'] = 'Fax';
 $lang['FAX_VALUE'] = '064.3825545';
 $lang['EMAIL'] = 'Email';
+$lang['PERSONAL_CONTACT'] = 'Personal contact';
+$lang['MANAGER'] = 'Manager';
+$lang['MANAGER_VALUE'] = 'Mr. Huynh Minh Tuong';
 $lang['EMAIL_VALUE'] = 'tuongf34@gmail.com';
+$lang['MANAGER1'] = 'Director';
+$lang['MANAGER_VALUE1'] = 'MRS. Phuong';
+$lang['EMAIL_VALUE1'] = 'phuongf34@gmail.com';
+$lang['MANAGER2'] = 'Director';
+$lang['MANAGER_VALUE2'] = 'MRS. Huyen';
+$lang['EMAIL_VALUE2'] = 'huyenf34@gmail.com';
 // Menu
 $lang['MENU_HOME'] = 'HOME';
 $lang['MENU_INTRODUCE'] = 'Introduce';

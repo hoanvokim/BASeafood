@@ -44,13 +44,13 @@
                             echo "active";
                             $isInitial = true;
                         } ?>" id="tab_<?php echo $feature->id; ?>">
-                            <i class="<?php echo $feature->title_icon; ?>"></i>
-                            <h3><?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                            <h3>
+                                <i class="<?php echo $feature->title_icon; ?>"></i> <span><?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                                     echo $feature->en_title;
                                 }
                                 else {
                                     echo $feature->vi_title;
-                                } ?></h3>
+                                } ?></span></h3>
                             <p><?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                                     echo $feature->en_content;
                                 }

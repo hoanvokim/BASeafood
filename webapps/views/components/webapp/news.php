@@ -36,15 +36,6 @@
                         echo $new->vi_title;
                     } ?>
                 </a></h2>
-            <h5 class="post-author">published on <?php echo $new->created_date ?></h5>
-            <p> <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
-                    $limited_word = word_limiter($new->en_content, 20);
-                    echo $limited_word;
-                } else {
-                    $limited_word = word_limiter($new->vi_content, 20);
-                    echo $limited_word;
-                } ?>
-            </p>
             <a href="<?php echo base_url(); ?>news-details/view/<?php echo $new->id ?>"
                class="read-more">View More</a>
             <div class="post-bottom overflow">

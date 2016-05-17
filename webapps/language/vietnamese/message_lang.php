@@ -50,7 +50,16 @@ $lang['PHONE_VALUE'] = '064.3825246';
 $lang['FAX'] = 'Fax';
 $lang['FAX_VALUE'] = '064.3825545';
 $lang['EMAIL'] = 'Email';
+$lang['PERSONAL_CONTACT'] = 'Liên hệ với chúng tôi';
+$lang['MANAGER'] = 'Giám đốc';
+$lang['MANAGER_VALUE'] = 'Huỳnh Minh Tường';
 $lang['EMAIL_VALUE'] = 'tuongf34@gmail.com';
+$lang['MANAGER1'] = 'Trưởng phòng kế hoạch';
+$lang['MANAGER_VALUE1'] = 'Phượng';
+$lang['EMAIL_VALUE1'] = 'phuongf34@gmail.com';
+$lang['MANAGER2'] = 'Trưởng phòng kỷ thuật';
+$lang['MANAGER_VALUE2'] = 'Huyền';
+$lang['EMAIL_VALUE2'] = 'huyenf34@gmail.com';
 // MENU
 $lang['MENU_HOME'] = 'Trang chủ';
 $lang['MENU_INTRODUCE'] = 'Giới thiệu';

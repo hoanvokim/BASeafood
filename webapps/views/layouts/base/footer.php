@@ -12,6 +12,18 @@
                         <a class="list-group-item"><i class="fa fa-certificate fa-fw"></i>&nbsp; <?php echo $this->lang->line('ACCESSED'); ?>: 12930</a>
                     </div>
                 </div>
+
+                <div class="testimonial bottom">
+                    <h2><?php echo $this->lang->line('PERSONAL_CONTACT'); ?></h2>
+                    <div class="list-group">
+                        <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('MANAGER'); ?>: <?php echo $this->lang->line('MANAGER_VALUE'); ?></a>
+                        <a href="mailto:<?php echo $this->lang->line('EMAIL_VALUE'); ?>" class="list-group-item"> <i class="fa fa-google fa-fw"></i> <?php echo $this->lang->line('EMAIL'); ?>: <?php echo $this->lang->line('EMAIL_VALUE'); ?></a>
+                        <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('MANAGER1'); ?>: <?php echo $this->lang->line('MANAGER_VALUE1'); ?></a>
+                        <a href="mailto:<?php echo $this->lang->line('EMAIL_VALUE1'); ?>" class="list-group-item"> <i class="fa fa-google fa-fw"></i> <?php echo $this->lang->line('EMAIL'); ?>: <?php echo $this->lang->line('EMAIL_VALUE2'); ?></a>
+                        <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('MANAGER2'); ?>: <?php echo $this->lang->line('MANAGER_VALUE2'); ?></a>
+                        <a href="mailto:<?php echo $this->lang->line('EMAIL_VALUE2'); ?>" class="list-group-item"> <i class="fa fa-google fa-fw"></i> <?php echo $this->lang->line('EMAIL'); ?>: <?php echo $this->lang->line('EMAIL_VALUE2'); ?></a>
+                    </div>
+                </div>
             </div>
             <div class="col-md-5 col-sm-12">
                 <div class="contact-info bottom">
@@ -21,9 +33,8 @@
                         <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('COMPANY_NAME'); ?>: <?php echo $this->lang->line('COMPANY_NAME_VALUE'); ?></a>
                         <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('COMPANY_SHORTNAME'); ?>: <?php echo $this->lang->line('COMPANY_SHORTNAME_VALUE'); ?></a>
                         <a class="list-group-item"><i class="fa fa-road fa-fw"></i>&nbsp; <?php echo $this->lang->line('ADDRESS'); ?>: <?php echo $this->lang->line('ADDRESS_VALUE'); ?></a>
-                        <a class="list-group-item"><i class="fa fa-phone fa-fw"></i>&nbsp; <?php echo $this->lang->line('PHONE'); ?>: <?php echo $this->lang->line('PHONE_VALUE'); ?></a>
+                        <a href="tel:<?php echo $this->lang->line('PHONE_VALUE'); ?>" class="list-group-item"><i class="fa fa-phone fa-fw"></i>&nbsp; <?php echo $this->lang->line('PHONE'); ?>: <?php echo $this->lang->line('PHONE_VALUE'); ?></a>
                         <a class="list-group-item"><i class="fa fa-fax fa-fw"></i>&nbsp; <?php echo $this->lang->line('FAX'); ?>: <?php echo $this->lang->line('FAX_VALUE'); ?></a>
-                        <a class="list-group-item"><i class="fa fa-google fa-fw"></i>&nbsp; <?php echo $this->lang->line('EMAIL'); ?>: <?php echo $this->lang->line('EMAIL_VALUE'); ?></a>
                     </div>
                 </div>
             </div>
