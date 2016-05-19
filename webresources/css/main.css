@@ -2732,7 +2732,7 @@ span.stButton_gradient,
 }
 
 .landing-tab .nav-tabs > li {
-    padding: 0px 0;
+    padding: 7px 0;
 }
 
 .landing-tab .nav-tabs > li > a {
@@ -2815,6 +2815,7 @@ span.stButton_gradient,
 .landing-tab .tab-pane i.fa-4x {
     color: #2559a5;
 }
+
 /*BLOG*/
 
 #blog {
@@ -2978,4 +2979,8 @@ Portfolio with right sidebar
 
 .news--images {
     width: 600px !important;
+}
+
+.icon--images {
+    width: 100px !important;
 }

@@ -2,48 +2,77 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center bottom-separator">
-                <img src="<?php echo base_url(); ?>/webresources/images/home/under.png" class="img-responsive inline" alt="">
+                <img src="<?php echo base_url(); ?>/webresources/images/home/under.png" class="img-responsive inline"
+                     alt="">
             </div>
-            <div class="col-md-3 col-sm-12">
+            <div class="col-sm-12 text-center">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                            <a href="mailto:tuongf34@gmail.com"><img
+                                    src="<?php echo base_url(); ?>/webresources/images/tuong.jpg"
+                                    class="img-responsive inline" alt="" style="padding: 20px; max-width: 300px;"></a>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <a href="mailto:phuongf34@gmail.com"><img
+                                    src="<?php echo base_url(); ?>/webresources/images/phuong.jpg"
+                                    class="img-responsive inline" alt="" style="padding: 20px; max-width: 300px;"></a>
+                        </div>
+                        <div class="col-sm-12 col-md-4">
+                            <a href="mailto:huyenf34@gmail.com"> <img
+                                    src="<?php echo base_url(); ?>/webresources/images/huyen.jpg"
+                                    class="img-responsive inline" alt="" style="padding: 20px; max-width: 300px;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="col-md-4 col-sm-12" style="margin-top: 20px;">
+
                 <div class="testimonial bottom">
                     <h2><?php echo $this->lang->line('USER_ACCESS'); ?></h2>
                     <div class="list-group">
-                        <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('ONLINE'); ?>: 12</a>
-                        <a class="list-group-item"><i class="fa fa-certificate fa-fw"></i>&nbsp; <?php echo $this->lang->line('ACCESSED'); ?>: 12930</a>
-                    </div>
-                </div>
-
-                <div class="testimonial bottom">
-                    <h2><?php echo $this->lang->line('PERSONAL_CONTACT'); ?></h2>
-                    <div class="list-group">
-                        <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('MANAGER'); ?>: <?php echo $this->lang->line('MANAGER_VALUE'); ?></a>
-                        <a href="mailto:<?php echo $this->lang->line('EMAIL_VALUE'); ?>" class="list-group-item"> <i class="fa fa-google fa-fw"></i> <?php echo $this->lang->line('EMAIL'); ?>: <?php echo $this->lang->line('EMAIL_VALUE'); ?></a>
-                        <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('MANAGER1'); ?>: <?php echo $this->lang->line('MANAGER_VALUE1'); ?></a>
-                        <a href="mailto:<?php echo $this->lang->line('EMAIL_VALUE1'); ?>" class="list-group-item"> <i class="fa fa-google fa-fw"></i> <?php echo $this->lang->line('EMAIL'); ?>: <?php echo $this->lang->line('EMAIL_VALUE2'); ?></a>
-                        <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('MANAGER2'); ?>: <?php echo $this->lang->line('MANAGER_VALUE2'); ?></a>
-                        <a href="mailto:<?php echo $this->lang->line('EMAIL_VALUE2'); ?>" class="list-group-item"> <i class="fa fa-google fa-fw"></i> <?php echo $this->lang->line('EMAIL'); ?>: <?php echo $this->lang->line('EMAIL_VALUE2'); ?></a>
+                        <a class="list-group-item"><i
+                                class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('ONLINE'); ?>: 12</a>
+                        <a class="list-group-item"><i
+                                class="fa fa-certificate fa-fw"></i>&nbsp; <?php echo $this->lang->line('ACCESSED'); ?>:
+                            12930</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-5 col-sm-12">
-                <div class="contact-info bottom">
+            <div class="col-md-4 col-sm-12" style="margin-top: 20px;">
+                <div class="testimonial bottom">
                     <h2><?php echo $this->lang->line('CONTACT_INFO'); ?></h2>
                     <div class="list-group">
-                        <a class="list-group-item"><i class="fa fa-barcode fa-fw"></i>&nbsp; <?php echo $this->lang->line('COMPANY_CODE'); ?>: <?php echo $this->lang->line('COMPANY_CODE_VALUE'); ?></a>
-                        <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('COMPANY_NAME'); ?>: <?php echo $this->lang->line('COMPANY_NAME_VALUE'); ?></a>
-                        <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('COMPANY_SHORTNAME'); ?>: <?php echo $this->lang->line('COMPANY_SHORTNAME_VALUE'); ?></a>
-                        <a class="list-group-item"><i class="fa fa-road fa-fw"></i>&nbsp; <?php echo $this->lang->line('ADDRESS'); ?>: <?php echo $this->lang->line('ADDRESS_VALUE'); ?></a>
-                        <a href="tel:<?php echo $this->lang->line('PHONE_VALUE'); ?>" class="list-group-item"><i class="fa fa-phone fa-fw"></i>&nbsp; <?php echo $this->lang->line('PHONE'); ?>: <?php echo $this->lang->line('PHONE_VALUE'); ?></a>
-                        <a class="list-group-item"><i class="fa fa-fax fa-fw"></i>&nbsp; <?php echo $this->lang->line('FAX'); ?>: <?php echo $this->lang->line('FAX_VALUE'); ?></a>
+                        <a class="list-group-item"><i
+                                class="fa fa-barcode fa-fw"></i>&nbsp; <?php echo $this->lang->line('COMPANY_CODE'); ?>
+                            : <?php echo $this->lang->line('COMPANY_CODE_VALUE'); ?></a>
+                        <a class="list-group-item"><i
+                                class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('COMPANY_NAME'); ?>
+                            : <?php echo $this->lang->line('COMPANY_NAME_VALUE'); ?></a>
+                        <a class="list-group-item"><i
+                                class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('COMPANY_SHORTNAME'); ?>
+                            : <?php echo $this->lang->line('COMPANY_SHORTNAME_VALUE'); ?></a>
+                        <a class="list-group-item"><i
+                                class="fa fa-road fa-fw"></i>&nbsp; <?php echo $this->lang->line('ADDRESS'); ?>
+                            : <?php echo $this->lang->line('ADDRESS_VALUE'); ?></a>
+                        <a href="tel:<?php echo $this->lang->line('PHONE_VALUE'); ?>" class="list-group-item"><i
+                                class="fa fa-phone fa-fw"></i>&nbsp; <?php echo $this->lang->line('PHONE'); ?>
+                            : <?php echo $this->lang->line('PHONE_VALUE'); ?></a>
+                        <a class="list-group-item"><i
+                                class="fa fa-fax fa-fw"></i>&nbsp; <?php echo $this->lang->line('FAX'); ?>
+                            : <?php echo $this->lang->line('FAX_VALUE'); ?></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-12">
+            <div class="col-md-4 col-sm-12" style="margin-top: 20px;">
                 <div class="contact-form bottom">
                     <h2><?php echo $this->lang->line('SEND_MESSAGE'); ?></h2>
-                    <form id="main-contact-form" name="contact-form" method="post" action="<?php echo base_url(); ?>webresources/sendemail.php">
+                    <form id="main-contact-form" name="contact-form" method="post"
+                          action="<?php echo base_url(); ?>webresources/sendemail.php">
                         <div class="form-group">
-                            <input type="text" name="name" class="form-control" required="required" placeholder="<?php echo $this->lang->line('NAME'); ?>">
+                            <input type="text" name="name" class="form-control" required="required"
+                                   placeholder="<?php echo $this->lang->line('NAME'); ?>">
                         </div>
                         <div class="form-group">
                             <input type="email" name="email" class="form-control" required="required"
@@ -54,7 +83,8 @@
                                       placeholder="<?php echo $this->lang->line('TEXT'); ?>"></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="submit" name="submit" class="btn btn-submit" value="<?php echo $this->lang->line('SEND'); ?>">
+                            <input type="submit" name="submit" class="btn btn-submit"
+                                   value="<?php echo $this->lang->line('SEND'); ?>">
                         </div>
                     </form>
                 </div>

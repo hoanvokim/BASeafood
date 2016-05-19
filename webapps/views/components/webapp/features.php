@@ -6,10 +6,10 @@
  * Time: 12:43 AM
  */
 ?>
-<section id="top-brand" class="top-brand">
+<section id="top-brand" style="margin-top: 20px;">
     <div class="container">
         <div class="page-header text-center wow fadeinup" data-wow-delay="0.4s">
-            <h1 class="title uppercase red-text"><?php echo $this->lang->line('BASEAFOOD'); ?></h1>
+            <h1 class="title uppercase red-text"> <img src="<?php echo base_url().'webresources/images/ribbon-baseafood.png' ?>" style="width: 280px;"/></h1>
             <div class="devider"></div>
             <p class="subtitle"><?php echo $this->lang->line('FEATURES'); ?></p>
         </div>

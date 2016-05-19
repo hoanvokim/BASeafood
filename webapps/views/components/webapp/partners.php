@@ -6,7 +6,7 @@
  * Time: 12:50 AM
  */
 ?>
-<section id="partners-section">
+<section id="partners-section" style="padding-bottom: 30px;">
     <!-- Begin page header-->
     <div class="page-header-wrapper">
         <div class="container">
@@ -18,7 +18,7 @@
         </div>
     </div>
     <!-- End page header-->
-    <div class="container wow fadeInDown" data-wow-delay="0.4s">
+    <div class="container wow fadeInDown" data-wow-delay="1s">
         <div id="owl-partners" class="owl-carousel">
             <img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/1.png" alt="img">
             <img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/2.png" alt="img">
