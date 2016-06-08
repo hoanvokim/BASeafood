@@ -9,13 +9,23 @@
 <?php $this->load->view('layouts/base/menu'); ?>
 
 <!--Start content-->
-<?php $this->load->view('components/webapp/sliders'); ?>
-<?php $this->load->view('components/webapp/features'); ?>
-<?php $this->load->view('components/webapp/partners'); ?>
+
+<div class="container-home">
+    <div style="width:24%;float:left;">
+        <?php $this->load->view('components/webapp/feature_home'); ?>
+    </div>
+    <div style="width:55%;float:left;">
+        <?php $this->load->view('components/webapp/sliders'); ?>
+    </div>
+    <div style="width:19%;float:right;margin-top:30px;">
+        <?php $this->load->view('components/webapp/partners'); ?>
+    </div>
+</div>
+
 <!--End content-->
 
 <!--Begin include JS files-->
-<?php $this->load->view('layouts/base/footer'); ?>
+<?php $this->load->view('layouts/base/footer_home'); ?>
 <?php $this->load->view('layouts/base/footer_js'); ?>
 </body>
 </html>

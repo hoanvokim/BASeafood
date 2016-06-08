@@ -7,19 +7,13 @@
  */ ?>
 
 <section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5">
-    <div class="container">
+
         <div class="caption text-center text-dark" data-stellar-ratio="0.7">
-            <div id="owl-intro-text" class="owl-carousel">
+            <div id="owl-intro-text" class="owl-carousel slider-define">
 
                 <?php foreach ($sliders as $slider) { ?>
                     <div class="item">
                         <img src="<?php echo $slider->img_src; ?>" class="slider-item"/>
-                        <p><?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
-                                echo $slider->en_content;
-                            }
-                            else {
-                                echo $slider->vi_content;
-                            } ?></p>
                         <div class="extra-space-l"></div>
                         <?php if ($slider->url != NULL) { ?>
                             <a class="btn btn-blank" href="<?php echo $slider->url; ?>" target="_blank"
@@ -31,6 +25,6 @@
 
             </div>
         </div> <!-- /.caption -->
-    </div> <!-- /.container -->
+
 </section>
 

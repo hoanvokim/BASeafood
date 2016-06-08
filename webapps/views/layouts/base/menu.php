@@ -62,16 +62,25 @@
                             href="<?php echo site_url('introduce'); ?>"><?php echo $this->lang->line('MENU_ABOUT'); ?>
                             <i
                                 class="fa fa-angle-down"></i></a>
-                        <ul role="menu" class="sub-menu">
+                        <ul role="menu" class="child-menu">
 
-                            <li>
-                                <a href="<?php echo site_url('ourbusiness'); ?>"><?php echo $this->lang->line('MENU_BUSINESS'); ?> </a>
+                            <li class="child-li">
+                                <a href="<?php echo site_url('ourbusiness'); ?>" class="orange-color font-custom">
+                                    <span class="child-icon"><i class="fa fa-modx"></i></span>
+                                    <span class="child-info"><?php echo $this->lang->line('MENU_BUSINESS'); ?></span>
+                                </a>
                             </li>
-                            <li>
-                                <a href="<?php echo site_url('photos'); ?>"><?php echo $this->lang->line('MENU_PHOTOS'); ?></a>
+                            <li class="child-li">
+                                <a href="<?php echo site_url('photos'); ?>" class="purple-color font-custom">
+                                    <span class="child-icon"><i class="fa fa-modx"></i></span>
+                                    <span class="child-info"><?php echo $this->lang->line('MENU_PHOTOS'); ?></span>
+                                </a>
                             </li>
-                            <li>
-                                <a href="<?php echo site_url('introduce'); ?>"><?php echo $this->lang->line('MENU_ABOUT'); ?></a>
+                            <li class="child-li">
+                                <a href="<?php echo site_url('introduce'); ?>" class="blue-color font-custom">
+                                    <span class="child-icon"><i class="fa fa-modx"></i></span>
+                                    <span class="child-info"><?php echo $this->lang->line('MENU_ABOUT'); ?></span>
+                                </a>
                             </li>
                         </ul>
                     </li>

@@ -298,7 +298,7 @@ h3 {
 
 /*  Dropdown menu*/
 
-ul.sub-menu {
+/*ul.sub-menu {
     z-index: 1000;
     display: none;
     list-style: none;
@@ -339,6 +339,91 @@ ul.sub-menu {
 #header .navbar-nav li ul.sub-menu li a:focus {
     background: #2559a5;
     color: #fff;
+} */
+
+li.dropdown {
+    position:relative;
+}
+
+li.dropdown:hover > ul.child-menu {
+    display:block;
+    -webkit-animation: fadeInUp 400ms;
+    animation: fadeInUp 400ms;
+}
+
+ul.child-menu {
+    display:none;
+    min-width:500px;
+    position:absolute;
+    top:50px;
+    padding:0 10px;
+    margin:0;
+
+}
+
+.child-icon,
+.child-info {
+    display:block;
+    text-align: center;
+}
+
+.child-icon {
+    font-size: 1.8em;
+}
+
+.child-info {
+    font-size: 1.1em;
+    text-transform: capitalize;
+}
+
+li.child-li {
+    display:inline-block;
+    margin-right:5px;
+}
+
+li.child-li>a{
+    display:block;
+    padding:5px!important;
+}
+
+li.child-li>a:hover {
+    color: #2559a5!important;
+}
+
+.orange-color {
+    color:orangered!important;
+}
+
+.blue-color {
+    color:cornflowerblue!important;
+}
+
+.purple-color {
+    color:purple!important;
+}
+
+.orange-bg {
+    background-color: orangered;
+}
+
+.blue-bg {
+    background-color: dodgerblue;
+}
+
+.purple-bg {
+    background-color: purple;
+}
+
+.yellow-bg {
+    background-color: #ffff00;
+}
+
+.green-bg {
+    background-color: green;
+}
+
+.red-bg {
+    background-color: red;
 }
 
 .fa-angle-down {
@@ -385,6 +470,7 @@ ul.sub-menu {
 **************************/
 
 #footer {
+    position:relative;
     padding-bottom: 10px;
     background-image: url(../images/home/footer.png);
     background-repeat: repeat-x;
@@ -399,6 +485,13 @@ ul.sub-menu {
 
 #footer .bottom-separator {
     margin-bottom: 60px;
+}
+
+.user-access {
+    position: absolute;
+    bottom: 5px;
+    right: 25px;
+    width: 190px;
 }
 
 #message {
@@ -544,6 +637,45 @@ ul.sub-menu {
     top: 50px;
     left: 0;
     width: 450px;
+}
+
+ul.ul-feature {
+    padding:0;
+    margin:70px 35px;
+}
+
+ul.ul-feature>li {
+    border:1px solid #2559a5;
+    padding:5px 5px 5px 5px;
+    margin-top:2px;
+    border-top-left-radius:15px;
+    border-bottom-right-radius:15px;
+}
+
+.feature-icon {
+    margin-right:5px;
+    margin-left:5px;
+}
+
+.container-home {
+    margin-top:10px;
+}
+
+ul.vertical-slider{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    height:350px;
+}
+
+ul.vertical-slider>li{
+    margin:10px 5px;
+}
+
+.slider-define{
+    width:100%!important;
+    margin:auto!important;
+    margin-top:20px!important;
 }
 
 .animate-in .slide-text {
