@@ -14,6 +14,7 @@ class Product_Model extends CI_Model
     public function __construct()
     {
         $this->load->database();
+        $this->load->model('Category_model');
     }
 
     public function findById($id)
@@ -106,6 +107,33 @@ class Product_Model extends CI_Model
             return $data;
         }
         return false;
+    }
+
+    public function getToTalRowsByCatCollection($aCat){
+       // $aSubCate = array();
+       // $aSubCate[] = $cateId;
+       // $this->Category_model->getAllSubMenu($cateId,$aSubCate);
+        $sql = "select count(*) as total_row from product where fk_category in (";
+        $n = count($aCat);
+        for($i=0;$i<=($n-2);$i++){
+            $sql = $sql . $aCat[$i] . ',';
+        }
+        $sql = $sql . $aCat[$n-1] . ')';
+        $result = $this->db->query($sql)->result_array();
+        return $result[0]['total_row'];
+    }
+
+    public function getProductsByCatCollection($aCat, $index_record, $limit){
+        if($aCat && count($aCat) > 0){
+            $sql = "select * from product where fk_category in (";
+            $cnt = count($aCat);
+            for ($i = 0; $i < $cnt - 1; $i++) {
+                $sql = $sql . $aCat[$i] . ",";
+            }
+            $sql = $sql . $aCat[$cnt - 1] . ") order by id DESC limit $index_record,$limit";
+            return $this->db->query($sql)->result_array();
+        }
+        return array();
     }
 
     public function recordCountByCategory($category)

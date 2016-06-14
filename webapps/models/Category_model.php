@@ -28,6 +28,48 @@ class Category_Model extends CI_Model
         return $this->db->get()->result_array();
     }
 
+    public function getFirstLevelSubMenu($parent_id){
+        $sql = "select * from category where parent = $parent_id";
+        $rs = $this->db->query($sql)->result_array();
+        $result = array();
+        $cnt = 0;
+        foreach($rs as $item){
+            $result[$cnt]['id'] = $item['id'];
+            $result[$cnt]['en_name'] = $item['en_name'];
+            $result[$cnt]['vi_name'] = $item['vi_name'];
+            $cnt++;
+        }
+        return $result;
+    }
+
+    /*public function getSecondLevelSubMenu($parent_id){
+        $aFirst = $this->getFirstLevelSubMenu($parent_id);
+        $result = array();
+        $cnt = 0;
+        foreach($aFirst as $item){
+            $aTemp = $this->getFirstLevelSubMenu($item['id']);
+            foreach($aTemp as $_item){
+                $result[$cnt]['id'] = $_item['id'];
+                $result[$cnt]['en_name'] = $_item['en_name'];
+                $result[$cnt]['vi_name'] = $_item['vi_name'];
+                $cnt++;
+            }
+        }
+        return $result;
+    }*/
+
+    public function getAllSubMenu($parent_id, &$aMenu)
+    {
+        $sql = "select id from category where parent = $parent_id";
+        $arr_result = $this->db->query($sql)->result_array();
+        if (count($arr_result) > 0) {
+            foreach ($arr_result as $item) {
+                $aMenu[] = $item['id'];
+                $this->getAllSubMenu($item['id'], $aMenu);
+            }
+        }
+    }
+
     public function findById($id)
     {
         $this->db->select('id , en_name,vi_name,parent');

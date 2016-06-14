@@ -3149,6 +3149,42 @@ Portfolio with right sidebar
     top: 33%;
 }
 
+.sub-menu {
+    height:60px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.sub-menu a {
+    color:#ffffff!important;
+}
+
+.bg-1 {
+    background-image: linear-gradient(#89bbd8, #1d5a8c);
+}
+
+.bg-2 {
+    background-image: linear-gradient(#1f97ea, #004687);
+}
+
+.bg-3 {
+    background-image: linear-gradient(#a2dc78, #36842a);
+}
+
+.bg-4 {
+    background-image: linear-gradient(#f8c861, #c76c01);
+
+}
+
+.bg-5 {
+    background-image: linear-gradient(#d86766, #920b1a);
+}
+
+.bg-6 {
+    background-image: linear-gradient(#a8a7ac, #3b3b39);
+}
+
 .bg-frozen {
     background-image: linear-gradient(#89bbd8, #1d5a8c);
 }

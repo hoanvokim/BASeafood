@@ -61,13 +61,13 @@
                                 class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="child-menu">
                             <li class="child-li">
-                                <a href="<?php echo site_url('product_domestic'); ?>" class="orange-color font-custom">
+                                <a href="<?php echo site_url('product/findByCategories/1'); ?>" class="orange-color font-custom">
                                     <span class="child-icon"><i class="fa fa-modx"></i></span>
                                     <span class="child-info"><?php echo $this->lang->line('MENU_DOMESTIC'); ?></span>
                                 </a>
                             </li>
                             <li class="child-li">
-                                <a href="<?php echo site_url('product_international'); ?>" class="purple-color font-custom">
+                                <a href="<?php echo site_url('product/findByCategories/2'); ?>" class="purple-color font-custom">
                                     <span class="child-icon"><i class="fa fa-modx"></i></span>
                                     <span class="child-info"><?php echo $this->lang->line('MENU_INTERNATIONAL'); ?></span>
                                 </a>

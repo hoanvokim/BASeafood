@@ -68,7 +68,8 @@ $route['career'] = 'webapp/career_controller/index';
 $route['contact'] = 'webapp/contact_controller/index';
 $route['product'] = 'webapp/product_controller/index';
 $route['product/(:num)'] = 'webapp/product_controller/index/$1';
-$route['product/findByCategories/(:num)'] = 'webapp/product_controller/findByCategories/$1';
+$route['product/findByCategories/(:num)'] = 'webapp/product_controller/findByCategories/$1/1';
+$route['product/findByCategories/(:num)/(:num)'] = 'webapp/product_controller/findByCategories/$1/$2';
 $route['news-details/view/(:num)'] = 'webapp/news_details_controller/view/$1';
 //webapp process
 $route['switchlanguage'] = 'webapp_process/switch_language_controller/index';

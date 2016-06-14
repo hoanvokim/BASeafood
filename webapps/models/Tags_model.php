@@ -19,6 +19,15 @@ class Tags_Model extends CI_Model
         return $this->db->get("tags")->result_array();
     }
 
+    public function getTagNameByProductId($productId){
+        $sql = "select tags.name as tag_name from product_tags, tags where product_tags.fk_product = $productId and product_tags.fk_tags = tags.id limit 0,2";
+        $result = $this->db->query($sql)->result_array();
+        if(count($result) == 0){
+            return false;
+        }
+        return $result;
+    }
+
     public function getRandom(){
         $query = $this->db->query("select name from tags order by rand() limit 5");
         return $query->result_array();
