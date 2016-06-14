@@ -42,6 +42,28 @@ class Category_Model extends CI_Model
         return $result;
     }
 
+    public function getLargestParent($cateId){
+        $sql = "select parent from category where id=$cateId";
+        $result = $this->db->query($sql)->result_array();
+        if(count($result)>0){
+            if($result[0]['parent']==null){
+                return $cateId;
+            }else{
+                return $this->getLargestParent($result[0]['parent']);
+            }
+        }
+        return $cateId;
+    }
+
+    public function isLargestParent($cateId){
+        $sql = "select * from category where id=$cateId and parent=null";
+        $result = $this->db->query($sql)->result_array();
+        if(count($result) > 0){
+            return true;
+        }
+        return false;
+    }
+
     /*public function getSecondLevelSubMenu($parent_id){
         $aFirst = $this->getFirstLevelSubMenu($parent_id);
         $result = array();

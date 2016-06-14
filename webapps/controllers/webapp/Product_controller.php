@@ -80,7 +80,9 @@ class Product_controller extends CI_Controller
         //$idList = $this->exportIds($ids, $idList);
         $this->load->model("product_model");
 
-        $aFirst = $this->Category_model->getFirstLevelSubMenu($category);
+        $null_parent = $this->Category_model->getLargestParent($category);
+
+        $aFirst = $this->Category_model->getFirstLevelSubMenu($null_parent);
         $treeSubMenu = array();
         $cnt = 0;
         foreach($aFirst as $first){
