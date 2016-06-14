@@ -116,4 +116,12 @@ class Product_controller extends CI_Controller
         }
         return $idList;
     }
+
+    public function domestic()
+    {
+
+        $data['title'] = 'Products';
+        $data['subTitle'] = 'Domestic';
+        $this->load->view('pages/webapp/productLayout', $data);
+    }
 }

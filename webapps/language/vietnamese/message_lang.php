@@ -80,4 +80,6 @@ $lang['TOTAL_ROW'] = 'Chúng tôi đã tìm thấy ';
 $lang['TOTAL_PRODUCTS'] = ' sản phẩm';
 $lang['TOTAL_PRODUCT'] = ' sản phẩm';
 $lang['NO_PHOTOS'] = 'Xin lỗi! Chúng tôi không có hình ảnh để thể hiện!';
+$lang['MENU_DOMESTIC'] = 'Nội địa';
+$lang['MENU_INTERNATIONAL'] = 'Xuất khẩu';
 ?>

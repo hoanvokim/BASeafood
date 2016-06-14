@@ -29,7 +29,7 @@
                 <div class="devider"></div>
             </div>
         </div>
-        <div style="text-align: left; padding-bottom: 40px;" class="wow fadeInUp" data-wow-delay="0.5s">
+        <div style="text-align: center; padding-bottom: 40px;" class="wow fadeInUp" data-wow-delay="0.5s">
             <p><?php echo $this->lang->line('PIECHART'); ?></p>
         </div>
         <div style="text-align: center;" class="wow fadeInUp" data-wow-delay="0.5s">
@@ -54,7 +54,7 @@
         <div style="text-align: center; padding-bottom: 40px;">
             <h3><strong><?php echo $this->lang->line('CHART'); ?></strong></h3>
         </div>
-        <div style="text-align: left; padding-bottom: 40px;">
+        <div style="text-align: center; padding-bottom: 40px;">
             <p><?php echo $this->lang->line('CHART_SALES'); ?></p>
         </div>
 

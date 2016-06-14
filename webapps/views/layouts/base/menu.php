@@ -55,15 +55,30 @@
                     <li class="active"><a
                             href="<?php echo site_url('home'); ?>"><?php echo $this->lang->line('MENU_HOME'); ?></a>
                     </li>
-                    <li>
-                        <a href="<?php echo site_url('product'); ?>"><?php echo $this->lang->line('MENU_PRODUCT'); ?></a>
+                    <li  class="dropdown">
+                        <a href="<?php echo site_url('product'); ?>"><?php echo $this->lang->line('MENU_PRODUCT'); ?>
+                            <i
+                                class="fa fa-angle-down"></i></a>
+                        <ul role="menu" class="child-menu">
+                            <li class="child-li">
+                                <a href="<?php echo site_url('product_domestic'); ?>" class="orange-color font-custom">
+                                    <span class="child-icon"><i class="fa fa-modx"></i></span>
+                                    <span class="child-info"><?php echo $this->lang->line('MENU_DOMESTIC'); ?></span>
+                                </a>
+                            </li>
+                            <li class="child-li">
+                                <a href="<?php echo site_url('product_international'); ?>" class="purple-color font-custom">
+                                    <span class="child-icon"><i class="fa fa-modx"></i></span>
+                                    <span class="child-info"><?php echo $this->lang->line('MENU_INTERNATIONAL'); ?></span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="dropdown"><a
                             href="<?php echo site_url('introduce'); ?>"><?php echo $this->lang->line('MENU_ABOUT'); ?>
                             <i
                                 class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="child-menu">
-
                             <li class="child-li">
                                 <a href="<?php echo site_url('ourbusiness'); ?>" class="orange-color font-custom">
                                     <span class="child-icon"><i class="fa fa-modx"></i></span>
@@ -96,7 +111,8 @@
             </div>
 
             <div class="search">
-                <form role="form" name="userinput" action="<?php echo base_url(); ?>webapp/search_controller/find" method="post">
+                <form role="form" name="userinput" action="<?php echo base_url(); ?>webapp/search_controller/find"
+                      method="post">
                     <i class="fa fa-search"></i>
                     <div class="field-toggle">
                         <input name="name" type="text" class="search-form" autocomplete="off" placeholder="Search">
