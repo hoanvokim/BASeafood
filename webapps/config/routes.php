@@ -56,7 +56,7 @@ $route['demo'] = 'webapp/demo_controller/index';
 //webapp pages
 $route['home'] = 'webapp/user_home_controller/index';
 $route['product_domestic'] = 'webapp/product_controller/domestic';
-$route['product_international'] = 'webapp/product_controller/international';
+$route['product_international'] = 'webapp/product_controller/domestic';
 $route['introduce'] = 'webapp/introduce_controller/index';
 $route['factory'] = 'webapp/factory_controller/index';
 $route['newsandevents'] = 'webapp/news_controller/index';

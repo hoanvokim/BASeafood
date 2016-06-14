@@ -342,28 +342,28 @@ h3 {
 } */
 
 li.dropdown {
-    position:relative;
+    position: relative;
 }
 
 li.dropdown:hover > ul.child-menu {
-    display:block;
+    display: block;
     -webkit-animation: fadeInUp 400ms;
     animation: fadeInUp 400ms;
 }
 
 ul.child-menu {
-    display:none;
-    min-width:500px;
-    position:absolute;
-    top:50px;
-    padding:0 10px;
-    margin:0;
+    display: none;
+    min-width: 500px;
+    position: absolute;
+    top: 50px;
+    padding: 0 10px;
+    margin: 0;
 
 }
 
 .child-icon,
 .child-info {
-    display:block;
+    display: block;
     text-align: center;
 }
 
@@ -377,29 +377,29 @@ ul.child-menu {
 }
 
 li.child-li {
-    display:inline-block;
-    margin-right:5px;
+    display: inline-block;
+    margin-right: 5px;
 }
 
-li.child-li>a{
-    display:block;
-    padding:5px!important;
+li.child-li > a {
+    display: block;
+    padding: 5px !important;
 }
 
-li.child-li>a:hover {
-    color: #2559a5!important;
+li.child-li > a:hover {
+    color: #2559a5 !important;
 }
 
 .orange-color {
-    color:orangered!important;
+    color: orangered !important;
 }
 
 .blue-color {
-    color:cornflowerblue!important;
+    color: cornflowerblue !important;
 }
 
 .purple-color {
-    color:purple!important;
+    color: purple !important;
 }
 
 .orange-bg {
@@ -470,7 +470,7 @@ li.child-li>a:hover {
 **************************/
 
 #footer {
-    position:relative;
+    position: relative;
     padding-bottom: 10px;
     background-image: url(../images/home/footer.png);
     background-repeat: repeat-x;
@@ -640,42 +640,42 @@ li.child-li>a:hover {
 }
 
 ul.ul-feature {
-    padding:0;
-    margin:70px 35px;
+    padding: 0;
+    margin: 70px 35px;
 }
 
-ul.ul-feature>li {
-    border:1px solid #2559a5;
-    padding:5px 5px 5px 5px;
-    margin-top:2px;
-    border-top-left-radius:15px;
-    border-bottom-right-radius:15px;
+ul.ul-feature > li {
+    border: 1px solid #2559a5;
+    padding: 5px 5px 5px 5px;
+    margin-top: 2px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .feature-icon {
-    margin-right:5px;
-    margin-left:5px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .container-home {
-    margin-top:10px;
+    margin-top: 10px;
 }
 
-ul.vertical-slider{
-    margin:0;
-    padding:0;
+ul.vertical-slider {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
-    height:350px;
+    height: 350px;
 }
 
-ul.vertical-slider>li{
-    margin:10px 5px;
+ul.vertical-slider > li {
+    margin: 10px 5px;
 }
 
-.slider-define{
-    width:100%!important;
-    margin:auto!important;
-    margin-top:20px!important;
+.slider-define {
+    width: 100% !important;
+    margin: auto !important;
+    margin-top: 20px !important;
 }
 
 .animate-in .slide-text {
@@ -3115,4 +3115,68 @@ Portfolio with right sidebar
 
 .icon--images {
     width: 100px !important;
+}
+
+.text-product {
+    font-size: 30px;
+    color: white;
+    top: 45%;
+    left: 45%;
+    position: relative;
+}
+
+.text-product--dry {
+    left: 40%;
+}
+
+.text-product--fish {
+    left: 33%;
+    top: 33%;
+}
+
+.text-product--shellfish {
+    left: 22%;
+    top: 33%;
+}
+
+.text-product--molluscs {
+    left: 17%;
+    top: 33%;
+}
+
+.text-product--others {
+    left: 24%;
+    top: 33%;
+}
+
+.bg-frozen {
+    background-image: linear-gradient(#89bbd8, #1d5a8c);
+}
+
+.bg-fish {
+    background-image: linear-gradient(#1f97ea, #004687);
+}
+
+.bg-shellfish {
+    background-image: linear-gradient(#a2dc78, #36842a);
+}
+
+.bg-molluscs {
+    background-image: linear-gradient(#f8c861, #c76c01);
+
+}
+
+.bg-others {
+    background-image: linear-gradient(#d86766, #920b1a);
+}
+
+.bg-dry {
+    background-image: linear-gradient(#a8a7ac, #3b3b39);
+}
+
+.badge-fish {
+    border-radius: 25px;
+    color: white !important;
+    padding-left: 10px;
+    padding-right: 10px;
 }

@@ -119,7 +119,15 @@ class Product_controller extends CI_Controller
 
     public function domestic()
     {
-
+        $total_row = $this->product_model->record_count();
+        //bootstrap pagination
+        $config = $this->initPaginationBootstrap($total_row);
+        //paging
+        $this->pagination->initialize($config);
+        $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
+        $data["products"] = $this->product_model->fetch_data($config["per_page"], $page);
+        $data["links"] = $this->pagination->create_links();
+        $data['total'] = $total_row;
         $data['title'] = 'Products';
         $data['subTitle'] = 'Domestic';
         $this->load->view('pages/webapp/productLayout', $data);
