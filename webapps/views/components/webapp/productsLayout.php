@@ -22,18 +22,14 @@
     <div class="container">
 
         <?php
-            $random_num = 1;
             foreach($tree_sub_menu as $sub_menu){
-                if($random_num > 6){
-                    $random_num = 1;
-                }
             ?>
 
             <div class="row" style="margin-left:0;margin-right:0;">
 
                  <div class="col-md-12 col-xs-12">
                      <div class="row">
-                         <div class="col-md-12 bg-<?php echo $random_num++; ?>  sub-menu"><a href="<?php echo site_url('product/findByCategories/').'/'.$sub_menu['id']; ?>"> <?php
+                         <div class="col-md-12 bg-<?php echo $sub_menu['color_num']; ?>  sub-menu"><a style="display:block;" href="<?php echo site_url('product/findByCategories/').'/'.$sub_menu['id']; ?>"> <?php
                                  if (strcasecmp($_SESSION["activeLanguage"], "en") == 0){
                                      echo $sub_menu['en_name'];
                                  }else{
@@ -50,19 +46,16 @@
                                 $col_last_number = $remain + $col_number;
                          ?>
                          <?php for($i=0;$i<$n-1;$i++){
-                                    if($random_num > 6){
-                                        $random_num = 1;
-                                    }
                                     ?>
-                              <div class="col-md-<?php echo $col_number ?> bg-<?php echo $random_num++; ?> sub-menu"><a href="<?php echo site_url('product/findByCategories/').'/'.$sub_menu['sub_menu'][$i]['id']; ?>">
+                              <div class="col-md-<?php echo $col_number ?> bg-<?php echo $sub_menu['sub_menu'][$i]['color_num']; ?> sub-menu"><a style="display:block;" href="<?php echo site_url('product/findByCategories/').'/'.$sub_menu['sub_menu'][$i]['id']; ?>">
                                       <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0){
                                           echo $sub_menu['sub_menu'][$i]['en_name'];
                                       }else{
                                           echo $sub_menu['sub_menu'][$i]['vi_name'];
                                       } ?></a></div>
-                         <?php } if($random_num > 6){ $random_num = 1; } ?>
+                         <?php }?>
 
-                         <div class="col-md-<?php echo $col_last_number ?> bg-<?php echo $random_num++; ?> sub-menu"><a href="<?php echo site_url('product/findByCategories/').'/'.$sub_menu['sub_menu'][$n-1]['id']; ?>">
+                         <div class="col-md-<?php echo $col_last_number ?> bg-<?php echo $sub_menu['sub_menu'][$n-1]['color_num']; ?> sub-menu"><a style="display:block;" href="<?php echo site_url('product/findByCategories/').'/'.$sub_menu['sub_menu'][$n-1]['id']; ?>">
                                  <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0){
                                      echo $sub_menu['sub_menu'][$n-1]['en_name'];
                                  }else{
@@ -146,12 +139,21 @@
                                      ">
 
                                     <?php
-                                    if($product['atag']!==false){
-                                    foreach($product['atag'] as $tag){ ?>
-                                        <span class="badge-fish bg-fish"><?php echo $tag['tag_name']; ?></span>
-                                    <?php }} ?>
+                                        $color_cat_num = getColorFromTreeSubMenu($tree_sub_menu,$product['fk_category']);
+                                        if($color_cat_num > -1){
+                                    ?>
+                                            <span class="badge-fish bg-<?php echo $color_cat_num; ?>">
+                                                 <?php  if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                                                     echo $product['cat_en_name'];
+                                                 }else{
+                                                     echo $product['cat_vi_name'];
+                                                 }
+                                                 ?>
+                                            </span>
+                                    <?php } ?>
 
                                 <span>
+                                    &nbsp;
                                     <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                                         $limited_word = word_limiter($product['en_name'], 10);
                                         echo $limited_word;

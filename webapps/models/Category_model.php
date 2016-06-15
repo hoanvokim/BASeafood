@@ -28,7 +28,7 @@ class Category_Model extends CI_Model
         return $this->db->get()->result_array();
     }
 
-    public function getFirstLevelSubMenu($parent_id){
+    public function getFirstLevelSubMenu($parent_id, &$color_num){
         $sql = "select * from category where parent = $parent_id";
         $rs = $this->db->query($sql)->result_array();
         $result = array();
@@ -37,6 +37,10 @@ class Category_Model extends CI_Model
             $result[$cnt]['id'] = $item['id'];
             $result[$cnt]['en_name'] = $item['en_name'];
             $result[$cnt]['vi_name'] = $item['vi_name'];
+            if($color_num != -1 && $color_num > 6){
+                $color_num = 1;
+            }
+            $result[$cnt]['color_num'] = $color_num == -1 ? $color_num : $color_num++;
             $cnt++;
         }
         return $result;

@@ -84,14 +84,20 @@ class Product_controller extends CI_Controller
 
         $data['product_menu'] = $this->Category_model->product_menu();
 
-        $aFirst = $this->Category_model->getFirstLevelSubMenu($null_parent);
+        $color_number = -1;
+        $aFirst = $this->Category_model->getFirstLevelSubMenu($null_parent, $color_number);
         $treeSubMenu = array();
         $cnt = 0;
+        $color_number = 1;
         foreach($aFirst as $first){
             $treeSubMenu[$cnt]['id'] = $first['id'];
             $treeSubMenu[$cnt]['en_name'] = $first['en_name'];
             $treeSubMenu[$cnt]['vi_name'] = $first['vi_name'];
-            $treeSubMenu[$cnt]['sub_menu'] = $this->Category_model->getFirstLevelSubMenu($first['id']);
+            if($color_number > 6){
+                $color_number = 1;
+            }
+            $treeSubMenu[$cnt]['color_num'] = $color_number++;
+            $treeSubMenu[$cnt]['sub_menu'] = $this->Category_model->getFirstLevelSubMenu($first['id'],$color_number);
             $cnt++;
         }
 
@@ -116,6 +122,8 @@ class Product_controller extends CI_Controller
             $products[$cnt]['packing'] = $item['packing'];
             $products[$cnt]['url'] = $item['url'];
             $products[$cnt]['fk_category'] = $item['fk_category'];
+            $products[$cnt]['cat_en_name'] = $item['cat_en_name'];
+            $products[$cnt]['cat_vi_name'] = $item['cat_vi_name'];
             $products[$cnt]['atag'] = $this->Tags_model->getTagNameByProductId($item['id']);
             $cnt++;
         }

@@ -125,12 +125,12 @@ class Product_Model extends CI_Model
 
     public function getProductsByCatCollection($aCat, $index_record, $limit){
         if($aCat && count($aCat) > 0){
-            $sql = "select * from product where fk_category in (";
+            $sql = "select product.*, category.en_name as cat_en_name, category.vi_name as cat_vi_name from product, category where fk_category in (";
             $cnt = count($aCat);
             for ($i = 0; $i < $cnt - 1; $i++) {
                 $sql = $sql . $aCat[$i] . ",";
             }
-            $sql = $sql . $aCat[$cnt - 1] . ") order by id DESC limit $index_record,$limit";
+            $sql = $sql . $aCat[$cnt - 1] . ") and fk_category = category.id order by id DESC limit $index_record,$limit";
             return $this->db->query($sql)->result_array();
         }
         return array();
