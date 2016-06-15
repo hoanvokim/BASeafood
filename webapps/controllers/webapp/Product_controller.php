@@ -93,6 +93,7 @@ class Product_controller extends CI_Controller
             $treeSubMenu[$cnt]['id'] = $first['id'];
             $treeSubMenu[$cnt]['en_name'] = $first['en_name'];
             $treeSubMenu[$cnt]['vi_name'] = $first['vi_name'];
+            $treeSubMenu[$cnt]['icon'] = $first['icon'];
             if($color_number > 6){
                 $color_number = 1;
             }

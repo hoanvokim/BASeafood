@@ -22,48 +22,66 @@
     <div class="container">
 
         <?php
-            foreach($tree_sub_menu as $sub_menu){
+        foreach ($tree_sub_menu as $sub_menu) {
             ?>
 
             <div class="row" style="margin-left:0;margin-right:0;">
 
-                 <div class="col-md-12 col-xs-12">
-                     <div class="row">
-                         <div class="col-md-12 bg-<?php echo $sub_menu['color_num']; ?>  sub-menu"><a style="display:block;" href="<?php echo site_url('product/findByCategories/').'/'.$sub_menu['id']; ?>"> <?php
-                                 if (strcasecmp($_SESSION["activeLanguage"], "en") == 0){
+                <div class="col-md-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-12 bg-<?php echo $sub_menu['color_num']; ?>  sub-menu"><a
+                                style="display:block;"
+                                href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['id']; ?>">
+                                <img src="<?php echo base_url() . 'webresources/images/' . $sub_menu['icon'] ?>"/>
+                                 <span>
+                                 <?php
+                                 if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                                      echo $sub_menu['en_name'];
-                                 }else{
+                                 } else {
                                      echo $sub_menu['vi_name'];
                                  }
-                                 ?></a></div>
-                     </div>
-                     <div class="row">
-                         <?php
-                            $n = count($sub_menu['sub_menu']);
-                            if($n>0){
-                                $remain = 12%$n;
-                                $col_number = (12 - $remain) / $n;
-                                $col_last_number = $remain + $col_number;
-                         ?>
-                         <?php for($i=0;$i<$n-1;$i++){
-                                    ?>
-                              <div class="col-md-<?php echo $col_number ?> bg-<?php echo $sub_menu['sub_menu'][$i]['color_num']; ?> sub-menu"><a style="display:block;" href="<?php echo site_url('product/findByCategories/').'/'.$sub_menu['sub_menu'][$i]['id']; ?>">
-                                      <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0){
+                                 ?></span></a></div>
+                    </div>
+                    <div class="row">
+                        <?php
+                        $n = count($sub_menu['sub_menu']);
+                        if ($n > 0) {
+                            $remain = 12 % $n;
+                            $col_number = (12 - $remain) / $n;
+                            $col_last_number = $remain + $col_number;
+                            ?>
+                            <?php for ($i = 0; $i < $n - 1; $i++) {
+                                ?>
+                                <div
+                                    class="col-md-<?php echo $col_number ?> bg-<?php echo $sub_menu['sub_menu'][$i]['color_num']; ?> sub-menu">
+                                    <a style="display:block;"
+                                       href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['sub_menu'][$i]['id']; ?>">
+                                        <img
+                                            src="<?php echo base_url() . 'webresources/images/' . $sub_menu['sub_menu'][$i]['icon'] ?>"/>
+                                 <span>
+                                      <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                                           echo $sub_menu['sub_menu'][$i]['en_name'];
-                                      }else{
+                                      } else {
                                           echo $sub_menu['sub_menu'][$i]['vi_name'];
-                                      } ?></a></div>
-                         <?php }?>
-
-                         <div class="col-md-<?php echo $col_last_number ?> bg-<?php echo $sub_menu['sub_menu'][$n-1]['color_num']; ?> sub-menu"><a style="display:block;" href="<?php echo site_url('product/findByCategories/').'/'.$sub_menu['sub_menu'][$n-1]['id']; ?>">
-                                 <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0){
-                                     echo $sub_menu['sub_menu'][$n-1]['en_name'];
-                                 }else{
-                                     echo $sub_menu['sub_menu'][$n-1]['vi_name'];
-                                 } ?></a></div>
+                                      } ?>
+                                  </span></a></div>
                             <?php } ?>
-                     </div>
-                 </div>
+
+                            <div
+                                class="col-md-<?php echo $col_last_number ?> bg-<?php echo $sub_menu['sub_menu'][$n - 1]['color_num']; ?> sub-menu">
+                                <a style="display:block;"
+                                   href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['sub_menu'][$n - 1]['id']; ?>">
+                                    <img
+                                        src="<?php echo base_url() . 'webresources/images/' . $sub_menu['sub_menu'][$n - 1]['icon'] ?>"/>
+                                 <span>
+                                    <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                                        echo $sub_menu['sub_menu'][$n - 1]['en_name'];
+                                    } else {
+                                        echo $sub_menu['sub_menu'][$n - 1]['vi_name'];
+                                    } ?></span></a></div>
+                        <?php } ?>
+                    </div>
+                </div>
 
             </div>
 
@@ -127,8 +145,7 @@
                                             echo "<br/>";
                                             echo "Packing: " . $product['packing'];
                                             echo "<br/>";
-                                        }
-                                        else {
+                                        } else {
                                             echo "Tên: " . $product['vi_name'];
                                             echo "<br/>";
                                             echo "Cỡ: " . $product['size'];
@@ -139,33 +156,31 @@
                                      ">
 
                                     <?php
-                                        $color_cat_num = getColorFromTreeSubMenu($tree_sub_menu,$product['fk_category']);
-                                        if($color_cat_num > -1){
-                                    ?>
-                                            <span class="badge-fish bg-<?php echo $color_cat_num; ?>">
-                                                 <?php  if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                                    $color_cat_num = getColorFromTreeSubMenu($tree_sub_menu, $product['fk_category']);
+                                    if ($color_cat_num > -1) {
+                                        ?>
+                                        <span class="badge-fish bg-<?php echo $color_cat_num; ?>">
+                                                 <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                                                      echo $product['cat_en_name'];
-                                                 }else{
+                                                 } else {
                                                      echo $product['cat_vi_name'];
                                                  }
                                                  ?>
                                             </span>
                                     <?php } ?>
 
-                                <span>
+                                    <span>
                                     &nbsp;
-                                    <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
-                                        $limited_word = word_limiter($product['en_name'], 10);
-                                        echo $limited_word;
-                                    }
-                                    else {
-                                        $limited_word = word_limiter($product['vi_name'], 10);
-                                        echo $limited_word;
-                                    } ?></span>
+                                        <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                                            $limited_word = word_limiter($product['en_name'], 10);
+                                            echo $limited_word;
+                                        } else {
+                                            $limited_word = word_limiter($product['vi_name'], 10);
+                                            echo $limited_word;
+                                        } ?></span>
                                 </li>
                             <?php }
-                        }
-                        else { ?>
+                        } else { ?>
 
                         <?php } ?>
                     </ul>
