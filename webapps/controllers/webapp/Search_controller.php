@@ -13,12 +13,14 @@ class Search_controller extends CI_Controller
     {
         parent::__construct();
         $this->load->helper('form');
+        $this->load->model('Category_model');
         $this->utilities->loadPropertiesFiles($this->lang);
     }
 
     public function find($tag_name='')
     {
         // or just the username:
+        $data['product_menu'] = $this->Category_model->product_menu();
         $tag = $tag_name==''? $this->input->post("name"): urldecode($tag_name);
         $this->load->model("tags_model");
         $products = $this->tags_model->findProductsByTags($tag);

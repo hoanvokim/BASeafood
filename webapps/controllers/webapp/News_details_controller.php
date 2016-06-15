@@ -12,6 +12,7 @@ class News_details_controller extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('Category_model');
         $this->utilities->loadPropertiesFiles($this->lang);
     }
 
@@ -19,6 +20,7 @@ class News_details_controller extends CI_Controller
     {
         $this->load->model('tags_model');
         $this->load->model('news_model');
+        $data['product_menu'] = $this->Category_model->product_menu();
         $news = $this->news_model->findById($newsId);
         if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
             $data['title'] =  $news['en_title'];

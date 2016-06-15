@@ -82,6 +82,8 @@ class Product_controller extends CI_Controller
 
         $null_parent = $this->Category_model->getLargestParent($category);
 
+        $data['product_menu'] = $this->Category_model->product_menu();
+
         $aFirst = $this->Category_model->getFirstLevelSubMenu($null_parent);
         $treeSubMenu = array();
         $cnt = 0;

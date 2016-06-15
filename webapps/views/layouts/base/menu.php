@@ -57,22 +57,35 @@
                     </li>
                     <li  class="dropdown">
                         <a href="<?php echo site_url('product'); ?>"><?php echo $this->lang->line('MENU_PRODUCT'); ?>
-                            <i
-                                class="fa fa-angle-down"></i></a>
-                        <ul role="menu" class="child-menu">
-                            <li class="child-li">
-                                <a href="<?php echo site_url('product/findByCategories/1'); ?>" class="orange-color font-custom">
-                                    <span class="child-icon"><i class="fa fa-modx"></i></span>
-                                    <span class="child-info"><?php echo $this->lang->line('MENU_DOMESTIC'); ?></span>
-                                </a>
-                            </li>
-                            <li class="child-li">
-                                <a href="<?php echo site_url('product/findByCategories/2'); ?>" class="purple-color font-custom">
-                                    <span class="child-icon"><i class="fa fa-modx"></i></span>
-                                    <span class="child-info"><?php echo $this->lang->line('MENU_INTERNATIONAL'); ?></span>
-                                </a>
-                            </li>
-                        </ul>
+                        <?php if($product_menu && count($product_menu) > 0){ ?>
+                            <i class="fa fa-angle-down"></i></a>
+                            <ul role="menu" class="child-menu">
+
+                                <?php
+                                    $color = 3;
+                                foreach($product_menu as $product_menu_item){ ?>
+
+                                    <li class="child-li">
+                                        <?php
+                                            if($color > 7){
+                                                $color = 1;
+                                            }
+                                        ?>
+                                        <a href="<?php echo site_url('product/findByCategories/').'/'.$product_menu_item['id']; ?>" class="color-<?php echo $color++; ?> font-custom">
+                                            <span class="child-icon"><i class="<?php echo $product_menu_item['icon']; ?>"></i></span>
+                                            <span class="child-info"><?php
+                                                if (strcasecmp($_SESSION["activeLanguage"], "en") == 0){
+                                                    echo $product_menu_item['en_name'];
+                                                }else{
+                                                    echo $product_menu_item['vi_name'];
+                                                } ?></span>
+                                        </a>
+                                    </li>
+
+                                <?php } ?>
+
+                            </ul>
+                        <?php } ?>
                     </li>
                     <li class="dropdown"><a
                             href="<?php echo site_url('introduce'); ?>"><?php echo $this->lang->line('MENU_ABOUT'); ?>

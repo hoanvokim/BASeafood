@@ -14,6 +14,7 @@ class Home_controller extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('Category_model');
         $this->lang->load('message', 'english');
     }
 
@@ -21,7 +22,7 @@ class Home_controller extends CI_Controller
     {
         $_SESSION["activeLanguage"] = "en";
         $data['title'] = 'Baseafood';
-
+        $data['product_menu'] = $this->Category_model->product_menu();
         $this->load->model('features_model');
         $data['features'] = $this->features_model->findAll();
         $this->load->model('sliders_model');

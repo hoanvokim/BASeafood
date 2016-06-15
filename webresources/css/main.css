@@ -390,6 +390,34 @@ li.child-li > a:hover {
     color: #2559a5 !important;
 }
 
+a.color-1 {
+    color:orange!important;
+}
+
+a.color-2 {
+    color:#0000ff!important;
+}
+
+a.color-3 {
+    color:green!important;
+}
+
+a.color-4 {
+    color:mediumpurple!important;
+}
+
+a.color-5 {
+    color:darkred!important;
+}
+
+a.color-6 {
+    color:hotpink!important;
+}
+
+a.color-7 {
+    color:brown!important;
+}
+
 .orange-color {
     color: orangered !important;
 }

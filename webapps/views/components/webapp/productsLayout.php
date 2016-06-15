@@ -33,7 +33,13 @@
 
                  <div class="col-md-12 col-xs-12">
                      <div class="row">
-                         <div class="col-md-12 bg-<?php echo $random_num++; ?>  sub-menu"><a href="<?php echo site_url('product/findByCategories/').'/'.$sub_menu['id']; ?>"> <?php echo $sub_menu['en_name']; ?></a></div>
+                         <div class="col-md-12 bg-<?php echo $random_num++; ?>  sub-menu"><a href="<?php echo site_url('product/findByCategories/').'/'.$sub_menu['id']; ?>"> <?php
+                                 if (strcasecmp($_SESSION["activeLanguage"], "en") == 0){
+                                     echo $sub_menu['en_name'];
+                                 }else{
+                                     echo $sub_menu['vi_name'];
+                                 }
+                                 ?></a></div>
                      </div>
                      <div class="row">
                          <?php
@@ -48,10 +54,20 @@
                                         $random_num = 1;
                                     }
                                     ?>
-                              <div class="col-md-<?php echo $col_number ?> bg-<?php echo $random_num++; ?> sub-menu"><a href="<?php echo site_url('product/findByCategories/').'/'.$sub_menu['sub_menu'][$i]['id']; ?>"> <?php echo $sub_menu['sub_menu'][$i]['en_name']; ?></a></div>
+                              <div class="col-md-<?php echo $col_number ?> bg-<?php echo $random_num++; ?> sub-menu"><a href="<?php echo site_url('product/findByCategories/').'/'.$sub_menu['sub_menu'][$i]['id']; ?>">
+                                      <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0){
+                                          echo $sub_menu['sub_menu'][$i]['en_name'];
+                                      }else{
+                                          echo $sub_menu['sub_menu'][$i]['vi_name'];
+                                      } ?></a></div>
                          <?php } if($random_num > 6){ $random_num = 1; } ?>
 
-                         <div class="col-md-<?php echo $col_last_number ?> bg-<?php echo $random_num++; ?> sub-menu"><a href="<?php echo site_url('product/findByCategories/').'/'.$sub_menu['sub_menu'][$n-1]['id']; ?>"> <?php echo $sub_menu['sub_menu'][$n-1]['en_name']; ?></a></div>
+                         <div class="col-md-<?php echo $col_last_number ?> bg-<?php echo $random_num++; ?> sub-menu"><a href="<?php echo site_url('product/findByCategories/').'/'.$sub_menu['sub_menu'][$n-1]['id']; ?>">
+                                 <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0){
+                                     echo $sub_menu['sub_menu'][$n-1]['en_name'];
+                                 }else{
+                                     echo $sub_menu['sub_menu'][$n-1]['vi_name'];
+                                 } ?></a></div>
                             <?php } ?>
                      </div>
                  </div>

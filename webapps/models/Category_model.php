@@ -55,6 +55,11 @@ class Category_Model extends CI_Model
         return $cateId;
     }
 
+    public function product_menu(){
+        $sql = "select * from category where parent is null";
+        return $this->db->query($sql)->result_array();
+    }
+
     public function isLargestParent($cateId){
         $sql = "select * from category where id=$cateId and parent=null";
         $result = $this->db->query($sql)->result_array();
