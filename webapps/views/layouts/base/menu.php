@@ -71,8 +71,8 @@
                                                 $color = 1;
                                             }
                                         ?>
-                                        <a href="<?php echo site_url('product/findByCategories/').'/'.$product_menu_item['id']; ?>" class="color-<?php echo $color++; ?> font-custom">
-                                            <span class="child-icon"><i class="<?php echo $product_menu_item['icon']; ?>"></i></span>
+                                        <a href="<?php echo site_url('product/findByCategories/').'/'.$product_menu_item['id']; ?>" class="green-color font-custom">
+                                            <span class="child-icon"><img src="<?php echo base_url().'webresources/images/'.$product_menu_item['icon']; ?>" style="width: 60px;"/></span>
                                             <span class="child-info"><?php
                                                 if (strcasecmp($_SESSION["activeLanguage"], "en") == 0){
                                                     echo $product_menu_item['en_name'];
@@ -93,20 +93,20 @@
                                 class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="child-menu">
                             <li class="child-li">
-                                <a href="<?php echo site_url('ourbusiness'); ?>" class="orange-color font-custom">
-                                    <span class="child-icon"><i class="fa fa-modx"></i></span>
+                                <a href="<?php echo site_url('ourbusiness'); ?>" class="green-color font-custom">
+                                    <span class="child-icon"><img src="<?php echo base_url().'webresources/images/business.png' ?>" style="width: 40px;"/></span>
                                     <span class="child-info"><?php echo $this->lang->line('MENU_BUSINESS'); ?></span>
                                 </a>
                             </li>
                             <li class="child-li">
-                                <a href="<?php echo site_url('photos'); ?>" class="purple-color font-custom">
-                                    <span class="child-icon"><i class="fa fa-modx"></i></span>
+                                <a href="<?php echo site_url('photos'); ?>" class="green-color font-custom">
+                                    <span class="child-icon"><img src="<?php echo base_url().'webresources/images/photos.png' ?>" style="width: 40px;"/></span>
                                     <span class="child-info"><?php echo $this->lang->line('MENU_PHOTOS'); ?></span>
                                 </a>
                             </li>
                             <li class="child-li">
-                                <a href="<?php echo site_url('introduce'); ?>" class="blue-color font-custom">
-                                    <span class="child-icon"><i class="fa fa-modx"></i></span>
+                                <a href="<?php echo site_url('introduce'); ?>" class="green-color font-custom">
+                                    <span class="child-icon"><img src="<?php echo base_url().'webresources/images/about.png' ?>" style="width: 40px;"/></span>
                                     <span class="child-info"><?php echo $this->lang->line('MENU_ABOUT'); ?></span>
                                 </a>
                             </li>

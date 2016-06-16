@@ -3178,8 +3178,8 @@ Portfolio with right sidebar
 }
 
 .sub-menu {
-    height:60px;
-    font-size: 18px;
+    height:80px;
+    font-size: 20px;
     text-align: center;
     line-height: 60px;
 }
@@ -3187,7 +3187,12 @@ Portfolio with right sidebar
 .sub-menu a {
     color:#ffffff!important;
 }
-
+.sub-menu span {
+    padding-top: 10px;
+}
+.sub-menu img {
+    height: 88px;
+}
 .bg-1 {
     background-image: linear-gradient(#89bbd8, #1d5a8c);
 }
@@ -3241,6 +3246,5 @@ Portfolio with right sidebar
 .badge-fish {
     border-radius: 25px;
     color: white !important;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 1px 10px;
 }
