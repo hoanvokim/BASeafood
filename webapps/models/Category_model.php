@@ -29,7 +29,7 @@ class Category_Model extends CI_Model
     }
 
     public function getFirstLevelSubMenu($parent_id, &$color_num){
-        $sql = "select * from category where parent = $parent_id";
+        $sql = "select * from category where parent = $parent_id order by number";
         $rs = $this->db->query($sql)->result_array();
         $result = array();
         $cnt = 0;
