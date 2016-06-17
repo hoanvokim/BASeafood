@@ -32,7 +32,7 @@
                         <div class="col-md-12 bg-<?php echo $sub_menu['color_num']; ?>  sub-menu"><a
                                 style="display:block;"
                                 href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['id']; ?>">
-                                <img src="<?php echo base_url() . 'webresources/images/' . $sub_menu['icon'] ?>"/>
+                                <img src="<?php echo base_url() . 'webresources/images/' . $sub_menu['icon-col'] ?>"/>
                                  <span>
                                  <?php
                                  if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
@@ -56,8 +56,7 @@
                                     class="col-md-<?php echo $col_number ?> bg-<?php echo $sub_menu['sub_menu'][$i]['color_num']; ?> sub-menu">
                                     <a style="display:block;"
                                        href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['sub_menu'][$i]['id']; ?>">
-                                        <img
-                                            src="<?php echo base_url() . 'webresources/images/' . $sub_menu['sub_menu'][$i]['icon'] ?>"/>
+                                        <img src="<?php echo base_url() . 'webresources/images/' . $sub_menu['sub_menu'][$i]['icon-col']; ?>"/>
                                  <span>
                                       <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                                           echo $sub_menu['sub_menu'][$i]['en_name'];
@@ -72,7 +71,7 @@
                                 <a style="display:block;"
                                    href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['sub_menu'][$n - 1]['id']; ?>">
                                     <img
-                                        src="<?php echo base_url() . 'webresources/images/' . $sub_menu['sub_menu'][$n - 1]['icon'] ?>"/>
+                                        src="<?php echo base_url() . 'webresources/images/' . $sub_menu['sub_menu'][$n - 1]['icon-col']; ?>"/>
                                  <span>
                                     <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                                         echo $sub_menu['sub_menu'][$n - 1]['en_name'];

@@ -72,7 +72,7 @@
                                             }
                                         ?>
                                         <a href="<?php echo site_url('product/findByCategories/').'/'.$product_menu_item['id']; ?>" class="green-color font-custom">
-                                            <span class="child-icon"><img src="<?php echo base_url().'webresources/images/'.$product_menu_item['icon']; ?>" style="width: 60px;"/></span>
+                                            <span class="child-icon"><img src="<?php echo base_url().'webresources/images/'.$product_menu_item['icon-col']; ?>" style="width: 60px;"/></span>
                                             <span class="child-info"><?php
                                                 if (strcasecmp($_SESSION["activeLanguage"], "en") == 0){
                                                     echo $product_menu_item['en_name'];

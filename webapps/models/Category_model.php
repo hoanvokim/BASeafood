@@ -37,7 +37,7 @@ class Category_Model extends CI_Model
             $result[$cnt]['id'] = $item['id'];
             $result[$cnt]['en_name'] = $item['en_name'];
             $result[$cnt]['vi_name'] = $item['vi_name'];
-            $result[$cnt]['icon'] = $item['icon'];
+            $result[$cnt]['icon-col'] = $item['icon-col'];
             if($color_num != -1 && $color_num > 6){
                 $color_num = 1;
             }
