@@ -60,6 +60,7 @@ $lang['EMAIL_VALUE1'] = 'phuongf34@gmail.com';
 $lang['MANAGER2'] = 'Trưởng phòng kỷ thuật';
 $lang['MANAGER_VALUE2'] = 'Huyền';
 $lang['EMAIL_VALUE2'] = 'huyenf34@gmail.com';
+$lang['GOOGLE_MAP_TITLE'] = 'Địa chỉ công ty';
 // MENU
 $lang['MENU_HOME'] = 'Trang chủ';
 $lang['MENU_INTRODUCE'] = 'Giới thiệu';

@@ -61,6 +61,7 @@ $lang['EMAIL_VALUE1'] = 'phuongf34@gmail.com';
 $lang['MANAGER2'] = 'Technical department';
 $lang['MANAGER_VALUE2'] = 'Mrs. Huyen';
 $lang['EMAIL_VALUE2'] = 'huyenf34@gmail.com';
+$lang['GOOGLE_MAP_TITLE'] = 'Maps';
 // Menu
 $lang['MENU_HOME'] = 'HOME';
 $lang['MENU_INTRODUCE'] = 'Introduce';

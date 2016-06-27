@@ -5,28 +5,6 @@
                 <img src="<?php echo base_url(); ?>/webresources/images/home/under.png" class="img-responsive inline"
                      alt="">
             </div>
-            <div class="col-sm-12 text-center">
-                <div>
-                    <div class="row">
-                        <div class="col-sm-12 col-md-4">
-                            <a href="mailto:tuongf34@gmail.com"><img
-                                    src="<?php echo base_url(); ?>/webresources/images/tuong.jpg"
-                                    class="img-responsive inline" alt="" style="padding: 20px; max-width: 300px;"></a>
-                        </div>
-                        <div class="col-sm-12 col-md-4">
-                            <a href="mailto:phuongf34@gmail.com"><img
-                                    src="<?php echo base_url(); ?>/webresources/images/phuong.jpg"
-                                    class="img-responsive inline" alt="" style="padding: 20px; max-width: 300px;"></a>
-                        </div>
-                        <div class="col-sm-12 col-md-4">
-                            <a href="mailto:huyenf34@gmail.com"> <img
-                                    src="<?php echo base_url(); ?>/webresources/images/huyen.jpg"
-                                    class="img-responsive inline" alt="" style="padding: 20px; max-width: 300px;"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br/>
             <div class="col-md-4 col-sm-12" style="margin-top: 20px;">
 
                 <div class="testimonial bottom">
