@@ -4,6 +4,7 @@
 <meta name="author" content="cosmic">
 <meta name="keywords" content="baseafood">
 <link rel="shortcut icon" href="<?php base_url() ?>webresources/images/ico/site-icon.png">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 <title><?php echo $title ?> | BaSeafood</title>
 <link href="<?php echo base_url(); ?>webresources/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">

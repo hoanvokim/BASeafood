@@ -22,21 +22,22 @@
     <div class="container">
 
         <?php
-            $limit = count($tree_sub_menu) > 2 ? 2 : count($tree_sub_menu);
+        $limit = count($tree_sub_menu) > 2 ? 2 : count($tree_sub_menu);
         ?>
 
         <div class="row" style="margin-left:0;margin-right:0;">
             <?php
-                $i = 0;
-                foreach($tree_sub_menu as $sub_menu){
-                    if($i==0){ ?>
-                      <div class="col-md-9">
-                          <div class="row">
-                              <div class="col-md-12 bg-<?php echo $sub_menu['color_num']; ?>  sub-menu">
-                                  <a
-                                      style="display:block;"
-                                      href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['id']; ?>">
-                                      <img src="<?php echo base_url() . 'webresources/images/' . $sub_menu['icon-col'] ?>"/>
+            $i = 0;
+            foreach ($tree_sub_menu as $sub_menu) {
+                if ($i == 0) { ?>
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-12 bg-<?php echo $sub_menu['color_num']; ?>  sub-menu">
+                                <a
+                                    style="display:block;"
+                                    href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['id']; ?>">
+                                    <img
+                                        src="<?php echo base_url() . 'webresources/images/' . $sub_menu['icon-col'] ?>"/>
                                  <span>
                                  <?php
                                  if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
@@ -45,119 +46,125 @@
                                      echo $sub_menu['vi_name'];
                                  }
                                  ?></span></a>
-                              </div>
-                          </div>
-                          <div class="row">
-                              <?php
-                              $temp = count($sub_menu['sub_menu']);
-                              if($temp > 0){
-                                  $remain = 12 % $temp;
-                                  $col_number = (12 - $remain) / $temp;
-                                  $col_last_number = $remain + $col_number;
-                                  for($j=0;$j<$temp-1;$j++){
-                              ?>
-                                      <div
-                                          class="col-md-<?php echo $col_number ?> bg-<?php echo $sub_menu['sub_menu'][$j]['color_num']; ?> sub-menu">
-                                          <a style="display:block;"
-                                             href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['sub_menu'][$j]['id']; ?>">
-                                              <img src="<?php echo base_url() . 'webresources/images/' . $sub_menu['sub_menu'][$j]['icon-col']; ?>"/>
-                                 <span>
-                                      <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
-                                          echo $sub_menu['sub_menu'][$j]['en_name'];
-                                      } else {
-                                          echo $sub_menu['sub_menu'][$j]['vi_name'];
-                                      } ?>
-                                  </span></a></div>
-                              <?php
-                                  } ?>
-
-                                  <div
-                                      class="col-md-<?php echo $col_last_number ?> bg-<?php echo $sub_menu['sub_menu'][$temp - 1]['color_num']; ?> sub-menu">
-                                      <a style="display:block;"
-                                         href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['sub_menu'][$temp - 1]['id']; ?>">
-                                          <img
-                                              src="<?php echo base_url() . 'webresources/images/' . $sub_menu['sub_menu'][$temp - 1]['icon-col']; ?>"/>
-                                 <span>
-                                    <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
-                                        echo $sub_menu['sub_menu'][$temp - 1]['en_name'];
-                                    } else {
-                                        echo $sub_menu['sub_menu'][$temp - 1]['vi_name'];
-                                    } ?></span></a></div>
-
-                              <?php   } ?>
-                          </div>
-                      </div>
-             <?php
-
-                    }
-                    if($i==1){
-                        ?>
-                        <div class="col-md-3 bg-<?php echo $sub_menu['color_num']; ?>">
-                            <div class="row">
-                                <div class="col-md-12 bg-<?php echo $sub_menu['color_num']; ?>  sub-menu" style="<?php if(count($sub_menu['sub_menu'])==0){ echo 'height:160px;line-height:160px;'; } ?>">
-                                    <a
-                                        style="display:block;"
-                                        href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['id']; ?>">
-                                        <img src="<?php echo base_url() . 'webresources/images/' . $sub_menu['icon-col'] ?>"/>
-                                 <span>
-                                 <?php
-                                 if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
-                                     echo $sub_menu['en_name'];
-                                 } else {
-                                     echo $sub_menu['vi_name'];
-                                 }
-                                 ?></span></a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <?php
-                                $temp = count($sub_menu['sub_menu']);
-                                if($temp > 0){
-                                    $remain = 12 % $temp;
-                                    $col_number = ((12 - $remain) / $temp)-1;
-                                    $col_last_number = $remain + $col_number;
-                                    ?>
-                                    <?php
-                                    for($j=0;$j<$temp;$j++){
-                                        ?>
-
-                                        <div
-                                            class="col-md-<?php echo $col_number ?> bg-<?php echo $sub_menu['sub_menu'][$j]['color_num']; ?> sub-menu">
-                                            <a style="display:block;"
-                                               href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['sub_menu'][$j]['id']; ?>">
-                                                <img src="<?php echo base_url() . 'webresources/images/' . $sub_menu['sub_menu'][$j]['icon-col']; ?>"/>
-                                 <span>
-                                      <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
-                                          echo $sub_menu['sub_menu'][$j]['en_name'];
-                                      } else {
-                                          echo $sub_menu['sub_menu'][$j]['vi_name'];
-                                      } ?>
-                                  </span></a></div>
-                                    <?php
-                                    } ?>
-                                    <div
-                                        class="col-md-<?php echo $col_last_number ?> bg-<?php echo $sub_menu['sub_menu'][$temp - 1]['color_num']; ?> sub-menu">
-                                        <a style="display:block;"
-                                           href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['sub_menu'][$temp - 1]['id']; ?>">
-                                            <img
-                                                src="<?php echo base_url() . 'webresources/images/' . $sub_menu['sub_menu'][$temp - 1]['icon-col']; ?>"/>
-                                 <span>
-                                    <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
-                                        echo $sub_menu['sub_menu'][$temp - 1]['en_name'];
-                                    } else {
-                                        echo $sub_menu['sub_menu'][$temp - 1]['vi_name'];
-                                    } ?></span></a></div>
-                               <?php } ?>
                             </div>
                         </div>
+                        <div class="row">
+                            <?php
+                            $temp = count($sub_menu['sub_menu']);
+                            if ($temp > 0) {
+                                $remain = 12 % $temp;
+                                $col_number = (12 - $remain) / $temp;
+                                $col_last_number = $remain + $col_number;
+                                for ($j = 0; $j < $temp - 1; $j++) {
+                                    ?>
+                                    <div
+                                        class="col-md-3 col-xs-3 bg-<?php echo $sub_menu['sub_menu'][$j]['color_num']; ?> sub-menu">
+                                        <a style="display:block;"
+                                           href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['sub_menu'][$j]['id']; ?>">
+                                            <img
+                                                src="<?php echo base_url() . 'webresources/images/' . $sub_menu['sub_menu'][$j]['icon-col']; ?>"/>
+                                 <span>
+                                      <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                                          echo $sub_menu['sub_menu'][$j]['en_name'];
+                                      } else {
+                                          echo $sub_menu['sub_menu'][$j]['vi_name'];
+                                      } ?>
+                                  </span></a></div>
+                                    <?php
+                                } ?>
+
+                                <div
+                                    class="col-md-3  col-xs-3  bg-<?php echo $sub_menu['sub_menu'][$temp - 1]['color_num']; ?> sub-menu">
+                                    <a style="display:block;"
+                                       href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['sub_menu'][$temp - 1]['id']; ?>">
+                                        <img
+                                            src="<?php echo base_url() . 'webresources/images/' . $sub_menu['sub_menu'][$temp - 1]['icon-col']; ?>"/>
+                                 <span>
+                                    <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                                        echo $sub_menu['sub_menu'][$temp - 1]['en_name'];
+                                    } else {
+                                        echo $sub_menu['sub_menu'][$temp - 1]['vi_name'];
+                                    } ?></span></a></div>
+
+                            <?php } ?>
+                        </div>
+                    </div>
                     <?php
-                    }
-                    $i++;
+
                 }
+                if ($i == 1) {
+                    ?>
+                    <div class="col-md-3 bg-<?php echo $sub_menu['color_num']; ?>">
+                        <div class="row">
+                            <div class="col-md-12 bg-<?php echo $sub_menu['color_num']; ?>  sub-menu"
+                                 style="<?php if (count($sub_menu['sub_menu']) == 0) {
+                                     echo 'height:160px;line-height:160px;';
+                                 } ?>">
+                                <a
+                                    style="display:block;"
+                                    href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['id']; ?>">
+                                    <img
+                                        src="<?php echo base_url() . 'webresources/images/' . $sub_menu['icon-col'] ?>"/>
+                                 <span>
+                                 <?php
+                                 if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                                     echo $sub_menu['en_name'];
+                                 } else {
+                                     echo $sub_menu['vi_name'];
+                                 }
+                                 ?></span></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <?php
+                            $temp = count($sub_menu['sub_menu']);
+                            if ($temp > 0) {
+                                $remain = 12 % $temp;
+                                $col_number = ((12 - $remain) / $temp) - 1;
+                                $col_last_number = $remain + $col_number;
+                                ?>
+                                <?php
+                                for ($j = 0; $j < $temp; $j++) {
+                                    ?>
+
+                                    <div
+                                        class="col-md-<?php echo $col_number ?> bg-<?php echo $sub_menu['sub_menu'][$j]['color_num']; ?> sub-menu">
+                                        <a style="display:block;"
+                                           href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['sub_menu'][$j]['id']; ?>">
+                                            <img
+                                                src="<?php echo base_url() . 'webresources/images/' . $sub_menu['sub_menu'][$j]['icon-col']; ?>"/>
+                                 <span>
+                                      <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                                          echo $sub_menu['sub_menu'][$j]['en_name'];
+                                      } else {
+                                          echo $sub_menu['sub_menu'][$j]['vi_name'];
+                                      } ?>
+                                  </span></a></div>
+                                    <?php
+                                } ?>
+                                <div
+                                    class="col-md-<?php echo $col_last_number ?> bg-<?php echo $sub_menu['sub_menu'][$temp - 1]['color_num']; ?> sub-menu">
+                                    <a style="display:block;"
+                                       href="<?php echo site_url('product/findByCategories/') . '/' . $sub_menu['sub_menu'][$temp - 1]['id']; ?>">
+                                        <img
+                                            src="<?php echo base_url() . 'webresources/images/' . $sub_menu['sub_menu'][$temp - 1]['icon-col']; ?>"/>
+                                 <span>
+                                    <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                                        echo $sub_menu['sub_menu'][$temp - 1]['en_name'];
+                                    } else {
+                                        echo $sub_menu['sub_menu'][$temp - 1]['vi_name'];
+                                    } ?></span></a></div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                    <?php
+                }
+                $i++;
+            }
             ?>
         </div>
 
-<!--        <?php
+        <!--        <?php
         foreach ($tree_sub_menu as $sub_menu) {
             ?>
 
@@ -171,23 +178,23 @@
                                 <img src="<?php echo base_url() . 'webresources/images/' . $sub_menu['icon-col'] ?>"/>
                                  <span>
                                  <?php
-                                 if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
-                                     echo $sub_menu['en_name'];
-                                 } else {
-                                     echo $sub_menu['vi_name'];
-                                 }
-                                 ?></span></a></div>
+            if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                echo $sub_menu['en_name'];
+            } else {
+                echo $sub_menu['vi_name'];
+            }
+            ?></span></a></div>
                     </div>
                     <div class="row">
                         <?php
-                        $n = count($sub_menu['sub_menu']);
-                        if ($n > 0) {
-                            $remain = 12 % $n;
-                            $col_number = (12 - $remain) / $n;
-                            $col_last_number = $remain + $col_number;
-                            ?>
+            $n = count($sub_menu['sub_menu']);
+            if ($n > 0) {
+                $remain = 12 % $n;
+                $col_number = (12 - $remain) / $n;
+                $col_last_number = $remain + $col_number;
+                ?>
                             <?php for ($i = 0; $i < $n - 1; $i++) {
-                                ?>
+                    ?>
                                 <div
                                     class="col-md-<?php echo $col_number ?> bg-<?php echo $sub_menu['sub_menu'][$i]['color_num']; ?> sub-menu">
                                     <a style="display:block;"
@@ -195,10 +202,10 @@
                                         <img src="<?php echo base_url() . 'webresources/images/' . $sub_menu['sub_menu'][$i]['icon-col']; ?>"/>
                                  <span>
                                       <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
-                                          echo $sub_menu['sub_menu'][$i]['en_name'];
-                                      } else {
-                                          echo $sub_menu['sub_menu'][$i]['vi_name'];
-                                      } ?>
+                        echo $sub_menu['sub_menu'][$i]['en_name'];
+                    } else {
+                        echo $sub_menu['sub_menu'][$i]['vi_name'];
+                    } ?>
                                   </span></a></div>
                             <?php } ?>
 
@@ -210,10 +217,10 @@
                                         src="<?php echo base_url() . 'webresources/images/' . $sub_menu['sub_menu'][$n - 1]['icon-col']; ?>"/>
                                  <span>
                                     <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
-                                        echo $sub_menu['sub_menu'][$n - 1]['en_name'];
-                                    } else {
-                                        echo $sub_menu['sub_menu'][$n - 1]['vi_name'];
-                                    } ?></span></a></div>
+                    echo $sub_menu['sub_menu'][$n - 1]['en_name'];
+                } else {
+                    echo $sub_menu['sub_menu'][$n - 1]['vi_name'];
+                } ?></span></a></div>
                         <?php } ?>
                     </div>
                 </div>

@@ -4,9 +4,7 @@
             <div class="col-sm-12 overflow">
                 <div class="social-icons pull-right">
                     <ul class="nav nav-pills">
-                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="https://www.facebook.com/baseafood1/"><i class="fa fa-facebook"></i></a></li>
                         <li>
                             <?php
                             $attributes = array('id' => 'languageForm');
@@ -56,7 +54,7 @@
                             href="<?php echo site_url('home'); ?>"><?php echo $this->lang->line('MENU_HOME'); ?></a>
                     </li>
                     <li  class="dropdown">
-                        <a href="<?php echo site_url('product'); ?>"><?php echo $this->lang->line('MENU_PRODUCT'); ?>
+                        <a ><?php echo $this->lang->line('MENU_PRODUCT'); ?>
                         <?php if($product_menu && count($product_menu) > 0){ ?>
                             <i class="fa fa-angle-down"></i></a>
                             <ul role="menu" class="child-menu">

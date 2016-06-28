@@ -14,19 +14,41 @@
 
 <div id="map" style="text-align: center" class="container">
     <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-7 col-sm-12" id="maps-section">
             <h3><img src="<?php echo base_url() . 'webresources/images/maps.png'; ?>"/>
                 <span><?php echo $this->lang->line('GOOGLE_MAP_TITLE'); ?></span></h3>
             <div class="overlay" onClick="style.pointerEvents='none'"></div>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.1879392011488!2d107.17178816410873!3d10.485845992922625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDI5JzA5LjEiTiAxMDfCsDEwJzI2LjEiRQ!5e0!3m2!1sen!2s!4v1466955062737"
-                width="100%" height="450px" frameborder="1" style="border:none;" allowfullscreen></iframe>
+            <div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.1879392011488!2d107.17178816410873!3d10.485845992922625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDI5JzA5LjEiTiAxMDfCsDEwJzI2LjEiRQ!5e0!3m2!1sen!2s!4v1466955062737"
+                    width="100%" height="450px" frameborder="1" style="border:none;" allowfullscreen></iframe>
+            </div>
+            <div class="contact-info text-right">
+                <h2 class="uppercase"><?php echo $this->lang->line('BASEAFOOD1'); ?></h2>
+                <address>
+                    <?php echo $this->lang->line('MANAGER'); ?>: <?php echo $this->lang->line('MANAGER_VALUE'); ?><br>
+                    <?php echo $this->lang->line('EMAIL'); ?>: <a
+                        href="mailto:<?php echo $this->lang->line('EMAIL_VALUE'); ?>"><?php echo $this->lang->line('EMAIL_VALUE'); ?></a>
+                    <br>
+                    <?php echo $this->lang->line('PHONE'); ?>: <a
+                        href="tel:<?php echo $this->lang->line('PHONE_VALUE'); ?>"><?php echo $this->lang->line('PHONE_VALUE'); ?></a>
+                    <br>
+                    <?php echo $this->lang->line('FAX'); ?>: <?php echo $this->lang->line('FAX_VALUE'); ?><br>
+                </address>
+
+                <h2><?php echo $this->lang->line('ADDRESS'); ?></h2>
+                <address>
+                    <?php echo $this->lang->line('ADDRESS_VALUE'); ?>
+                </address>
+            </div>
+            </address>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5 col-sm-12">
             <div style="margin-top: 20px;">
                 <p>
-                    <i class="ion ion-ios-location-outline"></i> <img src="<?php echo base_url() . 'webresources/images/contact-us.png'; ?>" style="height: 84px;"/>
-                <span class="uppercase" >
+                    <i class="ion ion-ios-location-outline"></i> <img
+                        src="<?php echo base_url() . 'webresources/images/contact-us.png'; ?>" style="height: 84px;"/>
+                <span class="uppercase">
                     <?php echo $this->lang->line('PERSONAL_CONTACT'); ?>
                 </span>
                 </p>
