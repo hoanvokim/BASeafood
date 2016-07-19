@@ -11,7 +11,7 @@ $lang['BASEAFOOD'] = 'baseafood';
 $lang['BASEAFOOD1'] = 'baseafood1';
 $lang['FEATURES'] = 'Professional - Dynamic - Developing';
 $lang['VIEW_MORE'] = 'View More!';
-$lang['OUR_CERTIFICATES'] = 'Our Certifications';
+$lang['OUR_CERTIFICATES'] = 'Certifications';
 $lang['OUR_CERTIFICATES_INTRO'] = 'Complete all standard to brings the good products to you.';
 $lang['CLIENTS'] = 'Happy Clients';
 $lang['CLIENTS_INTRO'] = 'All of customers and companies trust and using our products.';
@@ -85,4 +85,6 @@ $lang['NO_PHOTOS'] = 'Sorry! We don\'t have any photos!';
 //
 $lang['MENU_DOMESTIC'] = 'Domesic';
 $lang['MENU_INTERNATIONAL'] = ' International';
+$lang['INDEX-SLOGAN'] = 'Keep up to date with the latest news &amp; products… Sign up to our e-newsletter… ';
+$lang['INDEX-SLOGAN-BTN'] = 'Inspire Me';
 ?>

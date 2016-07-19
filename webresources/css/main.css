@@ -3267,7 +3267,6 @@ Portfolio with right sidebar
 }
 
 .contact-information:hover {
-    background: #004687;
     transition: all 0.2s ease 0s;
 }
 
@@ -3298,6 +3297,7 @@ Portfolio with right sidebar
 
 .single_why h3 {
     text-transform: uppercase;
+    font-weight: 1400;
 }
 
 .single_why i {
@@ -3326,4 +3326,82 @@ Portfolio with right sidebar
     width: 30px;
     border: 2px solid #0075ff;
     background: #0075ff none repeat scroll 0 0;
+}
+
+#sub {
+    background-image: url(../images/ocean-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    position: relative;
+    /* top: 890px; */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.wrapper {
+    width: 1024px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul#subscribe-post {
+    margin: 0;
+    padding: 0;
+}
+
+ul#subscribe-post li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 75%;
+    margin-right: 4%;
+    vertical-align: top;
+    position: relative;
+}
+
+ul#subscribe-post li h4 {
+    font-size: 2em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+    color: #fff;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+}
+
+p.blkfont20 {
+    font-size: 1.2em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+    color: #fff;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+}
+
+ul#subscribe-post li:last-child {
+    margin-right: 0;
+    width: 20%;
+}
+
+.input-submit {
+    border: none;
+    font-size: 1.1em;
+    background-color: #004990;
+    color: #fff;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: background-color;
+    transition-property: background-color;
+    position: absolute;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 35px;
+    margin-top: 15px;
 }

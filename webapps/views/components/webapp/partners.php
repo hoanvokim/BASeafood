@@ -26,9 +26,16 @@
         </div>
     </div>
 </section>  -->
+<div class="row">
+    <div class="col-sm-12 col-md-12">
+                <span class="uppercase" style="font-size: 25px; font-weight: 300; color: #0b598d">
+                    <?php echo $this->lang->line('OUR_CERTIFICATES'); ?>
+                </span>
+        <span class="line"></span>
+    </div>
 
-<marquee direction="down">
-
+</div>
+<marquee behavior="scroll" direction="down">
     <ul class="vertical-slider">
         <li class="text-center"><img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/1.png" alt="img"></li>
         <li class="text-center"><img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/2.png" alt="img"></li>
@@ -44,7 +51,6 @@
         <li class="text-center"><img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/12.jpg" alt="img"></li>
         <li class="text-center"><img class="certificates__img" src="<?php echo base_url(); ?>webresources/images/certificates/13.jpg" alt="img"></li>
     </ul>
-
 </marquee>
 
 

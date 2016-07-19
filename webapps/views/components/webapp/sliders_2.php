@@ -1,4 +1,4 @@
-<section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5">
+<section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="margin-top: -60px;">
     <div id="why_choose" class="carousel slide" data-ride="carousel" data-interval="9999999">
         <ol class="carousel-indicators">
             <?php $counter = 0;
@@ -15,11 +15,11 @@
                 <div class="item  <?php if ($counter == 0) echo 'active'; ?>">
                     <div class="single_why">
                         <i class="<?php echo $feature->title_icon; ?>"></i>
-                        <h3><?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                        <strong><h3><?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                                 echo $feature->en_name;
                             } else {
                                 echo $feature->vi_name;
-                            } ?></h3>
+                            } ?></h3></strong>
                         <span></span>
                         <p><?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                                 echo $feature->en_content;

@@ -83,4 +83,6 @@ $lang['TOTAL_PRODUCT'] = ' sản phẩm';
 $lang['NO_PHOTOS'] = 'Xin lỗi! Chúng tôi không có hình ảnh để thể hiện!';
 $lang['MENU_DOMESTIC'] = 'Nội địa';
 $lang['MENU_INTERNATIONAL'] = 'Xuất khẩu';
+$lang['INDEX-SLOGAN'] = 'Hãy liên lạc ngay với chúng tôi bằng thư điện tử, để có được những tin tức và sản phẩm...';
+$lang['INDEX-SLOGAN-BTN'] = 'Gửi mail';
 ?>
