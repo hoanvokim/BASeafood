@@ -3405,3 +3405,22 @@ ul#subscribe-post li:last-child {
     padding: 10px 35px;
     margin-top: 15px;
 }
+
+.title-bg {
+    height: 450px;
+}
+
+.blue-bg {
+    background-color: #2458a4;
+}
+
+.module {
+    position: relative;
+    padding: 140px 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}

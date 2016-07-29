@@ -87,4 +87,6 @@ $lang['MENU_DOMESTIC'] = 'Domesic';
 $lang['MENU_INTERNATIONAL'] = ' International';
 $lang['INDEX-SLOGAN'] = 'Keep up to date with the latest news &amp; products… Sign up to our e-newsletter… ';
 $lang['INDEX-SLOGAN-BTN'] = 'Inspire Me';
+$lang['HOW-TO'] = 'How to achieve an healthy life?';
+$lang['HOW-TO-1'] = 'Healthy living is within your reach, starting today. Sure, healthy living is a long-term commitment, not a flash-in-the-pan fad. But there are steps you can take right now that will make today healthier than yesterday and pave the way for healthy living tomorrow, too. Here\'s your checklist of practical healthy living tips that are ready to go. Let\'s get started.';
 ?>

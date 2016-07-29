@@ -85,4 +85,6 @@ $lang['MENU_DOMESTIC'] = 'Nội địa';
 $lang['MENU_INTERNATIONAL'] = 'Xuất khẩu';
 $lang['INDEX-SLOGAN'] = 'Hãy liên lạc ngay với chúng tôi bằng thư điện tử, để có được những tin tức và sản phẩm...';
 $lang['INDEX-SLOGAN-BTN'] = 'Gửi mail';
+$lang['HOW-TO'] = 'Cách đạt được một cuộc sống khoẻ?';
+$lang['HOW-TO-1'] = 'Đạt được một cuộc sống khoẻ mạnh, hoàn toàn trong khả năng của bạn. Hãy bắt đầu ngay hôm nay. Để đạt được điều nay là một nỗ lực trong thời gian dài, không phải dễ dàng. Nhưng đây sẽ là vài cách để có cuộc sống tốt hơn ngày hôm qua. Đây là danh sách các mục bạn cần làm, hãy bắt đầu ngay nhé!';
 ?>
