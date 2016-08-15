@@ -175,6 +175,10 @@ ul.flags li > a > div.vn > span {
     -o-transition: opacity 0.5s;
 }
 
+ul.flags li > a > div.vn > span.active {
+    opacity: 1;
+}
+
 ul.flags li > a > div.vn > span:hover {
     opacity: 1;
     cursor: pointer;
@@ -185,7 +189,7 @@ ul.flags li > a > div.en {
     height: 46px;
     background: url(../images/flags.png) no-repeat;
     display: block;
-    background-position: 0 -47px;
+    background-position: -47px -47px;
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
@@ -202,6 +206,10 @@ ul.flags li > a > div.en > span {
     -webkit-transition: opacity 0.5s;
     -moz-transition: opacity 0.5s;
     -o-transition: opacity 0.5s;
+}
+
+ul.flags li > a > div.en > span.active {
+    opacity: 1;
 }
 
 ul.flags li > a > div.en > span:hover {

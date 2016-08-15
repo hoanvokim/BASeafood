@@ -26,7 +26,7 @@
                                    data-on="<i class='fa fa-language'></i> Eng &nbsp;&nbsp;"
                                    data-off="<i class='fa fa-language'></i> Vie &nbsp;&nbsp;"
                                    data-size="mini"/>
-                            </form
+                            </form>
                         </li>
                     </ul>
                 </div>

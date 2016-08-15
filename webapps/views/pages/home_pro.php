@@ -19,17 +19,28 @@
 <body>
 <div id="main">
     <div id="language">
+        <form action="<?php echo base_url(); ?>switchlanguage" id="languageForm" method="post" accept-charset="utf-8">
+        <input type="hidden" name="redirurl" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
         <ul class="flags">
-            <li><a href="http://www.pacificwestfoods.com.fr/index.php" target="_blank">
-                    <div class="en"><span></span></div>
+            <li><a id="en_lang">
+                    <div class="en"><span class="<?php
+                        if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                            echo 'active';
+                        }
+                        ?>"></span></div>
                 </a><br>English
             </li>
 
-            <li><a href="http://retail.pacificwest.com.au/" target="_blank">
-                    <div class="vn"><span></span></div>
+            <li><a id="vi_lang">
+                    <div class="vn"><span class="<?php
+                        if (strcasecmp($_SESSION["activeLanguage"], "vi") == 0) {
+                            echo 'active';
+                        }
+                        ?>"></span></div>
                 </a><br>Vietnamese
             </li>
-        </ul>
+        </ul> 
+        </form>
     </div>
     <div class="bss-slides" autofocus="autofocus">
         <figure>
@@ -121,6 +132,12 @@ Copyright © Baseafood1. All Rights Reserved
         src="<?php echo base_url(); ?>webresources/css/owl-carousel/js/owl.carousel.min.js"></script>
 <script>
     $(document).ready(function () {
+        $( "#en_lang" ).click(function() {
+            $( "#languageForm" ).submit();
+        });
+        $( "#vi_lang" ).click(function() {
+            $( "#languageForm" ).submit();
+        });
         $("#owl-partners").owlCarousel({
             items: 5,
             itemsDesktop: [800, 5],

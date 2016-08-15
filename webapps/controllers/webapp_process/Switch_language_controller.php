@@ -25,7 +25,7 @@ class Switch_language_controller extends CI_Controller
         }
         //redirect to current page
         if (strcasecmp($this->input->post('redirurl'), "/") == 0) {
-            redirect($this->input->post('redirurl') . "home");
+            redirect($this->input->post('redirurl') . "home_pro");
         }
         else {
             redirect($this->input->post('redirurl'));

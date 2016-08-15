@@ -22,13 +22,14 @@ class Home_controller extends CI_Controller
     {
         $_SESSION["activeLanguage"] = "en";
         $data['title'] = 'Baseafood';
-//        $data['product_menu'] = $this->Category_model->product_menu();
-//        $this->load->model('features_model');
-//        $data['features'] = $this->features_model->findAll();
-//        $this->load->model('sliders_model');
-//        $data['sliders'] = $this->sliders_model->findAll();
-//        $this->load->model('news_model');
-//        $data['news'] = $this->news_model->getAll();
+        $data['product_menu'] = $this->Category_model->product_menu();
+        $this->load->model('features_model');
+        $data['features'] = $this->features_model->findAll();
+        $this->load->model('sliders_model');
+        $data['sliders'] = $this->sliders_model->findAll();
+        $this->load->model('news_model');
+        $data['news'] = $this->news_model->getAll();
         $this->load->view('pages/home_pro', $data);
+//        $this->load->view('pages/home', $data);
     }
 }
