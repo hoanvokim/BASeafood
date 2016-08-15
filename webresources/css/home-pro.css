@@ -1,0 +1,357 @@
+
+body {
+    background: url(../images/home-bg.png) no-repeat fixed;
+    background-size: cover;
+    color: #fff;
+    font-size: .81em;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans Semibold";
+}
+
+html {
+    height: 100%;
+}
+
+#main {
+    width: 800px;
+    height: 800px;
+    background: url(../images/home-page.png) no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+#partners-section {
+    color: #0a5a90;
+    width: 750px;
+    background-color: white;
+    margin-left: 28px;
+    margin-right: auto;
+    position: absolute;
+    margin-top: 600px;
+}
+
+.page-header-wrapper {
+    text-align: center;
+}
+
+#language {
+    position: absolute;
+    margin-top: 71px;
+    width: 200px;
+    height: 100px;
+    right: 21px;
+}
+
+ul.flags {
+    font-family: "Open Sans Semibold";
+    font-size: 10.5px;
+    line-height: 11px;
+    color: #666;
+    position: absolute;
+    right: 40px;
+    bottom: 97px;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: normal;
+    padding-left: 20px;
+    text-align: center;
+}
+
+ul.flags li {
+    margin: 0;
+    padding: 0;
+    padding-right: 15px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+
+}
+
+ul.flags li:last-child {
+    padding-right: 0px;
+}
+
+@-moz-document url-prefix() {
+    ul.flags {
+        font-family: "Open Sans Semibold";
+        font-size: 10.5px;
+        line-height: 11px;
+        color: #666;
+        position: absolute;
+        /*right:40px;*/
+        bottom: 97px;
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+@media only screen and (max-width: 785px) {
+    ul.flags {
+        font-family: "Open Sans Semibold";
+        font-size: 10.5px;
+        line-height: 11px;
+        color: #666;
+        position: relative;
+        left: 0;
+        bottom: 30%;
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    ul.flags li {
+        margin: 0;
+        padding: 0;
+        padding-right: 15px;
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    ul.flags {
+        font-family: "Open Sans Semibold";
+        font-size: 10.5px;
+        line-height: 11px;
+        color: #666;
+        position: relative;
+        /*left:11%;*/
+        bottom: 50%;
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+        font-style: normal;
+
+    }
+
+    ul.flags li {
+        margin: 0;
+        padding: 0;
+        padding-right: 15px;
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        width: 28%;
+
+    }
+
+    ul.flags li:nth-child(3) {
+        padding-right: 0px;
+    }
+
+}
+
+ul.flags li > a > div.vn {
+    width: 46px;
+    height: 46px;
+    background: url(../images/flags.png) no-repeat;
+    display: block;
+    background-position: -47px 0;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul.flags li > a > div.vn > span {
+    width: 46px;
+    height: 46px;
+    background: url(../images/flags.png) no-repeat;
+    display: block;
+    background-position: 0 0;
+    margin-top: 15px;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+}
+
+ul.flags li > a > div.vn > span:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+ul.flags li > a > div.en {
+    width: 46px;
+    height: 46px;
+    background: url(../images/flags.png) no-repeat;
+    display: block;
+    background-position: 0 -47px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul.flags li > a > div.en > span {
+    width: 46px;
+    height: 46px;
+    background: url(../images/flags.png) no-repeat;
+    display: block;
+    background-position: 0 -47px;
+    margin-top: 15px;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+}
+
+ul.flags li > a > div.en > span:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#footer {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.fb {
+    position: absolute;
+    left: 100px;
+    top: -45px;
+    display: block;
+    width: 200px;
+}
+
+.fb img {
+    position: relative;
+    top: 20px;
+}
+
+.copy {
+    position: absolute;
+    right: 100px;
+    top: -3px;
+}
+
+@media only screen and (max-width: 980px) {
+    #footer {
+        width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        font-size: .9em;
+    }
+
+    .fb {
+        position: absolute;
+        left: 2%;
+        top: -30px;
+        display: block;
+        width: 200px;
+    }
+
+    .fb > a {
+        font-size: 1em;
+    }
+
+    .fb img {
+        position: relative;
+        top: 20px;
+    }
+
+    .copy {
+        position: absolute;
+        left: 3.5%;
+        top: 45px;
+        padding-bottom: 5%;
+        width: 100%;
+    }
+
+    .copy > a {
+        font-size: 1em;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+    #footer {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        font-size: .9em;
+    }
+
+    .fb {
+        position: absolute;
+        left: 0;
+        top: -30px;
+        display: block;
+        width: 200px;
+    }
+
+    .fb > a {
+        font-size: 1em;
+    }
+
+    .fb img {
+        position: relative;
+        top: 20px;
+    }
+
+    .copy {
+        position: absolute;
+        left: 0;
+        top: 45px;
+        padding-bottom: 5%;
+        width: 100%;
+    }
+
+    .copy > a {
+        font-size: 1em;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    #footer {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        font-size: .9em;
+    }
+
+    .fb {
+        position: absolute;
+        left: 0;
+        top: -30px;
+        display: block;
+        width: 200px;
+    }
+
+    .fb > a {
+        font-size: 1em;
+    }
+
+    .fb img {
+        position: relative;
+        top: 20px;
+    }
+
+    .copy {
+        position: absolute;
+        left: 0;
+        top: 45px;
+        padding-bottom: 5%;
+        width: 100%;
+        padding-left: 5%;
+    }
+
+    .copy > a {
+        font-size: 1em;
+    }
+
+}

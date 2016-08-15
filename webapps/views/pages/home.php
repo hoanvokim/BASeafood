@@ -34,30 +34,6 @@
     </div>
 </div>
 
-<section id="about" class="module blue-bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-                <div class="row">
-                    <div class="col-sm-4 text-right">
-                        <i class="wow fadeInRight animated" style="visibility: visible; animation-name: fadeIn;"><img
-                                src="<?php echo base_url(); ?>webresources/images/healthy-life.png"
-                                style="width: 200px;"> </i>
-                    </div>
-                    <div class="col-sm-7 col-sm-offset-1">
-                        <i class="wow fadeInRight animated" style="visibility: visible; animation-name: fadeInRight;">
-                            <h2 class="h4" style="color: #fff;"><?php echo $this->lang->line('HOW-TO'); ?></h2>
-                            <p class="color-secondary" style="color: #fff;">
-                                <?php echo $this->lang->line('HOW-TO-1'); ?>
-                            </p>
-                        </i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <div id="sub">
     <div class="wrapper">
         <ul id="subscribe-post">
