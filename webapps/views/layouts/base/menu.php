@@ -43,7 +43,7 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="<?php echo site_url('home'); ?>">
+                <a class="navbar-brand" href="<?php echo site_url('home_pro'); ?>">
                     <h1><img src="<?php echo base_url(); ?>/webresources/images/flag.png" alt="logo"></h1>
                 </a>
 
@@ -51,7 +51,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a
-                            href="<?php echo site_url('home'); ?>"><?php echo $this->lang->line('MENU_HOME'); ?></a>
+                            href="<?php echo site_url('home_pro'); ?>"><?php echo $this->lang->line('MENU_HOME'); ?></a>
                     </li>
                     <li  class="dropdown">
                         <a ><?php echo $this->lang->line('MENU_PRODUCT'); ?>

@@ -17,30 +17,36 @@
     <link href="<?php echo base_url(); ?>webresources/css/owl-carousel/css/owl.theme.css" rel="stylesheet">
 </head>
 <body>
-<div id="main">
+<div class="main <?php
+if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+    echo 'en';
+} else {
+    echo 'vi';
+}
+?>">
     <div id="language">
         <form action="<?php echo base_url(); ?>switchlanguage" id="languageForm" method="post" accept-charset="utf-8">
-        <input type="hidden" name="redirurl" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
-        <input type="hidden" name="type" id="type"/>
-        <ul class="flags">
-            <li><a id="en_lang">
-                    <div class="en"><span class="<?php
-                        if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
-                            echo 'active';
-                        }
-                        ?>"></span></div>
-                </a><br>English
-            </li>
+            <input type="hidden" name="redirurl" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
+            <input type="hidden" name="type" id="type"/>
+            <ul class="flags">
+                <li><a id="en_lang">
+                        <div class="en"><span class="<?php
+                            if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
+                                echo 'active';
+                            }
+                            ?>"></span></div>
+                    </a><br>English
+                </li>
 
-            <li><a id="vi_lang">
-                    <div class="vn"><span class="<?php
-                        if (strcasecmp($_SESSION["activeLanguage"], "vi") == 0) {
-                            echo 'active';
-                        }
-                        ?>"></span></div>
-                </a><br>Vietnamese
-            </li>
-        </ul> 
+                <li><a id="vi_lang">
+                        <div class="vn"><span class="<?php
+                            if (strcasecmp($_SESSION["activeLanguage"], "vi") == 0) {
+                                echo 'active';
+                            }
+                            ?>"></span></div>
+                    </a><br>Vietnamese
+                </li>
+            </ul>
         </form>
     </div>
     <div class="bss-slides" autofocus="autofocus">
@@ -73,9 +79,9 @@
     </div>
     <div id="menu">
         <ul>
-            <li>Products</li>
-            <li>About Us</li>
-            <li>Products</li>
+            <li><a href="<?php echo site_url('product/findByCategories/').'/1'; ?>"><?php echo $this->lang->line('MENU_PRODUCT'); ?></a></li>
+            <li><a href="<?php echo site_url('introduce'); ?>"><?php echo $this->lang->line('MENU_ABOUT'); ?></a></li>
+            <li><a href="<?php echo site_url('contact'); ?>"><?php echo $this->lang->line('MENU_CONTACT'); ?></a></li>
         </ul>
     </div>
     <div id="partners-section">
@@ -139,13 +145,13 @@ Copyright © Baseafood1. All Rights Reserved
         src="<?php echo base_url(); ?>webresources/css/owl-carousel/js/owl.carousel.min.js"></script>
 <script>
     $(document).ready(function () {
-        $( "#en_lang" ).click(function() {
-            $( "#type" ).val('en');
-            $( "#languageForm" ).submit();
+        $("#en_lang").click(function () {
+            $("#type").val('en');
+            $("#languageForm").submit();
         });
-        $( "#vi_lang" ).click(function() {
-            $( "#type" ).val('vi');
-            $( "#languageForm" ).submit();
+        $("#vi_lang").click(function () {
+            $("#type").val('vi');
+            $("#languageForm").submit();
         });
         $("#owl-partners").owlCarousel({
             items: 5,

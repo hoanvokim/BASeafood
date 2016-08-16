@@ -14,13 +14,53 @@ html {
     height: 100%;
 }
 
-#main {
+.main.en {
     width: 800px;
-    height: 800px;
+    height: 908px;
     background: url(../images/home-page.png) no-repeat;
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    margin-top: -18px;
+}
+
+.main.vi {
+    width: 800px;
+    height: 908px;
+    background: url(../images/home-page-vi.png) no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: -18px;
+}
+
+#menu {
+    color: white;
+    font-size: 20px;
+    width: 750px;
+    margin-left: 28px;
+    margin-right: auto;
+    position: absolute;
+    margin-top: 610px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#menu ul li {
+    background-color: #0a5a90;
+    display: inline-block;
+    border: solid 1px #2e4c95;
+    box-shadow: 7px 7px 16px rgba(152, 152, 152, 0.21);
+    border-radius: 5px 5px 5px 5px;
+    text-align: center;
+    padding: 15px;
+}
+
+#menu ul li a {
+    color: inherit;
+    text-decoration: none;
 }
 
 #partners-section {
@@ -30,7 +70,7 @@ html {
     margin-left: 28px;
     margin-right: auto;
     position: absolute;
-    margin-top: 600px;
+    margin-top: 710px;
 }
 
 .page-header-wrapper {
