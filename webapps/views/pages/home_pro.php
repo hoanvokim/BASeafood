@@ -21,6 +21,7 @@
     <div id="language">
         <form action="<?php echo base_url(); ?>switchlanguage" id="languageForm" method="post" accept-charset="utf-8">
         <input type="hidden" name="redirurl" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
+        <input type="hidden" name="type" id="type"/>
         <ul class="flags">
             <li><a id="en_lang">
                     <div class="en"><span class="<?php
@@ -70,15 +71,21 @@
         </figure>
 
     </div>
-
+    <div id="menu">
+        <ul>
+            <li>Products</li>
+            <li>About Us</li>
+            <li>Products</li>
+        </ul>
+    </div>
     <div id="partners-section">
         <!-- Begin page header-->
         <div class="page-header-wrapper">
             <div class="container">
                 <div class="page-header text-center wow fadeInDown" data-wow-delay="0.4s">
-                    <h1 class="title">Our Certifications</h1>
+                    <h1 class="title"><?php echo $this->lang->line('OUR_CERTIFICATES'); ?></h1>
                     <div class="devider"></div>
-                    <p class="subtitle">Complete all standard to brings the good products to you.</p>
+                    <p class="subtitle"><?php echo $this->lang->line('OUR_CERTIFICATES_INTRO'); ?></p>
                 </div>
             </div>
         </div>
@@ -133,9 +140,11 @@ Copyright © Baseafood1. All Rights Reserved
 <script>
     $(document).ready(function () {
         $( "#en_lang" ).click(function() {
+            $( "#type" ).val('en');
             $( "#languageForm" ).submit();
         });
         $( "#vi_lang" ).click(function() {
+            $( "#type" ).val('vi');
             $( "#languageForm" ).submit();
         });
         $("#owl-partners").owlCarousel({

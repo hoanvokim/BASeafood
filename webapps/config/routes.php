@@ -54,7 +54,7 @@ $route['default_controller'] = 'home_controller/index';
 $route['demo'] = 'webapp/demo_controller/index';
 
 //webapp pages
-$route['home-pro'] = 'webapp/user_home_controller/index';
+$route['home_pro'] = 'webapp/user_home_pro_controller/index';
 $route['home'] = 'webapp/user_home_controller/index';
 $route['product_domestic'] = 'webapp/product_controller/domestic';
 $route['product_international'] = 'webapp/product_controller/domestic';
