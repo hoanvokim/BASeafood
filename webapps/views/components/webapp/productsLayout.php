@@ -1,23 +1,3 @@
-<section id="page-breadcrumb">
-    <div class="vertical-center sun">
-        <div class="container">
-            <div class="row">
-                <div class="action">
-                    <div class="col-sm-12" style="padding: 20px 30px 20px 30px;">
-                        <h1 class="title">
-                            <?php echo $this->lang->line('MENU_PRODUCT'); ?>
-                            <p>
-                                <?php echo $subTitle; ?>
-                            </p>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--/#action-->
-
 <section id="product">
     <div class="container">
 

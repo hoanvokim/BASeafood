@@ -12,6 +12,7 @@
     <title>HomePage | BaSeafood</title>
     <link href="<?php echo base_url(); ?>webresources/css/home-pro.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>webresources/css/simple-slideshow-styles.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>webresources/css/hover.css" rel="stylesheet" media="all">
     <!--Slider-->
     <link href="<?php echo base_url(); ?>webresources/css/owl-carousel/css/owl.carousel.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>webresources/css/owl-carousel/css/owl.theme.css" rel="stylesheet">
@@ -77,11 +78,11 @@ if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
         </figure>
 
     </div>
-    <div id="menu">
+    <div id="menu" class="effects">
         <ul>
-            <li><a href="<?php echo site_url('product/findByCategories/').'/1'; ?>"><?php echo $this->lang->line('MENU_PRODUCT'); ?></a></li>
-            <li><a href="<?php echo site_url('introduce'); ?>"><?php echo $this->lang->line('MENU_ABOUT'); ?></a></li>
-            <li><a href="<?php echo site_url('contact'); ?>"><?php echo $this->lang->line('MENU_CONTACT'); ?></a></li>
+            <li class="hvr-float-shadow" ><a href="<?php echo site_url('product/findByCategories/').'/1'; ?>"><?php echo $this->lang->line('MENU_PRODUCT'); ?></a></li>
+            <li class="hvr-float-shadow" ><a href="<?php echo site_url('introduce'); ?>"><?php echo $this->lang->line('MENU_ABOUT'); ?></a></li>
+            <li class="hvr-float-shadow" ><a href="<?php echo site_url('contact'); ?>"><?php echo $this->lang->line('MENU_CONTACT'); ?></a></li>
         </ul>
     </div>
     <div id="partners-section">
@@ -175,6 +176,16 @@ Copyright © Baseafood1. All Rights Reserved
         swipe: true
     };
     makeBSS('.bss-slides', opts);
+
+    var effects = document.querySelectorAll('.effects')[0];
+
+    effects.addEventListener('click', function(e) {
+
+        if (e.target.className.indexOf('hvr') > -1) {
+            e.preventDefault();
+            e.target.blur();
+        }
+    });
 </script>
 </body>
 </html>

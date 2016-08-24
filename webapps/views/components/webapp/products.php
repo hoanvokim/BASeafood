@@ -6,33 +6,6 @@
  * Time: 8:48 PM
  */
 ?>
-<section id="page-breadcrumb">
-    <div class="vertical-center sun">
-        <div class="container">
-            <div class="row">
-                <div class="action">
-                    <div class="col-sm-12" style="padding: 20px 30px 20px 30px;">
-                        <h1 class="title">
-                            <?php echo $this->lang->line('MENU_PRODUCT'); ?>
-                            <p>
-                                <?php if (strcasecmp($title, "Products") != 0) {
-                                    if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
-                                        echo $category["en_name"];
-                                    }
-                                    else if (strcasecmp($_SESSION["activeLanguage"], "vi") == 0) {
-                                        echo $category["vi_name"];
-                                    }
-                                } ?>
-                            </p>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--/#action-->
-
 <section id="product">
     <div id="container">
         <div class="row">
