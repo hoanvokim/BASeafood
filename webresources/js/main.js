@@ -15,7 +15,6 @@ jQuery(function ($) {
     if ($('#video-container').length) {
         $("#video-container").fitVids();
     }
-
     //Initiat WOW JS
     new WOW().init();
 
@@ -185,6 +184,20 @@ function categorytreeview() {
 $(document).ready(function () {
     categorytreeview();
 });
+
+var module = $('.home-section, .module, .module-small, .side-image');
+module.each(function(i) {
+    if ($(this).attr('data-background')) {
+        $(this).css('background-image', 'url(' + $(this).attr('data-background') + ')');
+    }
+});
+
+if ($('.testimonials-slider').length > 0 ) {
+    $('.testimonials-slider').flexslider( {
+        animation: "slide",
+        smoothHeight: true,
+    });
+}
 
 var data = {
     labels: ["2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015"],

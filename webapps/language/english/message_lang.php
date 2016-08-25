@@ -35,6 +35,7 @@ $lang['CHART_SALES'] = 'Sales turnover: GRADUALLY INCREASING OVER YEARS END OF 2
 $lang['PIECHART'] = 'BASEAFOOD IS DESIROUS OF EXPANDING TO THE FOREIGN MARKET';
 $lang['BUSINESS'] = 'Business';
 $lang['SEARCH_RESULT'] = 'Search result';
+$lang['HIGHLIGHT_PRODUCTS'] = 'Highlighted Products';
 // Contact us
 $lang['CONTACT_US_PLACEHOLDER'] = 'Stay close';
 // About us

@@ -34,6 +34,7 @@ $lang['CHART_SALES'] = 'Doanh thu sẽ tăng mạnh trong năm 2016, ước tín
 $lang['PIECHART'] = 'BASEAFOOD đang phát triển rất nhanh ở các thị trường nước ngoài.';
 $lang['BUSINESS'] = 'Kinh doanh';
 $lang['SEARCH_RESULT'] = 'Kết quả tìm kiếm';
+$lang['HIGHLIGHT_PRODUCTS'] = 'Sản Phẩm Tiêu Biểu';
 // Contact us
 $lang['CONTACT_US_PLACEHOLDER'] = 'Chúng tôi ở đây';
 // About us

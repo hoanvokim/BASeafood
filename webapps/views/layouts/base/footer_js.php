@@ -6,6 +6,8 @@
 <script type="text/javascript" src="<?php echo base_url(); ?>webresources/js/bootstrap-tooltip.js"></script>
 <!--Plug in-->
 <script type="text/javascript"
+        src="<?php echo base_url(); ?>webresources/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript"
         src="<?php echo base_url(); ?>webresources/css/owl-carousel/js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>webresources/js/jquery.cycle2.min.js"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>

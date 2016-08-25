@@ -15,6 +15,7 @@
 <link href="<?php echo base_url(); ?>webresources/css/animation.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>webresources/css/bootstrap-toggle.min.css" rel="stylesheet">
 <!--Slider-->
+<link href="<?php echo base_url(); ?>webresources/css/flexslider.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>webresources/css/owl-carousel/css/owl.carousel.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>webresources/css/owl-carousel/css/owl.theme.css" rel="stylesheet">
 <link href="<?php echo base_url(); ?>webresources/css/modify.css" rel="stylesheet"/>

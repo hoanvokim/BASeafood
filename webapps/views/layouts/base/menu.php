@@ -50,7 +50,7 @@
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a
+                    <li><a
                             href="<?php echo site_url('home_pro'); ?>"><?php echo $this->lang->line('MENU_HOME'); ?></a>
                     </li>
                     <li  class="dropdown">

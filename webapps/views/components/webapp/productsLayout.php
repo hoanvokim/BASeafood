@@ -302,9 +302,7 @@
                                         } ?></span>
                                 </li>
                             <?php }
-                        } else { ?>
-
-                        <?php } ?>
+                        } ?>
                     </ul>
                 </div>
                 <div class="product-pagination">
@@ -314,3 +312,32 @@
         </div>
     </div>
 </section>
+<!-- Testimonials start -->
+<section class="module bg-dark-60 pb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="module-title-bg font-serif text-center"><?php echo $this->lang->line('HIGHLIGHT_PRODUCTS'); ?></h2>
+            </div>
+        </div>
+    </div>
+    <div class="testimonials-slider pb-140">
+        <ul class="slides" style="text-align: center;">
+            <?php if (!empty($products)) {
+                for ($i = 0; $i <= 5; $i++) {
+                    $product = $products[$i]; ?>
+                    <li>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <img src="<?php echo base_url(); ?>assets/upload/images/products/thumb/<?php echo $product['url']; ?>" style="height: 240px;">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                <?php }
+            } ?>
+        </ul>
+    </div><!-- .testimonials-slider -->
+</section>
+<!-- Testimonials end -->

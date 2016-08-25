@@ -3416,11 +3416,37 @@ ul#subscribe-post li:last-child {
 
 .module {
     position: relative;
-    padding: 140px 0;
+    padding: 51px 0 50px 0;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+
+.testimonials-slider {
+    position: relative;
+}
+
+.testimonial-text {
+    text-align: center;
+    font-style: normal;
+    font-size: 18px;
+}
+
+.testimonial-caption {
+    text-align: center;
+    padding: 10px 0 0;
+}
+
+.testimonial-title {
+    font-size: 14px;
+}
+
+.testimonial-descr {
+    color: rgba(255, 255, 255, .7);
+    font-size: 13px;
+    letter-spacing: 1px;
 }
