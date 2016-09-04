@@ -46,8 +46,8 @@
             <div class="col-md-4 col-sm-12" style="margin-top: 20px;">
                 <div class="contact-form bottom">
                     <h2><?php echo $this->lang->line('SEND_MESSAGE'); ?></h2>
-                    <form id="main-contact-form" name="contact-form" method="post"
-                          action="<?php echo base_url(); ?>webresources/sendemail.php">
+                    <?php echo form_open('sentmail-footer-submit'); ?>
+                        <input type="hidden" name="redirurl" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" required="required"
                                    placeholder="<?php echo $this->lang->line('NAME'); ?>">
@@ -61,10 +61,19 @@
                                       placeholder="<?php echo $this->lang->line('TEXT'); ?>"></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="submit" name="submit" class="btn btn-submit"
+                            <input type="submit" name="send_submit" class="btn btn-submit"
                                    value="<?php echo $this->lang->line('SEND'); ?>">
                         </div>
                     </form>
+                    <p class="message <?php echo $status; ?>"><?php if ($status == 'error') {
+                            echo $this->lang->line('MESSAGE_ERROR');
+                        }
+                        elseif ($status == 'success') {
+                            echo $this->lang->line('CONTACT_SUCCESS');
+                        }
+                        else {
+                            echo '';
+                        } ?></p>
                 </div>
             </div>
             <div class="col-sm-12">

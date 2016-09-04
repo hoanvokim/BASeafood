@@ -42,24 +42,48 @@
                 </span>
                 </p>
                 <div class="row">
-                    <div class="col-sm-12 col-md-12">
+                    <div class="col-sm-4 col-md-4">
                         <a href="mailto:tuongf34@gmail.com"><img
-                                src="<?php echo base_url(); ?>/webresources/images/tuong.jpg"
-                                class="img-responsive inline" alt="" style="padding: 20px; max-width: 300px;"></a>
+                                src="<?php echo base_url(); ?>/webresources/images/tuong.png"
+                                class="img-responsive inline" alt="" style="padding: 20px; max-width: 140px;"></a>
                     </div>
-                    <div class="col-sm-12 col-md-12">
+                    <div class="col-sm-4 col-md-4">
                         <a href="mailto:phuongf34@gmail.com"><img
-                                src="<?php echo base_url(); ?>/webresources/images/phuong.jpg"
-                                class="img-responsive inline" alt="" style="padding: 20px; max-width: 300px;"></a>
+                                src="<?php echo base_url(); ?>/webresources/images/phuong.png"
+                                class="img-responsive inline" alt="" style="padding: 20px; max-width: 140px;"></a>
                     </div>
-                    <div class="col-sm-12 col-md-12">
+                    <div class="col-sm-4 col-md-4">
                         <a href="mailto:huyenf34@gmail.com"> <img
-                                src="<?php echo base_url(); ?>/webresources/images/huyen.jpg"
-                                class="img-responsive inline" alt="" style="padding: 20px; max-width: 300px;"></a>
+                                src="<?php echo base_url(); ?>/webresources/images/huyen.png"
+                                class="img-responsive inline" alt="" style="padding: 20px; max-width: 140px;"></a>
                     </div>
                 </div>
             </div>
-
+            <div style="margin-top: 20px;">
+                <div class="contact-form bottom">
+                    <h2><?php echo $this->lang->line('SEND_MESSAGE'); ?></h2>
+                    <form class="contact-form" id="ContactForm" method="post"
+                          action="<?php echo base_url().'sentmail-contact-submit'; ?>">
+                    <div class="form-group">
+                        <input type="text" name="consult_name" class="form-control" required="required"
+                               placeholder="<?php echo $this->lang->line('NAME'); ?>">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="consult_email" class="form-control" required="required"
+                               placeholder="<?php echo $this->lang->line('EMAIL'); ?>">
+                    </div>
+                    <div class="form-group">
+                            <textarea name="consult_content" id="message" required="required" class="form-control" rows="8"
+                                      placeholder="<?php echo $this->lang->line('TEXT'); ?>"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="send_submit" class="btn btn-submit"
+                               value="<?php echo $this->lang->line('SEND'); ?>">
+                    </div>
+                    </form>
+                    <p class="message <?php echo $status; ?>"><?php echo $status; ?></p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

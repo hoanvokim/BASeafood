@@ -52,6 +52,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //default controllers
 $route['default_controller'] = 'home_controller/index';
 $route['demo'] = 'webapp/demo_controller/index';
+$route['sentmail-contact-submit'] = 'webapp/Contact_controller/index';
+$route['sentmail-footer-submit'] = 'webapp_process/Sentmail_controller/index';
 
 //webapp pages
 $route['home_pro'] = 'webapp/user_home_pro_controller/index';

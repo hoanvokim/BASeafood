@@ -512,3 +512,10 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 $autoload['helper'] = array('form');
+
+//project config
+$config['contact_email'] = 'sup.baseafood1@gmail.com';
+$config['protocol'] = 'sendmail';
+$config['charset'] = 'utf-8';
+$config['mailtype'] = 'html';
+$config['wordwrap'] = TRUE;
