@@ -17,14 +17,14 @@ class Switch_language_controller extends CI_Controller
     function index()
     {
         $languageToggle = $this->input->post('type');
-        if (strcasecmp($languageToggle, "en") == 0) {
+        if (strcasecmp($languageToggle, "en") == 0 || strcasecmp($languageToggle, "on") == 0) {
             $_SESSION["activeLanguage"] = "en";
         }
         else {
             $_SESSION["activeLanguage"] = "vi";
         }
-        echo $_SESSION["activeLanguage"];
-        //redirect to current page
+//        echo $languageToggle;
+//        redirect to current page
         if (strcasecmp($this->input->post('redirurl'), "/") == 0) {
             redirect($this->input->post('redirurl') . "home_pro");
         }

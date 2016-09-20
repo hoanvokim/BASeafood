@@ -13,7 +13,7 @@
                             <input type="hidden" name="redirurl" value="<?php echo $_SERVER['REQUEST_URI']; ?>"/>
                             <input type="checkbox"
                                    id="languageToggle"
-                                   name="languageToggle"
+                                   name="type"
                                 <?php
                                 if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
                                     ?>

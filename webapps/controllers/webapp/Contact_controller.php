@@ -22,60 +22,47 @@ class Contact_controller extends CI_Controller
         $data['title'] = 'Contact';
         try {
             if ($this->input->post('send_submit')) {
-                $contact['protocol'] = $this->config->item('protocol');
-                $contact['charset'] = $this->config->item('charset');
-                $contact['mailtype'] = $this->config->item('mailtype');
-                $contact['wordwrap'] = $this->config->item('wordwrap');
-
                 $consult_name = $this->input->post('consult_name');
                 $consult_email = $this->input->post('consult_email');
-
+                $consult_subject = 'Contact from customer';
                 $consult_content = "<i>Tên: " . $consult_name . "<br/>"
                     . "Email: " . $consult_email . "<br/>"
                     . "------------------------------------------<br/>"
-                    . "<strong>Nội dung:</strong><br/><br/>"
+                    . "<strong>Tiêu đề: " . $consult_subject . "</strong><br/><br/>"
                     . $this->input->post('consult_content');
 
                 //test
-                $config = array(
+                $config1 = Array(
                     'protocol' => 'smtp',
                     'smtp_host' => 'ssl://smtp.googlemail.com',
                     'smtp_port' => 465,
-                    'smtp_user' => 'sup.issiloo@gmail.com',
+                    'smtp_user' => 'sup.baseafood1@gmail.com',
                     'smtp_pass' => 'TihHon@16LH',
                     'mailtype' => 'html',
-                    'charset' => 'iso-8859-1',
-                    'wordwrap' => TRUE
+                    'charset' => 'utf-8',
+                    'starttls'  => TRUE,
+                    'wordwrap' => TRUE,
+                    'newline'   => "\r\n"
                 );
-
-                $this->load->library('email', $config);
-                $this->email->initialize($config);
+                $this->load->library('email', $config1);
                 $this->email->set_newline("\r\n");
-                $this->email->from('sup.issiloo@gmail.com', 'Hoan vo');
-                $this->email->to('hoan.vokim@gmail.com');
-                $this->email->subject('SOME SUBJECT');
-                $this->email->message('<p>Some Content</p>');
-//                if (!$this->email->send()) {
-//                    $data['status'] = 'error';
-//                } else {
-//                    $data['status'] = 'success';
-//                }
-                if($this->email->send())
-                {
-                    echo 'Your email was sent.';
-                }
 
-                else
-                {
-                    show_error($this->email->print_debugger());
+                $this->email->from('sup.baseafood1@gmail.com', $consult_email);
+                $this->email->to($this->config->item('contact_email'));
+                $this->email->subject($consult_subject);
+                $this->email->message($consult_content);
+                if (!$this->email->send()) {
+                    $data['status'] = $this->email->print_debugger();;
+                } else {
+                    $data['status'] = 'success';
                 }
             } else {
                 $data['status'] = '';
-                $data['product_menu'] = $this->Category_model->product_menu();
-                $this->load->view('pages/webapp/contact', $data);
             }
         } catch (Exception $e) {
             $data['status'] = $e;
         }
+        $data['product_menu'] = $this->Category_model->product_menu();
+        $this->load->view('pages/webapp/contact', $data);
     }
 }
