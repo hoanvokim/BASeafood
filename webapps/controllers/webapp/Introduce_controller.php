@@ -14,6 +14,7 @@ class Introduce_controller extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Category_model');
+        $this->load->library('utilities');
         $this->utilities->loadPropertiesFiles($this->lang);
     }
 

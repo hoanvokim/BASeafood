@@ -13,6 +13,7 @@ class Home_pro_controller extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->library('utilities');
     }
 
     public function index()

@@ -499,7 +499,7 @@ a.color-7 {
 
 #footer {
     padding-bottom: 10px;
-    background-image: url(../images/home/footer.png);
+    /*background-image: url(../images/home/footer.png);*/
     background-repeat: repeat-x;
     background-position: bottom;
     background-size: contain;
@@ -1504,7 +1504,7 @@ Portfolio with right sidebar
 
 .popular ul.gallery li {
     display: block;
-    width: 33.33%;
+    width: 50%;
     float: left;
     padding: 8px;
 }

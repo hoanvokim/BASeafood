@@ -13,6 +13,7 @@ class Product_controller extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->library('utilities');
         $this->utilities->loadPropertiesFiles($this->lang);
         //init pagination
         $this->load->library("pagination");

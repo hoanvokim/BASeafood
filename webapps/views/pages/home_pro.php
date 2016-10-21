@@ -80,7 +80,7 @@ if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
     </div>
     <div id="menu" class="effects">
         <ul>
-            <li class="hvr-float-shadow" ><a href="<?php echo site_url('product/findByCategories/').'/1'; ?>"><?php echo $this->lang->line('MENU_PRODUCT'); ?></a></li>
+            <li class="hvr-float-shadow" ><a href="<?php echo site_url('product/findByCategories').'/1'; ?>"><?php echo $this->lang->line('MENU_PRODUCT'); ?></a></li>
             <li class="hvr-float-shadow" ><a href="<?php echo site_url('introduce'); ?>"><?php echo $this->lang->line('MENU_ABOUT'); ?></a></li>
             <li class="hvr-float-shadow" ><a href="<?php echo site_url('contact'); ?>"><?php echo $this->lang->line('MENU_CONTACT'); ?></a></li>
         </ul>
