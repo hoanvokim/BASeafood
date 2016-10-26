@@ -50,6 +50,7 @@ $lang['PHONE'] = 'Điện thoại';
 $lang['PHONE_VALUE'] = '064.3825246';
 $lang['FAX'] = 'Fax';
 $lang['FAX_VALUE'] = '064.3825545';
+$lang['ROLE_TITLE'] = 'Tổng giám đốc';
 $lang['EMAIL'] = 'Email';
 $lang['PERSONAL_CONTACT'] = 'Liên hệ với chúng tôi';
 $lang['MANAGER'] = 'Giám đốc';
@@ -88,4 +89,8 @@ $lang['INDEX-SLOGAN'] = 'Hãy liên lạc ngay với chúng tôi bằng thư đi
 $lang['INDEX-SLOGAN-BTN'] = 'Gửi mail';
 $lang['HOW-TO'] = 'Cách đạt được một cuộc sống khoẻ?';
 $lang['HOW-TO-1'] = 'Đạt được một cuộc sống khoẻ mạnh, hoàn toàn trong khả năng của bạn. Hãy bắt đầu ngay hôm nay. Để đạt được điều nay là một nỗ lực trong thời gian dài, không phải dễ dàng. Nhưng đây sẽ là vài cách để có cuộc sống tốt hơn ngày hôm qua. Đây là danh sách các mục bạn cần làm, hãy bắt đầu ngay nhé!';
+$lang['PIECHART-TEXT'] = 'BASEAFOOD 1 has established strong ties with customers in fishery, based on keeping high quality standards from the material to finish-product. Our long history and extensive experience guides us in meeting our customer’s demand all over the world as Japan, Korea, Russia, Ukraine, Spain, France, Italy, Germany, Australia, Taiwan, China, Thailand, Dominican,… and is recognized as the prestige company in Vietnam.';
+$lang['BUSINESS-1'] = '1. MAIN MARKET';
+$lang['BUSINESS-2'] = '2. TURNOVER GROWTH';
+$lang['BUSINESS-2-TEXT'] = 'BASEAFOOD has grown expansively and become one of the large Vietnamese seafood processor';
 ?>

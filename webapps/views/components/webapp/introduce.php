@@ -40,8 +40,9 @@
                                     <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('COMPANY_SHORTNAME'); ?>: BASEAFOOD 1 CO.,LTD</a>
                                     <a class="list-group-item"><i class="fa fa-road fa-fw"></i>&nbsp; <?php echo $this->lang->line('ADDRESS'); ?>: 321, Trần Xuân Độ street, Phuoc trung ward, Ba Ria
                                                                                                city, BR-VT province</a>
-                                    <a class="list-group-item"><i class="fa fa-phone fa-fw"></i>&nbsp; <?php echo $this->lang->line('PHONE'); ?>: 064.3825246</a>
-                                    <a class="list-group-item"><i class="fa fa-fax fa-fw"></i>&nbsp; <?php echo $this->lang->line('FAX'); ?>: 064.3825545</a>
+                                    <a class="list-group-item"><i class="fa fa-phone fa-fw"></i>&nbsp; <?php echo $this->lang->line('PHONE'); ?>: (+84)64.3825246</a>
+                                    <a class="list-group-item"><i class="fa fa-fax fa-fw"></i>&nbsp; <?php echo $this->lang->line('FAX'); ?>:  (+84)64.3825545</a>
+                                    <a class="list-group-item"><i class="fa fa-user fa-fw"></i>&nbsp; <?php echo $this->lang->line('ROLE_TITLE'); ?>: Huynh Minh Tuong</a>
                                     <a class="list-group-item"><i class="fa fa-google fa-fw"></i>&nbsp; <?php echo $this->lang->line('EMAIL'); ?>: tuongf34@gmail.com</a>
 
                                 </div>

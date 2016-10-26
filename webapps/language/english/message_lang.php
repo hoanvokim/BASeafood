@@ -51,6 +51,7 @@ $lang['PHONE'] = 'Phone';
 $lang['PHONE_VALUE'] = '064.3825246';
 $lang['FAX'] = 'Fax';
 $lang['FAX_VALUE'] = '064.3825545';
+$lang['ROLE_TITLE'] = 'Director';
 $lang['EMAIL'] = 'Email';
 $lang['PERSONAL_CONTACT'] = 'Personal contact';
 $lang['MANAGER'] = 'Director';
@@ -90,4 +91,8 @@ $lang['INDEX-SLOGAN'] = 'Keep up to date with the latest news &amp; products… 
 $lang['INDEX-SLOGAN-BTN'] = 'Inspire Me';
 $lang['HOW-TO'] = 'How to achieve an healthy life?';
 $lang['HOW-TO-1'] = 'Healthy living is within your reach, starting today. Sure, healthy living is a long-term commitment, not a flash-in-the-pan fad. But there are steps you can take right now that will make today healthier than yesterday and pave the way for healthy living tomorrow, too. Here\'s your checklist of practical healthy living tips that are ready to go. Let\'s get started.';
+$lang['PIECHART-TEXT'] = 'BASEAFOOD 1 has established strong ties with customers in fishery, based on keeping high quality standards from the material to finish-product. Our long history and extensive experience guides us in meeting our customer’s demand all over the world as Japan, Korea, Russia, Ukraine, Spain, France, Italy, Germany, Australia, Taiwan, China, Thailand, Dominican,… and is recognized as the prestige company in Vietnam.';
+$lang['BUSINESS-1'] = '1. MAIN MARKET';
+$lang['BUSINESS-2'] = '2. TURNOVER GROWTH';
+$lang['BUSINESS-2-TEXT'] = 'BASEAFOOD has grown expansively and become one of the large Vietnamese seafood processor';
 ?>
