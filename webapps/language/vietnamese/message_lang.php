@@ -93,4 +93,6 @@ $lang['PIECHART-TEXT'] = 'BASEAFOOD 1 has established strong ties with customers
 $lang['BUSINESS-1'] = '1. MAIN MARKET';
 $lang['BUSINESS-2'] = '2. TURNOVER GROWTH';
 $lang['BUSINESS-2-TEXT'] = 'BASEAFOOD has grown expansively and become one of the large Vietnamese seafood processor';
+$lang['NO-VACAN']='There are currently no vacancies available. <br/> However, we are always keen to meet energetic and talented professionals who would like to join our company';
+$lang['CARRER-1']='Over many years of development, becoming one of the leading brands in Vietnam and are reaching the international level, we have always understood that human is a decisive factor for the success and development of  company. At BASEAFOOD1, your career will be associated with the sustainable development of us.';
 ?>

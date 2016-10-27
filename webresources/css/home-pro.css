@@ -79,7 +79,7 @@ html {
 
 #language {
     position: absolute;
-    margin-top: 71px;
+    margin-top: 5%;
     width: 200px;
     height: 100px;
     right: 21px;
@@ -90,7 +90,6 @@ ul.flags {
     font-size: 10.5px;
     line-height: 11px;
     color: #666;
-    position: absolute;
     right: 40px;
     bottom: 97px;
     margin: 0;

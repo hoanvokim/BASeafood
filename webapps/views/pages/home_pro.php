@@ -80,9 +80,13 @@ if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {
     </div>
     <div id="menu" class="effects">
         <ul>
-            <li class="hvr-float-shadow" ><a href="<?php echo site_url('product/findByCategories').'/1'; ?>"><?php echo $this->lang->line('MENU_PRODUCT'); ?></a></li>
-            <li class="hvr-float-shadow" ><a href="<?php echo site_url('introduce'); ?>"><?php echo $this->lang->line('MENU_ABOUT'); ?></a></li>
-            <li class="hvr-float-shadow" ><a href="<?php echo site_url('contact'); ?>"><?php echo $this->lang->line('MENU_CONTACT'); ?></a></li>
+            <li class="hvr-float-shadow"><a
+                    href="<?php echo site_url('product/findByCategories') . '/1'; ?>"><?php echo $this->lang->line('MENU_PRODUCT'); ?></a>
+            </li>
+            <li class="hvr-float-shadow"><a
+                    href="<?php echo site_url('introduce'); ?>"><?php echo $this->lang->line('MENU_ABOUT'); ?></a></li>
+            <li class="hvr-float-shadow"><a
+                    href="<?php echo site_url('contact'); ?>"><?php echo $this->lang->line('MENU_CONTACT'); ?></a></li>
         </ul>
     </div>
     <div id="partners-section">
@@ -155,8 +159,7 @@ Copyright © Baseafood1. All Rights Reserved
             $("#languageForm").submit();
         });
         $("#owl-partners").owlCarousel({
-            items: 5,
-            itemsDesktop: [800, 5],
+            items: 7,
             autoPlay: 2000,
             stopOnHover: true,
             pagination: false
@@ -179,7 +182,7 @@ Copyright © Baseafood1. All Rights Reserved
 
     var effects = document.querySelectorAll('.effects')[0];
 
-    effects.addEventListener('click', function(e) {
+    effects.addEventListener('click', function (e) {
 
         if (e.target.className.indexOf('hvr') > -1) {
             e.preventDefault();
