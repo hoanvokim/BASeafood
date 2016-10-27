@@ -37,19 +37,6 @@
 
                     <div class="col-md-12 col-sm-12">
                         <div class="single-blog blog-details two-column">
-                            <div class="post-thumb">
-                                <img src="<?php
-                                if (strpos($new['url_attached_file'], 'pdf') !== false) {
-                                    echo base_url() . 'webresources/images/files/pdf.png';
-                                }
-                                else if (strpos($new['url_attached_file'], 'jpg') !== false) {
-                                    echo base_url() .$new['url_attached_file'];
-                                }
-                                else {
-                                    echo base_url() . 'webresources/images/files/news.png';
-                                }
-                                ?>" alt="blog"/>
-                            </div>
                             <div class="post-content overflow">
                                 <p>
                                     <?php if (strcasecmp($_SESSION["activeLanguage"], "en") == 0) {

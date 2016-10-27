@@ -15,6 +15,8 @@
                         echo base_url() . 'webresources/images/files/pdf.png';
                     } else if (strpos($new->url_attached_file, 'jpg') !== false) {
                         echo $new->url_attached_file;
+                    } else if (strpos($new->url_attached_file, 'youtube') !== false) {
+                        echo base_url() . 'webresources/images/files/youtube.png';
                     } else {
                         echo base_url() . 'webresources/images/files/news.png';
                     }

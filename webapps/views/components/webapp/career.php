@@ -16,6 +16,7 @@
                     <p style="font-weight: 700; font-size: 17px;">ENJOY WORKING WITH US </p>
                     <div class="devider"></div>
 
+                    <img src="<?php echo base_url() . 'webresources/images/contactus.png' ?>" style="width: 100px;"/>
                     <p>
                         <?php echo $this->lang->line('CARRER-1'); ?>
                     </p>
