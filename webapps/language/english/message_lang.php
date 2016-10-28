@@ -32,7 +32,7 @@ $lang['LATEST_PHOTOS'] = 'Latest photos';
 $lang['FINANCIAL_REPORT'] = 'Our Business Report';
 $lang['CHART'] = 'Yearly sales turnover 2005-2015';
 $lang['CHART_SALES'] = 'Sales turnover: GRADUALLY INCREASING OVER YEARS END OF 2016, ESTIMATED AT 17,500,000 USD.';
-$lang['PIECHART'] = 'BASEAFOOD IS DESIROUS OF EXPANDING TO THE FOREIGN MARKET';
+$lang['PIECHART'] = 'BASEAFOOD 1 IS DESIROUS OF EXPANDING TO THE FOREIGN MARKET';
 $lang['BUSINESS'] = 'Business';
 $lang['SEARCH_RESULT'] = 'Search result';
 $lang['HIGHLIGHT_PRODUCTS'] = 'Highlighted Products';
@@ -94,7 +94,7 @@ $lang['HOW-TO-1'] = 'Healthy living is within your reach, starting today. Sure, 
 $lang['PIECHART-TEXT'] = 'BASEAFOOD 1 has established strong ties with customers in fishery, based on keeping high quality standards from the material to finish-product. Our long history and extensive experience guides us in meeting our customer’s demand all over the world as Japan, Korea, Russia, Ukraine, Spain, France, Italy, Germany, Australia, Taiwan, China, Thailand, Dominican,… and is recognized as the prestige company in Vietnam.';
 $lang['BUSINESS-1'] = '1. MAIN MARKET';
 $lang['BUSINESS-2'] = '2. TURNOVER GROWTH';
-$lang['BUSINESS-2-TEXT'] = 'BASEAFOOD has grown expansively and become one of the large Vietnamese seafood processor';
+$lang['BUSINESS-2-TEXT'] = 'BASEAFOOD 1 has grown expansively and become one of the large Vietnamese seafood processor';
 $lang['NO-VACAN']='There are currently no vacancies available. <br/> However, we are always keen to meet energetic and talented professionals who would like to join our company';
 $lang['CARRER-1']='Over many years of development, becoming one of the leading brands in Vietnam and are reaching the international level, we have always understood that human is a decisive factor for the success and development of  company. At BASEAFOOD1, your career will be associated with the sustainable development of us.';
 ?>
